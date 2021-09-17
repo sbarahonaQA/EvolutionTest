@@ -252,8 +252,7 @@ public class StepDefinitions{
 
     /** Scroll to the (top/end) of the page. */
     @And("^Desplazar al (inicio|fin) de la pagina$")
-    public void scrollPage(String to) throws Exception
-    {
+    public void scrollPage(String to) {
         functions.scrollPage(to);
     }
 
@@ -348,7 +347,7 @@ public class StepDefinitions{
 
     @And("^Pausa (.*?)$")
     public void Pausa(int segundos) throws Exception {
-        Thread.sleep(segundos * 1000);
+        Thread.sleep(segundos * 1000L);
     }
 
 }
