@@ -80,5 +80,11 @@
   "ElementosMostrados": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "XX":{
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Grupos corporativos')]"
   }
+
 }

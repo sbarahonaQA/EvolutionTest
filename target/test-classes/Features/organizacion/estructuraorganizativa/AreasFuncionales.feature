@@ -114,3 +114,13 @@ Característica: AreasFuncionales
     Y Capturar pantalla: PDS-1269-resultado
     Entonces Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese el nombre del área funcional
+
+  @Highest
+  Escenario: Prueba para Allure
+    Dado Cargar Evolution
+    Entonces Cargar elementos de la pagina Login.json
+    Cuando Iniciar sesion con usuario gerenterrhh
+    Entonces Cargar elementos de la pagina AreasFuncionales.json
+    Entonces Navegar
+      | Organizacion | EstructuraOrganizativa |
+    Entonces Prueba exitosa si elemento XX contiene texto Grupos corporativos

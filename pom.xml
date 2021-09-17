@@ -43,7 +43,7 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber4-jvm</artifactId>
-            <version>2.13.2</version>
+            <version>2.15.0</version>
         </dependency>
 
         <dependency>
@@ -136,7 +136,9 @@
                 <configuration>
                     <propertiesFilePath>src/test/resources/allure.properties/allure.properties</propertiesFilePath>
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
-                    <reportVersion>2.7.0</reportVersion>
+                    <reportVersion>2.10.0</reportVersion>
+                    <allureDownloadUrl>https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.10.0/allure-commandline-2.10.0.zip</allureDownloadUrl>
+
                 </configuration>
             </plugin>
             <plugin>
@@ -145,7 +147,7 @@
                 <version>2.20</version>
                 <configuration>
                 <systemPropertyVariables>
-                        <reportVersion>2.7.0</reportVersion>
+                        <reportVersion>2.10.0</reportVersion>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
                     <argLine>
