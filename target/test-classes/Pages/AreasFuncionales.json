@@ -1,0 +1,84 @@
+{
+  "Organizacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/div[2]/a[2]"
+  },
+  "EstructuraOrganizativa": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/h2[1]/a[1]"
+  },
+  "Catalogo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Catálogo')]"
+  },
+  "AreaFuncional": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html/body/div[1]/div[4]/div[2]/div[2]/div[2]/fieldset[3]/div/div[1]/div[1]/div[2]/h2/a"
+  },
+
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_edit"
+  },
+
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[1]/span[1]"
+  },
+
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[2]/span[1]"
+  },
+
+  "GrupoCoporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[3]/span[1]"
+  },
+
+  "GuardarAreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarAreaFuncional"
+  },
+  "CancelarAreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAreaFuncional"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+}
