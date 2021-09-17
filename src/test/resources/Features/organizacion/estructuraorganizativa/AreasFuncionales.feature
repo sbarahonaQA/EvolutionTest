@@ -121,6 +121,5 @@ Característica: AreasFuncionales
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
     Entonces Cargar elementos de la pagina AreasFuncionales.json
-    Entonces Navegar
-      | Organizacion | EstructuraOrganizativa |
-    Entonces Prueba exitosa si elemento XX contiene texto Grupos corporativos
+    Y Adjuntar captura de pantalla al reporte
+    Entonces Prueba exitosa si elemento Organizacion contiene texto Organización
