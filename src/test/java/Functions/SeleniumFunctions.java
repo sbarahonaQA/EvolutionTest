@@ -28,6 +28,10 @@ public class SeleniumFunctions {
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
 
+    /**** Observaciones
+     * Definir un orden para los métodos
+     * ******/
+
     public SeleniumFunctions() {
         driver = Hooks.driver;
     }
@@ -286,6 +290,9 @@ public class SeleniumFunctions {
 
     public void iClicInElement(String element) throws Exception {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        w.until(ExpectedConditions.elementToBeClickable(SeleniumElement));
+        log.info("Esperando que el elemento: "+element + " sea clickeable");
         driver.findElement(SeleniumElement).click();
         log.info("Click al elemento: " + element);
     }

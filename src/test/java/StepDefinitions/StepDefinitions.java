@@ -17,6 +17,11 @@ public class StepDefinitions{
     WebDriver driver;
     SeleniumFunctions functions = new SeleniumFunctions();
 
+    /* Obsrevaciones
+    *  Definir un tipo de orden para este archivo puede ser según su función, click, assert
+    *  Cambiar a español los nombres de métodos
+    *  */
+
     /******** Log Attribute ********/
     Logger log = Logger.getLogger(StepDefinitions.class);
     public StepDefinitions() {
