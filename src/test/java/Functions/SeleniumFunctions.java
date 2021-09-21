@@ -6,16 +6,24 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.junit.Assert;
-import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.AggregatedAsserts;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -55,10 +63,10 @@ public class SeleniumFunctions {
     public static String ValueToFind = "";
 
     public static Object readJson() throws Exception {
-        FileReader reader = new FileReader(PagesFilePath + FileName);
+        InputStreamReader isr = new InputStreamReader(new FileInputStream(PagesFilePath + FileName), StandardCharsets.UTF_8);
         try {
             JSONParser jsonParser = new JSONParser();
-            return jsonParser.parse(reader);
+            return jsonParser.parse(isr);
         } catch (FileNotFoundException e) {
             log.error("ReadEntity: No existe el archivo " + FileName);
             return null;
@@ -251,6 +259,8 @@ public class SeleniumFunctions {
         wait.until(ExpectedConditions.presenceOfElementLocated(SeleniumElement));
         log.info(String.format("Esperando el elemento: %s", element));
         ElementText = driver.findElement(SeleniumElement).getText();
+        if(ElementText.isEmpty())
+            ElementText = driver.findElement(SeleniumElement).getAttribute("value");
         return ElementText;
     }
 
@@ -292,20 +302,28 @@ public class SeleniumFunctions {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
         w.until(ExpectedConditions.elementToBeClickable(SeleniumElement));
-        log.info("Esperando que el elemento: "+element + " sea clickeable");
-        driver.findElement(SeleniumElement).click();
+        try {
+            driver.findElement(SeleniumElement).click();
+        }
+        catch(org.openqa.selenium.StaleElementReferenceException ex)
+        {
+            driver.findElement(SeleniumElement).click();
+        }
         log.info("Click al elemento: " + element);
     }
 
     public void searchInSmartlist(String cajaBusqueda, String busqueda) throws Exception {
         By cajaBusquedaElement = SeleniumFunctions.getCompleteElement(cajaBusqueda);
         By elementosMostrados = SeleniumFunctions.getCompleteElement("ElementosMostrados");
+        String retrieved_text = driver.findElement(elementosMostrados).getText();
+
         driver.findElement(cajaBusquedaElement).clear();
         driver.findElement(cajaBusquedaElement).sendKeys(busqueda);
         driver.findElement(cajaBusquedaElement).sendKeys(Keys.RETURN);
         log.info("Buscando término en Smarlist: " + busqueda);
-        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
-        wait.until(ExpectedConditions.textToBe(elementosMostrados,"Elementos mostrados 1 - 1 de 1"));
+
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.invisibilityOfElementWithText(elementosMostrados, retrieved_text));
     }
 
     public void scrollPage(String to)

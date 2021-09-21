@@ -1,10 +1,10 @@
 {
   "AreasFuncionales": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//a[contains(@href, '/Estructura/AreaFuncional')])[1]"
+    "ValueToFind": "//div[@class='task']//a[contains(text(),'Áreas funcionales')]"
   },
   "Catalogo": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id='innerright']/div[2]/fieldset[3]/h4/a"
+    "ValueToFind": "//a[contains(text(),'Catálogo')]"
   }
 }

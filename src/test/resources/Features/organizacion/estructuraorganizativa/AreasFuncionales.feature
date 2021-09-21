@@ -8,7 +8,7 @@ Característica: AreasFuncionales
  @organizacion
  @estructura_organizativa
  @areas_funcionales
- @highest
+ @Highest
  @PDS-1217
    #OBSERVACIONES
    #- Agregar el paso 2 de validar que se esté en ASEINFO Corporativo, sin oestá sería de seleccionar esa empresa
@@ -25,20 +25,26 @@ Característica: AreasFuncionales
   Entonces Cargar elementos de la pagina Login.json
   Cuando Iniciar sesion con usuario gerenterrhh
   Entonces Cargar elementos de la pagina Inicio.json
+   #Y Seleccionar ASEINFO Corporativo de la lista Empresas
   Y Click a Organizacion
   Y Cargar elementos de la pagina Organizacion.json
   Y Click a EstructuraOrganizativa
   Y Cargar elementos de la pagina EstructuraOrganizativa.json
   Y Click a Catalogo
+  Entonces Esperar que el elemento AreasFuncionales este presente
   Y Click a AreasFuncionales
   Y Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
   Y Click a Nuevo
   Entonces Llenar formulario:
-   | Nombre | PRUEBA AUTOMATIZADA PDS-1217 |
-  Y Capturar pantalla: PDS-1217-datos
-  Y Click a GuardarAreaFuncional
-  Y Capturar pantalla: PDS-1217-resultado
-  Entonces Prueba exitosa si elemento Mensaje contiene texto El área funcional ha sido guardada correctamente
+    | Nombre | Área Funcional 1 |
+   Y Adjuntar captura de pantalla al reporte
+   Y Click a GuardarAreaFuncional
+   Y Refrescar pagina
+   Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino Área Funcional 1
+   Y Click a PrimerElementoDeSmartlist
+   Y Click a Editar
+   Y Adjuntar captura de pantalla al reporte
+   Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
 
   @test
   Escenario: Editar un área funcional con información básica (PDS-1270)
@@ -133,11 +139,3 @@ Característica: AreasFuncionales
     Entonces Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese el nombre del área funcional
 
-  @Highest
-  Escenario: Prueba para Allure
-    Dado Cargar Evolution
-    Entonces Cargar elementos de la pagina Login.json
-    Cuando Iniciar sesion con usuario gerenterrhh
-    Entonces Cargar elementos de la pagina AreasFuncionales.json
-    Y Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Organizacion contiene texto Organización
