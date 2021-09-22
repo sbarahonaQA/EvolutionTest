@@ -43,11 +43,8 @@ public class SeleniumFunctions {
     public SeleniumFunctions() {
         driver = Hooks.driver;
     }
-
     public String ElementText = "";
-
     public static final int EXPLICIT_TIMEOUT = 15;
-
 
     public String readProperties(String property) throws IOException {
         prop.load(in);
@@ -76,7 +73,7 @@ public class SeleniumFunctions {
         }
     }
 
-    public static JSONObject ReadEntity(String element) throws Exception {
+    public static JSONObject readEntity(String element) throws Exception {
         JSONObject Entity;
 
         JSONObject jsonObject = (JSONObject) readJson();
@@ -89,7 +86,7 @@ public class SeleniumFunctions {
         return Entity;
     }
 
-    public void ScreenShot(String TestCaptura) throws IOException {
+    public void screenShot(String TestCaptura) throws IOException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmm");
         String screenShotName = readProperties("ScreenShotPath") + "\\" + readProperties("browser") + "\\" + TestCaptura + "_(" + dateFormat.format(GregorianCalendar.getInstance().getTime()) + ")";
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -119,8 +116,7 @@ public class SeleniumFunctions {
         return isDisplayed;
     }
 
-    public void AcceptAlert()
-    {
+    public void acceptAlert(){
         try{
             WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
             Alert alert = wait.until(ExpectedConditions.alertIsPresent());
@@ -145,7 +141,7 @@ public class SeleniumFunctions {
 
     public static By getCompleteElement(String element) throws Exception {
         By result = null;
-        JSONObject Entity = ReadEntity(element);
+        JSONObject Entity = readEntity(element);
 
         GetFieldBy = (String) Entity.get("GetFieldBy");
         ValueToFind = (String) Entity.get("ValueToFind");
@@ -175,8 +171,7 @@ public class SeleniumFunctions {
         return SegAcceso.getProperty(usuario);
     }
 
-    public void selectOptionDropdownByIndex(String element, int option) throws Exception
-    {
+    public void selectOptionDropdownByIndex(String element, int option) throws Exception {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         log.info(String.format("Esperando elemento: %s", element));
 
@@ -185,8 +180,7 @@ public class SeleniumFunctions {
         opt.selectByIndex(option);
     }
 
-    public void selectOptionDropdownByText(String element, String option) throws Exception
-    {
+    public void selectOptionDropdownByText(String element, String option) throws Exception {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         log.info(String.format("Esperando elemento: %s", element));
 
@@ -215,7 +209,7 @@ public class SeleniumFunctions {
         }
     }
 
-    public void UncheckCheckbox(String element) throws Exception
+    public void uncheckCheckbox(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         boolean isChecked = driver.findElement(SeleniumElement).isSelected();
@@ -234,7 +228,7 @@ public class SeleniumFunctions {
 
     }
 
-    public void ClickJSElement(String element) throws Exception
+    public void clickJSElement(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -243,17 +237,17 @@ public class SeleniumFunctions {
     }
 
     public void checkPartialTextElementNotPresent(String elemento,String texto) throws Exception {
-        ElementText = GetTextElement(elemento);
+        ElementText = getTextElement(elemento);
         aggregatedAsserts.assertFalse("Texto NO esta presente en elemento: " + elemento + " - texto: " + texto, !ElementText.contains(texto));
     }
 
     public void checkPartialTextElementPresent(String elemento,String texto) throws Exception {
-        ElementText = GetTextElement(elemento);
+        ElementText = getTextElement(elemento);
         aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + elemento + " - texto: " + texto, ElementText.contains(texto));
         aggregatedAsserts.processAllAssertions();
     }
 
-    public String GetTextElement(String element) throws Exception {
+    public String getTextElement(String element) throws Exception {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
         wait.until(ExpectedConditions.presenceOfElementLocated(SeleniumElement));
@@ -378,7 +372,7 @@ public class SeleniumFunctions {
         w.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
     }
 
-    public void SaveInScenario(String key, String text) {
+    public void saveInScenario(String key, String text) {
 
         if (!ScenaryData.containsKey(key)) {
             ScenaryData.put(key,text);
@@ -390,15 +384,15 @@ public class SeleniumFunctions {
 
     }
 
-    public void ValidateInfo(List<List<String>> rows) throws Exception {
+    public void validateInfo(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
-            ElementText = GetTextElement(columns.get(0));
+            ElementText = getTextElement(columns.get(0));
             aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + columns.get(0) + " - texto: " + columns.get(1), ElementText.contains(columns.get(1)));
         }
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void FillForm(List<List<String>> rows) throws Exception {
+    public void fillForm(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
             driver.findElement(SeleniumElement).clear();
@@ -407,17 +401,7 @@ public class SeleniumFunctions {
         }
     }
 
-    public void Navegar(List<List<String>> rows) throws Exception {
-        for (List<String> columns : rows) {
-            for (String element : columns) {
-                By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
-                driver.findElement(SeleniumElement).click();
-                log.info("Click al elemento: " + element);
-            }
-        }
-    }
-
-    public void Verificar(List<List<String>> rows) throws Exception {
+    public void checkIfPresent(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
             for (String element : columns) {
                 aggregatedAsserts.assertTrue("Elemento esta presente: " + element, this.isElementDisplayed(element));
@@ -426,23 +410,12 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void seleccionarLaEmpresaSiNoEstaSeleccionada(String empresa) throws Exception {
-        // Locating the Main Menu (Parent element)
+    public void selectCompanyIfNotSelected(String empresa) throws Exception {
         WebElement mainMenu = driver.findElement(SeleniumFunctions.getCompleteElement("Empresa"));
-
-        //Instantiating Actions class
         Actions actions = new Actions(driver);
-
-        //Hovering on main menu
         actions.moveToElement(mainMenu);
-
-        // Locating the element from Sub Menu
         WebElement subMenu = driver.findElement(SeleniumFunctions.getCompleteElement("ASEINFOCorporativo"));
-
-        //To mouseover on sub menu
         actions.moveToElement(subMenu);
-
-        //build()- used to compile all the actions into a single step
         actions.click().build().perform();
     }
 }

@@ -26,7 +26,7 @@ public class StepDefinitions{
     }
 
     @Dado("^que carga Evolution")
-    public void cargarEvolution() throws IOException {
+    public void loadEvolution() throws IOException {
         String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instancia");
         log.info("Cargando URL: " + sitioPruebas);
         driver.get(sitioPruebas);
@@ -89,11 +89,11 @@ public class StepDefinitions{
 
     @Y("^Capturar pantalla: (.*)")
     public void takeScreenshot(String TestCaptura) throws IOException{
-        functions.ScreenShot(TestCaptura);
+        functions.screenShot(TestCaptura);
     }
 
     @Y("Adjuntar captura de pantalla al reporte")
-    public void AttachAScreenshotToReport(){
+    public void attachAScreenshotToReport(){
         functions.attachScreenShot();
     }
 
@@ -113,9 +113,9 @@ public class StepDefinitions{
 
     /** Handle and accept a JavaScript alert */
     @Entonces("^Aceptar alerta$")
-    public void AcceptAlert()
+    public void acceptAlert()
     {
-        functions.AcceptAlert();
+        functions.acceptAlert();
     }
 
     /** Handle and dismiss a JavaScript alert */
@@ -151,8 +151,8 @@ public class StepDefinitions{
 
     /** Check an option from a checkbox */
     @Cuando("^Desmarcar cheque (.*?)$")
-    public void UncheckCheckbox(String element) throws Exception{
-        functions.UncheckCheckbox(element);
+    public void uncheckCheckbox(String element) throws Exception{
+        functions.uncheckCheckbox(element);
     }
 
     /** Refresh current page */
@@ -230,8 +230,8 @@ public class StepDefinitions{
 
     /** I click in JS element. */
     @Y("^Click al elemento JS (.+)$")
-    public void ClickJSElement(String element) throws Exception    {
-        functions.ClickJSElement(element);
+    public void clickJSElement(String element) throws Exception    {
+        functions.clickJSElement(element);
     }
 
     /** Navigate forward */
@@ -270,48 +270,43 @@ public class StepDefinitions{
     }
 
     @Entonces("^Guardar como contexto de escenario - llave (.*?) - valor (.*?)$")
-    public void SaveInScenarioData(String key,String text) {
-        functions.SaveInScenario(key, text);
+    public void saveInScenarioData(String key, String text) {
+        functions.saveInScenario(key, text);
     }
 
     @Y("^Guardando texto (.*?) como contexto de escenario$")
     public void iSaveTextOfElementAsScenarioContext(String element) throws Exception {
-        String ScenarioElementText = functions.GetTextElement(element);
-        functions.SaveInScenario(element+".text", ScenarioElementText);
+        String ScenarioElementText = functions.getTextElement(element);
+        functions.saveInScenario(element+".text", ScenarioElementText);
     }
 
     @Cuando("^Buscar en Smartlist (.*?) el termino (.*?)$")
-    public void buscarEnSmartlist(String txtQuickSearch, String busqueda) throws Exception {
+    public void searchInSmartlist(String txtQuickSearch, String busqueda) throws Exception {
         functions.searchInSmartlist(txtQuickSearch, busqueda);
     }
 
     @Entonces("^Validar informacion:$")
-    public void ValidateInfo(List<List<String>> table) throws Exception {
-        functions.ValidateInfo(table);
+    public void validateInfo(List<List<String>> table) throws Exception {
+        functions.validateInfo(table);
     }
 
     @Entonces("^Llenar formulario:$")
-    public void FillForm(List<List<String>> table) throws Exception {
-        functions.FillForm(table);
-    }
-
-    @Entonces("^Navegar$")
-    public void Navegar(List<List<String>> table) throws Exception {
-        functions.Navegar(table);
+    public void fillForm(List<List<String>> table) throws Exception {
+        functions.fillForm(table);
     }
 
     @Entonces("^Verificar que esten presentes:")
-    public void Verificar(List<List<String>> table) throws Exception {
-        functions.Verificar(table);
+    public void checkIfPresent(List<List<String>> table) throws Exception {
+        functions.checkIfPresent(table);
     }
 
     @Y("^Pausa (.*?)$")
-    public void Pausa(int segundos) throws Exception {
+    public void pause(int segundos) throws Exception {
         Thread.sleep(segundos * 1000L);
     }
 
     @Pero("seleccionar la empresa (.*?) si no está seleccionada$")
-    public void seleccionarLaEmpresaSiNoEstaSeleccionada(String empresa) throws Exception {
-        functions.seleccionarLaEmpresaSiNoEstaSeleccionada(empresa);
+    public void selectCompanyIfNotSelected(String empresa) throws Exception {
+        functions.selectCompanyIfNotSelected(empresa);
     }
 }

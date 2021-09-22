@@ -11,7 +11,6 @@ Característica: AreasFuncionales
  @Highest
  @PDS-1217
    #OBSERVACIONES
-   #- SeleniumFunction se va a dejar en inglés, revisar que todas estén en inglés
    #- Evaluar utilizar nombres en español para el stepdefinition y conjugarlos ej. hago click en
    #- Agregar tags
    #- Evaluar colocar en carpetas las Pages para mejor administración
