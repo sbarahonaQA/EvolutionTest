@@ -11,7 +11,6 @@ Característica: AreasFuncionales
  @Highest
  @PDS-1217
    #OBSERVACIONES
-   #- Agregar tags
    #- Evaluar colocar en carpetas las Pages para mejor administración
    #- Revisar los xpath
    #- Se cambio el Navegar por clicks inviduales
@@ -42,6 +41,11 @@ Característica: AreasFuncionales
      Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @areas_funcionales
+  @Highest
+  @PDS-1270
   Escenario: Editar un área funcional con información básica (PDS-1270)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
@@ -72,6 +76,11 @@ Característica: AreasFuncionales
     Entonces Prueba exitosa si elemento Nombre contiene texto ValorEditado
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @areas_funcionales
+  @Highest
+  @PDS-1274
   Escenario: Eliminar un área funcional con información básica (PDS-1274)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
@@ -93,6 +102,11 @@ Característica: AreasFuncionales
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @areas_funcionales
+  @Highest
+  @PDS-1271
   Escenario: Consultar un área funcional con información básica (PDS-1271)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
@@ -117,6 +131,11 @@ Característica: AreasFuncionales
       | GrupoCoporativoRO | Aseinfo             |
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @areas_funcionales
+  @Highest
+  @PDS-1216
   Escenario: Ver el listado de áreas funcionales (PDS-1216)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
@@ -136,6 +155,11 @@ Característica: AreasFuncionales
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @areas_funcionales
+  @Highest
+  @PDS-1269
   Escenario: Guardar un área funcional con los campos en blanco (PDS-1269)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
