@@ -96,7 +96,7 @@ public class AggregatedAsserts {
      */
     public void processAllAssertions() {
         if (errors.isEmpty()) {
-            log.info("No Assertion errors were thrown"); //replace with Logger if desired
+            log.info("No hay errores de afirmación"); //replace with Logger if desired
         } else {
             StringBuilder msgBuilder = new StringBuilder();
             for (Error error : errors) {
@@ -113,7 +113,7 @@ public class AggregatedAsserts {
                 }
             }
             log.error(msgBuilder.toString());
-            Assert.fail(errors.size() + " " + AssertionError.class.getSimpleName() + "(s) were thrown:" + NEW_LINE + msgBuilder.toString());
+            Assert.fail(errors.size() + " " + AssertionError.class.getSimpleName() + "(s) were thrown:" + NEW_LINE + msgBuilder);
         }
     }
 

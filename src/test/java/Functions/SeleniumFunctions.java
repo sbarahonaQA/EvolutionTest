@@ -315,15 +315,15 @@ public class SeleniumFunctions {
     public void searchInSmartlist(String cajaBusqueda, String busqueda) throws Exception {
         By cajaBusquedaElement = SeleniumFunctions.getCompleteElement(cajaBusqueda);
         By elementosMostrados = SeleniumFunctions.getCompleteElement("ElementosMostrados");
-        String retrieved_text = driver.findElement(elementosMostrados).getText();
+        String texto_inicial = driver.findElement(elementosMostrados).getText();
 
         driver.findElement(cajaBusquedaElement).clear();
         driver.findElement(cajaBusquedaElement).sendKeys(busqueda);
         driver.findElement(cajaBusquedaElement).sendKeys(Keys.RETURN);
         log.info("Buscando término en Smarlist: " + busqueda);
 
-        WebDriverWait wait = new WebDriverWait(driver,30);
-        wait.until(ExpectedConditions.invisibilityOfElementWithText(elementosMostrados, retrieved_text));
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.invisibilityOfElementWithText(elementosMostrados, texto_inicial));
     }
 
     public void scrollPage(String to)

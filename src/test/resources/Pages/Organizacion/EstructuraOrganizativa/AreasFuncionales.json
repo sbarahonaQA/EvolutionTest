@@ -23,17 +23,17 @@
 
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[1]/span[1]"
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
   },
 
   "NombreRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[2]/span[1]"
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[2]//span[1]"
   },
 
   "GrupoCoporativoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[3]/span[1]"
+    "ValueToFind": "//div[@id='main']//div[3]//span[1]"
   },
 
   "GuardarAreaFuncional": {

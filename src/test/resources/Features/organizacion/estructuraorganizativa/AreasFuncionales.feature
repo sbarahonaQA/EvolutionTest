@@ -11,9 +11,6 @@ Característica: AreasFuncionales
  @Highest
  @PDS-1217
    #OBSERVACIONES
-   #- Agregar el paso 2 de validar que se esté en ASEINFO Corporativo, sin oestá sería de seleccionar esa empresa
-   #- Agregar el paso 7 de verificar que esté el registro recien creado
-   #- Utilizar los mismos datos de la prueba del test
    #- SeleniumFunction se va a dejar en inglés, revisar que todas estén en inglés
    #- Evaluar utilizar nombres en español para el stepdefinition y conjugarlos ej. hago click en
    #- Agregar tags
@@ -26,24 +23,24 @@ Característica: AreasFuncionales
   Cuando Iniciar sesion con usuario gerenterrhh
   Entonces Cargar elementos de la pagina Inicio.json
   #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
-  Y Click a Organizacion
-  Y Cargar elementos de la pagina Organizacion.json
-  Y Click a EstructuraOrganizativa
-  Y Cargar elementos de la pagina EstructuraOrganizativa.json
-  Y Click a Catalogo
+  * Click a Organizacion
+  * Cargar elementos de la pagina Organizacion.json
+  * Click a EstructuraOrganizativa
+  * Cargar elementos de la pagina EstructuraOrganizativa.json
+  * Click a Catalogo
   Entonces Esperar que el elemento AreasFuncionales este presente
-  Y Click a AreasFuncionales
-  Y Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
-  Y Click a Nuevo
+  * Click a AreasFuncionales
+  * Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
+  * Click a Nuevo
   Entonces Llenar formulario:
     | Nombre | Área Funcional 1 |
-   Y Adjuntar captura de pantalla al reporte
-   Y Click a GuardarAreaFuncional
-   Y Refrescar pagina
+   * Adjuntar captura de pantalla al reporte
+   * Click a GuardarAreaFuncional
+   * Refrescar pagina
    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino Área Funcional 1
-   Y Click a PrimerElementoDeSmartlist
-   Y Click a Editar
-   Y Adjuntar captura de pantalla al reporte
+   * Click a PrimerElementoDeSmartlist
+   * Click a Editar
+   * Adjuntar captura de pantalla al reporte
    Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
 
   @test
@@ -51,74 +48,92 @@ Característica: AreasFuncionales
     Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
-    Entonces Cargar elementos de la pagina AreasFuncionales.json
-    Entonces Navegar
-      | Organizacion | EstructuraOrganizativa | Catalogo |
-    Entonces Esperar que el elemento AreaFuncional este presente
-    Entonces Navegar
-      | AreaFuncional |
-    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 145
-    Y Click a PrimerElementoDeSmartlist
-    Y Click a Editar
+    Entonces Cargar elementos de la pagina Inicio.json
+  #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Cargar elementos de la pagina Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Cargar elementos de la pagina EstructuraOrganizativa.json
+    * Click a Catalogo
+    Entonces Esperar que el elemento AreasFuncionales este presente
+    * Click a AreasFuncionales
+    * Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
+    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 133
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Adjuntar captura de pantalla al reporte
     Entonces Llenar formulario:
       | Nombre | ValorEditado |
-    Y Capturar pantalla: PDS-1270-datos
-    Y Click a GuardarAreaFuncional
-    Y Capturar pantalla: PDS-1270-resultado
-    Entonces Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto El área funcional ha sido guardada correctamente
+    * Adjuntar captura de pantalla al reporte
+    * Click a GuardarAreaFuncional
+    * Refrescar pagina
+    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 133
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Adjuntar captura de pantalla al reporte
+    Entonces Prueba exitosa si elemento Nombre contiene texto ValorEditado
 
   @test
   Escenario: Eliminar un área funcional con información básica (PDS-1274)
     Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
-    Entonces Cargar elementos de la pagina AreasFuncionales.json
-    Entonces Navegar
-      | Organizacion | EstructuraOrganizativa | Catalogo |
-    Entonces Esperar que el elemento AreaFuncional este presente
-    Entonces Navegar
-      | AreaFuncional |
-    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 149
-    Y Click a PrimerElementoDeSmartlist
+    Entonces Cargar elementos de la pagina Inicio.json
+    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Cargar elementos de la pagina Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Cargar elementos de la pagina EstructuraOrganizativa.json
+    * Click a Catalogo
+    Entonces Esperar que el elemento AreasFuncionales este presente
+    * Click a AreasFuncionales
+    * Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
+    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 15
+    * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
-    Entonces Esperar que el elemento Mensaje este visible
-    Y Capturar pantalla: PDS-1274-resultado
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Area funcional eliminada correctamente
+    Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
   Escenario: Consultar un área funcional con información básica (PDS-1271)
     Dado que carga Evolution
-  Entonces Cargar elementos de la pagina Login.json
-  Cuando Iniciar sesion con usuario auditoria
-  Entonces Cargar elementos de la pagina AreasFuncionales.json
-  Entonces Navegar
-    | Organizacion | EstructuraOrganizativa | Catalogo |
-  Entonces Esperar que el elemento AreaFuncional este presente
-  Entonces Navegar
-    | AreaFuncional |
-  Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 8
-  Y Click a PrimerElementoDeSmartlist
-  * Click a Detalles
-    Y Adjuntar captura de pantalla al reporte
-  Entonces Validar informacion:
-    | CodigoRO          | 8                   |
-    | NombreRO          | Atención al Cliente |
-    | GrupoCoporativoRO | Aseinfo             |
+    Entonces Cargar elementos de la pagina Login.json
+    Cuando Iniciar sesion con usuario auditoria
+    Entonces Cargar elementos de la pagina Inicio.json
+    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Cargar elementos de la pagina Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Cargar elementos de la pagina EstructuraOrganizativa.json
+    * Click a Catalogo
+    Entonces Esperar que el elemento AreasFuncionales este presente
+    * Click a AreasFuncionales
+    * Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
+    Cuando Buscar en Smartlist CajaBusquedaSmartlist el termino 8
+    * Click a PrimerElementoDeSmartlist
+    * Click a Detalles
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | CodigoRO          | 8                   |
+      | NombreRO          | Atención al Cliente |
+      | GrupoCoporativoRO | Aseinfo             |
 
   @test
   Escenario: Ver el listado de áreas funcionales (PDS-1216)
     Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
-    Entonces Cargar elementos de la pagina AreasFuncionales.json
-    Entonces Navegar
-      | Organizacion | EstructuraOrganizativa | Catalogo |
-    Entonces Esperar que el elemento AreaFuncional este presente
-    Entonces Navegar
-      | AreaFuncional |
-    Y Capturar pantalla: PDS-1216-resultado
+    Entonces Cargar elementos de la pagina Inicio.json
+    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Cargar elementos de la pagina Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Cargar elementos de la pagina EstructuraOrganizativa.json
+    * Click a Catalogo
+    Entonces Esperar que el elemento AreasFuncionales este presente
+    * Click a AreasFuncionales
+    * Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
+    * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
@@ -127,15 +142,19 @@ Característica: AreasFuncionales
     Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
-    Entonces Cargar elementos de la pagina AreasFuncionales.json
-    Entonces Navegar
-      | Organizacion | EstructuraOrganizativa | Catalogo |
-    Entonces Esperar que el elemento AreaFuncional este presente
-    Entonces Navegar
-      | AreaFuncional | Nuevo |
-    Y Click a GuardarAreaFuncional
-    Y Pausa 5
-    Y Capturar pantalla: PDS-1269-resultado
+    Entonces Cargar elementos de la pagina Inicio.json
+    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Cargar elementos de la pagina Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Cargar elementos de la pagina EstructuraOrganizativa.json
+    * Click a Catalogo
+    Entonces Esperar que el elemento AreasFuncionales este presente
+    * Click a AreasFuncionales
+    * Cargar elementos de la pagina Organizacion/EstructuraOrganizativa/AreasFuncionales.json
+    * Click a Nuevo
+    * Click a GuardarAreaFuncional
+    * Adjuntar captura de pantalla al reporte
     Entonces Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese el nombre del área funcional
 
