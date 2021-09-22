@@ -426,4 +426,23 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
+    public void seleccionarLaEmpresaSiNoEstaSeleccionada(String empresa) throws Exception {
+        // Locating the Main Menu (Parent element)
+        WebElement mainMenu = driver.findElement(SeleniumFunctions.getCompleteElement("Empresa"));
+
+        //Instantiating Actions class
+        Actions actions = new Actions(driver);
+
+        //Hovering on main menu
+        actions.moveToElement(mainMenu);
+
+        // Locating the element from Sub Menu
+        WebElement subMenu = driver.findElement(SeleniumFunctions.getCompleteElement("ASEINFOCorporativo"));
+
+        //To mouseover on sub menu
+        actions.moveToElement(subMenu);
+
+        //build()- used to compile all the actions into a single step
+        actions.click().build().perform();
+    }
 }
