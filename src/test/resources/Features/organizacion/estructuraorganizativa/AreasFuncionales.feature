@@ -21,11 +21,11 @@ Característica: AreasFuncionales
    #- Revisar los xpath
    #- Se cambio el Navegar por clicks inviduales
  Escenario: Crear un área funcional con información básica (PDS-1217)
-  Dado Cargar Evolution
+  Dado que carga Evolution
   Entonces Cargar elementos de la pagina Login.json
   Cuando Iniciar sesion con usuario gerenterrhh
   Entonces Cargar elementos de la pagina Inicio.json
-   #Y Seleccionar ASEINFO Corporativo de la lista Empresas
+  #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
   Y Click a Organizacion
   Y Cargar elementos de la pagina Organizacion.json
   Y Click a EstructuraOrganizativa
@@ -48,7 +48,7 @@ Característica: AreasFuncionales
 
   @test
   Escenario: Editar un área funcional con información básica (PDS-1270)
-    Dado Cargar Evolution
+    Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
     Entonces Cargar elementos de la pagina AreasFuncionales.json
@@ -70,7 +70,7 @@ Característica: AreasFuncionales
 
   @test
   Escenario: Eliminar un área funcional con información básica (PDS-1274)
-    Dado Cargar Evolution
+    Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
     Entonces Cargar elementos de la pagina AreasFuncionales.json
@@ -89,7 +89,7 @@ Característica: AreasFuncionales
 
   @test
   Escenario: Consultar un área funcional con información básica (PDS-1271)
-  Dado Cargar Evolution
+    Dado que carga Evolution
   Entonces Cargar elementos de la pagina Login.json
   Cuando Iniciar sesion con usuario auditoria
   Entonces Cargar elementos de la pagina AreasFuncionales.json
@@ -109,7 +109,7 @@ Característica: AreasFuncionales
 
   @test
   Escenario: Ver el listado de áreas funcionales (PDS-1216)
-    Dado Cargar Evolution
+    Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
     Entonces Cargar elementos de la pagina AreasFuncionales.json
@@ -124,7 +124,7 @@ Característica: AreasFuncionales
 
   @test
   Escenario: Guardar un área funcional con los campos en blanco (PDS-1269)
-    Dado Cargar Evolution
+    Dado que carga Evolution
     Entonces Cargar elementos de la pagina Login.json
     Cuando Iniciar sesion con usuario gerenterrhh
     Entonces Cargar elementos de la pagina AreasFuncionales.json
