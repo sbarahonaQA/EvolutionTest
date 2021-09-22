@@ -307,6 +307,7 @@ public class SeleniumFunctions {
     }
 
     public void searchInSmartlist(String cajaBusqueda, String busqueda) throws Exception {
+        //TODO Analizar los casos cuando solamente se tiene un registro y la busqueda regresa ese mismo registro
         By cajaBusquedaElement = SeleniumFunctions.getCompleteElement(cajaBusqueda);
         By elementosMostrados = SeleniumFunctions.getCompleteElement("ElementosMostrados");
         String texto_inicial = driver.findElement(elementosMostrados).getText();

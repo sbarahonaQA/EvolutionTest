@@ -10,9 +10,6 @@ Característica: AreasFuncionales
  @areas_funcionales
  @Highest
  @PDS-1217
-   #OBSERVACIONES
-   #- Revisar los xpath
-   #- Se cambio el Navegar por clicks inviduales
  Escenario: Crear un área funcional con información básica (PDS-1217)
     Dado que carga Evolution
     Entonces Se cargan elementos de la pagina Login.json

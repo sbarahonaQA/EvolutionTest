@@ -6,5 +6,9 @@
   "Catalogo": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//a[contains(text(),'Catálogo')]"
+  },
+  "Centros_de_costo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='task']//a[contains(text(),'Centros de costo')]"
   }
 }

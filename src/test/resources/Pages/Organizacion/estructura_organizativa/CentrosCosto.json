@@ -1,19 +1,4 @@
 {
-  "Organizacion": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/div[2]/a[2]"
-  },
-
-  "EstructuraOrganizativa": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/h2[1]/a[1]"
-  },
-
-  "CentrosDeCosto": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[2]/fieldset[1]/div[1]/div[5]/div[3]/div[2]/h2[1]/a[1]"
-  },
-
   "Nuevo": {
     "GetFieldBy": "Id",
     "ValueToFind": "smlCentroCosto_new"
