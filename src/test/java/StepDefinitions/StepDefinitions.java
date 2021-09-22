@@ -44,7 +44,7 @@ public class StepDefinitions{
         driver.manage().window().maximize();
     }
 
-    @Entonces("^Cargar elementos de la pagina (.*)")
+    @Entonces("^Se cargan elementos de la pagina (.*)")
     public void iLoadTheDOMInformation(String file) throws Exception {
         SeleniumFunctions.FileName = file;
         SeleniumFunctions.readJson();
@@ -61,7 +61,7 @@ public class StepDefinitions{
         functions.doubleClick(element);
     }
 
-    @Cuando("^Iniciar sesion con usuario (.*)")
+    @Cuando("^Inicio sesion con usuario (.*)")
     public void iSetLoginCredentials(String username) throws Exception {
         functions.iSetLoginCredentials(username);
     }
