@@ -15,13 +15,11 @@ Característica: AreasFuncionales
     Entonces Se cargan elementos de la pagina Login.json
     Cuando Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento AreasFuncionales este presente
     * Click a AreasFuncionales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
     * Click a Nuevo
@@ -47,13 +45,11 @@ Característica: AreasFuncionales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento AreasFuncionales este presente
     * Click a AreasFuncionales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 133
@@ -82,19 +78,18 @@ Característica: AreasFuncionales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento AreasFuncionales este presente
     * Click a AreasFuncionales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 15
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 134
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
+    * Refrescar pagina
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
@@ -108,13 +103,11 @@ Característica: AreasFuncionales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento AreasFuncionales este presente
     * Click a AreasFuncionales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 8
@@ -137,7 +130,6 @@ Característica: AreasFuncionales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -161,7 +153,6 @@ Característica: AreasFuncionales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa

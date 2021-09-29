@@ -33,7 +33,7 @@
 
   "GrupoCoporativoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[@id='main']//div[3]//span[1]"
+    "ValueToFind": "(//fieldset)[1]/div[3]/span[1]"
   },
 
   "GuardarAreaFuncional": {

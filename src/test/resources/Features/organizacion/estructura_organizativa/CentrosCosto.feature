@@ -4,6 +4,10 @@
 Característica: CentrosCosto
   Pruebas para entidad CentrosCosto
 
+  #Revisar lo siguiente:
+  #- Falta seleccionar el área funcional del paso 5
+  #- Esta fallando, al parecer no espera a finalizar la búsqueda y editar el primer registro luego de guardar
+  #- En el assert falta validar el resto de campos
   @test
   @organizacion
   @estructura_organizativa
@@ -15,7 +19,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -36,6 +39,9 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Adjuntar captura de pantalla al reporte
     Entonces Prueba exitosa si elemento Descripcion contiene texto Control de Calidad
 
+  #Revisar lo siguiente:
+  #- Falta ingresar los otros campos del paso 5
+  #- En el assert falta validar el resto de campos
   @test
   @organizacion
   @estructura_organizativa
@@ -47,7 +53,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -71,7 +76,8 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Adjuntar captura de pantalla al reporte
     Entonces Prueba exitosa si elemento Descripcion contiene texto Costos Editado Basico
 
-
+  #Revisar lo siguiente:
+  #- Utilizar el registro indicado en el paso 5
   @test
   @organizacion
   @estructura_organizativa
@@ -83,7 +89,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
-    #Pero seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
