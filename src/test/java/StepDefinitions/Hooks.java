@@ -36,7 +36,9 @@ public class Hooks {
 	    	driver = CreateDriver.initConfig();
 	    	
 	    	log.info("***********************************************************************************************************");
-			log.info("[ Escenario ] - "+ scenario.getName());
+			if (scenario != null) {
+				log.info("[ Escenario ] - "+ scenario.getName());
+			}
 			log.info("***********************************************************************************************************");
 	    }	 
 	     

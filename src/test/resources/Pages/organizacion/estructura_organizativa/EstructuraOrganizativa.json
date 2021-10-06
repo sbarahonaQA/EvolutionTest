@@ -10,5 +10,9 @@
   "Centros_de_costo": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='task']//a[contains(text(),'Centros de costo')]"
+  },
+  "TiposCondicionesTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de condiciones de trabajo"
   }
 }

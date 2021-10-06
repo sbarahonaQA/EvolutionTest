@@ -392,6 +392,28 @@ public class SeleniumFunctions {
         w.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
     }
 
+    public void waitForTextToBePresentInElement(String text , String element) throws Exception {
+        int reps = 0;
+        Boolean found = false;
+        By seleniumElement;
+
+        while (reps <= 10) {
+            seleniumElement = SeleniumFunctions.getCompleteElement(element);
+
+            if (!driver.findElement(seleniumElement).getText().equals(text)) {
+                Thread.sleep(1000);
+            } else {
+                found = true;
+                break;
+            }
+            reps++;
+        }
+
+        if (!found) {
+            throw new NoSuchElementException("The text: " + text + " has not been found in element: " + element);
+        }
+    }
+
     /******** Form ********/
 
     public void validateInfo(List<List<String>> rows) throws Exception {
