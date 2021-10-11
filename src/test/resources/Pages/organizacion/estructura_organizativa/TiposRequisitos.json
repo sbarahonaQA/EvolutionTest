@@ -1,0 +1,52 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTipoRequisito_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTipoRequisito_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTipoRequisito_delete"
+  },
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTipoRequisito_txtQuickSearch"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura"
+  },
+
+  "GuardarTipodeRequisito": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTipoRequisito"
+  },
+  "RegresarAListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarTipoRequisito"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}
