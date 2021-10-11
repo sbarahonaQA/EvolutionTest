@@ -8,7 +8,27 @@
     "ValueToFind": "companiaselector"
   },
   "ASEINFOCorporativo": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//a[contains(@href, 'ASEINFO Corporativo (Aseinfo)')]"
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Corporativo"
+  },
+  "ASEINFOElSalvador": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO El Salvador"
+  },
+  "ASEINFOGuatemala": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Guatemala"
+  },
+  "ASEINFOHonduras": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Honduras"
+  },
+  "ListaEmpresas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ddlGrupoCompaniaSelector"
+  },
+  "EmpresaActual": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "companiaselector"
   }
 }
