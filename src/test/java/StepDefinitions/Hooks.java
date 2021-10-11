@@ -10,9 +10,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
 public class Hooks {
 	
 		public static WebDriver driver;
@@ -25,26 +22,21 @@ public class Hooks {
 		}
 
 		@Before
-	    /**
-	     * Delete all cookies at the start of each scenario to avoid
-	     * shared state between tests
-	     */
-	    public void initDriver() throws MalformedURLException {
+	    public void initDriver() {
 			log.info("***********************************************************************************************************");
 			log.info("[ Configuration ] - Inicia configuracion del driver");
 			log.info("***********************************************************************************************************");
 	    	driver = CreateDriver.initConfig();
 	    	
 	    	log.info("***********************************************************************************************************");
-			log.info("[ Escenario ] - "+ scenario.getName());
+			if (scenario != null) {
+				log.info("[ Escenario ] - "+ scenario.getName());
+			}
 			log.info("***********************************************************************************************************");
 	    }	 
 	     
 	 	@After
-	 	/**
-	     * Embed a screenshot in test report if test is marked as failed
-	     */
-	    public void embedScreenshot(Scenario scenario) throws IOException {
+	    public void embedScreenshot(Scenario scenario) {
 
 	        if(scenario.isFailed()) {
 		        try {
@@ -52,7 +44,6 @@ public class Hooks {
 		        	scenario.write("URL actual: " + driver.getCurrentUrl());
 		            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		            scenario.embed(screenshot, "src/test/resources/Data/Screenshots/Failed");
-					//functions.ScreenShot(scenario.getName());
 		        } catch (WebDriverException somePlatformsDontSupportScreenshots) {
 		            System.err.println(somePlatformsDontSupportScreenshots.getMessage());
 		        }
