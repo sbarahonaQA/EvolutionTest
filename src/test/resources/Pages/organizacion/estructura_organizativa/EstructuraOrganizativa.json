@@ -14,5 +14,9 @@
   "TiposCondicionesTrabajo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de condiciones de trabajo"
+  },
+  "TiposRequisitos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[@id='container']/div[@id='main']/div[@id='right']/div[@id='innerright']/div[2]/fieldset[3]/div[1]/div[8]/div[3]/div[2]/h2[1]/a[1]"
   }
 }

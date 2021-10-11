@@ -11,9 +11,10 @@ Característica: AreasFuncionales
  @PDS-1217
  Escenario: Crear un área funcional con información básica (PDS-1217)
     Dado que carga Evolution
-    Entonces Se cargan elementos de la pagina Login.json
-    Cuando Inicio sesion con usuario gerenterrhh
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa

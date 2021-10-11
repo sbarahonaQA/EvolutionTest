@@ -169,7 +169,7 @@ public class SeleniumFunctions {
             result = By.linkText(ValueToFind);
         } else if ("name".equalsIgnoreCase(GetFieldBy)) {
             result = By.name(ValueToFind);
-        } else if ("link".equalsIgnoreCase(GetFieldBy)) {
+        } else if ("partialLinkText".equalsIgnoreCase(GetFieldBy)) {
             result = By.partialLinkText(ValueToFind);
         } else if ("tagName".equalsIgnoreCase(GetFieldBy)) {
             result = By.tagName(ValueToFind);
@@ -433,7 +433,7 @@ public class SeleniumFunctions {
         }
     }
 
-    /******** Without classification ********/
+    /******** No classification ********/
 
     public void saveInScenario(String key, String text) {
 
@@ -457,12 +457,39 @@ public class SeleniumFunctions {
     }
 
     public void selectCompanyIfNotSelected(String empresa) throws Exception {
-        WebElement mainMenu = driver.findElement(SeleniumFunctions.getCompleteElement("Empresa"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(mainMenu);
-        WebElement subMenu = driver.findElement(SeleniumFunctions.getCompleteElement("ASEINFOCorporativo"));
-        actions.moveToElement(subMenu);
-        actions.click().build().perform();
+        String empresaActual = getTextElement("EmpresaActual");
+
+        if (!empresaActual.contains(empresa)) {
+
+            WebElement dropdown = driver.findElement(SeleniumFunctions.getCompleteElement("ListaEmpresas"));
+            Actions action = new Actions(driver);
+            action.moveToElement(dropdown).perform();
+
+            WebElement subMenu = null;
+            WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+            By SeleniumElement = null;
+
+            switch (empresa) {
+                case "ASEINFO Corporativo":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOCorporativo");
+                    break;
+                case "ASEINFO El Salvador":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOElSalvador");
+                    break;
+                case "ASEINFO Guatemala":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOGuatemala");
+                    break;
+                case "ASEINFO Honduras":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOHonduras");
+                    break;
+            }
+
+            subMenu = driver.findElement(SeleniumElement);
+            wait.until(ExpectedConditions.elementToBeClickable(subMenu));
+
+            action.moveToElement(subMenu);
+            action.click().build().perform();
+        }
     }
 
     public static String getPassword(String usuario) throws Exception {
