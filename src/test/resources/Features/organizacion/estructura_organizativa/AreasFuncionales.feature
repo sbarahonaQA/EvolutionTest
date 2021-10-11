@@ -1,13 +1,12 @@
 # language: es
 
-@example
+@organizacion
+@estructura_organizativa
+@areas_funcionales
 Característica: AreasFuncionales
   Pruebas para entidad AreasFuncionales
 
  @test
- @organizacion
- @estructura_organizativa
- @areas_funcionales
  @Highest
  @PDS-1217
  Escenario: Crear un área funcional con información básica (PDS-1217)
@@ -36,9 +35,6 @@ Característica: AreasFuncionales
      Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @areas_funcionales
   @Highest
   @PDS-1270
   Escenario: Editar un área funcional con información básica (PDS-1270)
@@ -69,9 +65,6 @@ Característica: AreasFuncionales
     Entonces Prueba exitosa si elemento Nombre contiene texto ValorEditado
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @areas_funcionales
   @Highest
   @PDS-1274
   Escenario: Eliminar un área funcional con información básica (PDS-1274)
@@ -94,9 +87,6 @@ Característica: AreasFuncionales
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @areas_funcionales
   @Highest
   @PDS-1271
   Escenario: Consultar un área funcional con información básica (PDS-1271)
@@ -121,9 +111,6 @@ Característica: AreasFuncionales
       | GrupoCoporativoRO | Aseinfo             |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @areas_funcionales
   @Highest
   @PDS-1216
   Escenario: Ver el listado de áreas funcionales (PDS-1216)
@@ -144,9 +131,6 @@ Característica: AreasFuncionales
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @areas_funcionales
   @Highest
   @PDS-1269
   Escenario: Guardar un área funcional con los campos en blanco (PDS-1269)
