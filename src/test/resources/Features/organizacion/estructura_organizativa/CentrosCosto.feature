@@ -1,6 +1,8 @@
 # language: es
 
-@example
+@organizacion
+@estructura_organizativa
+@centros_costo
 Característica: CentrosCosto
   Pruebas para entidad CentrosCosto
 
@@ -9,9 +11,6 @@ Característica: CentrosCosto
   #- Esta fallando, al parecer no espera a finalizar la búsqueda y editar el primer registro luego de guardar
   #- En el assert falta validar el resto de campos
   @test
-  @organizacion
-  @estructura_organizativa
-  @centros_costo
   @Highest
   @PDS-1251
 Escenario: Crear un centro de costo con información básica (PDS-1751)
@@ -43,9 +42,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
   #- Falta ingresar los otros campos del paso 5
   #- En el assert falta validar el resto de campos
   @test
-  @organizacion
-  @estructura_organizativa
-  @centros_costo
   @Highest
   @PDS-1754
   Escenario: Editar un centro de costo con información básica (PDS-1754)
@@ -79,9 +75,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
   #Revisar lo siguiente:
   #- Utilizar el registro indicado en el paso 5
   @test
-  @organizacion
-  @estructura_organizativa
-  @centros_costo
   @Highest
   @PDS-1755
   Escenario: Eliminar un centro de costo (PDS-1755)
