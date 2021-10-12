@@ -1,49 +1,46 @@
 # language: es
 
-@example
-Característica: Frecuencias
-  Pruebas para entidad Frecu
-  encias
-
+@organizacion
+@estructura_organizativa
+@tipos_condiciones_trabajo
+Característica: TiposCondicionesTrabajo
+  Pruebas para entidad TiposCondicionesTrabajo
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Frecuencias
   @Highest
-  @PDS-1375
-Escenario: Crear una frecuencia con información básica (PDS-1375)
+  @PDS-1450
+  Escenario: Crear un tipos de condiciones de trabajo con información básica (PDS-1450)
     Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    Entonces Se cargan elementos de la pagina Login.json
+    Cuando Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Click a TiposCondicionesTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion | Creacion Basica |
-    | Abreviatura | CB-PDS1375 |
+      | Descripcion | Tipo de condición básica |
+      | Abreviatura | pds1450 |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarFrecuencia
+    * Click a Guardar
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de condición básica
+    * Esperar a que aparezca el texto Tipo de condición básica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Creacion Basica
+    Entonces Validar informacion:
+      | Descripcion | Tipo de condición básica |
+      | Abreviatura | pds1450 |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Frecuencias
   @Highest
-  @PDS-1384
-  Escenario: Editar una frecuencia con información básica (PDS-1384)
+  @PDS-1468
+  Escenario: Editar un tipo de condición de trabajo con información básica (PDS-1468)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -52,32 +49,32 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editar
+    * Click a TiposCondicionesTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
+    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion | Editado |
-      | Abreviatura | E1384 |
+      | Descripcion | descripción editada |
+      | Abreviatura | pds1468 |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarFrecuencia
+    * Click a Guardar
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editado
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino pds1468
+    * Esperar a que aparezca el texto descripción editada en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Editado
+    Entonces Validar informacion:
+      | Descripcion | descripción editada |
+      | Abreviatura | pds1468 |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Frecuencias
   @Highest
-  @PDS-1386
-  Escenario: Eliminar una frecuencia (PDS-1386)
+  @PDS-1469
+  Escenario: Eliminar un tipo de condición de trabajo (PDS-1469)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -87,9 +84,10 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
+    * Click a TiposCondicionesTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
+    * Esperar a que aparezca el texto Para Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -97,12 +95,9 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Frecuencias
   @Highest
-  @PDS-1379
-  Escenario: Consultar una frecuencia con información básica (PDS-1379)
+  @PDS-1454
+  Escenario: Consultar un tipo de condición de trabajo con información básica (PDS-1454)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -112,24 +107,23 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino consulta
+    * Click a TiposCondicionesTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Consulta de Archivo y Campo
+    * Esperar a que aparezca el texto Consulta de Archivo y Campo en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 12                     |
-      | DescripcionRO     | consulta               |
-      | AbreviaturaRO     | c                      |
+      | CodigoRO | 16 |
+      | DescripcionRO | Consulta de Archivo y Campo |
+      | AbreviaturaRO | CAC |
+      | GrupoCoporativoRO | Aseinfo |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Frecuencias
   @Highest
-  @PDS-1374
-  Escenario: Ver el listado de frecuencias (PDS-1374)
+  @PDS-1448
+  Escenario: Ver el listado de tipos de condiciones de trabajo (PDS-1448)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -139,35 +133,30 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento Frecuencias este presente
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Click a TiposCondicionesTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
-
   @test
-  @organizacion
-  @estructura_organizativa
-  @Frecuencias
   @Highest
-  @PDS-1383
-  Escenario: Guardar una frecuencia con los campos en blanco (PDS-1383)
+  @PDS-1467
+  Escenario: Guardar un tipo de condición de trabajo con los campos en blanco (PDS-1467)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento Frecuencias este presente
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Click a TiposCondicionesTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Click a Nuevo
-    * Click a GuardarFrecuencia
+    * Click a Guardar
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
+

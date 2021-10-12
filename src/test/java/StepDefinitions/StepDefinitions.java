@@ -250,6 +250,12 @@ public class StepDefinitions{
         Thread.sleep(segundos * 1000L);
     }
 
+    @Y("^Esperar a que aparezca el texto (.*?) en el elemento (.*?)$")
+    public void esperarAQueAparezcaElTextoEnElElemento(String elemento, String texto) throws Exception {
+        functions.waitForTextToBePresentInElement(elemento, texto);
+    }
+
+
     /****** Guardar en contexto ********/
 
     @Entonces("^Guardar como contexto de escenario - llave (.*?) - valor (.*?)$")
