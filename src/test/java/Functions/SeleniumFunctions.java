@@ -118,11 +118,9 @@ public class SeleniumFunctions {
         FileUtils.copyFile(scrFile, new File(String.format("%s.png", screenShotName)));
     }
 
-    public byte[] attachScreenShot(){
+    public void attachScreenShot(){
         log.info("Adjuntando captura de pantalla");
-        byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
         Allure.addAttachment("CapturaPantalla", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
-        return screenshot;
     }
 
     /******** Alerts ********/
@@ -465,7 +463,6 @@ public class SeleniumFunctions {
             Actions action = new Actions(driver);
             action.moveToElement(dropdown).perform();
 
-            WebElement subMenu = null;
             WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
             By SeleniumElement = null;
 
@@ -484,7 +481,7 @@ public class SeleniumFunctions {
                     break;
             }
 
-            subMenu = driver.findElement(SeleniumElement);
+            WebElement subMenu = driver.findElement(SeleniumElement);
             wait.until(ExpectedConditions.elementToBeClickable(subMenu));
 
             action.moveToElement(subMenu);
