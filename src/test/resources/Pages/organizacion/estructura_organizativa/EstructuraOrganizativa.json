@@ -14,5 +14,9 @@
   "tiposFunciones":{
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset[3]/div/div[8]/div[1]/div[2]/h2/a"
+  },
+  "Frecuencias": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset[3]/div/div[4]/div[1]/div[2]/h2/a"
   }
 }
