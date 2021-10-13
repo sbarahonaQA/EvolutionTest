@@ -61,8 +61,8 @@ public class CreateDriver {
         /******** POM Information ********/
         log.info("[ POM Configuration ] - Browser: " + browser);
         log.info("[ POM Configuration ] - Modo Headless: " + headless);
-         log.info("[ POM Configuration ] - Servidor: " + servidor);
-         log.info("[ POM Configuration ] - Instancia: " + instancia);
+        log.info("[ POM Configuration ] - Servidor: " + servidor);
+        log.info("[ POM Configuration ] - Instancia: " + instancia);
         log.info("[ POM Configuration ] - Logger Level: " + logLevel);
         log.info("***********************************************************************************************************");
         

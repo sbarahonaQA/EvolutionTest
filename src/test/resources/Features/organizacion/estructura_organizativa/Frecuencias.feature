@@ -1,85 +1,95 @@
 # language: es
 
-@organizacion
-@estructura_organizativa
-@areas_funcionales
-Característica: AreasFuncionales
-  Pruebas para entidad AreasFuncionales
+@example
+Característica: Frecuencias
+  Pruebas para entidad Frecu
+  encias
 
- @test
- @Highest
- @PDS-1217
- Escenario: Crear un área funcional con información básica (PDS-1217)
+
+  @test
+  @organizacion
+  @estructura_organizativa
+  @Frecuencias
+  @Highest
+  @PDS-1375
+Escenario: Crear una frecuencia con información básica (PDS-1375)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a AreasFuncionales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
+    * Click a Frecuencias
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
     * Click a Nuevo
     * Llenar formulario:
-      | Nombre | Área Funcional 1 |
-     * Adjuntar captura de pantalla al reporte
-     * Click a GuardarAreaFuncional
-     * Refrescar pagina
-     * Buscar en Smartlist CajaBusquedaSmartlist el termino Área Funcional 1
-     * Click a PrimerElementoDeSmartlist
-     * Click a Editar
-     * Adjuntar captura de pantalla al reporte
-     Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
+    | Descripcion | Creacion Basica |
+    | Abreviatura | CB-PDS1375 |
+    * Adjuntar captura de pantalla al reporte
+    * Click a GuardarFrecuencia
+    * Refrescar pagina
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Adjuntar captura de pantalla al reporte
+    Entonces Prueba exitosa si elemento Descripcion contiene texto Creacion Basica
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @Frecuencias
   @Highest
-  @PDS-1270
-  Escenario: Editar un área funcional con información básica (PDS-1270)
+  @PDS-1384
+  Escenario: Editar una frecuencia con información básica (PDS-1384)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a AreasFuncionales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 133
+    * Click a Frecuencias
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre | ValorEditado |
+      | Descripcion | Editado |
+      | Abreviatura | E1384 |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarAreaFuncional
+    * Click a GuardarFrecuencia
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 133
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editado
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto ValorEditado
+    Entonces Prueba exitosa si elemento Descripcion contiene texto Editado
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @Frecuencias
   @Highest
-  @PDS-1274
-  Escenario: Eliminar un área funcional con información básica (PDS-1274)
+  @PDS-1386
+  Escenario: Eliminar una frecuencia (PDS-1386)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a AreasFuncionales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 134
+    * Click a Frecuencias
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -87,9 +97,12 @@ Característica: AreasFuncionales
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @Frecuencias
   @Highest
-  @PDS-1271
-  Escenario: Consultar un área funcional con información básica (PDS-1271)
+  @PDS-1379
+  Escenario: Consultar una frecuencia con información básica (PDS-1379)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -99,56 +112,62 @@ Característica: AreasFuncionales
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a AreasFuncionales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 8
+    * Click a Frecuencias
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino consulta
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 8                   |
-      | NombreRO          | Atención al Cliente |
-      | GrupoCoporativoRO | Aseinfo             |
+      | CodigoRO          | 12                     |
+      | DescripcionRO     | consulta               |
+      | AbreviaturaRO     | c                      |
 
   @test
+  @organizacion
+  @estructura_organizativa
+  @Frecuencias
   @Highest
-  @PDS-1216
-  Escenario: Ver el listado de áreas funcionales (PDS-1216)
+  @PDS-1374
+  Escenario: Ver el listado de frecuencias (PDS-1374)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento AreasFuncionales este presente
-    * Click a AreasFuncionales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
+    * Esperar que el elemento Frecuencias este presente
+    * Click a Frecuencias
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
+
   @test
+  @organizacion
+  @estructura_organizativa
+  @Frecuencias
   @Highest
-  @PDS-1269
-  Escenario: Guardar un área funcional con los campos en blanco (PDS-1269)
+  @PDS-1383
+  Escenario: Guardar una frecuencia con los campos en blanco (PDS-1383)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento AreasFuncionales este presente
-    * Click a AreasFuncionales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
+    * Esperar que el elemento Frecuencias este presente
+    * Click a Frecuencias
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
     * Click a Nuevo
-    * Click a GuardarAreaFuncional
+    * Click a GuardarFrecuencia
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese el nombre del área funcional
-
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida

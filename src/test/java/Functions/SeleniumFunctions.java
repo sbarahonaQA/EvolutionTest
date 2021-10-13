@@ -118,11 +118,9 @@ public class SeleniumFunctions {
         FileUtils.copyFile(scrFile, new File(String.format("%s.png", screenShotName)));
     }
 
-    public byte[] attachScreenShot(){
+    public void attachScreenShot(){
         log.info("Adjuntando captura de pantalla");
-        byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
         Allure.addAttachment("CapturaPantalla", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
-        return screenshot;
     }
 
     /******** Alerts ********/
@@ -169,7 +167,7 @@ public class SeleniumFunctions {
             result = By.linkText(ValueToFind);
         } else if ("name".equalsIgnoreCase(GetFieldBy)) {
             result = By.name(ValueToFind);
-        } else if ("link".equalsIgnoreCase(GetFieldBy)) {
+        } else if ("partialLinkText".equalsIgnoreCase(GetFieldBy)) {
             result = By.partialLinkText(ValueToFind);
         } else if ("tagName".equalsIgnoreCase(GetFieldBy)) {
             result = By.tagName(ValueToFind);
@@ -392,6 +390,28 @@ public class SeleniumFunctions {
         w.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
     }
 
+    public void waitForTextToBePresentInElement(String text , String element) throws Exception {
+        int reps = 0;
+        Boolean found = false;
+        By seleniumElement;
+
+        while (reps <= 10) {
+            seleniumElement = SeleniumFunctions.getCompleteElement(element);
+
+            if (!driver.findElement(seleniumElement).getText().equals(text)) {
+                Thread.sleep(1000);
+            } else {
+                found = true;
+                break;
+            }
+            reps++;
+        }
+
+        if (!found) {
+            throw new NoSuchElementException("The text: " + text + " has not been found in element: " + element);
+        }
+    }
+
     /******** Form ********/
 
     public void validateInfo(List<List<String>> rows) throws Exception {
@@ -411,7 +431,7 @@ public class SeleniumFunctions {
         }
     }
 
-    /******** Without classification ********/
+    /******** No classification ********/
 
     public void saveInScenario(String key, String text) {
 
@@ -435,12 +455,38 @@ public class SeleniumFunctions {
     }
 
     public void selectCompanyIfNotSelected(String empresa) throws Exception {
-        WebElement mainMenu = driver.findElement(SeleniumFunctions.getCompleteElement("Empresa"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(mainMenu);
-        WebElement subMenu = driver.findElement(SeleniumFunctions.getCompleteElement("ASEINFOCorporativo"));
-        actions.moveToElement(subMenu);
-        actions.click().build().perform();
+        String empresaActual = getTextElement("EmpresaActual");
+
+        if (!empresaActual.contains(empresa)) {
+
+            WebElement dropdown = driver.findElement(SeleniumFunctions.getCompleteElement("ListaEmpresas"));
+            Actions action = new Actions(driver);
+            action.moveToElement(dropdown).perform();
+
+            WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+            By SeleniumElement = null;
+
+            switch (empresa) {
+                case "ASEINFO Corporativo":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOCorporativo");
+                    break;
+                case "ASEINFO El Salvador":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOElSalvador");
+                    break;
+                case "ASEINFO Guatemala":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOGuatemala");
+                    break;
+                case "ASEINFO Honduras":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOHonduras");
+                    break;
+            }
+
+            WebElement subMenu = driver.findElement(SeleniumElement);
+            wait.until(ExpectedConditions.elementToBeClickable(subMenu));
+
+            action.moveToElement(subMenu);
+            action.click().build().perform();
+        }
     }
 
     public static String getPassword(String usuario) throws Exception {
