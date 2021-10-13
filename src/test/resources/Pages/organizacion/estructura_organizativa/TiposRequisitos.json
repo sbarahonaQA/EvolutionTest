@@ -11,6 +11,10 @@
     "GetFieldBy": "Id",
     "ValueToFind": "smlTipoRequisito_delete"
   },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTipoRequisito_edit"
+  },
   "CajaBusquedaSmartlist": {
     "GetFieldBy": "Id",
     "ValueToFind": "smlTipoRequisito_txtQuickSearch"
@@ -24,7 +28,26 @@
     "GetFieldBy": "Id",
     "ValueToFind": "Abreviatura"
   },
-
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//fieldset)[1]/div[1]/span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//fieldset)[1]/div[2]/span[1]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//fieldset)[1]/div[3]/span[1]"
+  },
+  "OperadorRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//fieldset)[1]/div[4]/span[1]"
+  },
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//fieldset)[1]/div[5]/span[1]"
+  },
   "GuardarTipodeRequisito": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarTipoRequisito"
