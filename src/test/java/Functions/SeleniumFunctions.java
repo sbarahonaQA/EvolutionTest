@@ -26,6 +26,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class SeleniumFunctions {
     static WebDriver driver;
@@ -303,6 +304,7 @@ public class SeleniumFunctions {
 
     public void checkPartialTextElementPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
+        log.info("Buscando texto: '" + texto + "' en texto del elemento '" + ElementText + "'");
         aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + elemento + " - texto: " + texto, ElementText.contains(texto));
         aggregatedAsserts.processAllAssertions();
     }
@@ -343,7 +345,7 @@ public class SeleniumFunctions {
     /******** Smartlist ********/
 
     public void searchInSmartlist(String cajaBusqueda, String busqueda) throws Exception {
-        //TODO Analizar los casos cuando solamente se tiene un registro y la busqueda regresa ese mismo registro
+        int reps = 0;
         By cajaBusquedaElement = SeleniumFunctions.getCompleteElement(cajaBusqueda);
         By elementosMostrados = SeleniumFunctions.getCompleteElement("ElementosMostrados");
         String texto_inicial = driver.findElement(elementosMostrados).getText();
@@ -351,10 +353,20 @@ public class SeleniumFunctions {
         driver.findElement(cajaBusquedaElement).clear();
         driver.findElement(cajaBusquedaElement).sendKeys(busqueda);
         driver.findElement(cajaBusquedaElement).sendKeys(Keys.RETURN);
-        log.info("Buscando término en Smarlist: " + busqueda);
+        log.info("Inicia búsqueda en Smarlist: " + busqueda);
 
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.invisibilityOfElementWithText(elementosMostrados, texto_inicial));
+        //Loop esperando que busqueda termine
+        while (reps <= 10) {
+            if (driver.findElement(elementosMostrados).getText().equals(texto_inicial)) {
+                TimeUnit.MILLISECONDS.sleep(1000);
+            } else {
+                log.info("Termina búsqueda en Smarlist: " + busqueda);
+                break;
+            }
+            reps++;
+        }
+        if(reps>=10)
+            log.info("No se encontró elemento en Smarlist (o solamente existe un registro)");
     }
 
     /******** Wait until expected conditions has met ********/
@@ -399,7 +411,7 @@ public class SeleniumFunctions {
             seleniumElement = SeleniumFunctions.getCompleteElement(element);
 
             if (!driver.findElement(seleniumElement).getText().equals(text)) {
-                Thread.sleep(1000);
+                TimeUnit.MILLISECONDS.sleep(1000);
             } else {
                 found = true;
                 break;
@@ -416,8 +428,8 @@ public class SeleniumFunctions {
 
     public void validateInfo(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
-            ElementText = getTextElement(columns.get(0));
-            aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + columns.get(0) + " - texto: " + columns.get(1), ElementText.contains(columns.get(1)));
+            ElementText = getTextElement(columns.get(0).trim());
+            aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + columns.get(0).trim() + " - texto: " + columns.get(1).trim(), ElementText.contains(columns.get(1).trim()));
         }
         aggregatedAsserts.processAllAssertions();
     }
