@@ -52,6 +52,7 @@
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarTipoRequisito"
   },
+
   "RegresarAListado": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnCancelarTipoRequisito"
@@ -70,6 +71,13 @@
   "ElementosMostrados": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+  "ColumnaAbreviaturaDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[3]"
+  },
+  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
   }
-
 }
