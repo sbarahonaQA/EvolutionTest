@@ -37,7 +37,10 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset[2]/div/div[2]/div[3]/div[2]/h2/a"
   },
-
+   "TiposCompetencia": {
+   "GetFieldBy": "Xpath",
+   "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset[2]/div/div[1]/div[3]/div[2]/h2/a"
+  },
   "Competencia": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//a[contains(text(),'Competencia')]"
