@@ -54,7 +54,7 @@ Característica: TiposUnidades
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre |  Registro Editado |
+      | Nombre | Registro Editado |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipoUnidad
     * Refrescar pagina
@@ -62,7 +62,7 @@ Característica: TiposUnidades
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto  Registro Editado
+    Entonces Prueba exitosa si elemento Nombre contiene texto Registro Editado
 
   @test
   @Highest
@@ -101,14 +101,14 @@ Característica: TiposUnidades
     * Click a Catalogo
     * Click a TiposUnidades
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 1
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino General
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 1                   |
-      | NombreRO          | General             |
-      | GrupoCoporativoRO | Aseinfo             |
+      | CodigoRO          | 1       |
+      | NombreRO          | General |
+      | GrupoCoporativoRO | Aseinfo |
 
   @test
   @Highest
@@ -150,4 +150,4 @@ Característica: TiposUnidades
     * Click a GuardarTipoUnidad
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese el nombre de Tipos Unidades
+    Entonces Prueba exitosa si elemento Mensaje contiene texto El nombre es requerido
