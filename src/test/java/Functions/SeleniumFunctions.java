@@ -6,17 +6,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,6 +47,8 @@ public class SeleniumFunctions {
 
     public static String GetFieldBy = "";
     public static String ValueToFind = "";
+    public static String FieldType = "";
+
 
     /******** Browser functions ********/
 
@@ -153,10 +147,11 @@ public class SeleniumFunctions {
 
     public static By getCompleteElement(String element) throws Exception {
         By result = null;
-        JSONObject Entity = readEntity(element);
 
+        JSONObject Entity = readEntity(element);
         GetFieldBy = (String) Entity.get("GetFieldBy");
         ValueToFind = (String) Entity.get("ValueToFind");
+        FieldType = Entity.get("FieldType") != null ? (String) Entity.get("FieldType") : "Texto";
 
         if ("className".equalsIgnoreCase(GetFieldBy)) {
             result = By.className(ValueToFind);
@@ -348,6 +343,7 @@ public class SeleniumFunctions {
         int reps = 0;
         By cajaBusquedaElement = SeleniumFunctions.getCompleteElement(cajaBusqueda);
         By elementosMostrados = SeleniumFunctions.getCompleteElement("ElementosMostrados");
+        By btnEditar = SeleniumFunctions.getCompleteElement("Editar");
         String texto_inicial = driver.findElement(elementosMostrados).getText();
 
         driver.findElement(cajaBusquedaElement).clear();
@@ -367,6 +363,10 @@ public class SeleniumFunctions {
         }
         if(reps>=10)
             log.info("No se encontró elemento en Smarlist (o solamente existe un registro)");
+
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        if(btnEditar!=null)
+            wait.until(ExpectedConditions.elementToBeClickable(btnEditar));
     }
 
     /******** Wait until expected conditions has met ********/
@@ -437,9 +437,27 @@ public class SeleniumFunctions {
     public void fillForm(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
-            driver.findElement(SeleniumElement).clear();
-            driver.findElement(SeleniumElement).sendKeys(columns.get(1));
-            log.info(String.format("Al elemento %s se le pone este texto %s", columns.get(0), columns.get(1)));
+
+            switch (FieldType){
+                case "Texto":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    log.info(String.format("Al elemento %s se le pone este texto %s", columns.get(0), columns.get(1)));
+                    break;
+                case "Lista":
+                    Select opt = new Select(driver.findElement(SeleniumElement));
+                    log.info("Seleccionando: " + columns.get(1) + " por texto");
+                    opt.selectByVisibleText(columns.get(1));
+                    break;
+                case "Radio":
+                    break;
+                case "Checkbox":
+                    break;
+                case "CodeCombo":
+                    break;
+                default:
+                    log.error("Manejo de tipo no disponible");
+            }
         }
     }
 
@@ -468,14 +486,13 @@ public class SeleniumFunctions {
 
     public void selectCompanyIfNotSelected(String empresa) throws Exception {
         String empresaActual = getTextElement("EmpresaActual");
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
 
         if (!empresaActual.contains(empresa)) {
-
             WebElement dropdown = driver.findElement(SeleniumFunctions.getCompleteElement("ListaEmpresas"));
             Actions action = new Actions(driver);
             action.moveToElement(dropdown).perform();
 
-            WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
             By SeleniumElement = null;
 
             switch (empresa) {
@@ -491,12 +508,14 @@ public class SeleniumFunctions {
                 case "ASEINFO Honduras":
                     SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOHonduras");
                     break;
+                case "ASEINFO Panamá":
+                    SeleniumElement = SeleniumFunctions.getCompleteElement("ASEINFOPanama");
+                    break;
             }
 
             WebElement subMenu = driver.findElement(SeleniumElement);
-            wait.until(ExpectedConditions.elementToBeClickable(subMenu));
-
             action.moveToElement(subMenu);
+            wait.until(ExpectedConditions.elementToBeClickable(subMenu));
             action.click().build().perform();
         }
     }

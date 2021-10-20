@@ -6,18 +6,15 @@
 Característica: CentrosCosto
   Pruebas para entidad CentrosCosto
 
-  #Revisar lo siguiente:
-  #- Falta seleccionar el área funcional del paso 5
-  #- Esta fallando, al parecer no espera a finalizar la búsqueda y editar el primer registro luego de guardar
-  #- En el assert falta validar el resto de campos
   @test
   @Highest
   @PDS-1251
 Escenario: Crear un centro de costo con información básica (PDS-1751)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -26,9 +23,11 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion | Control de Calidad |
-    | Abreviatura | CD |
-    | NomenContable | 12 |
+    | Descripcion   | Control de Calidad  |
+    | Abreviatura   | CD                  |
+    | NomenContable | 12                  |
+    | Compania      | ASEINFO Corporativo |
+    | AreaFuncional | Comercial           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCentroDeCosto
     * Refrescar pagina
@@ -36,33 +35,38 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Control de Calidad
+    Entonces Validar informacion:
+      | Descripcion   | Control de Calidad  |
+      | Abreviatura   | CD                  |
+      | NomenContable | 12                  |
+      | Compania      | ASEINFO Corporativo |
+      | AreaFuncional | Comercial           |
 
-  #Revisar lo siguiente:
-  #- Falta ingresar los otros campos del paso 5
-  #- En el assert falta validar el resto de campos
   @test
   @Highest
   @PDS-1754
   Escenario: Editar un centro de costo con información básica (PDS-1754)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Centros_de_costo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino CD
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion | Costos Editado Basico |
-      | Abreviatura | CEB |
-      | NomenContable | 12E |
+      | Descripcion   | Costos Editado Basico |
+      | Abreviatura   | CEB                   |
+      | NomenContable | 12E                   |
+      | Compania      | ASEINFO Guatemala     |
+      | AreaFuncional | Operaciones           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCentroDeCosto
     * Refrescar pagina
@@ -70,26 +74,101 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Costos Editado Basico
+    Entonces Validar informacion:
+      | Descripcion   | Costos Editado Basico |
+      | Abreviatura   | CEB                   |
+      | NomenContable | 12E                   |
+      | Compania      | ASEINFO Guatemala     |
+      | AreaFuncional | Operaciones           |
 
-  #Revisar lo siguiente:
-  #- Utilizar el registro indicado en el paso 5
   @test
   @Highest
   @PDS-1755
   Escenario: Eliminar un centro de costo (PDS-1755)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Centros_de_costo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino CD
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminación
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminación
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
+
+  @test
+  @Highest
+  @PDS-1752
+  Escenario: Consultar un centro de costo con información básica (PDS-1752)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario auditoria
+    * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Panamá si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Centros_de_costo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 121
+    * Click a PrimerElementoDeSmartlist
+    * Click a Detalles
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | CodigoRO        | 121                    |
+      | DescripcionRO   | Atención al Cliente PA |
+      | AbreviaturaRO   | SOP                    |
+      | NomenContableRO | SOP-PA-12              |
+      | CtaContableRO   | 12-SOP-008             |
+      | CompaniaRO      | ASEINFO Panamá         |
+      | AreaFuncionalRO | Atención al Cliente    |
+
+  @test
+  @Highest
+  @PDS-1750
+  Escenario: Ver el listado de centros de costo (PDS-1750)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Centros_de_costo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Adjuntar captura de pantalla al reporte
+    Entonces Verificar que esten presentes:
+      | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
+
+  @test
+  @Highest
+  @PDS-1753
+  Escenario: Guardar un centro de costo con los campos en blanco (PDS-1753)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Centros_de_costo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a Nuevo
+    * Click a GuardarCentroDeCosto
+    * Adjuntar captura de pantalla al reporte
+    * Esperar que el elemento Mensaje este visible
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La Descripción es requerida
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La Abreviatura es requerida
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La nomenclatura contable es requerida
