@@ -30,5 +30,17 @@
   "TiposUnidades": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "/html/body/div[1]/div[4]/div[2]/div[2]/div[2]/fieldset[3]/div/div[9]/div[1]/div[2]/h2/a"
+  },
+  "EquiposTrabajo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//fieldset[3]//div[1]//div[3]//div[3]//div[2]//h2[1]//a[1]"
+  },
+  "Competencia": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//fieldset[2]//h4[1]//a[1]"
+  },
+  "TiposCompetencia": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//fieldset[2]//div[1]//div[1]//div[3]//div[2]//h2[1]//a[1]"
   }
 }

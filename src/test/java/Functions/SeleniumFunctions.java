@@ -450,6 +450,14 @@ public class SeleniumFunctions {
                     opt.selectByVisibleText(columns.get(1));
                     break;
                 case "Radio":
+                    List<WebElement> radio = driver.findElements(SeleniumFunctions.getCompleteElement(columns.get(0)));
+                    for (WebElement webElement : radio) {
+                        if (webElement.getAttribute("value").equalsIgnoreCase(columns.get(1))) {
+                            webElement.click();
+                            log.info(String.format("Del radio %s se selecciona elemento con valor %s", columns.get(0), columns.get(1)));
+                            break;
+                        }
+                    }
                     break;
                 case "Checkbox":
                     break;
