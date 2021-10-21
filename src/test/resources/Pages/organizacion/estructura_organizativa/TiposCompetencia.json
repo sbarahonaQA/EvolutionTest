@@ -1,0 +1,64 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposCompetencia_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposCompetencia_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposCompetencia_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposCompetencia_edit"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "EsTecnica": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "EsTecnica",
+    "FieldType": "Checkbox"
+  },
+  "EsParaLiderazgo": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "EsParaLiderazgo",
+    "FieldType": "Checkbox"
+  },
+
+  "GuardarTipoCompetencia": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTipoCompetencia"
+  },
+  "CamcelarTipoCompetencia": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarTipoCompetencia"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposCompetencia_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}

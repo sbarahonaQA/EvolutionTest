@@ -404,7 +404,7 @@ public class SeleniumFunctions {
 
     public void waitForTextToBePresentInElement(String text , String element) throws Exception {
         int reps = 0;
-        Boolean found = false;
+        boolean found = false;
         By seleniumElement;
 
         while (reps <= 10) {
@@ -460,8 +460,13 @@ public class SeleniumFunctions {
                     }
                     break;
                 case "Checkbox":
-                    break;
-                case "CodeCombo":
+                    String checked = driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("checked");
+                    if(checked == null) checked = "";
+                    if(checked.equalsIgnoreCase("") && columns.get(1).equalsIgnoreCase("True")
+                        || checked.equalsIgnoreCase("true") && columns.get(1).equalsIgnoreCase("False")) {
+                        driver.findElement(SeleniumElement).click();
+                    }
+                    log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
                     break;
                 default:
                     log.error("Manejo de tipo no disponible");
