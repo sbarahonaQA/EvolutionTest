@@ -1,13 +1,12 @@
 # language: es
 
-@example
+@organizacion
+@estructura_organizativa
+@tipos_de_competencia
 Característica: TiposDeCompetencia
   Pruebas para entidad TiposCompetencia
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Tipos_De_Competencia
   @Highest
   @PDS-1604
   Escenario: Crear un tipo de competencia con información básica (PDS-1604)
@@ -29,16 +28,14 @@ Característica: TiposDeCompetencia
     * Click a GuardarTipoCompetencia
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de competencia básica
-    * Refrescar pagina
+    * Esperar a que aparezca el texto Tipo de competencia básica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Tipo de competencia básica
+    Entonces Validar informacion:
+      | Descripcion | Tipo de competencia básica |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Tipos_De_Competencia
   @Highest
   @PDS-1613
   Escenario: Editar un tipo de competencia con información básica (PDS-1613)
@@ -53,7 +50,8 @@ Característica: TiposDeCompetencia
     * Click a Competencia
     * Click a TiposCompetencia
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 7
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
+    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -62,16 +60,15 @@ Característica: TiposDeCompetencia
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipoCompetencia
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 7
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Descripción Editada
+    * Esperar a que aparezca el texto Descripción Editada en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Descripción Editada
+    Entonces Validar informacion:
+      | Descripcion | Descripción Editada  |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Tipos_De_Competencia
   @Highest
   @PDS-1614
   Escenario: Eliminar un tipo de competencia (PDS-1614)
@@ -86,7 +83,8 @@ Característica: TiposDeCompetencia
     * Click a Competencia
     * Click a TiposCompetencia
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 8
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
+    * Esperar a que aparezca el texto Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -94,9 +92,6 @@ Característica: TiposDeCompetencia
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Tipos_De_Competencia
   @Highest
   @PDS-1605
   Escenario: Consultar un tipo de competencia con información básica (PDS-1605)
@@ -111,7 +106,8 @@ Característica: TiposDeCompetencia
     * Click a Competencia
     * Click a TiposCompetencia
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 2
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino De Gestión
+    * Esperar a que aparezca el texto De Gestión en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
@@ -120,9 +116,6 @@ Característica: TiposDeCompetencia
       | DescripcionRO     | De Gestión                    |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Tipos_De_Competencia
   @Highest
   @PDS-1600
   Escenario: Ver el listado de tipos de competencia (PDS-1600)
@@ -143,9 +136,6 @@ Característica: TiposDeCompetencia
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Tipos_De_Competencia
   @Highest
   @PDS-1612
   Escenario: Guardar un tipo de competencia con los campos en blanco (PDS-1612)

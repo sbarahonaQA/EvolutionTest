@@ -59,6 +59,9 @@
   "ElementosMostrados": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"smlTiposCompetencia_grid\"]/div[4]/span[2]"
+  },
+  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
   }
-
 }

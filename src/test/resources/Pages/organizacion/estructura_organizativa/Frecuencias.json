@@ -70,6 +70,9 @@
     "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
   },
 
-
+  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
+  }
 
 }

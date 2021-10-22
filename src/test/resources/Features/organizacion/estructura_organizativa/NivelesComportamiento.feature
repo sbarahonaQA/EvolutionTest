@@ -1,13 +1,12 @@
 # language: es
 
-@example
+@organizacion
+@estructura_organizativa
+@niveles_de_comportamiento
 Característica: NivelesComportamiento
   Pruebas para entidad Niveles de Comportamiento
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Niveles_de_Comportamiento
   @Highest
   @PDS-1632
   Escenario: Crear un nivel de comportamiento con información básica (PDS-1632)
@@ -30,16 +29,15 @@ Característica: NivelesComportamiento
     * Click a GuardarNivelComportamiento
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
-    * Refrescar pagina
+    * Esperar a que aparezca el texto Creacion Basica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Creacion Basica
+    Entonces Validar informacion:
+      | Descripcion | Creacion Basica |
+      | Abreviatura | CB              |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Niveles_de_Comportamiento
   @Highest
   @PDS-1635
   Escenario: Editar un nivel de comportamiento con información básica (PDS-1635)
@@ -54,7 +52,8 @@ Característica: NivelesComportamiento
     * Click a Competencia
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 8
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
+    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -64,16 +63,16 @@ Característica: NivelesComportamiento
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarNivelComportamiento
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 8
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica Editada
+    * Esperar a que aparezca el texto Creacion Basica Editada en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Creacion Basica Editada
+    Entonces Validar informacion:
+      | Descripcion | Creacion Basica Editada  |
+      | Abreviatura | CBE                      |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Niveles_de_Comportamiento
   @Highest
   @PDS-1636
   Escenario: Eliminar un nivel de comportamiento (PDS-1636)
@@ -88,7 +87,8 @@ Característica: NivelesComportamiento
     * Click a Competencia
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 9
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
+    * Esperar a que aparezca el texto Para Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -96,9 +96,6 @@ Característica: NivelesComportamiento
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Niveles_de_Comportamiento
   @Highest
   @PDS-1633
   Escenario: Consultar un nivel de comportamiento con información básica (PDS-1633)
@@ -113,7 +110,8 @@ Característica: NivelesComportamiento
     * Click a Competencia
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 7
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Consultar Archivo y Adicional
+    * Esperar a que aparezca el texto Consultar Archivo y Adicional en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
@@ -124,9 +122,6 @@ Característica: NivelesComportamiento
       | GrupoCoporativoRO | Aseinfo                       |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Niveles_de_Comportamiento
   @Highest
   @PDS-1631
   Escenario: Ver el listado de niveles de comportamientos (PDS-1631)
@@ -147,9 +142,6 @@ Característica: NivelesComportamiento
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
-  @organizacion
-  @estructura_organizativa
-  @Niveles_de_Comportamiento
   @Highest
   @PDS-1634
   Escenario: Guardar un nivel de comportamiento con los campos en blanco (PDS-1634)
