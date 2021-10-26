@@ -182,12 +182,26 @@ public class SeleniumFunctions {
         if(ElementText.isEmpty())
             ElementText = driver.findElement(SeleniumElement).getAttribute("value");
 
-        //Validacion para checkbox
         String tipo = driver.findElement(SeleniumElement).getAttribute("type");
+
+        //Validacion para checkbox
         if(tipo != null && tipo.equalsIgnoreCase("checkbox")){
             String checked = driver.findElement(SeleniumElement).getAttribute("checked");
             if(checked == null) ElementText = "false";
             else if(checked.equalsIgnoreCase("checked")) ElementText = "true";
+        }
+
+        //Validacion para radio
+        if(tipo != null && tipo.equalsIgnoreCase("radio")) {
+            List<WebElement> radio = driver.findElements(SeleniumElement);
+            for (WebElement webElement : radio) {
+                String checked = webElement.getAttribute("checked");
+                if(checked == null) continue;
+                else if (checked.equalsIgnoreCase("true")) {
+                    ElementText = webElement.getAttribute("value");
+                    break;
+                }
+            }
         }
         return ElementText;
     }
