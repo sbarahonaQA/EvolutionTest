@@ -181,6 +181,14 @@ public class SeleniumFunctions {
         ElementText = driver.findElement(SeleniumElement).getText();
         if(ElementText.isEmpty())
             ElementText = driver.findElement(SeleniumElement).getAttribute("value");
+
+        //Validacion para checkbox
+        String tipo = driver.findElement(SeleniumElement).getAttribute("type");
+        if(tipo != null && tipo.equalsIgnoreCase("checkbox")){
+            String checked = driver.findElement(SeleniumElement).getAttribute("checked");
+            if(checked == null) ElementText = "false";
+            else if(checked.equalsIgnoreCase("checked")) ElementText = "true";
+        }
         return ElementText;
     }
 
