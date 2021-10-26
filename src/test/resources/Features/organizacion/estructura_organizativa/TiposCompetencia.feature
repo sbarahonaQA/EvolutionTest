@@ -29,9 +29,11 @@ Característica: TiposCompetencia
       | EsParaLiderazgo | False                      |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipoCompetencia
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de competencia básica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Tipo de competencia básica
+    Entonces Validar informacion:
+      | Descripcion     | Tipo de competencia básica |
+      | EsTecnica       | True                       |
+      | EsParaLiderazgo | False                      |

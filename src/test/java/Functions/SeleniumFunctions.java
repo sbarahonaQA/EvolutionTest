@@ -429,7 +429,7 @@ public class SeleniumFunctions {
     public void validateInfo(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
             ElementText = getTextElement(columns.get(0).trim());
-            aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + columns.get(0).trim() + " - texto: " + columns.get(1).trim(), ElementText.contains(columns.get(1).trim()));
+            aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + columns.get(0).trim() + " - texto: " + columns.get(1).trim(), ElementText.toUpperCase().contains(columns.get(1).trim().toUpperCase()));
         }
         aggregatedAsserts.processAllAssertions();
     }

@@ -37,7 +37,7 @@
   },
   "Competencia": {
     "GetFieldBy": "LinkText",
-    "ValueToFind": "Competencias"
+    "ValueToFind": "Competencia"
   },
   "TiposCompetencia": {
     "GetFieldBy": "LinkText",
