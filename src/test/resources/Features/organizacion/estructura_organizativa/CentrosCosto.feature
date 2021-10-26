@@ -8,7 +8,7 @@ Característica: CentrosCosto
 
   @test
   @Highest
-  @PDS-1251
+  @PDS-1751
 Escenario: Crear un centro de costo con información básica (PDS-1751)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
