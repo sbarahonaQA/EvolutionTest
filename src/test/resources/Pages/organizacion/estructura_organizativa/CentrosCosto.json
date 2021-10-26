@@ -16,6 +16,10 @@
     "ValueToFind": "smlCentroCosto_edit"
   },
 
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado"
+  },
   "Descripcion": {
     "GetFieldBy": "Name",
     "ValueToFind": "Descripcion"
@@ -77,7 +81,11 @@
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarCentroCosto"
   },
-  "GuardarYEnviarAFlujoCentroDeCosto": {
+  "GuardarYProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "GuardarYEnviarAAutorizacion": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarIniciarFlujo"
   },

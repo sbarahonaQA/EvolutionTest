@@ -44,6 +44,45 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
 
   @test
   @Highest
+  @PDS-3547
+  Escenario: Crear un centro de costo con toda la información (PDS-3547)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario soporteit
+    * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a CentrosDeCosto
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a Nuevo
+    * Llenar formulario:
+      | Descripcion   | Contabilidad CORP   |
+      | Abreviatura   | CONT                |
+      | NomenContable | 100                 |
+      | CtaContable   | 1                   |
+      | Compania      | ASEINFO Corporativo |
+      | AreaFuncional | Comercial           |
+    * Adjuntar captura de pantalla al reporte
+    * Click a GuardarYProcesar
+    * Refrescar pagina
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Contabilidad CORP
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | Estado        | Vigente             |
+      | Descripcion   | Contabilidad CORP   |
+      | Abreviatura   | CONT                |
+      | NomenContable | 100                 |
+      | CtaContable   | 1                   |
+      | Compania      | ASEINFO Corporativo |
+      | AreaFuncional | Comercial           |
+
+  @test
+  @Highest
   @PDS-1754
   Escenario: Editar un centro de costo con información básica (PDS-1754)
     Dado que carga Evolution
