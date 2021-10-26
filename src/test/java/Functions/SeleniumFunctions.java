@@ -340,33 +340,13 @@ public class SeleniumFunctions {
     /******** Smartlist ********/
 
     public void searchInSmartlist(String cajaBusqueda, String busqueda) throws Exception {
-        int reps = 0;
+        log.info("Inicia búsqueda en Smarlist: " + busqueda);
         By cajaBusquedaElement = SeleniumFunctions.getCompleteElement(cajaBusqueda);
-        By elementosMostrados = SeleniumFunctions.getCompleteElement("ElementosMostrados");
-        By btnEditar = SeleniumFunctions.getCompleteElement("Editar");
-        String texto_inicial = driver.findElement(elementosMostrados).getText();
-
         driver.findElement(cajaBusquedaElement).clear();
         driver.findElement(cajaBusquedaElement).sendKeys(busqueda);
         driver.findElement(cajaBusquedaElement).sendKeys(Keys.RETURN);
-        log.info("Inicia búsqueda en Smarlist: " + busqueda);
-
-        //Loop esperando que busqueda termine
-        while (reps <= 10) {
-            if (driver.findElement(elementosMostrados).getText().equals(texto_inicial)) {
-                TimeUnit.MILLISECONDS.sleep(1000);
-            } else {
-                log.info("Termina búsqueda en Smarlist: " + busqueda);
-                break;
-            }
-            reps++;
-        }
-        if(reps>=10)
-            log.info("No se encontró elemento en Smarlist (o solamente existe un registro)");
-
-        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
-        if(btnEditar!=null)
-            wait.until(ExpectedConditions.elementToBeClickable(btnEditar));
+        TimeUnit.SECONDS.sleep(5);
+        log.info("Termina búsqueda en Smarlist: " + busqueda);
     }
 
     /******** Wait until expected conditions has met ********/
