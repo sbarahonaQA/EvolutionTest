@@ -19,7 +19,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Centros_de_costo
+    * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Click a Nuevo
     * Llenar formulario:
@@ -55,7 +55,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Centros_de_costo
+    * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
@@ -94,7 +94,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Centros_de_costo
+    * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminación
     * Click a PrimerElementoDeSmartlist
@@ -116,7 +116,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Centros_de_costo
+    * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 121
     * Click a PrimerElementoDeSmartlist
@@ -144,7 +144,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Centros_de_costo
+    * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -163,7 +163,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Centros_de_costo
+    * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
     * Click a Nuevo
     * Click a GuardarCentroDeCosto

@@ -21,7 +21,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Click a Nuevo
     * Llenar formulario:
@@ -52,7 +52,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 22
     * Click a PrimerElementoDeSmartlist
@@ -86,7 +86,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 23
     * Click a PrimerElementoDeSmartlist
@@ -111,7 +111,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 21
     * Click a PrimerElementoDeSmartlist
@@ -141,7 +141,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
     * Esperar que el elemento tiposFunciones este presente
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -165,7 +165,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
     * Esperar que el elemento tiposFunciones este presente
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Click a Nuevo
     * Click a GuardarTipoFuncion
