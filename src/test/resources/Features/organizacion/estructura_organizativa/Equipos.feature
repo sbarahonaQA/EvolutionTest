@@ -29,9 +29,11 @@ Característica: Equipos
       | EquipoEspecial | True              |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarEquipo
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Equipo de Trabajo
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Equipo de Trabajo
+    Entonces Validar informacion:
+      | Descripcion    | Equipo de Trabajo |
+      | Abreviatura    | ET                |
+      | EquipoEspecial | True              |
