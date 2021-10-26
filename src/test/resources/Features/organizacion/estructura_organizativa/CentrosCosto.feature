@@ -135,11 +135,11 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a CentrosDeCosto
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminación
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminación
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion
     Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
 
   @test
