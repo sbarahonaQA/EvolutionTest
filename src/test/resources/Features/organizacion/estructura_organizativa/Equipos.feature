@@ -26,7 +26,7 @@ Característica: Equipos
     * Llenar formulario:
       | Descripcion    | Equipo de Trabajo |
       | Abreviatura    | ET                |
-      | EquipoEspecial | True              |
+      | EquipoEspecial | False             |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarEquipo
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Equipo de Trabajo
@@ -36,4 +36,4 @@ Característica: Equipos
     Entonces Validar informacion:
       | Descripcion    | Equipo de Trabajo |
       | Abreviatura    | ET                |
-      | EquipoEspecial | True              |
+      | EquipoEspecial | False             |
