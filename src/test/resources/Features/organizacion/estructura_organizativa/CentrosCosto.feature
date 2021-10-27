@@ -27,20 +27,20 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     | Abreviatura   | CD                  |
     | NomenContable | 12                  |
     | Compania      | ASEINFO Corporativo |
-    | AreaFuncional | Comercial           |
+    | AreaFuncional | Operaciones         |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCentroDeCosto
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Control de Calidad
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
+      | Estado        | Pendiente           |
       | Descripcion   | Control de Calidad  |
       | Abreviatura   | CD                  |
       | NomenContable | 12                  |
       | Compania      | ASEINFO Corporativo |
-      | AreaFuncional | Comercial           |
+      | AreaFuncional | Operaciones         |
 
   @test
   @Highest
@@ -48,7 +48,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
   Escenario: Crear un centro de costo con toda la información (PDS-3547)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario soporteit
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
@@ -67,7 +67,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
       | AreaFuncional | Comercial           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarYProcesar
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Contabilidad CORP
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
@@ -87,7 +86,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
   Escenario: Editar un centro de costo con información básica (PDS-1754)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    * Inicio sesion con usuario soporteit
     * Se cargan elementos de la pagina inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
@@ -104,11 +103,11 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
       | Descripcion   | Costos Editado Basico |
       | Abreviatura   | CEB                   |
       | NomenContable | 12E                   |
+      | CtaContable   | 1E                    |
       | Compania      | ASEINFO Guatemala     |
       | AreaFuncional | Operaciones           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCentroDeCosto
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Costos Editado Basico
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
@@ -117,6 +116,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
       | Descripcion   | Costos Editado Basico |
       | Abreviatura   | CEB                   |
       | NomenContable | 12E                   |
+      | CtaContable   | 1E                    |
       | Compania      | ASEINFO Guatemala     |
       | AreaFuncional | Operaciones           |
 
@@ -163,6 +163,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
       | CodigoRO        | 121                    |
+      | Estado          | Vigente                |
       | DescripcionRO   | Atención al Cliente PA |
       | AbreviaturaRO   | SOP                    |
       | NomenContableRO | SOP-PA-12              |
@@ -209,5 +210,5 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La Descripción es requerida
-    Entonces Prueba exitosa si elemento Mensaje contiene texto La Abreviatura es requerida
-    Entonces Prueba exitosa si elemento Mensaje contiene texto La nomenclatura contable es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto La Abreviatura es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto La nomenclatura contable es requerida
