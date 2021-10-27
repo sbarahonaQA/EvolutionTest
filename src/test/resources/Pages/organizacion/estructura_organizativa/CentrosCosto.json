@@ -52,6 +52,10 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@id='right']//div[1]//span[1]"
   },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"

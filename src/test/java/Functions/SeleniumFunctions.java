@@ -510,6 +510,7 @@ public class SeleniumFunctions {
     public void selectCompanyIfNotSelected(String empresa) throws Exception {
         String empresaActual = getTextElement("EmpresaActual");
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        TimeUnit.SECONDS.sleep(5);
 
         if (!empresaActual.contains(empresa)) {
             WebElement dropdown = driver.findElement(SeleniumFunctions.getCompleteElement("ListaEmpresas"));

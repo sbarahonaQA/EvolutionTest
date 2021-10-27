@@ -163,7 +163,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
       | CodigoRO        | 121                    |
-      | Estado          | Vigente                |
+      | EstadoRO        | Vigente                |
       | DescripcionRO   | Atención al Cliente PA |
       | AbreviaturaRO   | SOP                    |
       | NomenContableRO | SOP-PA-12              |
