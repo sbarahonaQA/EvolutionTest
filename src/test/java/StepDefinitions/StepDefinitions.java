@@ -308,6 +308,11 @@ public class StepDefinitions{
         functions.checkPartialTextElementNotPresent(element, text);
     }
 
+    @Entonces("^Prueba exitosa si elemento (.*?) es igual al texto (.*?)$")
+    public void pruebaExitosaSiElementoEsIgualTexto(String element,String text) throws Exception {
+        functions.checkTextElement(element, text);
+    }
+
     /** Assert if element is present*/
     @Entonces("^Prueba exitosa si (.*?) esta presente$")
     public void pruebaExitosaSiEstaPresente(String element) throws Exception {

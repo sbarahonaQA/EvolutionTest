@@ -196,10 +196,11 @@ public class SeleniumFunctions {
             List<WebElement> radio = driver.findElements(SeleniumElement);
             for (WebElement webElement : radio) {
                 String checked = webElement.getAttribute("checked");
-                if(checked == null) continue;
-                else if (checked.equalsIgnoreCase("true")) {
-                    ElementText = webElement.getAttribute("value");
-                    break;
+                if(checked != null) {
+                    if (checked.equalsIgnoreCase("true")) {
+                        ElementText = webElement.getAttribute("value");
+                        break;
+                    }
                 }
             }
         }
@@ -316,13 +317,20 @@ public class SeleniumFunctions {
 
     public void checkPartialTextElementNotPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
-        aggregatedAsserts.assertFalse("Texto NO esta presente en elemento: " + elemento + " - texto: " + texto, !ElementText.contains(texto));
+        aggregatedAsserts.assertFalse("Texto NO esta presente en elemento: " + elemento + " - texto: " + texto, !ElementText.toUpperCase().contains(texto.toUpperCase()));
     }
 
     public void checkPartialTextElementPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
         log.info("Buscando texto: '" + texto + "' en texto del elemento '" + ElementText + "'");
-        aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + elemento + " - texto: " + texto, ElementText.contains(texto));
+        aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + elemento + " - texto: " + texto, ElementText.toUpperCase().contains(texto.toUpperCase()));
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void checkTextElement(String elemento,String texto) throws Exception {
+        ElementText = getTextElement(elemento);
+        log.info("Verificando texto: '" + texto + "' con texto del elemento '" + ElementText + "'");
+        aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - es igual a texto: " + texto, ElementText.equals(texto));
         aggregatedAsserts.processAllAssertions();
     }
 
