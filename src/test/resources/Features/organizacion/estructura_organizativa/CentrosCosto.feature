@@ -86,7 +86,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
   Escenario: Editar un centro de costo con información básica (PDS-1754)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario soporteit
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
