@@ -66,6 +66,8 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
       | AreaFuncional | Comercial           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarYProcesar
+    #Esperando que el registro se autorice
+    * Esperar 1 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Contabilidad CORP
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
