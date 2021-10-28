@@ -382,7 +382,8 @@ public class SeleniumFunctions {
         driver.findElement(cajaBusquedaElement).clear();
         driver.findElement(cajaBusquedaElement).sendKeys(busqueda);
         driver.findElement(cajaBusquedaElement).sendKeys(Keys.RETURN);
-        TimeUnit.SECONDS.sleep(5);
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//table[@class='k-selectable']"))));
         log.info("Termina búsqueda en Smarlist: " + busqueda);
     }
 
