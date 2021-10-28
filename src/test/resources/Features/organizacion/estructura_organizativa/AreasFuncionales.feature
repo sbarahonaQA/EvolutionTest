@@ -27,12 +27,12 @@ Característica: AreasFuncionales
       | Nombre | Área Funcional 1 |
      * Adjuntar captura de pantalla al reporte
      * Click a GuardarAreaFuncional
-     * Refrescar pagina
      * Buscar en Smartlist CajaBusquedaSmartlist el termino Área Funcional 1
      * Click a PrimerElementoDeSmartlist
      * Click a Editar
      * Adjuntar captura de pantalla al reporte
-     Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
+     Entonces Validar informacion:
+      | Nombre | Área Funcional 1 |
 
   @test
   @Highest
@@ -58,12 +58,12 @@ Característica: AreasFuncionales
       | Nombre | ValorEditado |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarAreaFuncional
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 133
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto ValorEditado
+    Entonces Validar informacion:
+      | Nombre | ValorEditado |
 
   @test
   @Highest
@@ -81,11 +81,12 @@ Característica: AreasFuncionales
     * Click a Catalogo
     * Click a AreasFuncionales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 134
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 136
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
-    Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
+    Entonces Validar informacion:
+      | ElementosMostrados | No hay registros. |
 
   @test
   @Highest
