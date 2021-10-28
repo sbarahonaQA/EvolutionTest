@@ -45,7 +45,7 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
   @test
   @Highest
   @PDS-3547
-  Escenario: Crear un centro de costo con toda la información (PDS-3547)
+  Escenario: Guardar y procesar un centro de costo con información básica (PDS-3547)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -62,7 +62,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
       | Descripcion   | Contabilidad CORP   |
       | Abreviatura   | CONT                |
       | NomenContable | 100                 |
-      | CtaContable   | 1                   |
       | Compania      | ASEINFO Corporativo |
       | AreaFuncional | Comercial           |
     * Adjuntar captura de pantalla al reporte
@@ -76,7 +75,6 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
       | Descripcion   | Contabilidad CORP   |
       | Abreviatura   | CONT                |
       | NomenContable | 100                 |
-      | CtaContable   | 1                   |
       | Compania      | ASEINFO Corporativo |
       | AreaFuncional | Comercial           |
 
