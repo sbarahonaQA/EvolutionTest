@@ -183,9 +183,9 @@ public class StepDefinitions{
 
     /** Handle and accept a JavaScript alert */
     @Entonces("^Aceptar alerta$")
-    public void aceptarAlerta()
-    {
+    public void aceptarAlerta() throws InterruptedException {
         functions.acceptAlert();
+        TimeUnit.SECONDS.sleep(1);
     }
 
     /** Handle and dismiss a JavaScript alert */
