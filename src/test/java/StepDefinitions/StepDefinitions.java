@@ -310,7 +310,12 @@ public class StepDefinitions{
 
     @Entonces("^Prueba exitosa si elemento (.*?) es igual al texto (.*?)$")
     public void pruebaExitosaSiElementoEsIgualTexto(String element,String text) throws Exception {
-        functions.checkTextElement(element, text);
+        functions.checkTextElementPresent(element, text);
+    }
+
+    @Entonces("^Prueba exitosa si elemento (.*?) no es igual al texto (.*?)$")
+    public void pruebaExitosaSiElementoNoEsIgualTexto(String element,String text) throws Exception {
+        functions.checkTextElementNotPresent(element, text);
     }
 
     /** Assert if element is present*/

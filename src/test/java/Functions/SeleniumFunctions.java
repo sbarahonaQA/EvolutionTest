@@ -327,10 +327,17 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void checkTextElement(String elemento,String texto) throws Exception {
+    public void checkTextElementPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
         log.info("Verificando texto: '" + texto + "' con texto del elemento '" + ElementText + "'");
         aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - es igual a texto: " + texto, ElementText.equals(texto));
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void checkTextElementNotPresent(String elemento,String texto) throws Exception {
+        ElementText = getTextElement(elemento);
+        log.info("Verificando texto: '" + texto + "' sea diferente texto del elemento '" + ElementText + "'");
+        aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - es igual a texto: " + texto, !ElementText.equals(texto));
         aggregatedAsserts.processAllAssertions();
     }
 
