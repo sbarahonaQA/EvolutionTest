@@ -139,8 +139,8 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion
-    Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
+    Entonces Validar informacion:
+      | ElementosMostrados | No hay registros. |
 
   @test
   @Highest
