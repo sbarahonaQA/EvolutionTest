@@ -245,9 +245,9 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
-    @Y("^Pausa (.*?)$")
-    public void pausa(int segundos) throws Exception {
-        Thread.sleep(segundos * 1000L);
+    @Y("^Esperar (.*?) segundos$")
+    public void esperar(int segundos) throws InterruptedException {
+        TimeUnit.SECONDS.sleep(segundos);
     }
 
     @Y("^Esperar a que aparezca el texto (.*?) en el elemento (.*?)$")
