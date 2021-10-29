@@ -68,8 +68,5 @@
   "AbreviaturaRO": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
-  },
-
-
-
+  }
 }

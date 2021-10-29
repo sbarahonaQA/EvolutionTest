@@ -28,12 +28,12 @@
 
   "NombreRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[2]//span[1]"
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
   },
 
   "GrupoCoporativoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//fieldset)[1]/div[3]/span[1]"
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
   },
 
   "GuardarTipoUnidad": {
