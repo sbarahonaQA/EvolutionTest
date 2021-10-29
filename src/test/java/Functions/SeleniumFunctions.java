@@ -185,22 +185,17 @@ public class SeleniumFunctions {
         String tipo = driver.findElement(SeleniumElement).getAttribute("type");
 
         //Validacion para checkbox
-        if(tipo != null && tipo.equalsIgnoreCase("checkbox")){
-            String checked = driver.findElement(SeleniumElement).getAttribute("checked");
-            if(checked == null) ElementText = "false";
-            else if(checked.equalsIgnoreCase("checked")) ElementText = "true";
+        if(tipo != null && tipo.equalsIgnoreCase("checkbox")) {
+            ElementText = String.valueOf(driver.findElement(SeleniumElement).isSelected());
         }
 
         //Validacion para radio
         if(tipo != null && tipo.equalsIgnoreCase("radio")) {
             List<WebElement> radio = driver.findElements(SeleniumElement);
             for (WebElement webElement : radio) {
-                String checked = webElement.getAttribute("checked");
-                if(checked != null) {
-                    if (checked.equalsIgnoreCase("true")) {
-                        ElementText = webElement.getAttribute("value");
-                        break;
-                    }
+                if (webElement.isSelected()) {
+                    ElementText = webElement.getAttribute("value");
+                    break;
                 }
             }
         }
@@ -478,13 +473,12 @@ public class SeleniumFunctions {
                     }
                     break;
                 case "Checkbox":
-                    String checked = driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("checked");
-                    if(checked == null) checked = "";
-                    if(checked.equalsIgnoreCase("") && columns.get(1).equalsIgnoreCase("True")
-                        || checked.equalsIgnoreCase("true") && columns.get(1).equalsIgnoreCase("False")) {
-                        driver.findElement(SeleniumElement).click();
+                    if((Boolean.parseBoolean(columns.get(1)) && !driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).isSelected())
+                       || (!Boolean.parseBoolean(columns.get(1)) && driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).isSelected()))
+                    {
+                        log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
+                        driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).click();
                     }
-                    log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
                     break;
                 default:
                     log.error("Manejo de tipo no disponible");
