@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EvolutionTest" />
         <module name="Evolution" />
+        <module name="EvolutionTest4" />
       </profile>
     </annotationProcessing>
   </component>

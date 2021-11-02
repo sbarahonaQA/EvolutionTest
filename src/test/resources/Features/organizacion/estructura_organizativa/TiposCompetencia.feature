@@ -37,3 +37,4 @@ Característica: TiposCompetencia
       | Descripcion     | Tipo de competencia básica |
       | EsTecnica       | True                       |
       | EsParaLiderazgo | False                      |
+
