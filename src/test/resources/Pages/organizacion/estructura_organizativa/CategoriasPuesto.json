@@ -1,55 +1,54 @@
 {
   "Nuevo": {
     "GetFieldBy": "Id",
-    "ValueToFind": "smlTiposCompetencia_new"
+    "ValueToFind": "smlCategorias_new"
   },
   "Editar": {
     "GetFieldBy": "Id",
-    "ValueToFind": "smlTiposCompetencia_edit"
+    "ValueToFind": "smlCategorias_edit"
   },
   "Eliminar": {
     "GetFieldBy": "Id",
-    "ValueToFind": "smlTiposCompetencia_delete"
+    "ValueToFind": "smlCategorias_delete"
   },
   "Detalles": {
     "GetFieldBy": "Id",
-    "ValueToFind": "smlTiposCompetencia_edit"
+    "ValueToFind": "smlCategorias_edit"
   },
   "Descripcion": {
-    "GetFieldBy": "Id",
+    "GetFieldBy": "Name",
     "ValueToFind": "Descripcion",
     "FieldType": "Texto"
   },
-  "EsTecnica": {
-    "GetFieldBy": "Name",
-    "ValueToFind": "EsTecnica",
-    "FieldType": "Checkbox"
+  "Clasificacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoClasificacion",
+    "FieldType": "Lista"
   },
-  "EsParaLiderazgo": {
-    "GetFieldBy": "Name",
-    "ValueToFind": "EsParaLiderazgo",
-    "FieldType": "Checkbox"
-  },
-
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
   },
-
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "ClasificacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
   },
 
-  "GuardarTipoCompetencia": {
+  "GuardarCategoriaPuesto": {
     "GetFieldBy": "Name",
-    "ValueToFind": "btnGuardarTipoCompetencia"
+    "ValueToFind": "btnGuardarCategoriaPuesto"
   },
-
-
-  "CancelarAreaFuncional": {
+  "CancelarCategoria": {
     "GetFieldBy": "Name",
-    "ValueToFind": "btnCancelarAreaFuncional"
+    "ValueToFind": "btnCancelarCategoria"
   },
 
   "Mensaje": {
@@ -59,7 +58,7 @@
 
   "CajaBusquedaSmartlist": {
     "GetFieldBy": "Id",
-    "ValueToFind": "smlTiposCompetencia_txtQuickSearch"
+    "ValueToFind": "smlCategorias_txtQuickSearch"
   },
 
   "PrimerElementoDeSmartlist": {
@@ -71,7 +70,6 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//span[@class='k-pager-info k-label']"
   },
-
   "ColumnaDescripcionDePrimerElementoDeSmartlist": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"

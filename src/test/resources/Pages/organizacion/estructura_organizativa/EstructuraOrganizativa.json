@@ -11,7 +11,7 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de costo"
   },
-  "TiposFunciones": {
+  "TiposFunciones":{
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de funciones"
   },
@@ -42,5 +42,13 @@
   "TiposCompetencia": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de Competencia"
+},
+  "NivelesComportamiento": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Niveles de comportamientos"
+  },
+  "CategoriasPuestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de puestos"
   }
 }
