@@ -42,5 +42,9 @@
   "TiposCompetencia": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de Competencia"
+  },
+  "CentrosTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Centros de trabajo"
   }
 }
