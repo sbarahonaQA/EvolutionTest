@@ -7,7 +7,7 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
   },
-  "CentrosDeCosto": {
+"CentrosDeCosto": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de costo"
   },
@@ -39,13 +39,13 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencia"
   },
-  "TiposCompetencia": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Tipos de Competencia"
-},
   "NivelesComportamiento": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Niveles de comportamientos"
+  },
+   "TiposCompetencia": {
+   "GetFieldBy": "LinkText",
+   "ValueToFind": "Tipos de Competencia"
   },
   "CategoriasPuestos": {
     "GetFieldBy": "LinkText",

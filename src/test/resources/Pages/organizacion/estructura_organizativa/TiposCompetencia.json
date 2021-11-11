@@ -35,21 +35,26 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
   },
-
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+  },
+  "EsTecnicaRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsTecnica"
+  },
+  "EsParaLiderazgoRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsParaLiderazgo"
   },
 
   "GuardarTipoCompetencia": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarTipoCompetencia"
   },
-
-
-  "CancelarAreaFuncional": {
+  "CancelarTipoCompetencia": {
     "GetFieldBy": "Name",
-    "ValueToFind": "btnCancelarAreaFuncional"
+    "ValueToFind": "btnCancelarTipoCompetencia"
   },
 
   "Mensaje": {
