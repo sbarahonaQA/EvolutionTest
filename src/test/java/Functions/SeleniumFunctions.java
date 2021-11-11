@@ -458,6 +458,12 @@ public class SeleniumFunctions {
                     log.info(String.format("Al elemento %s se le pone este texto %s", columns.get(0), columns.get(1)));
                     break;
                 case "Lista":
+                    //Espera a que la lista cargue sus elementos
+                    while(new Select(driver.findElement(SeleniumElement)).getOptions().size() <= 1
+                        && getTextElement(columns.get(0).trim()).isEmpty()){
+                        log.info("Esperando lista: " + new Select(driver.findElement(SeleniumElement)).getOptions().size());
+                        TimeUnit.SECONDS.sleep(1);
+                    }
                     Select opt = new Select(driver.findElement(SeleniumElement));
                     log.info("Seleccionando: " + columns.get(1) + " por texto");
                     opt.selectByVisibleText(columns.get(1));
