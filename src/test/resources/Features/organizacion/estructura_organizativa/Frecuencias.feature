@@ -25,7 +25,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a Nuevo
     * Llenar formulario:
     | Descripcion | Creacion Basica |
-    | Abreviatura | CB-PDS1375 |
+    | Abreviatura | CB-PDS1375      |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarFrecuencia
     * Refrescar pagina
@@ -36,7 +36,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
       | Descripcion | Creacion Basica |
-      | Abreviatura | CB-PDS1375 |
+      | Abreviatura | CB-PDS1375      |
 
   @test
   @Highest
@@ -59,7 +59,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
       | Descripcion | Editado |
-      | Abreviatura | E1384 |
+      | Abreviatura | E1384   |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarFrecuencia
     * Refrescar pagina
@@ -69,7 +69,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
       | Descripcion | Editado |
-      | Abreviatura | E1384 |
+      | Abreviatura | E1384   |
 
   @test
   @Highest
@@ -86,7 +86,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a Catalogo
     * Click a Frecuencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 14
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -101,6 +101,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -108,14 +109,14 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a Catalogo
     * Click a Frecuencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino consulta
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 12
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 12                     |
-      | DescripcionRO     | consulta               |
-      | AbreviaturaRO     | c                      |
+      | CodigoRO      | 12       |
+      | DescripcionRO | consulta |
+      | AbreviaturaRO | c        |
 
   @test
   @Highest
@@ -130,7 +131,6 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento Frecuencias este presente
     * Click a Frecuencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
     * Adjuntar captura de pantalla al reporte
@@ -151,7 +151,6 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento Frecuencias este presente
     * Click a Frecuencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
     * Click a Nuevo
@@ -159,3 +158,4 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto La abreviatura es requerida
