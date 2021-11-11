@@ -1,0 +1,82 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlNivelComportamiento_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlNivelComportamiento_edit"
+  },
+
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlNivelComportamiento_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlNivelComportamiento_edit"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
+  },
+  "CodigoAlternoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
+  "GrupoCoporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+
+  "GuardarNivelComportamiento": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarNivelComportamiento"
+  },
+  "CancelarAreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAreaFuncional"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlNivelComportamiento_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"smlNivelComportamiento_grid\"]/div[4]/span[2]"
+  },
+  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
+  }
+}

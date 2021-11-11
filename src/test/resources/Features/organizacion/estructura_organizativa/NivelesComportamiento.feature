@@ -2,32 +2,31 @@
 
 @organizacion
 @estructura_organizativa
-@frecuencias
-Característica: Frecuencias
-  Pruebas para entidad Frecuencias
-
+@niveles_de_comportamiento
+Característica: NivelesComportamiento
+  Pruebas para entidad Niveles de Comportamiento
 
   @test
   @Highest
-  @PDS-1375
-Escenario: Crear una frecuencia con información básica (PDS-1375)
+  @PDS-1632
+  Escenario: Crear un nivel de comportamiento con información básica (PDS-1632)
     Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    Entonces Se cargan elementos de la pagina Login.json
+    Cuando Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion | Creacion Basica |
-    | Abreviatura | CB-PDS1375      |
+      | Descripcion | Creacion Basica |
+      | Abreviatura | CB              |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarFrecuencia
+    * Click a GuardarNivelComportamiento
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
     * Click a PrimerElementoDeSmartlist
@@ -35,12 +34,12 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
       | Descripcion | Creacion Basica |
-      | Abreviatura | CB-PDS1375      |
+      | Abreviatura | CB              |
 
   @test
   @Highest
-  @PDS-1384
-  Escenario: Editar una frecuencia con información básica (PDS-1384)
+  @PDS-1635
+  Escenario: Editar un nivel de comportamiento con información básica (PDS-1635)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -49,31 +48,31 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editar
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion | Editado |
-      | Abreviatura | E1384   |
+      | Descripcion | Creacion Basica Editada |
+      | Abreviatura | CBE                     |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarFrecuencia
+    * Click a GuardarNivelComportamiento
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editado
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Editado |
-      | Abreviatura | E1384   |
+      | Descripcion | Creacion Basica Editada |
+      | Abreviatura | CBE                     |
 
   @test
   @Highest
-  @PDS-1386
-  Escenario: Eliminar una frecuencia (PDS-1386)
+  @PDS-1636
+  Escenario: Eliminar un nivel de comportamiento (PDS-1636)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -82,10 +81,10 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 14
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -94,8 +93,8 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
 
   @test
   @Highest
-  @PDS-1379
-  Escenario: Consultar una frecuencia con información básica (PDS-1379)
+  @PDS-1633
+  Escenario: Consultar un nivel de comportamiento con información básica (PDS-1633)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -105,22 +104,23 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 12
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Consultar Archivo y Adicional
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO      | 12       |
-      | DescripcionRO | consulta |
-      | AbreviaturaRO | c        |
+      | CodigoRO          | 7                             |
+      | DescripcionRO     | Consultar Archivo y Adicional |
+      | AbreviaturaRO     | CAA                           |
+      | GrupoCoporativoRO | Aseinfo                       |
 
   @test
   @Highest
-  @PDS-1374
-  Escenario: Ver el listado de frecuencias (PDS-1374)
+  @PDS-1631
+  Escenario: Ver el listado de niveles de comportamientos (PDS-1631)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -129,18 +129,17 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
-
   @test
   @Highest
-  @PDS-1383
-  Escenario: Guardar una frecuencia con los campos en blanco (PDS-1383)
+  @PDS-1634
+  Escenario: Guardar un nivel de comportamiento con los campos en blanco (PDS-1634)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -149,12 +148,12 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a Frecuencias
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Click a Nuevo
-    * Click a GuardarFrecuencia
+    * Click a GuardarNivelComportamiento
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
-    * Prueba exitosa si elemento Mensaje contiene texto La abreviatura es requerida
+
