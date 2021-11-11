@@ -64,6 +64,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a GuardarTipoFuncion
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Registro Editado
+    * Esperar a que aparezca el texto Registro Editado en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -110,6 +111,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 21
+    * Esperar a que aparezca el texto Para Consultas Extras en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte

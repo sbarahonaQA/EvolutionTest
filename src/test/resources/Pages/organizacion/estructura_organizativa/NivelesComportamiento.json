@@ -19,11 +19,18 @@
 
   "Descripcion": {
     "GetFieldBy": "Id",
-    "ValueToFind": "Descripcion"
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
   },
   "Abreviatura": {
     "GetFieldBy": "Id",
-    "ValueToFind": "Abreviatura"
+    "ValueToFind": "Abreviatura",
+    "FieldType": "Texto"
+  },
+  "CodigoAlterno": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoAlterno",
+    "FieldType": "Texto"
   },
 
   "CodigoRO": {

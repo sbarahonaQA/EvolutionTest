@@ -30,6 +30,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a GuardarFrecuencia
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
+    * Esperar a que aparezca el texto Creacion Basica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -52,7 +53,7 @@ Escenario: Crear una frecuencia con información básica (PDS-1375)
     * Click a Catalogo
     * Click a Frecuencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Frecuencias.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte

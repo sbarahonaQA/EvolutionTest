@@ -47,7 +47,6 @@
     "ValueToFind": "CodigoAreaFuncional",
     "FieldType": "Lista"
   },
-
   "CodigoRO": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@id='right']//div[1]//span[1]"
