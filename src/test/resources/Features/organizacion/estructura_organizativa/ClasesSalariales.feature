@@ -14,7 +14,6 @@ Característica: ClasesSalariales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -24,8 +23,8 @@ Característica: ClasesSalariales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/ClasesSalariales.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion   | Información Básica  |
-      | AsignaA       | True                |
+      | Descripcion | Información Básica |
+      | AsignaA     | True               |
     * Esperar que el elemento Pais este presente
     * Llenar formulario:
       | Pais          | gt                  |
@@ -38,9 +37,9 @@ Característica: ClasesSalariales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion   | Información Básica  |
-      | AsignaA       | True                |
-      | Pais          | gt                  |
+      | Descripcion | Información Básica |
+      | AsignaA     | True               |
+      | Pais        | gt                 |
 
 
   @test
@@ -51,7 +50,6 @@ Característica: ClasesSalariales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -64,23 +62,23 @@ Característica: ClasesSalariales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion   | Edicion Basica  |
-      | AsignaA       | True            |
+      | Descripcion | Edicion Basica |
+      | AsignaA     | True           |
     * Esperar que el elemento Pais este presente
     * Llenar formulario:
-      | Pais          | gt                  |
+      | Pais | gt |
     # Se debe seleccionar o hacer clic en cualquier parte de la pantlla para que se reconozca el país en el combotext
     * Click a Minimo
     * Llenar formulario:
-      | Minimo        | 2000                |
-      | Medio         | 3000                |
-      | Maximo        | 4000                |
-      | TipoValuacion | Por puntos          |
-      | Inicial       | 1                   |
-      | Final         | 10                  |
-      | Estado        | NoVigente           |
-      | FechaInicio   | 1/1/2021            |
-      | FechaFin      | 31/12/2021          |
+      | Minimo        | 2000       |
+      | Medio         | 3000       |
+      | Maximo        | 4000       |
+      | TipoValuacion | Por puntos |
+      | Inicial       | 1          |
+      | Final         | 10         |
+      | Estado        | NoVigente  |
+      | FechaInicio   | 01/01/2021 |
+      | FechaFin      | 31/12/2021 |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Edicion Basica
@@ -88,18 +86,18 @@ Característica: ClasesSalariales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion   | Edicion Basica      |
-      | AsignaA       | True                |
-      | Pais          | gt                  |
-      | Minimo        | 2000                |
-      | Medio         | 3000                |
-      | Maximo        | 4000                |
-      | TipoValuacion | Por punto           |
-      | Inicial       | 1                   |
-      | Final         | 10                  |
-      | Estado        | NoVigente           |
-      | FechaInicio   | 1/1/2021            |
-      | FechaFin      | 31/12/2021          |
+      | Descripcion   | Edicion Basica |
+      | AsignaA       | True           |
+      | Pais          | gt             |
+      | Minimo        | 2000           |
+      | Medio         | 3000           |
+      | Maximo        | 4000           |
+      | TipoValuacion | Por punto      |
+      | Inicial       | 1              |
+      | Final         | 10             |
+      | Estado        | NoVigente      |
+      | FechaInicio   | 1/1/2021       |
+      | FechaFin      | 31/12/2021     |
 
 
   @test
@@ -110,7 +108,6 @@ Característica: ClasesSalariales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -146,10 +143,19 @@ Característica: ClasesSalariales
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                | 51                      |
-      | DescripcionRO           | A consultar             |
-      | AsignaRO                | True                    |
-      | PaisRO                  | Guatemala               |
+      | CodigoRO        | 51           |
+      | DescripcionRO   | A consultar  |
+      | AsignaRO        | True         |
+      | PaisRO          | Guatemala    |
+      | MínimoRO        | 125.36       |
+      | MedioRO         | 569.78       |
+      | MáximoRO        | 5,479.36     |
+      | TipoValuacionRO | Por Matrices |
+      | InicialRO       | 5            |
+      | FinalRO         | 25           |
+      | EstadoRO        | Vigente      |
+      | FechaInicioRO   | 31/12/2000   |
+      | FechaFinRO      | 15/12/2020   |
 
   @test
   @Highest
@@ -159,7 +165,6 @@ Característica: ClasesSalariales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -179,7 +184,6 @@ Característica: ClasesSalariales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa

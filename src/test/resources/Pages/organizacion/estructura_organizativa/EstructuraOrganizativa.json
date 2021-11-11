@@ -50,5 +50,9 @@
   "CategoriasPuestos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Categorías de puestos"
+  },
+  "ClasesSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clases Salariales"
   }
 }
