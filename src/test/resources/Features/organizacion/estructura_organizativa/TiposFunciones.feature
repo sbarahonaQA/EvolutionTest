@@ -20,7 +20,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Click a Nuevo
     * Llenar formulario:
@@ -51,10 +51,9 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
-    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -65,7 +64,6 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a GuardarTipoFuncion
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Registro Editado
-    * Esperar a que aparezca el texto Registro Editado en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -87,10 +85,9 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
-    * Esperar a que aparezca el texto Para Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -110,7 +107,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 21
     * Click a PrimerElementoDeSmartlist
@@ -136,8 +133,7 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento tiposFunciones este presente
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -157,11 +153,11 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento tiposFunciones este presente
-    * Click a tiposFunciones
+    * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Click a Nuevo
     * Click a GuardarTipoFuncion
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la descripcion del tipo de función
+    * Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la abreviatura del tipo de función

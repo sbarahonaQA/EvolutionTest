@@ -28,22 +28,23 @@
 
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
   },
-
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
   },
-
   "AbreviaturaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
   },
-
+  "CodigoAlternoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
   "GrupoCoporativoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[5]/span"
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
   },
 
   "GuardarNivelComportamiento": {

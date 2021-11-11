@@ -15,7 +15,7 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='task']//a[contains(text(),'Centros de costo')]"
   },
-  "tiposFunciones":{
+  "TiposFunciones":{
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de funciones"
   },
