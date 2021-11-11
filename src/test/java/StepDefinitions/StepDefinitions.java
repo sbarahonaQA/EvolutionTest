@@ -164,7 +164,10 @@ public class StepDefinitions{
 
     @Cuando("^Inicio sesion con usuario (.*)")
     public void inicioSesionConUsuario(String username) throws Exception {
-        functions.iSetLoginCredentials(username);
+        if(functions.readProperties("IDS").equalsIgnoreCase("yes") || functions.readProperties("IDS").equalsIgnoreCase("si"))
+            functions.iSetIDSLoginCredentials(username);
+        else
+            functions.iSetLoginCredentials(username);
     }
 
     /****** Captura de pantalla ********/

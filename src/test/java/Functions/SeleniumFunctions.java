@@ -26,6 +26,7 @@ public class SeleniumFunctions {
     public static InputStream in = SeleniumFunctions.class.getResourceAsStream("../test.properties");
     public static Properties SegAcceso = new Properties();
     public static InputStream inSegAcceso = SeleniumFunctions.class.getResourceAsStream("../usuarios.properties");
+    public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
 
@@ -52,26 +53,21 @@ public class SeleniumFunctions {
 
     /******** Browser functions ********/
 
-    public void zoomTillElementDisplay(String element) throws Exception
-    {
+    public void zoomTillElementDisplay(String element) throws Exception{
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         WebElement html = driver.findElement(SeleniumElement);
         html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
     }
 
     public void switchToFrame(String Frame) throws Exception {
-
         By SeleniumElement = SeleniumFunctions.getCompleteElement(Frame);
         log.info("Cambiando de frame: " + Frame);
         driver.switchTo().frame(driver.findElement(SeleniumElement));
-
     }
 
     public void switchToParentFrame() {
-
         log.info("Cambiando al frame padre");
         driver.switchTo().parentFrame();
-
     }
 
     /******** JSON Manipulation ********/
@@ -342,7 +338,15 @@ public class SeleniumFunctions {
         iSetElementWithText("Usuario", username);
         iSetElementWithText("Contrasenia", SeleniumFunctions.getPassword(username));
         iClicInElement("BotonIniciarSesion");
+
         log.info(String.format("Iniciando sesion con usuario %s", username));
+    }
+
+    public void iSetIDSLoginCredentials(String username) throws Exception {
+        iSetElementWithText("UsuarioIDS", username);
+        iSetElementWithText("ContraseniaIDS", SeleniumFunctions.getPassword(username));
+        iClicInElement("BotonIniciarSesionIDS");
+        log.info(String.format("Iniciando sesion en IDS con usuario %s", username));
     }
 
     /******** Click ********/
@@ -553,7 +557,10 @@ public class SeleniumFunctions {
     }
 
     public static String getPassword(String usuario) throws Exception {
-        SegAcceso.load(inSegAcceso);
+        if(prop.getProperty("IDS").equalsIgnoreCase("yes") || prop.getProperty("IDS").equalsIgnoreCase("si"))
+            SegAcceso.load(inSegAccesoIDS);
+        else
+            SegAcceso.load(inSegAcceso);
         return SegAcceso.getProperty(usuario);
     }
 }
