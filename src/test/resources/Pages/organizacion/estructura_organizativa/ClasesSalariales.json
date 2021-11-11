@@ -1,0 +1,118 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClaseSalarial_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClaseSalarial_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClaseSalarial_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClaseSalarial_edit"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Descripcion"
+  },
+  "AsignaA": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsPorPais",
+    "FieldType": "Radio"
+  },
+      "Pais": {
+      "GetFieldBy": "Xpath",
+      "ValueToFind": "//*[@id=\"CodigoPais\"]",
+      "FieldType": "Texto"
+  },
+  "Minimo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Minimo"
+  },
+  "Medio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Medio"
+  },
+  "Maximo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Maximo"
+  },
+  "TipoValuacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TipoValuacion",
+    "FieldType": "Lista"
+  },
+  "Inicial": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ValuacionInicial"
+  },
+  "Final": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ValuacionFinal"
+  },
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado",
+    "FieldType": "Radio"
+  },
+  "FechaInicio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaVigenciaInicial"
+  },
+  "FechaFin": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaVigenciaFin"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "AsignaRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsPorPais",
+    "FieldType": "Radio"
+  },
+  "PaisRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/div/span[2]"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarClaseSalarial"
+  },
+
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClaseSalarial_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
+  }
+}
