@@ -7,7 +7,6 @@
     "GetFieldBy": "Id",
     "ValueToFind": "smlTiposCompetencia_edit"
   },
-
   "Eliminar": {
     "GetFieldBy": "Id",
     "ValueToFind": "smlTiposCompetencia_delete"
@@ -19,7 +18,8 @@
 
   "Descripcion": {
     "GetFieldBy": "Id",
-    "ValueToFind": "Descripcion"
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
   },
   "EsTecnica": {
     "GetFieldBy": "Name",
@@ -75,10 +75,7 @@
 
   "ElementosMostrados": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"smlTiposCompetencia_grid\"]/div[4]/span[2]"
-  },
-  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
   }
+
 }

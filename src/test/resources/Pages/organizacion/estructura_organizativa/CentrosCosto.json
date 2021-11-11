@@ -11,7 +11,15 @@
     "GetFieldBy": "Id",
     "ValueToFind": "smlCentroCosto_delete"
   },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCentroCosto_edit"
+  },
 
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado"
+  },
   "Descripcion": {
     "GetFieldBy": "Name",
     "ValueToFind": "Descripcion"
@@ -26,22 +34,62 @@
   },
   "CtaContable": {
     "GetFieldBy": "Name",
-    "ValueToFind": "CtaContable"
+    "ValueToFind": "CtaContable",
+    "FieldType": "Texto"
   },
   "Compania": {
     "GetFieldBy": "Name",
-    "ValueToFind": "CodigoCompania"
+    "ValueToFind": "CodigoCompania",
+    "FieldType": "Lista"
   },
   "AreaFuncional": {
     "GetFieldBy": "Name",
-    "ValueToFind": "CodigoAreaFuncional"
+    "ValueToFind": "CodigoAreaFuncional",
+    "FieldType": "Lista"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
+  "NomenContableRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+  "CtaContableRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
+  },
+  "CompaniaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[7]//span[1]"
+  },
+  "AreaFuncionalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[8]//span[1]"
   },
 
   "GuardarCentroDeCosto": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarCentroCosto"
   },
-  "GuardarYEnviarAFlujoCentroDeCosto": {
+  "GuardarYProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "GuardarYEnviarAAutorizacion": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarIniciarFlujo"
   },

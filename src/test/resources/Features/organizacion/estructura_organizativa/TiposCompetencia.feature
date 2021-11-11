@@ -2,7 +2,7 @@
 
 @organizacion
 @estructura_organizativa
-@tipos_de_competencia
+@tipos_competencia
 Característica: TiposCompetencia
   Pruebas para entidad TiposCompetencia
 
@@ -11,9 +11,10 @@ Característica: TiposCompetencia
   @PDS-1604
   Escenario: Crear un tipo de competencia con información básica (PDS-1604)
     Dado que carga Evolution
-    Entonces Se cargan elementos de la pagina Login.json
-    Cuando Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -28,7 +29,6 @@ Característica: TiposCompetencia
       | EsParaLiderazgo | False                      |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipoCompetencia
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de competencia básica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
@@ -160,4 +160,3 @@ Característica: TiposCompetencia
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La Descripción es requerida
-

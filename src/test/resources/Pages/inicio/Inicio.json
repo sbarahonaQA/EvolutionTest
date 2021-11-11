@@ -23,6 +23,10 @@
     "GetFieldBy": "partialLinkText",
     "ValueToFind": "ASEINFO Honduras"
   },
+  "ASEINFOPanama": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Panamá"
+  },
   "ListaEmpresas": {
     "GetFieldBy": "Id",
     "ValueToFind": "ddlGrupoCompaniaSelector"
@@ -30,5 +34,13 @@
   "EmpresaActual": {
     "GetFieldBy": "Id",
     "ValueToFind": "companiaselector"
+  },
+  "SelectorEmpresas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "grupoCompaniaSelectorSpan"
+  },
+  "VerTodasAutorizaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='widgetAutorizaciones']//div[@class='widgetBox']//div[@class='widgetContent']//div//div[@class='HomeWidgetBody']//a"
   }
 }
