@@ -480,6 +480,13 @@ public class SeleniumFunctions {
                         driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).click();
                     }
                     break;
+                case "CodeCombo":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    driver.findElement(SeleniumElement).sendKeys(Keys.TAB);
+
+                    log.info(String.format("Al codecombo %s se le pone codigo %s", columns.get(0), columns.get(1)));
+                    break;
                 default:
                     log.error("Manejo de tipo no disponible");
             }
