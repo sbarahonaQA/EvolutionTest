@@ -54,5 +54,13 @@
   "ClasesSalariales": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Clases Salariales"
+  },
+  "ClasificacionesCategoriasPuestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clasificaciones de categorías para puestos"
+  },
+  "TiposEmpresas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de empresa"
   }
 }
