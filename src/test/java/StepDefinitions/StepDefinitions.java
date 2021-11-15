@@ -258,6 +258,11 @@ public class StepDefinitions{
         functions.waitForTextToBePresentInElement(elemento, texto);
     }
 
+    @Y("^Refrescar hasta que elemento (.*?) tenga texto (.*?)$")
+    public void refrescarEsperandoCambio(String elemento, String texto) throws Exception {
+        functions.refreshWaitingChange(elemento, texto);
+    }
+
 
     /****** Guardar en contexto ********/
 

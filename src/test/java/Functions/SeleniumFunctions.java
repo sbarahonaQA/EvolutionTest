@@ -35,6 +35,7 @@ public class SeleniumFunctions {
     }
     public String ElementText = "";
     public static final int EXPLICIT_TIMEOUT = 15;
+    public static final int INTENTOS_MAX = 15;
 
     public String readProperties(String property) throws IOException {
         prop.load(in);
@@ -441,6 +442,25 @@ public class SeleniumFunctions {
         }
     }
 
+    public void refreshWaitingChange(String element, String text) throws Exception {
+        int intentos = 0;
+        boolean found = false;
+
+        while (intentos <= INTENTOS_MAX) {
+            if (!getTextElement(element).equalsIgnoreCase(text)) {
+                driver.navigate().refresh();
+                intentos++;
+            } else {
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            throw new NoSuchElementException("The text: " + text + " has not been found in element: " + element);
+        }
+    }
+
     /******** Form ********/
 
     public void validateInfo(List<List<String>> rows) throws Exception {
@@ -452,6 +472,7 @@ public class SeleniumFunctions {
     }
 
     public void fillForm(List<List<String>> rows) throws Exception {
+        int intentos = 0;
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
 
@@ -464,10 +485,16 @@ public class SeleniumFunctions {
                 case "Lista":
                     //Espera a que la lista cargue sus elementos
                     while(new Select(driver.findElement(SeleniumElement)).getOptions().size() <= 1
-                        && getTextElement(columns.get(0).trim()).isEmpty()){
+                        && getTextElement(columns.get(0).trim()).isEmpty()
+                        && intentos < INTENTOS_MAX){
                         log.info("Esperando lista: " + new Select(driver.findElement(SeleniumElement)).getOptions().size());
                         TimeUnit.SECONDS.sleep(1);
+                        intentos++;
                     }
+
+                    if(intentos >= INTENTOS_MAX)
+                        throw new TimeoutException("Se agotó el tiempo de espera del llenado de la lista "+columns.get(0));
+
                     Select opt = new Select(driver.findElement(SeleniumElement));
                     log.info("Seleccionando: " + columns.get(1) + " por texto");
                     opt.selectByVisibleText(columns.get(1));

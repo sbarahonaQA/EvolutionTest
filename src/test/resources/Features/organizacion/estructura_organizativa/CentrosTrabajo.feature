@@ -2,7 +2,7 @@
 
 @organizacion
 @estructura_organizativa
-@CentrosTrabajo
+@centros_trabajo
 Característica: CentrosTrabajo
   Pruebas para entidad CentrosTrabajo
 
@@ -14,6 +14,7 @@ Característica: CentrosTrabajo
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -22,26 +23,26 @@ Característica: CentrosTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion  | Oficinas Este       |
-      | Direccion    | Este                |
-      | Compania     | ASEINFO Corporativo |
-      | Pais         | Guatemala           |
-      | Departamento | CHIQUIMULA          |
-      | Municipio    | OLOPA               |
+      | Descripcion  | Oficinas Apoyo Terrestre          |
+      | Direccion    | Calle don Quijote, 30 - PISO 6 IZ |
+      | Compania     | ASEINFO Corporativo               |
+      | Pais         | Guatemala                         |
+      | Departamento | CHIQUIMULA                        |
+      | Municipio    | OLOPA                             |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCentroDeTrabajo
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Oficinas Este
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Oficinas Apoyo Terrestre
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado       | Pendiente           |
-      | Descripcion  | Oficinas Este       |
-      | Direccion    | Este                |
-      | Compania     | ASEINFO Corporativo |
-      | Pais         | Guatemala           |
-      | Departamento | CHIQUIMULA          |
-      | Municipio    | OLOPA               |
+      | Estado       | Pendiente                         |
+      | Descripcion  | Oficinas Apoyo Terrestre          |
+      | Direccion    | Calle don Quijote, 30 - PISO 6 IZ |
+      | Compania     | ASEINFO Corporativo               |
+      | Pais         | Guatemala                         |
+      | Departamento | CHIQUIMULA                        |
+      | Municipio    | OLOPA                             |
 
   @test
   @Highest
@@ -68,11 +69,10 @@ Característica: CentrosTrabajo
       | Municipio    | SAN PEDRO SACATEPEQUEZ |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarYProcesar
-    #Esperando que el registro se autorice
-    * Esperar 1 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Oficinas Oeste
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
+    * Refrescar hasta que elemento Estado tenga texto Vigente
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
       | Estado       | Vigente                |
@@ -132,6 +132,7 @@ Característica: CentrosTrabajo
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -160,21 +161,21 @@ Característica: CentrosTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a CentrosTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 1
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Consulta
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO       | 1                     |
-      | EstadoRO       | Vigente               |
-      | DescripcionRO  | Oficinas Centrales    |
-      | DireccionRO    | Oficinas Corporativas |
-      | TelefonoRO     | 22855559              |
-      | FaxRO          | 22529913              |
-      | CompaniaRO     | ASEINFO Corporativo   |
-      | PaisRO         | Guatemala             |
-      | DepartamentoRO | GUATEMALA             |
-      | MunicipioRO    | GUATEMALA             |
+      | CodigoRO       | 25                         |
+      | EstadoRO       | Vigente                    |
+      | DescripcionRO  | Para Consulta              |
+      | DireccionRO    | Cl 15 De Septiembre Zona 0 |
+      | TelefonoRO     | 22855559                   |
+      | FaxRO          | 22529913                   |
+      | CompaniaRO     | ASEINFO Corporativo        |
+      | PaisRO         | Guatemala                  |
+      | DepartamentoRO | IZABAL                     |
+      | MunicipioRO    | LOS AMATES                 |
 
   @test
   @Highest
@@ -184,6 +185,7 @@ Característica: CentrosTrabajo
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -202,6 +204,7 @@ Característica: CentrosTrabajo
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
