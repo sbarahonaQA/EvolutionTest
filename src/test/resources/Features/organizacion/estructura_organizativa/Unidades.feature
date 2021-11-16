@@ -14,6 +14,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -25,7 +26,7 @@ Característica: Unidades
       | Nombre        | Creación Básica |
       | AreaFuncional | Comercial       |
       | TipoUnidad    | 16              |
-      | NivelHnas     | False           |
+      | NivelHnas     | True            |
       | EsStaff       | False           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarUnidad
@@ -37,7 +38,7 @@ Característica: Unidades
       | Nombre          | Creación Básica |
       | AreaFuncional   | Comercial       |
       | TipoUnidadTexto | Directores      |
-      | NivelHnas       | False           |
+      | NivelHnas       | True            |
       | EsStaff         | False           |
 
   @test
@@ -48,6 +49,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -84,6 +86,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -128,6 +131,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -181,6 +185,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -199,6 +204,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -220,6 +226,7 @@ Característica: Unidades
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
