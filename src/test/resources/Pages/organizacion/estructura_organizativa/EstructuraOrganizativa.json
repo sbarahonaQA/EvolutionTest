@@ -58,5 +58,13 @@
   "Unidades": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Unidades"
+  },
+  "ClasificacionesCategoriasPuestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clasificaciones de categorías para puestos"
+  },
+  "TiposEmpresas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de empresa"
   }
 }

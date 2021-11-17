@@ -48,6 +48,7 @@ Característica: TiposCondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Catalogo
     * Click a TiposCondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
