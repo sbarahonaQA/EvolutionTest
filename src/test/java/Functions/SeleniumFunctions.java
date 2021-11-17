@@ -26,6 +26,7 @@ public class SeleniumFunctions {
     public static InputStream in = SeleniumFunctions.class.getResourceAsStream("../test.properties");
     public static Properties SegAcceso = new Properties();
     public static InputStream inSegAcceso = SeleniumFunctions.class.getResourceAsStream("../usuarios.properties");
+    public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
 
@@ -34,6 +35,7 @@ public class SeleniumFunctions {
     }
     public String ElementText = "";
     public static final int EXPLICIT_TIMEOUT = 15;
+    public static final int INTENTOS_MAX = 15;
 
     public String readProperties(String property) throws IOException {
         prop.load(in);
@@ -52,26 +54,21 @@ public class SeleniumFunctions {
 
     /******** Browser functions ********/
 
-    public void zoomTillElementDisplay(String element) throws Exception
-    {
+    public void zoomTillElementDisplay(String element) throws Exception{
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         WebElement html = driver.findElement(SeleniumElement);
         html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
     }
 
     public void switchToFrame(String Frame) throws Exception {
-
         By SeleniumElement = SeleniumFunctions.getCompleteElement(Frame);
         log.info("Cambiando de frame: " + Frame);
         driver.switchTo().frame(driver.findElement(SeleniumElement));
-
     }
 
     public void switchToParentFrame() {
-
         log.info("Cambiando al frame padre");
         driver.switchTo().parentFrame();
-
     }
 
     /******** JSON Manipulation ********/
@@ -342,7 +339,15 @@ public class SeleniumFunctions {
         iSetElementWithText("Usuario", username);
         iSetElementWithText("Contrasenia", SeleniumFunctions.getPassword(username));
         iClicInElement("BotonIniciarSesion");
+
         log.info(String.format("Iniciando sesion con usuario %s", username));
+    }
+
+    public void iSetIDSLoginCredentials(String username) throws Exception {
+        iSetElementWithText("UsuarioIDS", username);
+        iSetElementWithText("ContraseniaIDS", SeleniumFunctions.getPassword(username));
+        iClicInElement("BotonIniciarSesionIDS");
+        log.info(String.format("Iniciando sesion en IDS con usuario %s", username));
     }
 
     /******** Click ********/
@@ -437,6 +442,25 @@ public class SeleniumFunctions {
         }
     }
 
+    public void refreshWaitingChange(String element, String text) throws Exception {
+        int intentos = 0;
+        boolean found = false;
+
+        while (intentos <= INTENTOS_MAX) {
+            if (!getTextElement(element).equalsIgnoreCase(text)) {
+                driver.navigate().refresh();
+                intentos++;
+            } else {
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            throw new NoSuchElementException("The text: " + text + " has not been found in element: " + element);
+        }
+    }
+
     /******** Form ********/
 
     public void validateInfo(List<List<String>> rows) throws Exception {
@@ -448,6 +472,7 @@ public class SeleniumFunctions {
     }
 
     public void fillForm(List<List<String>> rows) throws Exception {
+        int intentos = 0;
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
 
@@ -458,6 +483,18 @@ public class SeleniumFunctions {
                     log.info(String.format("Al elemento %s se le pone este texto %s", columns.get(0), columns.get(1)));
                     break;
                 case "Lista":
+                    //Espera a que la lista cargue sus elementos
+                    while(new Select(driver.findElement(SeleniumElement)).getOptions().size() <= 1
+                        && getTextElement(columns.get(0).trim()).isEmpty()
+                        && intentos < INTENTOS_MAX){
+                        log.info("Esperando lista: " + new Select(driver.findElement(SeleniumElement)).getOptions().size());
+                        TimeUnit.SECONDS.sleep(1);
+                        intentos++;
+                    }
+
+                    if(intentos >= INTENTOS_MAX)
+                        throw new TimeoutException("Se agotó el tiempo de espera del llenado de la lista "+columns.get(0));
+
                     Select opt = new Select(driver.findElement(SeleniumElement));
                     log.info("Seleccionando: " + columns.get(1) + " por texto");
                     opt.selectByVisibleText(columns.get(1));
@@ -547,7 +584,10 @@ public class SeleniumFunctions {
     }
 
     public static String getPassword(String usuario) throws Exception {
-        SegAcceso.load(inSegAcceso);
+        if(prop.getProperty("IDS").equalsIgnoreCase("yes") || prop.getProperty("IDS").equalsIgnoreCase("si"))
+            SegAcceso.load(inSegAccesoIDS);
+        else
+            SegAcceso.load(inSegAcceso);
         return SegAcceso.getProperty(usuario);
     }
 }

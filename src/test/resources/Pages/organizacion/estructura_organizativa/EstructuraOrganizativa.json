@@ -62,5 +62,9 @@
   "TiposEmpresas": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de empresa"
+  },
+  "CentrosTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Centros de trabajo"
   }
 }
