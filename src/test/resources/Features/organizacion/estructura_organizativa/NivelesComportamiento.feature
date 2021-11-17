@@ -2,46 +2,44 @@
 
 @organizacion
 @estructura_organizativa
-@tipos_funciones
-Característica: TiposFunciones
-  Pruebas para entidad TiposFunciones
-
+@niveles_de_comportamiento
+Característica: NivelesComportamiento
+  Pruebas para entidad Niveles de Comportamiento
 
   @test
   @Highest
-  @PDS-1506
-Escenario: Crear un tipo de funciones con información básica (PDS-1506)
+  @PDS-1632
+  Escenario: Crear un nivel de comportamiento con información básica (PDS-1632)
     Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    Entonces Se cargan elementos de la pagina Login.json
+    Cuando Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion | Prueba Basica |
-    | Abreviatura | PB |
+      | Descripcion | Creacion Basica |
+      | Abreviatura | CB              |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoFuncion
+    * Click a GuardarNivelComportamiento
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Basica
-    * Esperar a que aparezca el texto Prueba Basica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Prueba Basica |
-      | Abreviatura | PB |
+      | Descripcion | Creacion Basica |
+      | Abreviatura | CB              |
 
   @test
   @Highest
-  @PDS-1509
-  Escenario: Editar un tipo de funciones con información básica (PDS-1509)
+  @PDS-1635
+  Escenario: Editar un nivel de comportamiento con información básica (PDS-1635)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -50,33 +48,33 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion | Registro Editado |
-      | Abreviatura | DE |
+      | Descripcion   | Creacion Basica Editada  |
+      | Abreviatura   | CBE                      |
+      | CodigoAlterno | 1635                     |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoFuncion
+    * Click a GuardarNivelComportamiento
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Registro Editado
-    * Esperar a que aparezca el texto Registro Editado en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Registro Editado |
-      | Abreviatura | DE |
-
+      | Descripcion   | Creacion Basica Editada |
+      | Abreviatura   | CBE                     |
+      | CodigoAlterno | 1635                    |
 
   @test
   @Highest
-  @PDS-1510
-  Escenario: Eliminar un tipo de funciones (PDS-1510)
+  @PDS-1636
+  Escenario: Eliminar un nivel de comportamiento (PDS-1636)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -85,9 +83,9 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
@@ -97,35 +95,34 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
 
   @test
   @Highest
-  @PDS-1507
-  Escenario: Consultar un tipo de funciones con información básica (PDS-1507)
+  @PDS-1633
+  Escenario: Consultar un nivel de comportamiento con información básica (PDS-1633)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 21
-    * Esperar a que aparezca el texto Para Consultas Extras en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Consultar Archivo y Adicional
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 21                     |
-      | DescripcionRO     | Para Consultas Extras  |
-      | AbreviaturaRO     | PCE                    |
-      | GrupoCoporativoRO | Aseinfo                |
-
+      | CodigoRO          | 7                             |
+      | DescripcionRO     | Consultar Archivo y Adicional |
+      | AbreviaturaRO     | CAA                           |
+      | GrupoCoporativoRO | Aseinfo                       |
 
   @test
   @Highest
-  @PDS-1504
-  Escenario: Ver el listado de tipos de funciones (PDS-1504)
+  @PDS-1631
+  Escenario: Ver el listado de niveles de comportamientos (PDS-1631)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -134,18 +131,17 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
-
   @test
   @Highest
-  @PDS-1508
-  Escenario: Guardar un tipo de funciones con los campos en blanco (PDS-1508)
+  @PDS-1634
+  Escenario: Guardar un nivel de comportamiento con los campos en blanco (PDS-1634)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -154,12 +150,12 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a Competencia
+    * Click a NivelesComportamiento
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Click a Nuevo
-    * Click a GuardarTipoFuncion
+    * Click a GuardarNivelComportamiento
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la descripcion del tipo de función
-    * Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la abreviatura del tipo de función
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
+

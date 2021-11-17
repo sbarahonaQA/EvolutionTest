@@ -1,0 +1,82 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClasificaciones_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClasificaciones_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClasificaciones_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClasificaciones_edit"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Descripcion"
+  },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoGrupoCorporativo"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+
+  "GuardarClasificacionCategoriaPuesto": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarClasificacionCategoriaPuesto"
+  },
+  "GuardarYProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "GuardarYEnviarAAutorizacion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "CancelarCentroDeCosto": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarCentroCosto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlClasificaciones_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+  "ColumnaDescripcionDePrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]/td[2]"
+  }
+}

@@ -2,15 +2,14 @@
 
 @organizacion
 @estructura_organizativa
-@tipos_funciones
-Característica: TiposFunciones
-  Pruebas para entidad TiposFunciones
-
+@categorias_puestos
+Característica: CategoriasPuesto
+  Pruebas para entidad CategoriasPuesto
 
   @test
   @Highest
-  @PDS-1506
-Escenario: Crear un tipo de funciones con información básica (PDS-1506)
+  @PDS-1281
+Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -20,75 +19,73 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion | Prueba Basica |
-    | Abreviatura | PB |
+      | Descripcion   | Categoría Básica |
+      | Clasificacion | General          |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoFuncion
-    * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Basica
-    * Esperar a que aparezca el texto Prueba Basica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
+    * Click a GuardarCategoriaPuesto
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoría Básica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Prueba Basica |
-      | Abreviatura | PB |
+      | Descripcion   | Categoría Básica |
+      | Clasificacion | General          |
+
 
   @test
   @Highest
-  @PDS-1509
-  Escenario: Editar un tipo de funciones con información básica (PDS-1509)
+  @PDS-1285
+  Escenario: Editar una categoría de puesto con información básica (PDS-1285)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion | Registro Editado |
-      | Abreviatura | DE |
+      | Descripcion   | Registro Editado |
+      | Clasificacion | Directores       |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoFuncion
-    * Refrescar pagina
+    * Click a GuardarCategoriaPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Registro Editado
-    * Esperar a que aparezca el texto Registro Editado en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Registro Editado |
-      | Abreviatura | DE |
-
+      | Descripcion   | Registro Editado |
+      | Clasificacion | Directores       |
 
   @test
   @Highest
-  @PDS-1510
-  Escenario: Eliminar un tipo de funciones (PDS-1510)
+  @PDS-1291
+  Escenario: Eliminar una categoría de puesto (PDS-1291)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -97,69 +94,70 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
 
   @test
   @Highest
-  @PDS-1507
-  Escenario: Consultar un tipo de funciones con información básica (PDS-1507)
+  @PDS-1288
+  Escenario: Consultar una categoría de puesto con información básica (PDS-1288)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 21
-    * Esperar a que aparezca el texto Para Consultas Extras en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino para consulta
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 21                     |
-      | DescripcionRO     | Para Consultas Extras  |
-      | AbreviaturaRO     | PCE                    |
-      | GrupoCoporativoRO | Aseinfo                |
+      | CodigoRO           | 29            |
+      | DescripcionRO      | para consulta |
+      | ClasificacionRO    | General       |
+      | GrupoCorporativoRO | Aseinfo       |
+
 
 
   @test
   @Highest
-  @PDS-1504
-  Escenario: Ver el listado de tipos de funciones (PDS-1504)
+  @PDS-1277
+  Escenario: Ver el listado de categorías de puestos (PDS-1277)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
-
   @test
   @Highest
-  @PDS-1508
-  Escenario: Guardar un tipo de funciones con los campos en blanco (PDS-1508)
+  @PDS-1283
+  Escenario: Guardar una categoría de puesto con los campos en blanco (PDS-1283)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposFunciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Click a Nuevo
-    * Click a GuardarTipoFuncion
+    * Click a GuardarCategoriaPuesto
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la descripcion del tipo de función
-    * Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la abreviatura del tipo de función
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida

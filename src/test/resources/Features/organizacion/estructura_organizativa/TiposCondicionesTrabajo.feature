@@ -29,7 +29,6 @@ Característica: TiposCondicionesTrabajo
     * Click a Guardar
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de condición básica
-    * Esperar a que aparezca el texto Tipo de condición básica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -49,10 +48,10 @@ Característica: TiposCondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Catalogo
     * Click a TiposCondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
-    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -63,7 +62,6 @@ Característica: TiposCondicionesTrabajo
     * Click a Guardar
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino pds1468
-    * Esperar a que aparezca el texto descripción editada en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -87,7 +85,6 @@ Característica: TiposCondicionesTrabajo
     * Click a TiposCondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
-    * Esperar a que aparezca el texto Para Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -110,7 +107,6 @@ Característica: TiposCondicionesTrabajo
     * Click a TiposCondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCondicionesTrabajo.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Consulta de Archivo y Campo
-    * Esperar a que aparezca el texto Consulta de Archivo y Campo en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
