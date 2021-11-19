@@ -55,6 +55,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Clases Salariales"
   },
+  "Unidades": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Unidades"
+  },
   "ClasificacionesCategoriasPuestos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Clasificaciones de categorías para puestos"
