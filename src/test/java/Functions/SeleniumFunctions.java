@@ -16,12 +16,14 @@ import utils.AggregatedAsserts;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumFunctions {
     static WebDriver driver;
+    static Connection connection;
     public static Properties prop = new Properties();
     public static InputStream in = SeleniumFunctions.class.getResourceAsStream("../test.properties");
     public static Properties SegAcceso = new Properties();
@@ -32,6 +34,7 @@ public class SeleniumFunctions {
 
     public SeleniumFunctions() {
         driver = Hooks.driver;
+        connection = Hooks.connection;
     }
     public String ElementText = "";
     public static final int EXPLICIT_TIMEOUT = 15;

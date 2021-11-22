@@ -7,17 +7,20 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class StepDefinitions{
     WebDriver driver;
+    Connection connection;
     SeleniumFunctions functions = new SeleniumFunctions();
 
     /******** Log Attribute ********/
     Logger log = Logger.getLogger(StepDefinitions.class);
     public StepDefinitions() {
         driver = Hooks.driver;
+        connection = Hooks.connection;
     }
 
     /******** Interacción con browser ********/

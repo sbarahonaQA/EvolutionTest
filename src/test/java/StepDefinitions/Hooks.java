@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Functions.CreateDriver;
+import Functions.DBFactory;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -10,9 +11,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class Hooks {
 	
 		public static WebDriver driver;
+		public static Connection connection;
 		Logger log = Logger.getLogger(Hooks.class);
 		Scenario scenario = null;
 
@@ -33,7 +38,16 @@ public class Hooks {
 				log.info("[ Escenario ] - "+ scenario.getName());
 			}
 			log.info("***********************************************************************************************************");
-	    }	 
+	    }
+
+		@Before
+		public void initDBConnection(){
+			log.info("***********************************************************************************************************");
+			log.info("[ Configuration ] - Inicia configuracion de la conexion DB");
+			log.info("***********************************************************************************************************");
+			connection = DBFactory.initConfig();
+			log.info("***********************************************************************************************************");
+		}
 	     
 	 	@After
 	    public void embedScreenshot(Scenario scenario) {
@@ -55,4 +69,16 @@ public class Hooks {
 	        driver.quit();
 	        
 	    }
+
+		@After
+		public void closingDBConnection(){
+			if (connection != null) {
+				try {
+					log.info("Closing Database Connection...");
+					connection.close();
+				} catch (SQLException ex) {
+					ex.printStackTrace();
+				}
+			}
+		}
 }
