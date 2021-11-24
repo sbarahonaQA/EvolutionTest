@@ -1,0 +1,116 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFuncion_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFuncion_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFuncion_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFuncion_edit"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+  "Detalle": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "DescripcionDetalle"
+  },
+  "TipoFuncion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoTipoFuncion",
+    "FieldType": "Lista"
+  },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[5]/span"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='innerright']/div[3]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='innerright']/div[3]/fieldset/div[2]/span"
+  },
+  "DetalleRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='innerright']/div[3]/fieldset/div[3]/span"
+  },
+  "TipoFuncionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='innerright']/div[3]/fieldset/div[4]/span"
+  },
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id='innerright']/div[3]/fieldset/div[5]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarFuncion"
+  },
+  "GuardarYProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "CancelarCompetencia": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarCompetencia"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFuncion_txtQuickSearch"
+  },
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+  "NuevaConducta": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva conducta"
+  },
+  "NivelComp": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoNivelComportamiento",
+    "FieldType": "Lista"
+  },
+  "GuardarConducta": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarConducta"
+  },
+  "CompetenciaCreada": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Conducta Guardar y Procesar"
+  },
+  "NuevoComportamiento": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo comportamiento"
+  },
+  "Correlativo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Correlativo"
+  },
+  "Valor": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Valor"
+  },
+  "GuardarComportamiento": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarComportamientoAsociado"
+  }
+}
