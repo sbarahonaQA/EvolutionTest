@@ -1,0 +1,177 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlPlaza_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlPlaza_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlPlaza_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlPlaza_edit"
+  },
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado",
+    "FieldType": "Lista"
+  },
+  "Compania": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoCompania",
+    "FieldType": "Lista"
+  },
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre",
+    "FieldType": "Texto"
+  },
+  "MaxEmpleados": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MaxEmpleados",
+    "FieldType": "Texto"
+  },
+  "EsPresupuestada": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsPresupuestada",
+    "FieldType": "Radio"
+  },
+  "CodigoUnidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoUnidad",
+    "FieldType": "CodeCombo"
+  },
+  "CodigoUnidadTexto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoUnidad_Text",
+    "FieldType": "Texto"
+  },
+  "CodigoPuesto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoPuesto",
+    "FieldType": "CodeCombo"
+  },
+  "CodigoPuestoTexto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoPuesto_Text",
+    "FieldType": "Texto"
+  },
+  "CodigoCentroTrabajo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoCentroTrabajo",
+    "FieldType": "CodeCombo"
+  },
+  "CodigoCentroTrabajoTexto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoCentroTrabajo_Text",
+    "FieldType": "Texto"
+  },
+  "EsTemporal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsTemporal",
+    "FieldType": "Radio"
+  },
+  "FechaIni": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaIni",
+    "FieldType": "Texto"
+  },
+  "FechaFin": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaFin",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "CompaniaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+  "MaxRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+  "EsPresupuestadaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[8]/span"
+  },
+  "UnidadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[9]/span"
+  },
+  "PuestoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[10]/span"
+  },
+  "CentroTrabajoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[12]/span"
+  },
+  "EsTemporalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[13]/span"
+  },
+  "FechaInicioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[14]/span"
+  },
+  "FechaFinRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[15]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarPlaza"
+  },
+  "GuardaryProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarPlaza"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlPlaza_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  },
+  "Ordenar": {
+    "GetFieldBy": "LinKText",
+    "ValueToFind": "Nombre"
+  }
+}
