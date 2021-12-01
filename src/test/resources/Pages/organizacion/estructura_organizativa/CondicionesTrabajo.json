@@ -30,11 +30,12 @@
   },
   "TipoCondicion": {
     "GetFieldBy": "Id",
-    "ValueToFind": "CodigoTipoCondicionTrabajo"
+    "ValueToFind": "CodigoTipoCondicionTrabajo",
+    "FieldType": "CodeCombo"
   },
   "GrupoCorporativo": {
-    "GetFieldBy": "Id",
-    "ValueToFind": "codigoGrupoCorporativo"
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
   },
   "CodigoRO": {
     "GetFieldBy": "Xpath",
