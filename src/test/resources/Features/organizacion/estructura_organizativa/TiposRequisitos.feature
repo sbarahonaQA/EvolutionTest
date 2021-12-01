@@ -28,11 +28,12 @@ Característica: TiposRequisitos
     * Click a GuardarTipodeRequisito
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de requisito PDS-1512
-    * Esperar a que aparezca el texto Tipo de requisito PDS-1512 en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Prueba exitosa si elemento Descripcion contiene texto Tipo de requisito PDS-1512
+    Entonces Validar informacion:
+      | Descripcion | Tipo de requisito PDS-1512 |
 
   @test
   @Highest
@@ -50,7 +51,6 @@ Característica: TiposRequisitos
     * Click a TiposRequisitos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposRequisitos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino PCE-6162
-    * Esperar a que aparezca el texto PCE-6162 en el elemento ColumnaAbreviaturaDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
@@ -77,12 +77,12 @@ Característica: TiposRequisitos
     * Click a TiposRequisitos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposRequisitos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
-    * Esperar a que aparezca el texto Para Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
     * Refrescar pagina
-    Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
+    Entonces Validar informacion:
+      | ElementosMostrados | No hay registros |
 
   @test
   @Highest
@@ -97,7 +97,6 @@ Característica: TiposRequisitos
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento TiposRequisitos este presente
     * Click a TiposRequisitos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposRequisitos.json
     * Adjuntar captura de pantalla al reporte
@@ -117,7 +116,6 @@ Característica: TiposRequisitos
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento TiposRequisitos este presente
     * Click a TiposRequisitos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposRequisitos.json
     * Click a Nuevo
@@ -146,12 +144,13 @@ Característica: TiposRequisitos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre | ValorEditado |
+      | Descripcion | ValorEditado |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTiposRequisitos
+    * Click a GuardarTipodeRequisito
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino ValorEditado
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Descripcion contiene texto Para Editar
+    Entonces Validar informacion:
+      | Descripcion | ValorEditado |
