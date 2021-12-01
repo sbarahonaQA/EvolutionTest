@@ -1,0 +1,73 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlResponsabilidad_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlResponsabilidad_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlResponsabilidad_delete"
+  },
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlResponsabilidad_txtQuickSearch"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+  },
+
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura"
+  },
+
+  "GuardarResponsabilidad": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarResponsabilidad"
+  },
+  "RegresarAListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarResponsabilidad"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlResponsabilidad_edit"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[1]/span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Para Consulta de Archivos y Campo')]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'PCAC-6790')]",
+  },
+
+  "TipoRequisitoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Área de Estudio')]"
+  },
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}

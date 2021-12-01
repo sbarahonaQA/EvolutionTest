@@ -69,6 +69,10 @@
   },
   "CentrosTrabajo": {
     "GetFieldBy": "LinkText",
-    "ValueToFind": "Centros de trabajo"
+    "ValueToFind": "Centros de trabajo",
+  },
+  "Responsabilidades": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Responsabilidades"
   }
 }
