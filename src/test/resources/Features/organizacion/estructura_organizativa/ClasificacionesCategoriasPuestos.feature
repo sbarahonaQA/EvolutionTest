@@ -24,7 +24,7 @@ Característica: ClasificacionesCategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/ClasificacionesCategoriasPuestos.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion   | Investigación y Desarrollo  |
+      | Descripcion | Investigación y Desarrollo |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarClasificacionCategoriaPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Investigación y Desarrollo
@@ -32,7 +32,7 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion        | Investigación y Desarrollo |
+      | Descripcion | Investigación y Desarrollo |
 
 
   @test
@@ -51,12 +51,12 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Catalogo
     * Click a ClasificacionesCategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/ClasificacionesCategoriasPuestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar Básica
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar Basica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion        | Información Editada  |
+      | Descripcion | Información Editada |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarClasificacionCategoriaPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Información Editada
@@ -64,7 +64,7 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion        | Información Editada  |
+      | Descripcion | Información Editada |
 
 
   @test
@@ -83,7 +83,7 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Catalogo
     * Click a ClasificacionesCategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/ClasificacionesCategoriasPuestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion Básica
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion Basica
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -111,9 +111,9 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                | 8                      |
-      | DescripcionRO           | Directores             |
-      | GrupoCorporativoRO      | Aseinfo                |
+      | CodigoRO           | 8          |
+      | DescripcionRO      | Directores |
+      | GrupoCorporativoRO | Aseinfo    |
 
   @test
   @Highest

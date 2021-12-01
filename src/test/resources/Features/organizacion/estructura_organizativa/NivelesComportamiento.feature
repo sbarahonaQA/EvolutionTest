@@ -14,7 +14,6 @@ Característica: NivelesComportamiento
     Entonces Se cargan elementos de la pagina Login.json
     Cuando Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -24,19 +23,18 @@ Característica: NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion       | Creacion Basica |
-      | Abreviatura       | CB              |
+      | Descripcion | Creacion Basica |
+      | Abreviatura | CB              |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarNivelComportamiento
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
-    * Esperar a que aparezca el texto Creacion Basica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion       | Creacion Basica |
-      | Abreviatura       | CB              |
+      | Descripcion | Creacion Basica |
+      | Abreviatura | CB              |
 
   @test
   @Highest
@@ -46,7 +44,6 @@ Característica: NivelesComportamiento
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -55,26 +52,24 @@ Característica: NivelesComportamiento
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
-    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion       | Creacion Basica Editada  |
-      | Abreviatura       | CBE                      |
-      | CodigoAlterno     | 1635                     |
+      | Descripcion   | Creacion Basica Editada  |
+      | Abreviatura   | CBE                      |
+      | CodigoAlterno | 1635                     |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarNivelComportamiento
     * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica Editada
-    * Esperar a que aparezca el texto Creacion Basica Editada en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion       | Creacion Basica Editada  |
-      | Abreviatura       | CBE                      |
-      | CodigoAlterno     | 1635                     |
+      | Descripcion   | Creacion Basica Editada |
+      | Abreviatura   | CBE                     |
+      | CodigoAlterno | 1635                    |
 
   @test
   @Highest
@@ -84,7 +79,6 @@ Característica: NivelesComportamiento
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -92,8 +86,7 @@ Característica: NivelesComportamiento
     * Click a Competencia
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Eliminar
-    * Esperar a que aparezca el texto Prueba Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -117,7 +110,6 @@ Característica: NivelesComportamiento
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Consultar Archivo y Adicional
-    * Esperar a que aparezca el texto Consultar Archivo y Adicional en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
@@ -140,7 +132,6 @@ Característica: NivelesComportamiento
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Competencia
-    * Esperar que el elemento NivelesComportamiento este presente
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Adjuntar captura de pantalla al reporte
@@ -160,7 +151,6 @@ Característica: NivelesComportamiento
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Competencia
-    * Esperar que el elemento NivelesComportamiento este presente
     * Click a NivelesComportamiento
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/NivelesComportamiento.json
     * Click a Nuevo

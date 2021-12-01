@@ -7,7 +7,7 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
   },
-  "CentrosDeCosto": {
+"CentrosDeCosto": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de costo"
   },
@@ -39,16 +39,36 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencia"
   },
-  "TiposCompetencia": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Tipos de Competencia"
-},
   "NivelesComportamiento": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Niveles de comportamientos"
   },
+   "TiposCompetencia": {
+   "GetFieldBy": "LinkText",
+   "ValueToFind": "Tipos de Competencia"
+  },
   "CategoriasPuestos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Categorías de puestos"
+  },
+  "ClasesSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clases Salariales"
+  },
+  "Unidades": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Unidades"
+  },
+  "ClasificacionesCategoriasPuestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clasificaciones de categorías para puestos"
+  },
+  "TiposEmpresas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de empresa"
+  },
+  "CentrosTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Centros de trabajo"
   }
 }

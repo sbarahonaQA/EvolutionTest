@@ -54,7 +54,6 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
-    * Esperar a que aparezca el texto Para Editar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -90,7 +89,6 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
-    * Esperar a que aparezca el texto Para Eliminar en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -137,7 +135,6 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento TiposFunciones este presente
     * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Adjuntar captura de pantalla al reporte
@@ -158,7 +155,6 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento TiposFunciones este presente
     * Click a TiposFunciones
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposFunciones.json
     * Click a Nuevo
@@ -166,3 +162,4 @@ Escenario: Crear un tipo de funciones con información básica (PDS-1506)
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la descripcion del tipo de función
+    * Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la abreviatura del tipo de función

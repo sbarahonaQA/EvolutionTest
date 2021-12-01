@@ -14,7 +14,6 @@ Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -24,18 +23,17 @@ Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion   | Categoría Básica         |
-    | Clasificacion | General                  |
+      | Descripcion   | Categoría Básica |
+      | Clasificacion | General          |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCategoriaPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoría Básica
-    * Esperar a que aparezca el texto Categoría Básica en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion          | Categoría Básica         |
-      | Clasificacion        | General                  |
+      | Descripcion   | Categoría Básica |
+      | Clasificacion | General          |
 
 
   @test
@@ -54,13 +52,13 @@ Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     * Click a Catalogo
     * Click a CategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto e Editar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion     | Registro Editado |
-      | Clasificacion   | Directores       |
+      | Descripcion   | Registro Editado |
+      | Clasificacion | Directores       |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarCategoriaPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Registro Editado
@@ -68,8 +66,8 @@ Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion     | Registro Editado |
-      | Clasificacion   | Directores       |
+      | Descripcion   | Registro Editado |
+      | Clasificacion | Directores       |
 
   @test
   @Highest
@@ -87,7 +85,7 @@ Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     * Click a Catalogo
     * Click a CategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino a eliminar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -111,15 +109,14 @@ Escenario: Crear una categoría de puesto con información básica (PDS-1281)
     * Click a CategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino para consulta
-    * Esperar a que aparezca el texto para consulta en el elemento ColumnaDescripcionDePrimerElementoDeSmartlist
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO             | 29                     |
-      | DescripcionRO        | para consulta          |
-      | ClasificacionRO      | General                |
-      | GrupoCorporativoRO   | Aseinfo                |
+      | CodigoRO           | 29            |
+      | DescripcionRO      | para consulta |
+      | ClasificacionRO    | General       |
+      | GrupoCorporativoRO | Aseinfo       |
 
 
 

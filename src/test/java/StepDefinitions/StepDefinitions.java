@@ -164,7 +164,10 @@ public class StepDefinitions{
 
     @Cuando("^Inicio sesion con usuario (.*)")
     public void inicioSesionConUsuario(String username) throws Exception {
-        functions.iSetLoginCredentials(username);
+        if(functions.readProperties("IDS").equalsIgnoreCase("yes") || functions.readProperties("IDS").equalsIgnoreCase("si"))
+            functions.iSetIDSLoginCredentials(username);
+        else
+            functions.iSetLoginCredentials(username);
     }
 
     /****** Captura de pantalla ********/
@@ -253,6 +256,11 @@ public class StepDefinitions{
     @Y("^Esperar a que aparezca el texto (.*?) en el elemento (.*?)$")
     public void esperarAQueAparezcaElTextoEnElElemento(String elemento, String texto) throws Exception {
         functions.waitForTextToBePresentInElement(elemento, texto);
+    }
+
+    @Y("^Refrescar hasta que elemento (.*?) tenga texto (.*?)$")
+    public void refrescarEsperandoCambio(String elemento, String texto) throws Exception {
+        functions.refreshWaitingChange(elemento, texto);
     }
 
 

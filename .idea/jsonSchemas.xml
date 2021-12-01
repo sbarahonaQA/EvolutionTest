@@ -3,11 +3,11 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
-        <entry key=".cryproj (generic)">
+        <entry key="IntelliJ Themes">
           <value>
             <SchemaInfo>
-              <option name="name" value=".cryproj (generic)" />
-              <option name="relativePathToSchema" value="https://json.schemastore.org/cryproj.json" />
+              <option name="name" value="IntelliJ Themes" />
+              <option name="relativePathToSchema" value="../../../../JetBrains/IntelliJ IDEA Community Edition 2021.2.2/plugins/devkit/lib/devkit.jar!/schemes/theme.schema.json" />
               <option name="applicationDefined" value="true" />
             </SchemaInfo>
           </value>

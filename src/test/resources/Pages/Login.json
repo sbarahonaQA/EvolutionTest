@@ -3,15 +3,24 @@
     "GetFieldBy": "Name",
     "ValueToFind": "txtUsername"
   },
-
   "Contrasenia": {
     "GetFieldBy": "Name",
     "ValueToFind": "txtPassword"
   },
-
   "BotonIniciarSesion": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnIniciarSesion"
+  },
+  "UsuarioIDS": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Input_UserName"
+  },
+  "ContraseniaIDS": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Input_Password"
+  },
+  "BotonIniciarSesionIDS": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//form//div//button[1]"
   }
-
 }

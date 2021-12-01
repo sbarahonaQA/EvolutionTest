@@ -25,10 +25,10 @@
     "ValueToFind": "EsPorPais",
     "FieldType": "Radio"
   },
-      "Pais": {
-      "GetFieldBy": "Xpath",
-      "ValueToFind": "//*[@id=\"CodigoPais\"]",
-      "FieldType": "Texto"
+  "Pais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoPais",
+    "FieldType": "Texto"
   },
   "Minimo": {
     "GetFieldBy": "Id",
@@ -85,6 +85,42 @@
   "PaisRO": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/div/span[2]"
+  },
+  "MínimoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
+  },
+  "MedioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[7]//span[1]"
+  },
+  "MáximoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[8]//span[1]"
+  },
+  "TipoValuacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[9]//span[1]"
+  },
+  "InicialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[10]//span[1]"
+  },
+  "FinalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[11]//span[1]"
+  },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[12]//span[1]"
+  },
+  "FechaInicioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[13]//span[1]"
+  },
+  "FechaFinRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[14]//span[1]"
   },
 
   "Guardar": {
