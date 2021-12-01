@@ -2,14 +2,44 @@
 
 @organizacion
 @estructura_organizativa
-@tipos_unidades
-Característica: TiposUnidades
-  Pruebas para entidad TiposUnidades
+@categorias_puestos
+Característica: CategoriasPuesto
+  Pruebas para entidad CategoriasPuesto
 
   @test
   @Highest
-  @PDS-5097
-  Escenario: Crear un Tipo de Unidades con información básica (PDS-5097)
+  @PDS-1281
+Escenario: Crear una categoría de puesto con información básica (PDS-1281)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Click a Organizacion
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Catalogo
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Click a Nuevo
+    * Llenar formulario:
+      | Descripcion   | Categoría Básica |
+      | Clasificacion | General          |
+    * Adjuntar captura de pantalla al reporte
+    * Click a GuardarCategoriaPuesto
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoría Básica
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | Descripcion   | Categoría Básica |
+      | Clasificacion | General          |
+
+
+  @test
+  @Highest
+  @PDS-1285
+  Escenario: Editar una categoría de puesto con información básica (PDS-1285)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -20,66 +50,42 @@ Característica: TiposUnidades
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Click a Nuevo
-    * Llenar formulario:
-      | Nombre | Creación Básica |
-    * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoUnidad
-    * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creación Básica
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto Creación Básica
+    * Llenar formulario:
+      | Descripcion   | Registro Editado |
+      | Clasificacion | Directores       |
+    * Adjuntar captura de pantalla al reporte
+    * Click a GuardarCategoriaPuesto
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Registro Editado
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | Descripcion   | Registro Editado |
+      | Clasificacion | Directores       |
 
   @test
   @Highest
-  @PDS-5094
-  Escenario: Editar un Tipo de Unidades con información básica (PDS-5094)
+  @PDS-1291
+  Escenario: Eliminar una categoría de puesto (PDS-1291)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 19
-    * Click a PrimerElementoDeSmartlist
-    * Click a Editar
-    * Adjuntar captura de pantalla al reporte
-    * Llenar formulario:
-      | Nombre | Registro Editado |
-    * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoUnidad
-    * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 19
-    * Click a PrimerElementoDeSmartlist
-    * Click a Editar
-    * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto Registro Editado
-
-  @test
-  @Highest
-  @PDS-5093
-  Escenario: Eliminar un Tipo de Unidades (PDS-5093)
-    Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
-    * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
-    * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 20
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Categoria de puesto Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -88,66 +94,70 @@ Característica: TiposUnidades
 
   @test
   @Highest
-  @PDS-5096
-  Escenario: Consultar un Tipo de Unidades con información básica (PDS-5096)
+  @PDS-1288
+  Escenario: Consultar una categoría de puesto con información básica (PDS-1288)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino General
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino para consulta
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 1       |
-      | NombreRO          | General |
-      | GrupoCoporativoRO | Aseinfo |
+      | CodigoRO           | 29            |
+      | DescripcionRO      | para consulta |
+      | ClasificacionRO    | General       |
+      | GrupoCorporativoRO | Aseinfo       |
+
+
 
   @test
   @Highest
-  @PDS-1517
-  Escenario: Ver el listado de tipos de unidades (PDS-1517)
+  @PDS-1277
+  Escenario: Ver el listado de categorías de puestos (PDS-1277)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento TiposUnidades este presente
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
   @Highest
-  @PDS-5095
-  Escenario: Guardar un Tipo de Unidades con los campos en blanco (PDS-5095)
+  @PDS-1283
+  Escenario: Guardar una categoría de puesto con los campos en blanco (PDS-1283)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
-    * Esperar que el elemento TiposUnidades este presente
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
+    * Click a CategoriasPuestos
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CategoriasPuesto.json
     * Click a Nuevo
-    * Click a GuardarTipoUnidad
+    * Click a GuardarCategoriaPuesto
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto El nombre es requerido
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida

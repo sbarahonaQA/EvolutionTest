@@ -2,14 +2,14 @@
 
 @organizacion
 @estructura_organizativa
-@tipos_unidades
-Característica: TiposUnidades
-  Pruebas para entidad TiposUnidades
+@tipos_competencia
+Característica: TiposCompetencia
+  Pruebas para entidad TiposCompetencia
 
   @test
   @Highest
-  @PDS-5097
-  Escenario: Crear un Tipo de Unidades con información básica (PDS-5097)
+  @PDS-1604
+  Escenario: Crear un tipo de competencia con información básica (PDS-1604)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -19,25 +19,29 @@ Característica: TiposUnidades
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
+    * Click a Competencia
+    * Click a TiposCompetencia
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
     * Click a Nuevo
     * Llenar formulario:
-      | Nombre | Creación Básica |
+      | Descripcion     | Tipo de competencia básica |
+      | EsTecnica       | True                       |
+      | EsParaLiderazgo | False                      |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoUnidad
-    * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creación Básica
+    * Click a GuardarTipoCompetencia
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de competencia básica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto Creación Básica
+    Entonces Validar informacion:
+      | Descripcion     | Tipo de competencia básica |
+      | EsTecnica       | True                       |
+      | EsParaLiderazgo | False                      |
 
   @test
   @Highest
-  @PDS-5094
-  Escenario: Editar un Tipo de Unidades con información básica (PDS-5094)
+  @PDS-1613
+  Escenario: Editar un tipo de competencia con información básica (PDS-1613)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -46,28 +50,33 @@ Característica: TiposUnidades
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 19
+    * Click a Competencia
+    * Click a TiposCompetencia
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre | Registro Editado |
+      | Descripcion     | Descripción Editada |
+      | EsTecnica       | False               |
+      | EsParaLiderazgo | True                |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoUnidad
+    * Click a GuardarTipoCompetencia
     * Refrescar pagina
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 19
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Descripción Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto Registro Editado
+    Entonces Validar informacion:
+      | Descripcion     | Descripción Editada |
+      | EsTecnica       | False               |
+      | EsParaLiderazgo | True                |
 
   @test
   @Highest
-  @PDS-5093
-  Escenario: Eliminar un Tipo de Unidades (PDS-5093)
+  @PDS-1614
+  Escenario: Eliminar un tipo de competencia (PDS-1614)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -76,10 +85,10 @@ Característica: TiposUnidades
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 20
+    * Click a Competencia
+    * Click a TiposCompetencia
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -88,32 +97,34 @@ Característica: TiposUnidades
 
   @test
   @Highest
-  @PDS-5096
-  Escenario: Consultar un Tipo de Unidades con información básica (PDS-5096)
+  @PDS-1605
+  Escenario: Consultar un tipo de competencia con información básica (PDS-1605)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino General
+    * Click a Competencia
+    * Click a TiposCompetencia
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino De Gestión
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 1       |
-      | NombreRO          | General |
-      | GrupoCoporativoRO | Aseinfo |
+      | CodigoRO          | 2          |
+      | DescripcionRO     | De Gestión |
+      | EsTecnicaRO       | False      |
+      | EsParaLiderazgoRO | False      |
 
   @test
   @Highest
-  @PDS-1517
-  Escenario: Ver el listado de tipos de unidades (PDS-1517)
+  @PDS-1600
+  Escenario: Ver el listado de tipos de competencia (PDS-1600)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -122,18 +133,17 @@ Característica: TiposUnidades
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Esperar que el elemento TiposUnidades este presente
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
+    * Click a Competencia
+    * Click a TiposCompetencia
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
   @Highest
-  @PDS-5095
-  Escenario: Guardar un Tipo de Unidades con los campos en blanco (PDS-5095)
+  @PDS-1612
+  Escenario: Guardar un tipo de competencia con los campos en blanco (PDS-1612)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -142,12 +152,11 @@ Característica: TiposUnidades
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Catalogo
-    * Esperar que el elemento TiposUnidades este presente
-    * Click a TiposUnidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposUnidades.json
+    * Click a Competencia
+    * Click a TiposCompetencia
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/TiposCompetencia.json
     * Click a Nuevo
-    * Click a GuardarTipoUnidad
+    * Click a GuardarTipoCompetencia
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto El nombre es requerido
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La Descripción es requerida

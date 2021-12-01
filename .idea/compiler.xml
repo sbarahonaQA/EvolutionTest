@@ -8,7 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EvolutionTest" />
         <module name="Evolution" />
+        <module name="EvolutionTest2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EvolutionTest4" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

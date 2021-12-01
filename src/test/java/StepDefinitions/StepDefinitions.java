@@ -164,7 +164,10 @@ public class StepDefinitions{
 
     @Cuando("^Inicio sesion con usuario (.*)")
     public void inicioSesionConUsuario(String username) throws Exception {
-        functions.iSetLoginCredentials(username);
+        if(functions.readProperties("IDS").equalsIgnoreCase("yes") || functions.readProperties("IDS").equalsIgnoreCase("si"))
+            functions.iSetIDSLoginCredentials(username);
+        else
+            functions.iSetLoginCredentials(username);
     }
 
     /****** Captura de pantalla ********/
@@ -183,9 +186,9 @@ public class StepDefinitions{
 
     /** Handle and accept a JavaScript alert */
     @Entonces("^Aceptar alerta$")
-    public void aceptarAlerta()
-    {
+    public void aceptarAlerta() throws InterruptedException {
         functions.acceptAlert();
+        TimeUnit.SECONDS.sleep(1);
     }
 
     /** Handle and dismiss a JavaScript alert */
@@ -245,14 +248,19 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
-    @Y("^Pausa (.*?)$")
-    public void pausa(int segundos) throws Exception {
-        Thread.sleep(segundos * 1000L);
+    @Y("^Esperar (.*?) segundos$")
+    public void esperar(int segundos) throws InterruptedException {
+        TimeUnit.SECONDS.sleep(segundos);
     }
 
     @Y("^Esperar a que aparezca el texto (.*?) en el elemento (.*?)$")
     public void esperarAQueAparezcaElTextoEnElElemento(String elemento, String texto) throws Exception {
         functions.waitForTextToBePresentInElement(elemento, texto);
+    }
+
+    @Y("^Refrescar hasta que elemento (.*?) tenga texto (.*?)$")
+    public void refrescarEsperandoCambio(String elemento, String texto) throws Exception {
+        functions.refreshWaitingChange(elemento, texto);
     }
 
 
@@ -306,6 +314,16 @@ public class StepDefinitions{
     @Entonces("^Prueba exitosa si elemento (.*?) NO contiene texto (.*?)$")
     public void pruebaExitosaSiElementoNoContieneTexto(String element,String text) throws Exception {
         functions.checkPartialTextElementNotPresent(element, text);
+    }
+
+    @Entonces("^Prueba exitosa si elemento (.*?) es igual al texto (.*?)$")
+    public void pruebaExitosaSiElementoEsIgualTexto(String element,String text) throws Exception {
+        functions.checkTextElementPresent(element, text);
+    }
+
+    @Entonces("^Prueba exitosa si elemento (.*?) no es igual al texto (.*?)$")
+    public void pruebaExitosaSiElementoNoEsIgualTexto(String element,String text) throws Exception {
+        functions.checkTextElementNotPresent(element, text);
     }
 
     /** Assert if element is present*/

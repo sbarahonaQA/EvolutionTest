@@ -12,7 +12,7 @@ Característica: AreasFuncionales
  Escenario: Crear un área funcional con información básica (PDS-1217)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
@@ -27,12 +27,12 @@ Característica: AreasFuncionales
       | Nombre | Área Funcional 1 |
      * Adjuntar captura de pantalla al reporte
      * Click a GuardarAreaFuncional
-     * Refrescar pagina
      * Buscar en Smartlist CajaBusquedaSmartlist el termino Área Funcional 1
      * Click a PrimerElementoDeSmartlist
      * Click a Editar
      * Adjuntar captura de pantalla al reporte
-     Entonces Prueba exitosa si elemento Nombre contiene texto Área Funcional 1
+     Entonces Validar informacion:
+      | Nombre | Área Funcional 1 |
 
   @test
   @Highest
@@ -40,8 +40,9 @@ Característica: AreasFuncionales
   Escenario: Editar un área funcional con información básica (PDS-1270)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -57,12 +58,12 @@ Característica: AreasFuncionales
       | Nombre | ValorEditado |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarAreaFuncional
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 133
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
-    Entonces Prueba exitosa si elemento Nombre contiene texto ValorEditado
+    Entonces Validar informacion:
+      | Nombre | ValorEditado |
 
   @test
   @Highest
@@ -70,8 +71,9 @@ Característica: AreasFuncionales
   Escenario: Eliminar un área funcional con información básica (PDS-1274)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -79,12 +81,12 @@ Característica: AreasFuncionales
     * Click a Catalogo
     * Click a AreasFuncionales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/AreasFuncionales.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 134
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 136
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
-    * Refrescar pagina
-    Entonces Prueba exitosa si elemento ElementosMostrados contiene texto No hay registros
+    Entonces Validar informacion:
+      | ElementosMostrados | No hay registros. |
 
   @test
   @Highest
@@ -94,6 +96,7 @@ Característica: AreasFuncionales
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -116,8 +119,9 @@ Característica: AreasFuncionales
   Escenario: Ver el listado de áreas funcionales (PDS-1216)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -136,8 +140,9 @@ Característica: AreasFuncionales
   Escenario: Guardar un área funcional con los campos en blanco (PDS-1269)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario gerenterrhh
+    * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa

@@ -2,14 +2,14 @@
 
 @organizacion
 @estructura_organizativa
-@centros_costo
-Característica: CentrosCosto
-  Pruebas para entidad CentrosCosto
+@centros_trabajo
+Característica: CentrosTrabajo
+  Pruebas para entidad CentrosTrabajo
 
   @test
   @Highest
-  @PDS-1751
-Escenario: Crear un centro de costo con información básica (PDS-1751)
+  @PDS-1738
+  Escenario: Crear un centro de trabajo con información básica (PDS-1738)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -19,33 +19,35 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
     * Click a Nuevo
     * Llenar formulario:
-    | Descripcion   | Control de Calidad  |
-    | Abreviatura   | CD                  |
-    | NomenContable | 12                  |
-    | Compania      | ASEINFO Corporativo |
-    | AreaFuncional | Operaciones         |
+      | Descripcion  | Oficinas Apoyo Terrestre          |
+      | Direccion    | Calle don Quijote, 30 - PISO 6 IZ |
+      | Compania     | ASEINFO Corporativo               |
+      | Pais         | Guatemala                         |
+      | Departamento | CHIQUIMULA                        |
+      | Municipio    | OLOPA                             |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarCentroDeCosto
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Control de Calidad
+    * Click a GuardarCentroDeTrabajo
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Oficinas Apoyo Terrestre
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado        | Pendiente           |
-      | Descripcion   | Control de Calidad  |
-      | Abreviatura   | CD                  |
-      | NomenContable | 12                  |
-      | Compania      | ASEINFO Corporativo |
-      | AreaFuncional | Operaciones         |
+      | Estado       | Pendiente                         |
+      | Descripcion  | Oficinas Apoyo Terrestre          |
+      | Direccion    | Calle don Quijote, 30 - PISO 6 IZ |
+      | Compania     | ASEINFO Corporativo               |
+      | Pais         | Guatemala                         |
+      | Departamento | CHIQUIMULA                        |
+      | Municipio    | OLOPA                             |
 
   @test
   @Highest
-  @PDS-3547
-  Escenario: Guardar y procesar un centro de costo con información básica (PDS-3547)
+  @PDS-3542
+  Escenario: Guardar y procesar un centro de trabajo con información básica (PDS-3542)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -55,35 +57,36 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion   | Contabilidad CORP   |
-      | Abreviatura   | CONT                |
-      | NomenContable | 100                 |
-      | Compania      | ASEINFO Corporativo |
-      | AreaFuncional | Comercial           |
+      | Descripcion  | Oficinas Oeste         |
+      | Direccion    | Oeste                  |
+      | Compania     | ASEINFO Corporativo    |
+      | Pais         | Guatemala              |
+      | Departamento | SAN MARCOS             |
+      | Municipio    | SAN PEDRO SACATEPEQUEZ |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarYProcesar
-    #Esperando que el registro se autorice
-    * Esperar 1 segundos
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Contabilidad CORP
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Oficinas Oeste
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
+    * Refrescar hasta que elemento Estado tenga texto Vigente
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado        | Vigente             |
-      | Descripcion   | Contabilidad CORP   |
-      | Abreviatura   | CONT                |
-      | NomenContable | 100                 |
-      | Compania      | ASEINFO Corporativo |
-      | AreaFuncional | Comercial           |
+      | Estado       | Vigente                |
+      | Descripcion  | Oficinas Oeste         |
+      | Direccion    | Oeste                  |
+      | Compania     | ASEINFO Corporativo    |
+      | Pais         | Guatemala              |
+      | Departamento | SAN MARCOS             |
+      | Municipio    | SAN PEDRO SACATEPEQUEZ |
 
   @test
   @Highest
-  @PDS-1754
-  Escenario: Editar un centro de costo con información básica (PDS-1754)
+  @PDS-1739
+  Escenario: Editar un centro de trabajo con información básica (PDS-1739)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
@@ -93,37 +96,38 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion   | Costos Editado Basico |
-      | Abreviatura   | CEB                   |
-      | NomenContable | 12E                   |
-      | CtaContable   | 1E                    |
-      | Compania      | ASEINFO Guatemala     |
-      | AreaFuncional | Operaciones           |
+      | Descripcion  | Centro Editado      |
+      | Direccion    | Barrio El Golfo     |
+      | Compania     | ASEINFO El Salvador |
+      | Pais         | El Salvador         |
+      | Departamento | CABANAS             |
+      | Municipio    | Antiguo Cuscatlán   |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarCentroDeCosto
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Costos Editado Basico
+    * Click a GuardarCentroDeTrabajo
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Centro Editado
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion   | Costos Editado Basico |
-      | Abreviatura   | CEB                   |
-      | NomenContable | 12E                   |
-      | CtaContable   | 1E                    |
-      | Compania      | ASEINFO Guatemala     |
-      | AreaFuncional | Operaciones           |
+      | Estado       | Pendiente           |
+      | Descripcion  | Centro Editado      |
+      | Direccion    | Barrio El Golfo     |
+      | Compania     | ASEINFO El Salvador |
+      | Pais         | El Salvador         |
+      | Departamento | CABANAS             |
+      | Municipio    | Antiguo Cuscatlán   |
 
   @test
   @Highest
-  @PDS-1755
-  Escenario: Eliminar un centro de costo (PDS-1755)
+  @PDS-1740
+  Escenario: Eliminar un centro de trabajo (PDS-1740)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -133,9 +137,9 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminacion basica
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -144,37 +148,39 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
 
   @test
   @Highest
-  @PDS-1752
-  Escenario: Consultar un centro de costo con información básica (PDS-1752)
+  @PDS-1741
+  Escenario: Consultar un centro de trabajo con información básica (PDS-1741)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Panamá si no está seleccionada
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 121
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Consulta
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO        | 121                    |
-      | EstadoRO        | Vigente                |
-      | DescripcionRO   | Atención al Cliente PA |
-      | AbreviaturaRO   | SOP                    |
-      | NomenContableRO | SOP-PA-12              |
-      | CtaContableRO   | 12-SOP-008             |
-      | CompaniaRO      | ASEINFO Panamá         |
-      | AreaFuncionalRO | Atención al Cliente    |
+      | CodigoRO       | 25                         |
+      | EstadoRO       | Vigente                    |
+      | DescripcionRO  | Para Consulta              |
+      | DireccionRO    | Cl 15 De Septiembre Zona 0 |
+      | TelefonoRO     | 22855559                   |
+      | FaxRO          | 22529913                   |
+      | CompaniaRO     | ASEINFO Corporativo        |
+      | PaisRO         | Guatemala                  |
+      | DepartamentoRO | IZABAL                     |
+      | MunicipioRO    | LOS AMATES                 |
 
   @test
   @Highest
-  @PDS-1750
-  Escenario: Ver el listado de centros de costo (PDS-1750)
+  @PDS-1742
+  Escenario: Ver el listado de centros de trabajo (PDS-1742)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -184,16 +190,16 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
 
   @test
   @Highest
-  @PDS-1753
-  Escenario: Guardar un centro de costo con los campos en blanco (PDS-1753)
+  @PDS-1743
+  Escenario: Guardar un centro de trabajo con los campos en blanco (PDS-1743)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -203,12 +209,12 @@ Escenario: Crear un centro de costo con información básica (PDS-1751)
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a CentrosDeCosto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosCosto.json
+    * Click a CentrosTrabajo
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CentrosTrabajo.json
     * Click a Nuevo
-    * Click a GuardarCentroDeCosto
+    * Click a GuardarCentroDeTrabajo
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto La Descripción es requerida
-    * Prueba exitosa si elemento Mensaje contiene texto La Abreviatura es requerida
-    * Prueba exitosa si elemento Mensaje contiene texto La nomenclatura contable es requerida
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto La dirección es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto El municipio es requerido

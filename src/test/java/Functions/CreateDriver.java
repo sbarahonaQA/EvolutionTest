@@ -13,6 +13,7 @@ public class CreateDriver {
     private static String logLevel;
     private static String servidor;
     private static String instancia;
+    private static String usingIDS;
     private static String properties = "test.properties";
     private static Properties prop = new Properties();
     private static InputStream in = CreateDriver.class.getResourceAsStream("../test.properties");
@@ -52,7 +53,7 @@ public class CreateDriver {
             servidor = prop.getProperty("servidor");
             instancia = prop.getProperty("instancia");
             logLevel = prop.getProperty("logLevel");
-
+            usingIDS = prop.getProperty("IDS");
             
         } catch (IOException e) {
         	log.error("initConfig Error", e);
@@ -64,6 +65,7 @@ public class CreateDriver {
         log.info("[ POM Configuration ] - Servidor: " + servidor);
         log.info("[ POM Configuration ] - Instancia: " + instancia);
         log.info("[ POM Configuration ] - Logger Level: " + logLevel);
+        log.info("[ POM Configuration ] - IDS habilitado?: " + usingIDS);
         log.info("***********************************************************************************************************");
         
         /****** Load the driver *******/

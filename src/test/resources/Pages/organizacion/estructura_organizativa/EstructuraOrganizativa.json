@@ -1,35 +1,74 @@
 {
   "AreasFuncionales": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[@class='task']//a[contains(text(),'Áreas funcionales')]"
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Áreas funcionales"
   },
   "Catalogo": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//a[contains(text(),'Catálogo')]"
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Catálogo"
   },
-  "Centros_de_costo": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[@class='task']//a[contains(text(),'Centros de costo')]"
+"CentrosDeCosto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Centros de costo"
   },
-  "tiposFunciones":{
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset[3]/div/div[8]/div[1]/div[2]/h2/a"
+  "TiposFunciones":{
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de funciones"
   },
-
   "Frecuencias": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset[3]/div/div[4]/div[1]/div[2]/h2/a"
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Frecuencias"
   },
   "TiposCondicionesTrabajo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de condiciones de trabajo"
   },
   "TiposRequisitos": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[@class='task']//a[contains(text(),'Tipos de requisitos')]"
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de requisitos"
   },
   "TiposUnidades": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "/html/body/div[1]/div[4]/div[2]/div[2]/div[2]/fieldset[3]/div/div[9]/div[1]/div[2]/h2/a"
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de unidades"
+  },
+  "EquiposTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Equipos de trabajo"
+  },
+  "Competencia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencia"
+  },
+  "NivelesComportamiento": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Niveles de comportamientos"
+  },
+   "TiposCompetencia": {
+   "GetFieldBy": "LinkText",
+   "ValueToFind": "Tipos de Competencia"
+  },
+  "CategoriasPuestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de puestos"
+  },
+  "ClasesSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clases Salariales"
+  },
+  "Unidades": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Unidades"
+  },
+  "ClasificacionesCategoriasPuestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clasificaciones de categorías para puestos"
+  },
+  "TiposEmpresas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de empresa"
+  },
+  "CentrosTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Centros de trabajo"
   }
 }
