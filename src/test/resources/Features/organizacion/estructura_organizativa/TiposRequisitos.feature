@@ -14,6 +14,7 @@ Característica: TiposRequisitos
     Entonces Se cargan elementos de la pagina Login.json
     Cuando Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -26,7 +27,6 @@ Característica: TiposRequisitos
       | Descripcion | Tipo de requisito PDS-1512 |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipodeRequisito
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de requisito PDS-1512
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
@@ -43,6 +43,7 @@ Característica: TiposRequisitos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -69,6 +70,7 @@ Característica: TiposRequisitos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -80,7 +82,6 @@ Característica: TiposRequisitos
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
-    * Refrescar pagina
     Entonces Validar informacion:
       | ElementosMostrados | No hay registros |
 
@@ -92,6 +93,7 @@ Característica: TiposRequisitos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -111,6 +113,7 @@ Característica: TiposRequisitos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -132,6 +135,7 @@ Característica: TiposRequisitos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -147,7 +151,6 @@ Característica: TiposRequisitos
       | Descripcion | ValorEditado |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipodeRequisito
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino ValorEditado
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
