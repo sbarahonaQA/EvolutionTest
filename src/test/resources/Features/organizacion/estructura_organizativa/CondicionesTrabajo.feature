@@ -34,10 +34,10 @@ Característica: CondicionesTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion      | Condicion Nueva |
-      | Abreviatura      | CN-PDS-1337     |
-      | TipoCondicion    | 12              |
-      | GrupoCorporativo | Aseinfo         |
+      | Descripcion        | Condicion Nueva |
+      | Abreviatura        | CN-PDS-1337     |
+      | TipoCondicionTexto | NEW             |
+      | GrupoCorporativo   | Aseinfo         |
 
   @test
   @Highest
@@ -71,11 +71,11 @@ Característica: CondicionesTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion      | Condicion Editada            |
-      | Abreviatura      | DDTE                         |
-      | Definicion       | Condicion de Trabajo Editada |
-      | TipoCondicion    | 12                           |
-      | GrupoCorporativo | Aseinfo                      |
+      | Descripcion        | Condicion Editada            |
+      | Abreviatura        | DDTE                         |
+      | Definicion         | Condicion de Trabajo Editada |
+      | TipoCondicionTexto | NEW                          |
+      | GrupoCorporativo   | Aseinfo                      |
 
   @test
   @Highest

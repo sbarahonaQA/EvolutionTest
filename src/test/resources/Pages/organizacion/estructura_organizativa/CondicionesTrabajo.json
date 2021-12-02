@@ -33,6 +33,11 @@
     "ValueToFind": "CodigoTipoCondicionTrabajo",
     "FieldType": "CodeCombo"
   },
+  "TipoCondicionTexto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoTipoCondicionTrabajo_Text",
+    "FieldType": "Texto"
+  },
   "GrupoCorporativo": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@id='container']//div[6]//span[1]"
