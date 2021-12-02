@@ -30,7 +30,7 @@
   },
   "GrupoCorporativo": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[5]/span"
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
   },
   "CodigoRO": {
     "GetFieldBy": "Xpath",

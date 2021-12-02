@@ -24,9 +24,9 @@ Característica: FuncionesGenerales
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/FuncionesGenerales.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion       | Funciones General  |
-      | Detalle           | Prueba             |
-      | TipoFuncion       | Administrativas    |
+      | Descripcion | Funciones General |
+      | Detalle     | Prueba            |
+      | TipoFuncion | Administrativas   |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Funciones General
@@ -34,10 +34,10 @@ Característica: FuncionesGenerales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion       | Funciones General  |
-      | Detalle           | Prueba             |
-      | TipoFuncion       | Administrativas    |
-      | GrupoCorporativo  | aseinfo            |
+      | Descripcion      | Funciones General |
+      | Detalle          | Prueba            |
+      | TipoFuncion      | Administrativas   |
+      | GrupoCorporativo | Aseinfo           |
 
 
   @test
@@ -61,9 +61,9 @@ Característica: FuncionesGenerales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion       | Para Edición Básica Editado  |
-      | Detalle           | Detalle editado              |
-      | TipoFuncion       | Generales                    |
+      | Descripcion | Para Edición Básica Editado |
+      | Detalle     | Detalle editado             |
+      | TipoFuncion | Generales                   |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Edición Básica Editado
@@ -71,10 +71,10 @@ Característica: FuncionesGenerales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion       | Para Edición Básica Editado  |
-      | Detalle           | Detalle editado              |
-      | TipoFuncion       | Generales                    |
-      | GrupoCorporativo  | aseinfo                      |
+      | Descripcion      | Para Edición Básica Editado |
+      | Detalle          | Detalle editado             |
+      | TipoFuncion      | Generales                   |
+      | GrupoCorporativo | Aseinfo                     |
 
   @test
   @Highest
@@ -120,11 +120,11 @@ Característica: FuncionesGenerales
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO           | 15                       |
-      | DescripcionRO      | consulta                 |
-      | DetalleRO          | Detalle de función       |
-      | TipoFuncionRO      | Operativas               |
-      | GrupoCorporativoRO | Aseinfo                  |
+      | CodigoRO           | 15                 |
+      | DescripcionRO      | consulta           |
+      | DetalleRO          | Detalle de función |
+      | TipoFuncionRO      | Operativas         |
+      | GrupoCorporativoRO | Aseinfo            |
 
 
   @test
