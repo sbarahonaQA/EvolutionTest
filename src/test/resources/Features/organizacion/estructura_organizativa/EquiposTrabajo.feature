@@ -71,12 +71,11 @@ Característica: EquiposTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion           | Equipo de trabajo editado  |
-      | Abreviatura           | DE                         |
-      | EquipoEspecial        | True                       |
-      | PlazaEncargadaTexto   | Director Operaciones CORP  |
-      | GrupoCorporativo      | aseinfo                    |
-
+      | Descripcion         | Equipo de trabajo editado  |
+      | Abreviatura         | DE                         |
+      | EquipoEspecial      | True                       |
+      | PlazaEncargadaTexto | Director Operaciones CORP  |
+      | GrupoCorporativo    | Aseinfo                    |
 
   @test
   @Highest
@@ -94,7 +93,7 @@ Característica: EquiposTrabajo
     * Click a Catalogo
     * Click a EquiposTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EquiposTrabajo.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino eliminar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta

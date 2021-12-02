@@ -70,5 +70,9 @@
   "CentrosTrabajo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de trabajo"
+  },
+  "CondicionesTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Condiciones de trabajo"
   }
 }
