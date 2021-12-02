@@ -70,5 +70,13 @@
   "CentrosTrabajo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de trabajo"
+  },
+  "Companias": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Compañías"
+  },
+  "ObjetivoEstrategico": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Objetivos Estratégicos"
   }
 }
