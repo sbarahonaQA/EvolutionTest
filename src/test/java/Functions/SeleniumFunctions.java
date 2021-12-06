@@ -524,6 +524,16 @@ public class SeleniumFunctions {
 
                     log.info(String.format("Al codecombo %s se le pone codigo %s", columns.get(0), columns.get(1)));
                     break;
+                case "ValueList":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    driver.findElement(SeleniumElement).sendKeys(Keys.ARROW_DOWN);
+                    //Esperar que la lista se despliegue
+                    TimeUnit.SECONDS.sleep(1);
+                    driver.findElement(By.className("ac_even")).click();
+
+                    log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
+                    break;
                 default:
                     log.error("Manejo de tipo no disponible");
             }
