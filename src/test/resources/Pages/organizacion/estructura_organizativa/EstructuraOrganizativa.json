@@ -82,5 +82,9 @@
   "Competencias": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencias"
+  },
+  "Requisitos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Requisitos"
   }
 }
