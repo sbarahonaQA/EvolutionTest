@@ -1,0 +1,34 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Equipo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoEquipo_Text",
+    "FieldType": "ValueList"
+  },
+  "Observacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Observacion",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarEquipoPuesto"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  }
+}
