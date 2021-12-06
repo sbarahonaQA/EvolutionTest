@@ -32,9 +32,9 @@ Característica: Requisitos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion   | Creación Básica |
-      | TipoRequisito | Edad            |
-
+      | Descripcion      | Creación Básica |
+      | TipoRequisito    | Edad            |
+      | GrupoCorporativo | Aseinfo         |
 
   @test
   @Highest
@@ -76,6 +76,7 @@ Característica: Requisitos
     * Click a GuardarRequisito
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
+    Entonces Prueba exitosa si elemento Mensaje contiene texto Favor ingrese la descripcion del requisito
 
   @test
   @Highest
@@ -98,10 +99,11 @@ Característica: Requisitos
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO         | 178                        |
-      | DescripcionRO    | Para Consultar             |
-      | ObservacionRO    | Texto de observacion       |
-      | TipoRequisitoRO  | Área de Estudio            |
+      | CodigoRO         | 178                  |
+      | DescripcionRO    | Para Consultar       |
+      | ObservacionRO    | Texto de observacion |
+      | TipoRequisitoRO  | Área de Estudio      |
+      | GrupoCorporativo | Aseinfo              |
 
   @test
   @Highest
@@ -119,7 +121,7 @@ Característica: Requisitos
     * Click a Catalogo
     * Click a Requisitos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Requisitos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 177
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -142,7 +144,7 @@ Característica: Requisitos
     * Click a Catalogo
     * Click a Requisitos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Requisitos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 176
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
@@ -152,11 +154,12 @@ Característica: Requisitos
       | TipoRequisito  | Idiomas             |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarRequisito
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 176
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Descripción Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion    | Descripción Editada |
-      | Observacion    | Observación Editada |
-      | TipoRequisito  | Idiomas             |
+      | Descripcion      | Descripción Editada |
+      | Observacion      | Observación Editada |
+      | TipoRequisito    | Idiomas             |
+      | GrupoCorporativo | Aseinfo             |

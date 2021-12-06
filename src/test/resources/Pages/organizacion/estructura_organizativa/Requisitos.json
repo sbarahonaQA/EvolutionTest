@@ -18,14 +18,16 @@
 
   "Descripcion": {
     "GetFieldBy": "Id",
-    "ValueToFind": "Descripcion",
-
+    "ValueToFind": "Descripcion"
   },
-
   "TipoRequisito": {
     "GetFieldBy": "Id",
     "ValueToFind": "CodigoTipoRequisito",
     "FieldType": "Lista"
+  },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
   },
 
 
@@ -57,7 +59,7 @@
   },
   "ObservacionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//span[contains(text(),'Texto de observacion')]",
+    "ValueToFind": "//span[contains(text(),'Texto de observacion')]"
   },
   "Observacion": {
     "GetFieldBy": "Xpath",
