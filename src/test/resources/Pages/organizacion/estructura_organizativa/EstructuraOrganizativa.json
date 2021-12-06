@@ -70,5 +70,21 @@
   "CentrosTrabajo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de trabajo"
+  },
+  "CondicionesTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Condiciones de trabajo"
+  },
+  "FuncionesGenerales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Funciones Generales"
+  },
+  "Competencias": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias"
+  },
+  "Requisitos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Requisitos"
   }
 }

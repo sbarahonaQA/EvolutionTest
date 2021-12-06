@@ -24,9 +24,9 @@ Característica: CondicionesTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/CondicionesTrabajo.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion   | Condicion Nueva   |
-      | Abreviatura   | CN-PDS-1337       |
-      | TipoCondicion | 12                |
+      | Descripcion   | Condicion Nueva |
+      | Abreviatura   | CN-PDS-1337     |
+      | TipoCondicion | 12              |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Condicion Nueva
@@ -34,10 +34,10 @@ Característica: CondicionesTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion           | Condicion Nueva   |
-      | Abreviatura           | CN-PDS-1337       |
-      | TipoCondicionTexto    | NEW               |
-      | GrupoCorporativo      | aseinfo           |
+      | Descripcion        | Condicion Nueva |
+      | Abreviatura        | CN-PDS-1337     |
+      | TipoCondicionTexto | NEW             |
+      | GrupoCorporativo   | Aseinfo         |
 
   @test
   @Highest
@@ -60,10 +60,10 @@ Característica: CondicionesTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion   | Condicion Editada              |
-      | Abreviatura   | DDTE                           |
-      | Definicion    | Condicion de Trabajo Editada   |
-      | TipoCondicion | 12                             |
+      | Descripcion   | Condicion Editada            |
+      | Abreviatura   | DDTE                         |
+      | Definicion    | Condicion de Trabajo Editada |
+      | TipoCondicion | 12                           |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Condicion Editada
@@ -71,11 +71,11 @@ Característica: CondicionesTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion           | Condicion Editada              |
-      | Abreviatura           | DDTE                           |
-      | Definicion            | Condicion de Trabajo Editada   |
-      | TipoCondicionTexto    | NEW                            |
-      | GrupoCorporativo      | aseinfo                        |
+      | Descripcion        | Condicion Editada            |
+      | Abreviatura        | DDTE                         |
+      | Definicion         | Condicion de Trabajo Editada |
+      | TipoCondicionTexto | NEW                          |
+      | GrupoCorporativo   | Aseinfo                      |
 
   @test
   @Highest
@@ -121,12 +121,12 @@ Característica: CondicionesTrabajo
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO           | 10                         |
-      | DescripcionRO      | Condicion para consulta    |
-      | AbreviaturaRO      | CC-PDS-1341                |
-      | DefinicionRO       | Definición                 |
-      | TipoCondicionRO    | NEW                        |
-      | GrupoCorporativoRO | Aseinfo                    |
+      | CodigoRO           | 10                      |
+      | DescripcionRO      | Condicion para consulta |
+      | AbreviaturaRO      | CC-PDS-1341             |
+      | DefinicionRO       | Definición              |
+      | TipoCondicionRO    | NEW                     |
+      | GrupoCorporativoRO | Aseinfo                 |
 
   @test
   @Highest
