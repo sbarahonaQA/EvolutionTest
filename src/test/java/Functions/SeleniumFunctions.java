@@ -555,6 +555,16 @@ public class SeleniumFunctions {
                     }
                     log.info(String.format("Al calendario %s se le pone esta fecha %s", columns.get(0), columns.get(1)));
                     break;
+                case "ValueList":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    driver.findElement(SeleniumElement).sendKeys(Keys.ARROW_DOWN);
+                    //Esperar que la lista se despliegue
+                    TimeUnit.SECONDS.sleep(1);
+                    driver.findElement(By.className("ac_even")).click();
+
+                    log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
+                    break;
                 default:
                     log.error("Manejo de tipo no disponible");
             }
@@ -627,5 +637,112 @@ public class SeleniumFunctions {
         else
             SegAcceso.load(inSegAcceso);
         return SegAcceso.getProperty(usuario);
+    }
+
+    public void editRow(String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            //List <WebElement> acciones = columnas.get(0).findElements(By.tagName("a"));
+            List <WebElement> acciones = fila.findElements(By.tagName("a"));
+
+            if(acciones.size()==0) {
+                aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
+            }
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                if(acciones.size()==3)
+                    acciones.get(2).click();
+                else
+                    acciones.get(1).click();
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + text + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void deleteRow(String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                columnas.get(0).findElements(By.tagName("a")).get(0).click();
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+        }
     }
 }

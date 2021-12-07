@@ -90,5 +90,9 @@
   "Plazas": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Plazas"
+  },
+  "Puestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Puestos"
   }
 }
