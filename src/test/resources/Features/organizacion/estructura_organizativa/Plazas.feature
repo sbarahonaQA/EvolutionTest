@@ -23,14 +23,14 @@ Característica: Plazas
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Plazas.json
     * Click a Nuevo
     * Llenar formulario:
-      | Compania            | ASEINFO Corporativo    |
-      | Nombre              | Creación Básica        |
-      | MaxEmpleados        | 2                      |
-      | EsPresupuestada     | False                  |
-      | CodigoUnidad        | 10                     |
-      | CodigoPuesto        | 18                     |
-      | CodigoCentroTrabajo | 1                      |
-      | EsTemporal          | False                  |
+      | Compania            | ASEINFO Corporativo |
+      | Nombre              | Creación Básica     |
+      | MaxEmpleados        | 2                   |
+      | EsPresupuestada     | False               |
+      | CodigoUnidad        | 10                  |
+      | CodigoPuesto        | 18                  |
+      | CodigoCentroTrabajo | 1                   |
+      | EsTemporal          | False               |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creación Básica
@@ -38,14 +38,14 @@ Característica: Plazas
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado                     | Pendiente              |
-      | Nombre                     | Creación Básica        |
-      | MaxEmpleados               | 2                      |
-      | EsPresupuestada            | False                  |
-      | CodigoUnidadTexto          | Operaciones            |
-      | CodigoPuestoTexto          | Consultor Junior       |
-      | CodigoCentroTrabajoTexto   | Oficinas Centrales     |
-      | EsTemporal                 | False                  |
+      | Estado                   | Pendiente          |
+      | Nombre                   | Creación Básica    |
+      | MaxEmpleados             | 2                  |
+      | EsPresupuestada          | False              |
+      | CodigoUnidadTexto        | Operaciones        |
+      | CodigoPuestoTexto        | Consultor Junior   |
+      | CodigoCentroTrabajoTexto | Oficinas Centrales |
+      | EsTemporal               | False              |
 
   @test
   @Highest
@@ -61,20 +61,20 @@ Característica: Plazas
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Plazas
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Plazas.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Plaza Editar
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre              | Plaza editada          |
-      | MaxEmpleados        | 10                     |
-      | EsPresupuestada     | True                   |
-      | CodigoUnidad        | 8                      |
-      | CodigoPuesto        | 29                     |
-      | CodigoCentroTrabajo | 17                     |
-      | EsTemporal          | True                   |
-      | FechaIni            | 01/01/2021             |
-      | FechaFin            | 31/01/2021             |
+      | Nombre              | Plaza editada |
+      | MaxEmpleados        | 10            |
+      | EsPresupuestada     | True          |
+      | CodigoUnidad        | 8             |
+      | CodigoPuesto        | 29            |
+      | CodigoCentroTrabajo | 17            |
+      | EsTemporal          | True          |
+      | FechaIni            | 01/01/2021    |
+      | FechaFin            | 31/01/2021    |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Refrescar pagina
@@ -83,13 +83,15 @@ Característica: Plazas
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre                     | Plaza editada          |
-      | MaxEmpleados               | 10                     |
-      | EsPresupuestada            | True                   |
-      | CodigoUnidadTexto          | Comercial              |
-      | CodigoPuestoTexto          | Asistente de Gerencia  |
-      | CodigoCentroTrabajoTexto   | Oficinas Sur           |
-      | EsTemporal                 | True                   |
+      | Nombre                   | Plaza editada         |
+      | MaxEmpleados             | 10                    |
+      | EsPresupuestada          | True                  |
+      | CodigoUnidadTexto        | Comercial             |
+      | CodigoPuestoTexto        | Asistente de Gerencia |
+      | CodigoCentroTrabajoTexto | Oficinas Sur          |
+      | EsTemporal               | True                  |
+      | FechaIni                 | 01/01/2021            |
+      | FechaFin                 | 31/01/2021            |
 
 
   @test
@@ -135,20 +137,18 @@ Característica: Plazas
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                | 6                                |
-      | EstadoRO                | Vigente                          |
-      | CompaniaRO              | ASEINFO Corporativo              |
-      | NombreRO                | Director Comercial CORP          |
-      | MaxRO                   | 100                              |
-      | EsPresupuestadaRO       | Si                               |
-      | UnidadRO                | Comercial                        |
-      | PuestoRO                | Director Comercial               |
-      | CentroTrabajoRO         | Oficinas Centrales               |
-      | EsTemporalRO            | No                               |
-      | FechaInicioRO           | 1/1/2010                         |
-      | FechaFinRO              | -----                            |
-
-
+      | CodigoRO          | 6                       |
+      | EstadoRO          | Vigente                 |
+      | CompaniaRO        | ASEINFO Corporativo     |
+      | NombreRO          | Director Comercial CORP |
+      | MaxRO             | 100                     |
+      | EsPresupuestadaRO | Si                      |
+      | UnidadRO          | Comercial               |
+      | PuestoRO          | Director Comercial      |
+      | CentroTrabajoRO   | Oficinas Centrales      |
+      | EsTemporalRO      | No                      |
+      | FechaInicioRO     | 1/1/2010                |
+      | FechaFinRO        | -----                   |
 
   @test
   @Highest
@@ -208,14 +208,15 @@ Característica: Plazas
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Plazas.json
     * Click a Nuevo
     * Llenar formulario:
-      | Compania            | ASEINFO Corporativo          |
-      | Nombre              | Plaza autorizada sin flujo   |
-      | MaxEmpleados        | 2                            |
-      | EsPresupuestada     | False                        |
-      | CodigoUnidad        | 3                            |
-      | CodigoPuesto        | 29                           |
-      | CodigoCentroTrabajo | 1                            |
-      | EsTemporal          | False                        |
+      | Compania            | ASEINFO Corporativo        |
+      | Nombre              | Plaza autorizada sin flujo |
+      | MaxEmpleados        | 2                          |
+      | EsPresupuestada     | False                      |
+      | CodigoUnidad        | 3                          |
+      | CodigoPuesto        | 29                         |
+      | CodigoCentroTrabajo | 1                          |
+      | EsTemporal          | False                      |
+      | FechaIni            | FechaHoy                   |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardaryProcesar
     #Esperando que el registro se autorice
@@ -223,13 +224,16 @@ Característica: Plazas
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Plaza autorizada sin flujo
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
+    #Esperando que los codecombos terminen de cargar
+    * Esperar 1 segundos
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado                     | Vigente                    |
-      | Nombre                     | Plaza autorizada sin flujo |
-      | MaxEmpleados               | 2                          |
-      | EsPresupuestada            | False                      |
-      | CodigoUnidadTexto          | Recursos Humanos           |
-      | CodigoPuestoTexto          | Asistente de Gerencia      |
-      | CodigoCentroTrabajoTexto   | Oficinas Centrales         |
-      | EsTemporal                 | False                      |
+      | Estado                   | Vigente                    |
+      | Nombre                   | Plaza autorizada sin flujo |
+      | MaxEmpleados             | 2                          |
+      | EsPresupuestada          | False                      |
+      | CodigoUnidadTexto        | Recursos Humanos           |
+      | CodigoPuestoTexto        | Asistente de Gerencia      |
+      | CodigoCentroTrabajoTexto | Oficinas Centrales         |
+      | EsTemporal               | False                      |
+      | FechaIni                 | FechaHoy                   |
