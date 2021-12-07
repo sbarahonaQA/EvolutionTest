@@ -24,9 +24,9 @@ Característica: EquiposTrabajo
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EquiposTrabajo.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion    | Equipo de Trabajo |
-      | Abreviatura    | ET                |
-      | EquipoEspecial | False             |
+      | Descripcion    | Equipo de Trabajo   |
+      | Abreviatura    | ET                  |
+      | EquipoEspecial | False               |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Equipo de Trabajo
@@ -60,10 +60,10 @@ Característica: EquiposTrabajo
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion    | Equipo de trabajo editado |
-      | Abreviatura    | DE                        |
-      | EquipoEspecial | True                      |
-      | PlazaEncargada | 3                         |
+      | Descripcion    | Equipo de trabajo editado  |
+      | Abreviatura    | DE                         |
+      | EquipoEspecial | True                       |
+      | PlazaEncargada | 3                          |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Equipo de trabajo editado
