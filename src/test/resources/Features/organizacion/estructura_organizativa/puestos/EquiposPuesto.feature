@@ -25,7 +25,7 @@ Característica: EquiposPuesto
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a EquiposPuesto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EquiposPuesto.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/EquiposPuesto.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Observación de valor Para Editar
     * Esperar que el elemento Equipo este visible
@@ -61,7 +61,7 @@ Característica: EquiposPuesto
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a EquiposPuesto
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EquiposPuesto.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/EquiposPuesto.json
     * Esperar que el elemento Tabla este visible
     * Eliminar registro con columna Observación de valor Para Eliminar
     * Aceptar alerta

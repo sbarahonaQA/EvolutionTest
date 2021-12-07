@@ -25,7 +25,7 @@ Característica: CursosCertificacionesPuesto
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CursosCertificacionesPuestos.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Curso de valor Para Editar
     * Esperar que el elemento Certificacion este visible
@@ -69,7 +69,7 @@ Característica: CursosCertificacionesPuesto
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/CursosCertificacionesPuestos.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
     * Esperar que el elemento Tabla este visible
     * Eliminar registro con columna Curso de valor Para Eliminar
     * Aceptar alerta
