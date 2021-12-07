@@ -24,8 +24,8 @@ Característica: Competencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Competencias.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion       | Competencia Basica |
-      | TipoCompetencia   | Técnica            |
+      | Descripcion       | Competencia Basica  |
+      | TipoCompetencia   | Técnica             |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Competencia Basica
@@ -164,14 +164,14 @@ Característica: Competencias
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO           | 14                        |
-      | EstadoRO           | Vigente                   |
-      | DescripcionRO      | Competencia para consulta |
-      | DefinicionRO       | Definición                |
-      | FraseAsociadaRO    | Frase asociada            |
-      | AutorFraseRO       | ASEINFO GT                |
-      | TipoCompetenciaRO  | De Gestión                |
-      | GrupoCorporativoRO | Aseinfo                   |
+      | CodigoRO           | 14                       |
+      | EstadoRO           | Vigente                  |
+      | DescripcionRO      | Competencia para consulta|
+      | DefinicionRO       | Definición               |
+      | FraseAsociadaRO    | Frase asociada           |
+      | AutorFraseRO       | ASEINFO GT               |
+      | TipoCompetenciaRO  | De Gestión               |
+      | GrupoCorporativoRO | Aseinfo                  |
 
   @test
   @Highest
