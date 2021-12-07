@@ -641,7 +641,7 @@ public class SeleniumFunctions {
 
     public void editRow(String datoColumna, String text) throws Exception {
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
-        wait.until(ExpectedConditions.presenceOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
         By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
         WebElement tabla = driver.findElement(SeleniumElement);
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
@@ -699,9 +699,9 @@ public class SeleniumFunctions {
     }
 
     public void deleteRow(String datoColumna, String text) throws Exception {
-        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
-        wait.until(ExpectedConditions.presenceOfElementLocated(SeleniumElement));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
         WebElement tabla = driver.findElement(SeleniumElement);
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean registroExiste=false;
