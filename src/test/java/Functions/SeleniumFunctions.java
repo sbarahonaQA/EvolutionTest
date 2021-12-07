@@ -3,16 +3,18 @@ package Functions;
 import StepDefinitions.Hooks;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.AggregatedAsserts;
+import utils.DateValidator;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -29,6 +31,7 @@ public class SeleniumFunctions {
     public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
+    private String language;
 
     public SeleniumFunctions() {
         driver = Hooks.driver;
@@ -465,14 +468,30 @@ public class SeleniumFunctions {
 
     public void validateInfo(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
-            ElementText = getTextElement(columns.get(0).trim());
-            aggregatedAsserts.assertTrue("Texto NO coinciden para elemento: " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), ElementText.toUpperCase().contains(columns.get(1).trim().toUpperCase()));
+
+            if(columns.get(1).trim().equalsIgnoreCase("FechaHoy")) {
+                aggregatedAsserts.assertTrue("Fechas NO coinciden : " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), DateUtils.isSameDay(Objects.requireNonNull(DateValidator.toDate(getTextElement(columns.get(0).trim()))), new Date()));
+            }
+            else{
+                SeleniumFunctions.getCompleteElement(columns.get(0));
+                if(FieldType.equalsIgnoreCase("Fecha")) {
+                    aggregatedAsserts.assertTrue("Fechas NO coinciden : " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), DateUtils.isSameDay(Objects.requireNonNull(DateValidator.toDate(getTextElement(columns.get(0).trim()))), Objects.requireNonNull(DateValidator.toDate(columns.get(1).trim()))));
+                }
+                else{
+                    ElementText = getTextElement(columns.get(0).trim());
+                    aggregatedAsserts.assertTrue("Texto NO coinciden para elemento: " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), ElementText.toUpperCase().contains(columns.get(1).trim().toUpperCase()));
+                }
+            }
+
         }
         aggregatedAsserts.processAllAssertions();
     }
 
     public void fillForm(List<List<String>> rows) throws Exception {
         int intentos = 0;
+
+        language = readProperties("language");
+
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
 
@@ -523,6 +542,18 @@ public class SeleniumFunctions {
                     driver.findElement(SeleniumElement).sendKeys(Keys.TAB);
 
                     log.info(String.format("Al codecombo %s se le pone codigo %s", columns.get(0), columns.get(1)));
+                    break;
+                case "Fecha":
+                    driver.findElement(SeleniumElement).clear();
+                    if(columns.get(1).equalsIgnoreCase("FechaHoy"))
+                        driver.findElement(SeleniumElement).sendKeys(DateValidator.todayDate(language));
+                    else {
+                        if(DateValidator.validateDate(columns.get(1)))
+                            driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                        else
+                            throw new Exception("Fecha en formato incorrecto");
+                    }
+                    log.info(String.format("Al calendario %s se le pone esta fecha %s", columns.get(0), columns.get(1)));
                     break;
                 default:
                     log.error("Manejo de tipo no disponible");
