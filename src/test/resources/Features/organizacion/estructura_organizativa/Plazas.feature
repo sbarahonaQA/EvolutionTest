@@ -92,6 +92,7 @@ Característica: Plazas
       | EsTemporal                 | True                   |
 
 
+
   @test
   @Highest
   @PDS-1737
@@ -107,7 +108,6 @@ Característica: Plazas
     * Click a Plazas
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Plazas.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
-    # Se debe ordenar para que el registro de Nombre "Para Eliminar" quede primero en la lista
     * Click a Ordenar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar

@@ -70,5 +70,45 @@
   "CentrosTrabajo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Centros de trabajo"
+  },
+  "EquiposTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Equipos de trabajo"
+  },
+  "Competencias": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias"
+  },
+  "FuncionesGenerales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Funciones Generales"
+  },
+  "CondicionesTrabajo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Condiciones de trabajo"
+  },
+  "GruposCorporativos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Grupos corporativos"
+  },
+  "PiramideOcupacional": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Pirámide Ocupacional"
+  },
+  "Prestaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prestaciones"
+  },
+  "Plazas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Plazas"
+  },
+  "ModificacionTabuladorSalarial": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Modificación al tabulador Salarial"
+  },
+  "Puestos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Puestos"
   }
 }
