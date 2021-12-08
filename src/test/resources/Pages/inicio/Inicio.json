@@ -3,6 +3,10 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//a[contains(@href, 'Home/Index/AplicacionTaskOrganizacion')]"
   },
+  "Configuracion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(@href, 'Home/Index/AplicacionTaskInfrastructure')]"
+  },
   "Empresa": {
     "GetFieldBy": "Id",
     "ValueToFind": "companiaselector"
