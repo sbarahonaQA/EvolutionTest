@@ -33,10 +33,17 @@ Característica: Competencias
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
+<<<<<<< HEAD
       | Estado            | Pendiente           |
       | Descripcion       | Competencia Basica  |
       | TipoCompetencia   | Técnica             |
       | GrupoCorporativo  | aseinfo             |
+=======
+      | Estado            | Pendiente          |
+      | Descripcion       | Competencia Basica |
+      | TipoCompetencia   | Técnica            |
+      | GrupoCorporativo  | Aseinfo            |
+>>>>>>> origin/main
 
   @test
   @Highest
@@ -56,20 +63,33 @@ Característica: Competencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Competencias.json
     * Click a Nuevo
     * Llenar formulario:
+<<<<<<< HEAD
       | Descripcion       | descripción     |
       | Definicion        | definición      |
       | FraseAsociada     | frase           |
       | AutorFrase        | Carlos          |
       | TipoCompetencia   | Comunicativa    |
+=======
+      | Descripcion       | Descripción nueva competencia     |
+      | Definicion        | Definición nueva competencia      |
+      | FraseAsociada     | rase asociada a nueva competencia |
+      | AutorFrase        | Nicolas Tesla                     |
+      | TipoCompetencia   | Técnica                           |
+>>>>>>> origin/main
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarYProcesar
     #Esperando que el registro se autorice
     * Esperar 1 segundos
+<<<<<<< HEAD
     * Buscar en Smartlist CajaBusquedaSmartlist el termino descripción
+=======
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Descripción nueva competencia
+>>>>>>> origin/main
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
+<<<<<<< HEAD
       | Estado            | Vigente         |
       | Descripcion       | descripción     |
       | Definicion        | definición      |
@@ -96,6 +116,15 @@ Característica: Competencias
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarComportamiento
 
+=======
+      | Estado            | Vigente                           |
+      | Descripcion       | Descripción nueva competencia     |
+      | Definicion        | Definición nueva competencia      |
+      | FraseAsociada     | rase asociada a nueva competencia |
+      | AutorFrase        | Nicolas Tesla                     |
+      | TipoCompetencia   | Técnica                           |
+      | GrupoCorporativo  | Aseinfo                           |
+>>>>>>> origin/main
 
   @test
   @Highest
@@ -118,11 +147,19 @@ Característica: Competencias
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
+<<<<<<< HEAD
       | Descripcion       | Competencia Editable   |
       | Definicion        | Definición Editable    |
       | FraseAsociada     | Fase Editable          |
       | AutorFrase        | Lidia                  |
       | TipoCompetencia   | Técnica                |
+=======
+      | Descripcion       | Competencia Editable |
+      | Definicion        | Definición Editable  |
+      | FraseAsociada     | Fase Editable        |
+      | AutorFrase        | Lidia                |
+      | TipoCompetencia   | Técnica              |
+>>>>>>> origin/main
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Competencia Editable
@@ -130,6 +167,7 @@ Característica: Competencias
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
+<<<<<<< HEAD
       | Estado            | Vigente                |
       | Descripcion       | Competencia Editable   |
       | Definicion        | Definición Editable    |
@@ -137,6 +175,15 @@ Característica: Competencias
       | AutorFrase        | Lidia                  |
       | TipoCompetencia   | Técnica                |
       | GrupoCorporativo  | aseinfo                |
+=======
+      | Estado            | Vigente              |
+      | Descripcion       | Competencia Editable |
+      | Definicion        | Definición Editable  |
+      | FraseAsociada     | Fase Editable        |
+      | AutorFrase        | Lidia                |
+      | TipoCompetencia   | Técnica              |
+      | GrupoCorporativo  | Aseinfo              |
+>>>>>>> origin/main
 
 
   @test
