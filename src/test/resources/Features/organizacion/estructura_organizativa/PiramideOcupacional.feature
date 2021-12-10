@@ -99,8 +99,8 @@ Característica: PiramideOcupacional
 
   @test
   @Highest
-  @PDS-1379
-  Escenario: Consultar una frecuencia con información básica (PDS-1379)
+  @PDS-1624
+  Escenario: Consultar una pirámide ocupacional con información básica (PDS-1624)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -118,11 +118,11 @@ Característica: PiramideOcupacional
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO              | 1                |
-      | CorrelativoRO         | 1                |
-      | DescripcionRO         | Directores       |
-      | AbreviaturaRO         | Dir.             |
-      | NivelComportamientoRO | Nivel I          |
+      | CodigoRO              | 1          |
+      | CorrelativoRO         | 1          |
+      | DescripcionRO         | Directores |
+      | AbreviaturaRO         | Dir.       |
+      | NivelComportamientoRO | Nivel I    |
 
   @test
   @Highest
