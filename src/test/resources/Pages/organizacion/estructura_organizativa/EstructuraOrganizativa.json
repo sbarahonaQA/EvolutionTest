@@ -98,5 +98,9 @@
   "Prestaciones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Prestaciones"
+  },
+  "PiramideOcupacional": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Pirámide Ocupacional"
   }
 }
