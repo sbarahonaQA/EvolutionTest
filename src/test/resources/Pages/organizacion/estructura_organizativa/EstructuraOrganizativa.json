@@ -106,5 +106,9 @@
   "GruposCorporativos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Grupos corporativos"
+  },
+  "Responsabilidades": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Responsabilidades"
   }
 }
