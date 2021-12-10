@@ -2,9 +2,9 @@
 
 @organizacion
 @estructura_organizativa
-@clasificaciones_categorias_puestos
-Característica: ClasificacionesCategoriasPuestos
-  Pruebas para entidad ClasificacionesCategoriasPuestos
+@responsabilidades
+Característica: Responsabilidades
+  Pruebas para entidad Responsabilidades
 
   @test
   @Highest
@@ -28,14 +28,14 @@ Característica: ClasificacionesCategoriasPuestos
       | Abreviatura | CB              |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarResponsabilidad
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino CB
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Creacion Basica |
-      | Abreviatura | CB              |
-
+      | Descripcion      | Creacion Basica |
+      | Abreviatura      | CB              |
+      | GrupoCorporativo | Aseinfo         |
 
   @test
   @Highest
@@ -67,9 +67,9 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Registro Editado |
-      | Abreviatura | RE               |
-
+      | Descripcion      | Registro Editado |
+      | Abreviatura      | RE               |
+      | GrupoCorporativo | Aseinfo          |
 
   @test
   @Highest
@@ -87,7 +87,7 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Catalogo
     * Click a Responsabilidades
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Responsabilidades.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino PDS1447
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -115,9 +115,10 @@ Característica: ClasificacionesCategoriasPuestos
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO           | 7          |
-      | DescripcionRO      | Directores |
-      | AbreviaturaRO      | PCAC-6790  |
+      | CodigoRO           | 7                                 |
+      | DescripcionRO      | Para Consulta de Archivos y Campo |
+      | AbreviaturaRO      | PCAC-6790                         |
+      | GrupoCorporativoRO | Aseinfo                           |
 
   @test
   @Highest
@@ -134,7 +135,7 @@ Característica: ClasificacionesCategoriasPuestos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Catalogo
     * Click a Responsabilidades
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/responsabilidades.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Responsabilidades.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
@@ -160,3 +161,4 @@ Característica: ClasificacionesCategoriasPuestos
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto La abreviatura es requerida

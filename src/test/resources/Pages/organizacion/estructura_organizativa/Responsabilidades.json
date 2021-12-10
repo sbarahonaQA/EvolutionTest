@@ -18,12 +18,16 @@
 
   "Descripcion": {
     "GetFieldBy": "Id",
-    "ValueToFind": "Descripcion",
+    "ValueToFind": "Descripcion"
   },
 
   "Abreviatura": {
     "GetFieldBy": "Id",
     "ValueToFind": "Abreviatura"
+  },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Aseinfo')]"
   },
 
   "GuardarResponsabilidad": {
@@ -53,7 +57,11 @@
   },
   "AbreviaturaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//span[contains(text(),'PCAC-6790')]",
+    "ValueToFind": "//span[contains(text(),'PCAC-6790')]"
+  },
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Aseinfo')]"
   },
 
   "TipoRequisitoRO": {
