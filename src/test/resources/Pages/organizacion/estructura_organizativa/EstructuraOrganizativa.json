@@ -94,5 +94,9 @@
   "Puestos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Puestos"
+  },
+  "Prestaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prestaciones"
   }
 }
