@@ -33,10 +33,10 @@ Característica: Competencias
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado            | Pendiente           |
-      | Descripcion       | Competencia Basica  |
-      | TipoCompetencia   | Técnica             |
-      | GrupoCorporativo  | aseinfo             |
+      | Estado            | Pendiente          |
+      | Descripcion       | Competencia Basica |
+      | TipoCompetencia   | Técnica            |
+      | GrupoCorporativo  | Aseinfo            |
 
   @test
   @Highest
@@ -56,46 +56,27 @@ Característica: Competencias
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/Competencias.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion       | descripción     |
-      | Definicion        | definición      |
-      | FraseAsociada     | frase           |
-      | AutorFrase        | Carlos          |
-      | TipoCompetencia   | Comunicativa    |
+      | Descripcion       | Descripción nueva competencia     |
+      | Definicion        | Definición nueva competencia      |
+      | FraseAsociada     | rase asociada a nueva competencia |
+      | AutorFrase        | Nicolas Tesla                     |
+      | TipoCompetencia   | Técnica                           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarYProcesar
     #Esperando que el registro se autorice
     * Esperar 1 segundos
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino descripción
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Descripción nueva competencia
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado            | Vigente         |
-      | Descripcion       | descripción     |
-      | Definicion        | definición      |
-      | FraseAsociada     | frase           |
-      | AutorFrase        | Carlos          |
-      | TipoCompetencia   | Comunicativa    |
-      | GrupoCorporativo  | aseinfo         |
-    * Click a NuevaConducta
-    * Llenar formulario:
-      | Descripcion   | Conducta Guardar y Procesar |
-      | NivelComp     | Nivel I                     |
-    * Adjuntar captura de pantalla al reporte
-    * Click a GuardarConducta
-    * Click a CompetenciaCreada
-    * Adjuntar captura de pantalla al reporte
-    Entonces Validar informacion:
-      | Descripcion   | Conducta Guardar y Procesar |
-      | NivelComp     | Nivel I                     |
-    * Click a NuevoComportamiento
-    * Llenar formulario:
-      | Correlativo | 3555           |
-      | Descripcion | Comportamiento |
-      | Valor       | 10             |
-    * Adjuntar captura de pantalla al reporte
-    * Click a GuardarComportamiento
-
+      | Estado            | Vigente                           |
+      | Descripcion       | Descripción nueva competencia     |
+      | Definicion        | Definición nueva competencia      |
+      | FraseAsociada     | rase asociada a nueva competencia |
+      | AutorFrase        | Nicolas Tesla                     |
+      | TipoCompetencia   | Técnica                           |
+      | GrupoCorporativo  | Aseinfo                           |
 
   @test
   @Highest
@@ -118,11 +99,11 @@ Característica: Competencias
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion       | Competencia Editable   |
-      | Definicion        | Definición Editable    |
-      | FraseAsociada     | Fase Editable          |
-      | AutorFrase        | Lidia                  |
-      | TipoCompetencia   | Técnica                |
+      | Descripcion       | Competencia Editable |
+      | Definicion        | Definición Editable  |
+      | FraseAsociada     | Fase Editable        |
+      | AutorFrase        | Lidia                |
+      | TipoCompetencia   | Técnica              |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Competencia Editable
@@ -130,13 +111,13 @@ Característica: Competencias
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado            | Vigente                |
-      | Descripcion       | Competencia Editable   |
-      | Definicion        | Definición Editable    |
-      | FraseAsociada     | Fase Editable          |
-      | AutorFrase        | Lidia                  |
-      | TipoCompetencia   | Técnica                |
-      | GrupoCorporativo  | aseinfo                |
+      | Estado            | Vigente              |
+      | Descripcion       | Competencia Editable |
+      | Definicion        | Definición Editable  |
+      | FraseAsociada     | Fase Editable        |
+      | AutorFrase        | Lidia                |
+      | TipoCompetencia   | Técnica              |
+      | GrupoCorporativo  | Aseinfo              |
 
 
   @test

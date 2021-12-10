@@ -78,12 +78,12 @@
   "FechaIni": {
     "GetFieldBy": "Id",
     "ValueToFind": "FechaIni",
-    "FieldType": "Texto"
+    "FieldType": "Fecha"
   },
   "FechaFin": {
     "GetFieldBy": "Id",
     "ValueToFind": "FechaFin",
-    "FieldType": "Texto"
+    "FieldType": "Fecha"
   },
   "CodigoRO": {
     "GetFieldBy": "Xpath",
