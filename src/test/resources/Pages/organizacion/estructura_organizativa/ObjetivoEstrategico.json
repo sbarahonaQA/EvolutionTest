@@ -38,6 +38,10 @@
     "ValueToFind": "CodigoCompania",
     "FieldType": "Lista"
   },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[6]/span"
+  },
 
   "CodigoRO": {
     "GetFieldBy": "Xpath",
@@ -46,21 +50,21 @@
 
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
   },
 
   "OrdenRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
   },
 
   "CompaniaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[4]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
   },
   "GrupoCorporativoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[5]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
   },
 
   "GuardarObjetivoEstrategico": {
