@@ -110,5 +110,13 @@
   "Responsabilidades": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Responsabilidades"
+  },
+  "Companias": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Compañías"
+  },
+  "ObjetivoEstrategico": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Objetivos Estratégicos"
   }
 }
