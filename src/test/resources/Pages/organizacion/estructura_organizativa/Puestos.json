@@ -1,0 +1,127 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_edit"
+  },
+  "CursosCertificaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Cursos y certificaciones técnicas"
+  },
+  "EquiposPuesto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Equipo o dotación"
+  },
+
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Descripcion"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Abreviatura"
+  },
+  "NomenContable": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "NomenclaturaContable"
+  },
+  "CtaContable": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "CtaContable",
+    "FieldType": "Texto"
+  },
+  "Compania": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "CodigoCompania",
+    "FieldType": "Lista"
+  },
+  "AreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "CodigoAreaFuncional",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
+  "NomenContableRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+  "CtaContableRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
+  },
+  "CompaniaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[7]//span[1]"
+  },
+  "AreaFuncionalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[8]//span[1]"
+  },
+
+  "GuardarCentroDeCosto": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarCentroCosto"
+  },
+  "GuardarYProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "GuardarYEnviarAAutorizacion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "CancelarCentroDeCosto": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarCentroCosto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+}

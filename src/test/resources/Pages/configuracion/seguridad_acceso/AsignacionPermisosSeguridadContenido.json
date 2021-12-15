@@ -73,7 +73,7 @@
   },
   "Permitir": {
     "GetFieldBy": "Id",
-    "ValueToFind": "chkGrupo36"
+    "ValueToFind": "chkGrupo31"
   },
   "AplicarCambios": {
     "GetFieldBy": "Name",

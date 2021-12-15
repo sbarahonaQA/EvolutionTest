@@ -10,8 +10,8 @@ Característica: GruposCorporativos
   # El escenario usa funciones de javascript, como el id del botón "Permitir" en la pantalla de asignación de permisos de seguridad de contenido
   @test
   @Highest
-  @PDS-1354
-  Escenario: Crear un equipo de trabajo con información básica (PDS-1354)
+  @PDS-1531
+  Escenario: Crear un grupo corporativo con información básica (PDS-1531)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
@@ -25,8 +25,8 @@ Característica: GruposCorporativos
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/GruposCorporativos.json
     * Click a Nuevo
     * Llenar formulario:
-      | Nombre   | Creación Básica |
-      | Pais     | GT              |
+      | Nombre | Creación Básica |
+      | Pais   | gt              |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Click a CerrarSesion
@@ -44,6 +44,7 @@ Característica: GruposCorporativos
     * Click a CreacionBasica
     # se utilizó el ID del grupo corporativo que se creará, el cual va cambiando, por lo que cada vez que se ejcute se debe revisar poner el ID del último grupo creado + 1
     * Click a Permitir
+    * Click a AplicarCambios
     * Click a CerrarSesion
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario gerenterrhh
@@ -71,6 +72,7 @@ Característica: GruposCorporativos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -82,8 +84,8 @@ Característica: GruposCorporativos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre   | Para Editado Información |
-      | Pais     | sv                       |
+      | Nombre | Para Editado Información |
+      | Pais   | sv                       |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Click a Regresar
@@ -104,6 +106,7 @@ Característica: GruposCorporativos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -138,9 +141,9 @@ Característica: GruposCorporativos
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO        | 23               |
-      | NombreRO        | Consulta Basica  |
-      | PaisRO          | Guatemala        |
+      | CodigoRO | 23              |
+      | NombreRO | Consulta Basica |
+      | PaisRO   | Guatemala       |
 
   @test
   @Highest
@@ -150,6 +153,7 @@ Característica: GruposCorporativos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -168,6 +172,7 @@ Característica: GruposCorporativos
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
