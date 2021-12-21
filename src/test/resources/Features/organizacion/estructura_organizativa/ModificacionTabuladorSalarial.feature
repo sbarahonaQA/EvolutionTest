@@ -2,14 +2,14 @@
 
 @organizacion
 @estructura_organizativa
-@modificaciontabuladorsalarial
-Característica: ModificacionTabuladorSalarial
-  Pruebas para entidad ModificacionTabuladorSalarial (Modificación al Tabulador Salarial)
+@modificaciones_tabulador_salarial
+Característica: ModificacionesTabuladorSalarial
+  Pruebas para entidad ModificacionesTabuladorSalarial (Modificación al Tabulador Salarial)
 
   @test
   @Highest
-  @PDS-1727
-  Escenario: Crear una plaza con información básica (PDS-1727)
+  @PDS-1681
+  Escenario: Crear una modificación al tabulador salarial con información básica (PDS-1681)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -23,30 +23,29 @@ Característica: ModificacionTabuladorSalarial
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Click a Nuevo
     * Llenar formulario:
-      | AplicarA                   | False                  |
-      | codigoCompania             | ASEINFO Corporativo    |
-      | FechaVigencia              | 2/2/2021               |
-      | codigoAlternativoSolicita  | 100003                 |
-      | TipoEscala            | Salario mensual   |
-      | SalarioMinimo         | 8500              |
-      | SalarioMaximo         | 12000             |
-      | PorcentajeIncrementar | 10                |
+      | AplicarA                  | False               |
+      | codigoCompania            | ASEINFO Corporativo |
+      | FechaVigencia             | 2/2/2021            |
+      | codigoAlternativoSolicita | 100003              |
+      | TipoEscala                | Salario mensual     |
+      | SalarioMinimo             | 8500                |
+      | SalarioMaximo             | 12000               |
+      | PorcentajeIncrementar     | 10                  |
     * Adjuntar captura de pantalla al reporte
     * Click a Agregar
     * Click a Guardar
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Carlos Benjamin Carbajal Venero
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | AplicarA                        | False                              |
-      | codigoCompania                  | ASEINFO Corporativo                |
-      | FechaVigencia                   | 2/2/2021                           |
-      | codigoAlternativoSolicitaTexto  | Carbajal Venero, Carlos Benjamin   |
-      | SalarioMinimoTbl         | 8500              |
-      | SalarioMaximoTbl         | 12000             |
-      | PorcentajeIncrementalTbl | 10                |
+      | AplicarA                       | False                            |
+      | codigoCompania                 | ASEINFO Corporativo              |
+      | FechaVigencia                  | 2/2/2021                         |
+      | codigoAlternativoSolicitaTexto | Carbajal Venero, Carlos Benjamin |
+      | SalarioMinimoTbl               | 8500                             |
+      | SalarioMaximoTbl               | 12000                            |
+      | PorcentajeIncrementalTbl       | 10                               |
 
   @test
   @Highest
@@ -56,6 +55,7 @@ Característica: ModificacionTabuladorSalarial
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -65,37 +65,31 @@ Característica: ModificacionTabuladorSalarial
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Walter Alfredo Cordova
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Adjuntar captura de pantalla al reporte
-    # Se elimina la escala para crear la nueva, ya que los datos en la tabla de la escala no son interactuables
-    * Click a EliminarEscala
-    * Aceptar alerta
     * Llenar formulario:
-      | AplicarA                   | True                   |
+      | AplicarA | True |
     * Esperar que el elemento codigoPais este presente
     * Llenar formulario:
-      | codigoPais                 | gt                     |
-      | FechaVigencia              | 2/3/2021               |
-      | codigoAlternativoSolicita  | 100009                 |
-      | TipoEscala            | Salario mensual   |
-      | SalarioMinimo         | 18500             |
-      | SalarioMaximo         | 22000             |
-      | PorcentajeIncrementar | 15                |
-    * Click a Agregar
+      | codigoPais                | gt       |
+      | FechaVigencia             | 2/3/2021 |
+      | codigoAlternativoSolicita | 100009   |
+      | SalarioMinimoTbl          | 18500    |
+      | SalarioMaximoTbl          | 22000    |
+      | PorcentajeIncrementalTbl  | 15       |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Oscar Alfredo Chacón
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | AplicarA                        | True                               |
-      | codigoPaisTexto                 | Guatemala                          |
-      | FechaVigencia                   | 2/3/2021                           |
-      | codigoAlternativoSolicitaTexto  | Chacón, Oscar Alfredo              |
-      | SalarioMinimoTbl         | 18500             |
-      | SalarioMaximoTbl         | 22000             |
-      | PorcentajeIncrementalTbl | 15                |
+      | AplicarA                       | True                  |
+      | codigoPaisTexto                | Guatemala             |
+      | FechaVigencia                  | 2/3/2021              |
+      | codigoAlternativoSolicitaTexto | Chacón, Oscar Alfredo |
+      | TipoEscalaTbl                  | Salario mensual	   |
+      | SalarioMinimoTbl               | 18500                 |
+      | SalarioMaximoTbl               | 22000                 |
+      | PorcentajeIncrementalTbl       | 15                    |
 
 
   @test
@@ -106,6 +100,7 @@ Característica: ModificacionTabuladorSalarial
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -139,13 +134,11 @@ Característica: ModificacionTabuladorSalarial
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                | 1                                     |
-      | AplicarA                | False                                 |
-      | CompaniaRO              | ASEINFO Corporativo                   |
-      | FechaVigenciaRO         | 1/8/2020 00:00                        |
-      | SolicitanteRO           | 200001 - Gonzalez Garcia, Doris Deysi |
-
-
+      | CodigoRO        | 1                                     |
+      | AplicarA        | False                                 |
+      | CompaniaRO      | ASEINFO Corporativo                   |
+      | FechaVigenciaRO | 1/8/2020 00:00                        |
+      | SolicitanteRO   | 200001 - Gonzalez Garcia, Doris Deysi |
 
   @test
   @Highest
@@ -155,6 +148,7 @@ Característica: ModificacionTabuladorSalarial
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -173,6 +167,7 @@ Característica: ModificacionTabuladorSalarial
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
     * Se cargan elementos de la pagina inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
     * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
@@ -184,7 +179,6 @@ Característica: ModificacionTabuladorSalarial
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto The FechaVigencia field is required.
-
 
   @test
   @Highest
@@ -203,28 +197,27 @@ Característica: ModificacionTabuladorSalarial
     * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Click a Nuevo
     * Llenar formulario:
-      | AplicarA                   | False                  |
-      | codigoCompania             | ASEINFO Corporativo    |
-      | FechaVigencia              | 2/5/2021               |
-      | codigoAlternativoSolicita  | 100006                 |
-      | TipoEscala            | Salario mensual        |
-      | SalarioMinimo         | 7500.0000              |
-      | SalarioMaximo         | 10000.0000             |
-      | PorcentajeIncrementar | 10                     |
+      | AplicarA                  | False               |
+      | codigoCompania            | ASEINFO Corporativo |
+      | FechaVigencia             | 2/5/2021            |
+      | codigoAlternativoSolicita | 100006              |
+      | TipoEscala                | Salario mensual     |
+      | SalarioMinimo             | 7500.0000           |
+      | SalarioMaximo             | 10000.0000          |
+      | PorcentajeIncrementar     | 10                  |
     * Adjuntar captura de pantalla al reporte
     * Click a Agregar
     * Click a GuardaryProcesar
-    * Refrescar pagina
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Osmín Roberto Rodezno García
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | AplicarA                | False                                  |
-      | CompaniaRO              | ASEINFO Corporativo                    |
-      | FechaVigenciaRO         | 2/5/2021 00:00                         |
-      | SolicitanteRO           | 100006 - Rodezno García, Osmín Roberto |
-      | TipoEscalaRO            | Salario mensual	      |
-      | SalarioMinRO            | 7,500.00                |
-      | SalarioMaxRO            | 10,000.00               |
-      | PorcentajeRO            | 10.00                   |
+      | AplicarA        | False                                  |
+      | CompaniaRO      | ASEINFO Corporativo                    |
+      | FechaVigenciaRO | 2/5/2021 00:00                         |
+      | SolicitanteRO   | 100006 - Rodezno García, Osmín Roberto |
+      | TipoEscalaRO    | Salario mensual	                     |
+      | SalarioMinRO    | 7,500.00                               |
+      | SalarioMaxRO    | 10,000.00                              |
+      | PorcentajeRO    | 10.00                                  |

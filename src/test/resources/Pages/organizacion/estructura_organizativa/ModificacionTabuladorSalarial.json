@@ -38,7 +38,7 @@
   "FechaVigencia": {
     "GetFieldBy": "Id",
     "ValueToFind": "FechaVigencia",
-    "FieldType": "Texto"
+    "FieldType": "Fecha"
   },
   "codigoAlternativoSolicita": {
     "GetFieldBy": "Id",
@@ -142,6 +142,10 @@
   "SmartlistLoading": {
     "GetFieldBy": "className",
     "ValueToFind": "k-loading-mask"
+  },
+  "TipoEscalaTbl": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//td[2]"
   },
   "SalarioMinimoTbl": {
     "GetFieldBy": "Name",
