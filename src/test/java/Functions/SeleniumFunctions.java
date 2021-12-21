@@ -4,16 +4,18 @@ import StepDefinitions.Hooks;
 import cucumber.api.Scenario;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.AggregatedAsserts;
+import utils.DateValidator;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -30,6 +32,7 @@ public class SeleniumFunctions {
     public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
+    private String language;
 
     public SeleniumFunctions() {
         driver = Hooks.driver;
@@ -466,14 +469,30 @@ public class SeleniumFunctions {
 
     public void validateInfo(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
-            ElementText = getTextElement(columns.get(0).trim());
-            aggregatedAsserts.assertTrue("Texto NO esta presente en elemento: " + columns.get(0).trim() + " - texto: " + columns.get(1).trim(), ElementText.toUpperCase().contains(columns.get(1).trim().toUpperCase()));
+
+            if(columns.get(1).trim().equalsIgnoreCase("FechaHoy")) {
+                aggregatedAsserts.assertTrue("Fechas NO coinciden : " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), DateUtils.isSameDay(Objects.requireNonNull(DateValidator.toDate(getTextElement(columns.get(0).trim()))), new Date()));
+            }
+            else{
+                SeleniumFunctions.getCompleteElement(columns.get(0));
+                if(FieldType.equalsIgnoreCase("Fecha")) {
+                    aggregatedAsserts.assertTrue("Fechas NO coinciden : " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), DateUtils.isSameDay(Objects.requireNonNull(DateValidator.toDate(getTextElement(columns.get(0).trim()))), Objects.requireNonNull(DateValidator.toDate(columns.get(1).trim()))));
+                }
+                else{
+                    ElementText = getTextElement(columns.get(0).trim());
+                    aggregatedAsserts.assertTrue("Texto NO coinciden para elemento: " + columns.get(0).trim() + " - Sistema: " + ElementText + " - Prueba: " + columns.get(1).trim(), ElementText.toUpperCase().contains(columns.get(1).trim().toUpperCase()));
+                }
+            }
+
         }
         aggregatedAsserts.processAllAssertions();
     }
 
     public void fillForm(List<List<String>> rows) throws Exception {
         int intentos = 0;
+
+        language = readProperties("language");
+
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
 
@@ -524,6 +543,28 @@ public class SeleniumFunctions {
                     driver.findElement(SeleniumElement).sendKeys(Keys.TAB);
 
                     log.info(String.format("Al codecombo %s se le pone codigo %s", columns.get(0), columns.get(1)));
+                    break;
+                case "Fecha":
+                    driver.findElement(SeleniumElement).clear();
+                    if(columns.get(1).equalsIgnoreCase("FechaHoy"))
+                        driver.findElement(SeleniumElement).sendKeys(DateValidator.todayDate(language));
+                    else {
+                        if(DateValidator.validateDate(columns.get(1)))
+                            driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                        else
+                            throw new Exception("Fecha en formato incorrecto");
+                    }
+                    log.info(String.format("Al calendario %s se le pone esta fecha %s", columns.get(0), columns.get(1)));
+                    break;
+                case "ValueList":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    driver.findElement(SeleniumElement).sendKeys(Keys.ARROW_DOWN);
+                    //Esperar que la lista se despliegue
+                    TimeUnit.SECONDS.sleep(1);
+                    driver.findElement(By.className("ac_even")).click();
+
+                    log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
                     break;
                 default:
                     log.error("Manejo de tipo no disponible");
@@ -597,6 +638,113 @@ public class SeleniumFunctions {
         else
             SegAcceso.load(inSegAcceso);
         return SegAcceso.getProperty(usuario);
+    }
+
+    public void editRow(String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            //List <WebElement> acciones = columnas.get(0).findElements(By.tagName("a"));
+            List <WebElement> acciones = fila.findElements(By.tagName("a"));
+
+            if(acciones.size()==0) {
+                aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
+            }
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                if(acciones.size()==3)
+                    acciones.get(2).click();
+                else
+                    acciones.get(1).click();
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + text + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void deleteRow(String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                columnas.get(0).findElements(By.tagName("a")).get(0).click();
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+        }
     }
 
     public void advanceSearch(List<List<String>> rows) throws Exception {

@@ -357,6 +357,16 @@ public class StepDefinitions{
         functions.iSetElementWithKeyValue(element, text);
     }
 
+    @Y("^Editar registro con columna (.*?) de valor (.*?)$")
+    public void EditarRegistroConColumnaDeValor(String columna, String text) throws Exception {
+        functions.editRow(columna, text);
+    }
+
+    @Y("^Eliminar registro con columna (.*?) de valor (.*?)$")
+    public void EliminarRegistroConColumnaDeValor(String columna, String text) throws Exception {
+        functions.deleteRow(columna, text);
+    }
+
     @Entonces("^Aplicar busqueda avanzada:")
     public void aplicarBusquedaAvanzada(List<List<String>> table) throws Exception {
         functions.advanceSearch(table);

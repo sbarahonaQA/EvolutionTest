@@ -1,0 +1,100 @@
+
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlObjetivoEstrategico_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlObjetivoEstrategico_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlObjetivoEstrategico_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlObjetivoEstrategico_edit"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+
+  "Orden": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Orden",
+    "FieldType": "Texto"
+  },
+
+  "EsCorporativo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "isCorporativo",
+    "FieldType": "Radio"
+  },
+  "Compania": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoCompania",
+    "FieldType": "Lista"
+  },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[6]/span"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+
+  "OrdenRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+
+  "CompaniaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+
+  "GuardarObjetivoEstrategico": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarObjetivoEstrategico"
+  },
+
+  "CancelarObjetivoEstrategico": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarObjetivoEstrategico"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlObjetivoEstrategico_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}

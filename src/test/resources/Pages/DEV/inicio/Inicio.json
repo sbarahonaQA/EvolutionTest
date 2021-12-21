@@ -1,7 +1,11 @@
 {
   "Organizacion": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//a[contains(@href, 'Home/Index/AplicacionTaskOrganizacion')]"
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Organización"
+  },
+  "Configuracion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Configuración"
   },
   "Nominas": {
     "GetFieldBy": "LinkText",
