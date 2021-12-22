@@ -29,6 +29,13 @@ public class StepDefinitions{
         driver.get(sitioPruebas);
     }
 
+    @Dado("^que carga EvolutionWave")
+    public void queCargaEvolutionWave() throws IOException {
+        String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instanciaEvoWave");
+        log.info("Cargando URL: " + sitioPruebas);
+        driver.get(sitioPruebas);
+    }
+
     @Dado("^Cargar URL (.*)")
     public void cargarURL(String url){
         log.info("Cargando URL: " + url);
@@ -373,7 +380,7 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el valor del ingreso (.*) sea de (.*?)")
-    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) {
         functions.validateIncome(tipo, valor);
     }
 
@@ -388,12 +395,12 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el total de ingresos sea de (.*?)")
-    public void comprobarQueElTotalDeIngresosSeaDe(String valor) throws Exception {
+    public void comprobarQueElTotalDeIngresosSeaDe(String valor) {
         functions.validateTotalIncome(valor);
     }
 
     @Entonces("Comprobar que el total de descuentos sea de (.*?)")
-    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) throws Exception {
+    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) {
         functions.validateTotalDeduction(valor);
     }
 
@@ -403,12 +410,12 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que los dias de (.*) sean (.*?)")
-    public void comprobarQueLosDiasDeSean(String tipo, String valor) throws Exception {
+    public void comprobarQueLosDiasDeSean(String tipo, String valor) {
         functions.validateDays(tipo, valor);
     }
 
     @Entonces("Comprobar que las horas de (.*) sean (.*?)")
-    public void comprobarQueLasHorasDeSean(String tipo, String valor) throws Exception {
+    public void comprobarQueLasHorasDeSean(String tipo, String valor) {
         functions.validateHours(tipo, valor);
     }
 }
