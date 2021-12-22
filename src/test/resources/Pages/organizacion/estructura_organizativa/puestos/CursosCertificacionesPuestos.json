@@ -23,15 +23,22 @@
     "ValueToFind": "Orden",
     "FieldType": "Texto"
   },
+
   "Validez": {
     "GetFieldBy": "Id",
     "ValueToFind": "UsaValidez",
     "FieldType": "Checkbox"
   },
+
   "Modalidad": {
     "GetFieldBy": "Id",
     "ValueToFind": "Modalidad",
     "FieldType": "Lista"
+  },
+
+  "NuevoCursoCertificacionPuesto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva certificación"
   },
 
   "Guardar": {
@@ -42,9 +49,16 @@
     "GetFieldBy": "Name",
     "ValueToFind": "btnCancelarCursoCertificacionPuesto"
   },
-
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
+  },
   "Mensaje": {
-    "GetFieldBy": "Id",
+    "GetFieldBy": "id",
     "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
   }
 }

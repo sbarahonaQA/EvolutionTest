@@ -23,6 +23,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Equipo o dotación"
   },
+  "CompetenciasTécnicas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias Técnicas"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
