@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Functions.SeleniumFunctions;
+import Functions.SeleniumFunctionsEvoWave;
 import cucumber.api.java.es.*;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -29,13 +30,6 @@ public class StepDefinitions{
         driver.get(sitioPruebas);
     }
 
-    @Dado("^que carga EvolutionWave")
-    public void queCargaEvolutionWave() throws IOException {
-        String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instanciaEvoWave");
-        log.info("Cargando URL: " + sitioPruebas);
-        driver.get(sitioPruebas);
-    }
-
     @Dado("^Cargar URL (.*)")
     public void cargarURL(String url){
         log.info("Cargando URL: " + url);
@@ -51,6 +45,7 @@ public class StepDefinitions{
     @Entonces("^Se cargan elementos de la pagina (.*)")
     public void seCarganElementosDeLaPagina(String file) throws Exception {
         SeleniumFunctions.FileName = file;
+        SeleniumFunctionsEvoWave.FileName = file;
         SeleniumFunctions.readJson();
         log.info("initialize file: " + file );
     }
