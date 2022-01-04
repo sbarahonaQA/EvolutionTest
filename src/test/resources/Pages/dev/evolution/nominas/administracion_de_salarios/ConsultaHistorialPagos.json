@@ -1,0 +1,41 @@
+{
+  "TipoPlanillaBA": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_0__Text",
+    "FieldType": "CodeCombo"
+  },
+  "CodigoPlanillaBA": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_1__Text",
+    "FieldType": "Texto"
+  },
+  "EmpleadoBA": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_2__Text",
+    "FieldType": "CodeCombo"
+  },
+  "BuscarBA": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlHistorialPagos_btAvancedSearch"
+  },
+  "LimpiarBA": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlHistorialPagos_btClearAvancedSearch"
+  },
+  "DiasLaborados": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlHistorialPagos_btClearAvancedSearch"
+  },
+  "Salario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlHistorialPagos_btClearAvancedSearch"
+  },
+  "Tabla": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='detalleHistorialPago']//table[1]"
+  },
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='smlHistorialPagos_rightPanel']//td[1]"
+  }
+}

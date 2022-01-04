@@ -1,6 +1,7 @@
 package Functions;
 
 import StepDefinitions.Hooks;
+import cucumber.api.Scenario;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -318,21 +319,21 @@ public class SeleniumFunctions {
     public void checkPartialTextElementPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
         log.info("Buscando texto: '" + texto + "' en texto del elemento '" + ElementText + "'");
-        aggregatedAsserts.assertTrue("Texto SI esta presente en elemento: " + elemento + " - texto: " + texto, ElementText.toUpperCase().contains(texto.toUpperCase()));
+        aggregatedAsserts.assertTrue("Texto NO esta presente en elemento: " + elemento + " - texto: " + texto, ElementText.toUpperCase().contains(texto.toUpperCase()));
         aggregatedAsserts.processAllAssertions();
     }
 
     public void checkTextElementPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
         log.info("Verificando texto: '" + texto + "' con texto del elemento '" + ElementText + "'");
-        aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - es igual a texto: " + texto, ElementText.equals(texto));
+        aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - NO es igual a texto: " + texto, ElementText.equals(texto));
         aggregatedAsserts.processAllAssertions();
     }
 
     public void checkTextElementNotPresent(String elemento,String texto) throws Exception {
         ElementText = getTextElement(elemento);
         log.info("Verificando texto: '" + texto + "' sea diferente texto del elemento '" + ElementText + "'");
-        aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - es igual a texto: " + texto, !ElementText.equals(texto));
+        aggregatedAsserts.assertTrue("Texto del elemento: " + elemento + " - NO es igual a texto: " + texto, !ElementText.equals(texto));
         aggregatedAsserts.processAllAssertions();
     }
 
@@ -588,7 +589,7 @@ public class SeleniumFunctions {
     public void checkIfPresent(List<List<String>> rows) throws Exception {
         for (List<String> columns : rows) {
             for (String element : columns) {
-                aggregatedAsserts.assertTrue("Elemento esta presente: " + element, this.isElementDisplayed(element));
+                aggregatedAsserts.assertTrue("Elemento NO esta presente: " + element, this.isElementDisplayed(element));
             }
         }
         aggregatedAsserts.processAllAssertions();
@@ -745,4 +746,245 @@ public class SeleniumFunctions {
             aggregatedAsserts.processAllAssertions();
         }
     }
+
+    public void advanceSearch(List<List<String>> rows) throws Exception {
+        int intentos = 0;
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        for (List<String> columns : rows) {
+            By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
+
+            switch (FieldType){
+                case "Texto":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    log.info(String.format("Al elemento %s se le pone este texto %s", columns.get(0), columns.get(1)));
+                    break;
+                case "Lista":
+                    //Espera a que la lista cargue sus elementos
+                    while(new Select(driver.findElement(SeleniumElement)).getOptions().size() <= 1
+                            && getTextElement(columns.get(0).trim()).isEmpty()
+                            && intentos < INTENTOS_MAX){
+                        log.info("Esperando lista: " + new Select(driver.findElement(SeleniumElement)).getOptions().size());
+                        TimeUnit.SECONDS.sleep(1);
+                        intentos++;
+                    }
+
+                    if(intentos >= INTENTOS_MAX)
+                        throw new TimeoutException("Se agotó el tiempo de espera del llenado de la lista "+columns.get(0));
+
+                    Select opt = new Select(driver.findElement(SeleniumElement));
+                    log.info("Seleccionando: " + columns.get(1) + " por texto");
+                    opt.selectByVisibleText(columns.get(1));
+                    break;
+                case "Radio":
+                    List<WebElement> radio = driver.findElements(SeleniumFunctions.getCompleteElement(columns.get(0)));
+                    for (WebElement webElement : radio) {
+                        if (webElement.getAttribute("value").equalsIgnoreCase(columns.get(1))) {
+                            webElement.click();
+                            log.info(String.format("Del radio %s se selecciona elemento con valor %s", columns.get(0), columns.get(1)));
+                            break;
+                        }
+                    }
+                    break;
+                case "Checkbox":
+                    if((Boolean.parseBoolean(columns.get(1)) && !driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).isSelected())
+                            || (!Boolean.parseBoolean(columns.get(1)) && driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).isSelected()))
+                    {
+                        log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
+                        driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).click();
+                    }
+                    break;
+                case "CodeCombo":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    driver.findElement(SeleniumElement).sendKeys(Keys.TAB);
+
+                    log.info(String.format("Al codecombo %s se le pone codigo %s", columns.get(0), columns.get(1)));
+                    break;
+                default:
+                    log.error("Manejo de tipo no disponible");
+            }
+        }
+        TimeUnit.SECONDS.sleep(1);
+        driver.findElement(SeleniumFunctions.getCompleteElement("BuscarBA")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(SeleniumFunctions.getCompleteElement("BuscarBA"))));
+    }
+
+    public void validateIncome(String tipoIngreso, String valor) {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        Scenario scenario = Hooks.scenario;
+
+        Collection<String> etiquetas = scenario.getSourceTagNames();
+        boolean tipoIngresoExiste=false;
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            //Si el texto de la 2da columna es "Total ingresos" ya se llegó al final de los ingresos
+            if(columnas.get(1).getText().equalsIgnoreCase("Total ingresos")){
+                break;
+            }
+
+            if(columnas.get(1).getText().equalsIgnoreCase(tipoIngreso)){
+                aggregatedAsserts.assertTrue(String.format("Monto Ingreso %s no coincide con valor %s",columnas.get(2).getText(), valor), columnas.get(2).getText().equalsIgnoreCase(valor));
+                tipoIngresoExiste=true;
+                break;
+            }
+        }
+        if(!tipoIngresoExiste) {
+            aggregatedAsserts.fail("Tipo de ingreso \"" + tipoIngreso + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateDeduction(String tipoDescuento, String valor) throws Exception {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean sonFilasDescuentos=false;
+        boolean tipoDescuentoExiste=false;
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            //Si el texto de la 2da columna es "Total ingresos", los siguientes registros son los descuentos
+            if(columnas.get(1).getText().equalsIgnoreCase("Total ingresos")){
+                sonFilasDescuentos = true;
+                continue;
+            }
+
+            //Si el texto de la 2da columna es "Total descuentos" ya se llegó al final de los descuentos
+            if(columnas.get(1).getText().equalsIgnoreCase("Total descuentos")){
+                break;
+            }
+
+            if(sonFilasDescuentos && columnas.get(0).getText().equalsIgnoreCase(tipoDescuento)){
+                aggregatedAsserts.assertTrue(String.format("Monto Descuento %s no coincide con valor %s", columnas.get(3).getText(), valor), columnas.get(3).getText().equalsIgnoreCase(valor));
+                tipoDescuentoExiste=true;
+                break;
+            }
+        }
+        if(!tipoDescuentoExiste) {
+            aggregatedAsserts.fail("Tipo de descuento \"" + tipoDescuento + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateReserve(String tipoReserva, String valor) throws Exception {
+        WebElement tabla = driver.findElement(By.xpath("//body//table[2]"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean tipoReservaExiste=false;
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            if(columnas.get(1).getText().equalsIgnoreCase(tipoReserva)){
+                aggregatedAsserts.assertTrue(String.format("Monto reserva %s no coincide con valor %s", columnas.get(2).getText(), valor), columnas.get(2).getText().equalsIgnoreCase(valor));
+                tipoReservaExiste=true;
+                break;
+            }
+        }
+        if(!tipoReservaExiste) {
+            aggregatedAsserts.fail("Tipo de reserva \"" + tipoReserva + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateTotalIncome(String valor) {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            if(columnas.size() > 0 && columnas.get(1).getText().equalsIgnoreCase("Total ingresos")){
+                aggregatedAsserts.assertTrue(String.format("Total de ingresos %s no coincide con valor %s", columnas.get(2).getText(), valor), columnas.get(2).getText().equalsIgnoreCase(valor));
+                break;
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateTotalDeduction(String valor) {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            if(columnas.size() > 0 && columnas.get(1).getText().equalsIgnoreCase("Total descuentos")){
+                aggregatedAsserts.assertTrue(String.format("Total de descuentos %s no coincide con valor %s", columnas.get(3).getText(), valor), columnas.get(3).getText().equalsIgnoreCase(valor));
+                break;
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateNetValue(String valor) throws Exception {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            if(columnas.size() > 0 && columnas.get(1).getText().equalsIgnoreCase("Neto a Pagar")){
+                aggregatedAsserts.assertTrue(String.format("Neto a Pagar %s no coincide con valor %s", columnas.get(3).getText(), valor), columnas.get(3).getText().equalsIgnoreCase(valor));
+                break;
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateDays(String tipo, String valor) {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean tipoExiste=false;
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            if(columnas.size() > 0 && columnas.get(1).getText().equalsIgnoreCase(tipo)){
+                if(!columnas.get(5).getText().equalsIgnoreCase("Dias")){
+                    aggregatedAsserts.fail("El tipo \"" + tipo + "\" no tiene dias asignados");
+                }
+                aggregatedAsserts.assertTrue(String.format("Los dias %s para %s no coincide con valor %s", columnas.get(4).getText(), tipo, valor), columnas.get(4).getText().equalsIgnoreCase(valor));
+                tipoExiste=true;
+                break;
+            }
+        }
+        if(!tipoExiste) {
+            aggregatedAsserts.fail("Tipo \"" + tipo + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validateHours(String tipo, String valor) {
+        WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            if(columnas.size() > 0 && columnas.get(1).getText().equalsIgnoreCase(tipo)){
+                if(!columnas.get(5).getText().equalsIgnoreCase("Horas")){
+                    aggregatedAsserts.fail("El tipo \"" + tipo + "\" no tiene horas asignadas");
+                }
+                aggregatedAsserts.assertTrue(String.format("Las horas %s para %s no coincide con valor %s", columnas.get(4).getText(), tipo, valor), columnas.get(4).getText().equalsIgnoreCase(valor));
+                break;
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
 }
