@@ -13,14 +13,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Click a Nuevo
     * Llenar formulario:
       | AplicarA                  | False               |
@@ -54,14 +54,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Walter Alfredo Cordova
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
@@ -99,14 +99,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Ana María Penado Guzmán
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
@@ -121,14 +121,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Doris Deysi Gonzalez Garcia
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
@@ -147,14 +147,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
@@ -166,14 +166,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
@@ -187,14 +187,14 @@ Característica: ModificacionesTabuladorSalarial
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a ModificacionTabuladorSalarial
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/ModificacionTabuladorSalarial.json
     * Click a Nuevo
     * Llenar formulario:
       | AplicarA                  | False               |
