@@ -1,0 +1,10 @@
+{
+  "Aficiones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Aficiones"
+  },
+  "Catalogo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Catálogo"
+  }
+}
