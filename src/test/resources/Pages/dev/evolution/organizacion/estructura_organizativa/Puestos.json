@@ -23,6 +23,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Equipo o dotación"
   },
+  "ObjetivosPuesto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Objetivos del puesto"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",

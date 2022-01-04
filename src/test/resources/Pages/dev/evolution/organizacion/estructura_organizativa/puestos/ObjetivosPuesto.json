@@ -9,7 +9,7 @@
   },
   "RegistroConsultar": {
     "GetFieldBy": "LinkText",
-    "ValueToFind": "Para consulta de archivo y campo"
+    "ValueToFind": "Para Consulta"
   },
   "Definicion": {
     "GetFieldBy": "Id",
