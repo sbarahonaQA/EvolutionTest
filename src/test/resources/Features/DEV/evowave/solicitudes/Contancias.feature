@@ -1,6 +1,6 @@
 # language: es
 
-@evolutionwave
+@evowave
 @solicitudes
 Característica: Constancias
   Pruebas para entidad Constancias

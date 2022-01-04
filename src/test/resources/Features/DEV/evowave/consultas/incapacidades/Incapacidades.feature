@@ -1,6 +1,6 @@
 # language: es
 
-@evolutionwave
+@evowave
 @consultas
 Característica: Incapacidades
   Pruebas para entidad Incapacidades
