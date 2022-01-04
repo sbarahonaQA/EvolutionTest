@@ -13,19 +13,19 @@ Característica: CursosCertificacionesPuesto
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
+    * Se cargan elementos de la pagina inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Curso de valor Para Editar
     * Esperar que el elemento Certificacion este visible
@@ -57,19 +57,19 @@ Característica: CursosCertificacionesPuesto
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
+    * Se cargan elementos de la pagina inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
+    * Se cargan elementos de la pagina organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
     * Esperar que el elemento Tabla este visible
     * Eliminar registro con columna Curso de valor Para Eliminar
     * Aceptar alerta
