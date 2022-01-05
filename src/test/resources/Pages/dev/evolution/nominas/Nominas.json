@@ -1,0 +1,6 @@
+{
+  "AdministracionSalarios": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Administración de Salarios"
+  }
+}
