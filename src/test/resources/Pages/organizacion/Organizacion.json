@@ -1,6 +1,0 @@
-{
-  "EstructuraOrganizativa": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//a[contains(@href, 'Home/Index/ModuloTaskEstructura')]"
-  }
-}

@@ -9,6 +9,7 @@
         <module name="EvolutionTest" />
         <module name="Evolution" />
         <module name="EvolutionTest2" />
+        <module name="Selenium.Cucumber.BaseFramework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
