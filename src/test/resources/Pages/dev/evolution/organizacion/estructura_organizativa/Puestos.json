@@ -35,6 +35,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Prestaciones"
   },
+  "RelacionesExternas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Relaciones externas"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
