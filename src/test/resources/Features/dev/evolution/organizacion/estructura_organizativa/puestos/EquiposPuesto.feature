@@ -2,6 +2,7 @@
 
 @organizacion
 @estructura_organizativa
+@puestos
 @equipos_por_puesto
 Característica: EquiposPuesto
   Pruebas para entidad EquiposPuesto

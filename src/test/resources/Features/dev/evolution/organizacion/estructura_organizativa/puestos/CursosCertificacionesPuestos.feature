@@ -2,6 +2,7 @@
 
 @organizacion
 @estructura_organizativa
+@puestos
 @cursos_y_certificaciones_por_puesto
 Característica: CursosCertificacionesPuesto
   Pruebas para entidad CursosCertificacionesPuesto
