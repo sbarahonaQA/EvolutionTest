@@ -2,6 +2,7 @@
 
 @organizacion
 @estructura_organizativa
+@puestos
 @objetivos_del_puesto
 Característica: ObjetivosPuesto
   Pruebas para entidad ObjetivosPuesto

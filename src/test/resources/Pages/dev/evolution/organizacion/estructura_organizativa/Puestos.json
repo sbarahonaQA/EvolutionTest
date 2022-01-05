@@ -31,6 +31,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Funciones específicas"
   },
+  "Prestaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prestaciones"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
