@@ -27,6 +27,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Objetivos del puesto"
   },
+  "FuncionesEspecificas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Funciones específicas"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
