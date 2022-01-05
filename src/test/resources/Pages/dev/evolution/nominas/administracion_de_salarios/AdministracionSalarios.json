@@ -1,0 +1,6 @@
+{
+  "ConsultaHistorialPagos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de historial de pagos"
+  }
+}

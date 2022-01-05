@@ -1,0 +1,202 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCompanias_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCompanias_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCompanias_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCompanias_edit"
+  },
+
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura",
+    "FieldType": "Texto"
+  },
+  "GrupoCorporativo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoGrupo",
+    "FieldType": "Lista"
+  },
+  "TipoEmpresa": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipo",
+    "FieldType": "Lista"
+  },
+  "Pais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais",
+    "FieldType": "CodeCombo"
+  },
+  "PaisTexto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais_Text",
+    "FieldType": "Texto"
+  },
+  "Registro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Registro",
+    "FieldType": "Texto"
+  },
+  "Direccion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Direccion",
+    "FieldType": "Texto"
+  },
+  "Telefonos": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Telefonos",
+    "FieldType": "Texto"
+  },
+  "Fax": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Fax",
+    "FieldType": "Texto"
+  },
+  "NIT": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nit",
+    "FieldType": "Texto"
+  },
+  "NumeroPatronal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Patronal",
+    "FieldType": "Texto"
+  },
+  "InicioFiscal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Periodo",
+    "FieldType": "Texto"
+  },
+  "DireccionWeb": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "DireccionWeb",
+    "FieldType": "Texto"
+  },
+  "Mision": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Mision",
+    "FieldType": "Texto"
+  },
+  "Vision": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Vision",
+    "FieldType": "Texto"
+  },
+  "Giro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Giro",
+    "FieldType": "Texto"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[@id='innerright']//div//div[3]//span[1]"
+  },
+  "GrupoCorporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
+  "TipoEmpresaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+  "PaisTextoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
+  },
+  "RegistroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[7]//span[1]"
+  },
+  "DireccionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[8]//span[1]"
+  },
+  "TelefonosRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[9]//span[1]"
+  },
+  "FaxRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[10]//span[1]"
+  },
+  "NITRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[11]//span[1]"
+  },
+  "NumeroPatronalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[12]//span[1]"
+  },
+  "InicioFiscalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[13]//span[1]"
+  },
+  "DireccionWebRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[14]//span[1]"
+  },
+  "MisionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[15]//span[1]"
+  },
+  "VisionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[16]//span[1]"
+  },
+  "GiroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[17]//span[1]"
+  },
+
+  "GuardarCompania": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarCompania"
+  },
+  "CancelarCompanias": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarCompania"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCompanias_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}
