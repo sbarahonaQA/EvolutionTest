@@ -248,6 +248,12 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
+    @Entonces("^Esperar que el elemento (.*?) deje de estar visible$")
+    public void esperarQueElElementoDejeDeEstarVisible(String element) throws Exception
+    {
+        functions.waitForElementInvisible(element);
+    }
+
     @Y("^Esperar (.*?) segundos$")
     public void esperar(int segundos) throws InterruptedException {
         TimeUnit.SECONDS.sleep(segundos);
@@ -373,7 +379,7 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el valor del ingreso (.*) sea de (.*?)")
-    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) {
         functions.validateIncome(tipo, valor);
     }
 
@@ -388,12 +394,12 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el total de ingresos sea de (.*?)")
-    public void comprobarQueElTotalDeIngresosSeaDe(String valor) throws Exception {
+    public void comprobarQueElTotalDeIngresosSeaDe(String valor) {
         functions.validateTotalIncome(valor);
     }
 
     @Entonces("Comprobar que el total de descuentos sea de (.*?)")
-    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) throws Exception {
+    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) {
         functions.validateTotalDeduction(valor);
     }
 
@@ -403,12 +409,12 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que los dias de (.*) sean (.*?)")
-    public void comprobarQueLosDiasDeSean(String tipo, String valor) throws Exception {
+    public void comprobarQueLosDiasDeSean(String tipo, String valor) {
         functions.validateDays(tipo, valor);
     }
 
     @Entonces("Comprobar que las horas de (.*) sean (.*?)")
-    public void comprobarQueLasHorasDeSean(String tipo, String valor) throws Exception {
+    public void comprobarQueLasHorasDeSean(String tipo, String valor) {
         functions.validateHours(tipo, valor);
     }
 }

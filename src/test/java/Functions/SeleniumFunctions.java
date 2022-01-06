@@ -424,6 +424,14 @@ public class SeleniumFunctions {
         w.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
     }
 
+    public void waitForElementInvisible(String element) throws Exception
+    {
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        log.info("Esperando que el elemento: "+element + " deje de estar visible");
+        w.until(ExpectedConditions.invisibilityOfElementLocated(SeleniumElement));
+    }
+
     public void waitForTextToBePresentInElement(String text , String element) throws Exception {
         int reps = 0;
         boolean found = false;
@@ -843,7 +851,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateDeduction(String tipoDescuento, String valor) throws Exception {
+    public void validateDeduction(String tipoDescuento, String valor) {
         WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean sonFilasDescuentos=false;
@@ -880,7 +888,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateReserve(String tipoReserva, String valor) throws Exception {
+    public void validateReserve(String tipoReserva, String valor) {
         WebElement tabla = driver.findElement(By.xpath("//body//table[2]"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean tipoReservaExiste=false;
@@ -933,7 +941,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateNetValue(String valor) throws Exception {
+    public void validateNetValue(String valor) {
         WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         for (WebElement fila : filas) {
