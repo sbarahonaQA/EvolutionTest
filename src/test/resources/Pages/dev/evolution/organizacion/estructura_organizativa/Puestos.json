@@ -43,6 +43,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Relaciones internas"
   },
+  "TomaDecisiones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Toma de decisiones"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
