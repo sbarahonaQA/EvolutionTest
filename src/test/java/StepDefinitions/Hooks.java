@@ -14,7 +14,7 @@ public class Hooks {
 	
 		public static WebDriver driver;
 		Logger log = Logger.getLogger(Hooks.class);
-		Scenario scenario = null;
+		public static Scenario scenario = null;
 
 		@Before
 		public void before(Scenario scenario) {
