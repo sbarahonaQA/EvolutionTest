@@ -2,6 +2,7 @@
 
 @organizacion
 @estructura_organizativa
+@puestos
 @clases_salariales
 Característica: ClasesSalariales
   Pruebas para entidad ClasesSalariales
@@ -13,32 +14,30 @@ Característica: ClasesSalariales
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Pruebas EVO-1957 (Modificacion de datos)
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a ClasesSalariales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/ClasesSalariales.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ClasesSalariales.json
     * Click a Nuevo
     * Esperar que el elemento ClaseSalarial este visible
     * Llenar formulario:
-      | ClaseSalarial | GRADO I |
+      | ClaseSalarial | Clase para automatizacion (nuevo) |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
-    # Se esperan 3 segundos antes de buscar en la tabla porque la tabla siempre está presete, pero se debe acutalizar y esto dura en promedio 3 segundos
-    * Esperar 3 segundos
-    * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Clase salarial de valor GRADO I
+    * Esperar que el elemento Popup deje de estar visible
+    * Editar registro con columna Clase salarial de valor Clase para automatizacion (nuevo)
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | ClaseSalarial | GRADO I |
+      | ClaseSalarial | Clase para automatizacion (nuevo) |
 
   @test
   @Highest
@@ -47,19 +46,19 @@ Característica: ClasesSalariales
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Puesto
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a ClasesSalariales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/ClasesSalariales.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ClasesSalariales.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Comentario de valor Para editar
     * Esperar que el elemento Comentario este visible
@@ -67,14 +66,12 @@ Característica: ClasesSalariales
       | Comentario | Clase salarial de puesto editada |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
-    # Se esperan 3 segundos antes de buscar en la tabla porque la tabla siempre está presete, pero se debe acutalizar y esto dura en promedio 3 segundos
-    * Esperar 3 segundos
-    * Esperar que el elemento Tabla este visible
+    * Esperar que el elemento Popup deje de estar visible
     * Editar registro con columna Comentario de valor Clase salarial de puesto editada
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | ClaseSalarial | GRADO V                          |
-      | Comentario    | Clase salarial de puesto editada |
+      | ClaseSalarial | Clase para automatizacion (editar) |
+      | Comentario    | Clase salarial de puesto editada   |
 
   @test
   @Highest
@@ -83,21 +80,21 @@ Característica: ClasesSalariales
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a ClasesSalariales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/ClasesSalariales.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ClasesSalariales.json
     * Esperar que el elemento Tabla este visible
-    * Eliminar registro con columna Comentario de valor PARA ELIMINAR
+    * Eliminar registro con columna Comentario de valor Para eliminar
     * Aceptar alerta
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La clase salarial de puesto fue eliminada correctamente
@@ -109,26 +106,26 @@ Característica: ClasesSalariales
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Puesto
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a ClasesSalariales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/ClasesSalariales.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ClasesSalariales.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO        | 4                           |
-      #| ClaseSalarialRO | Clase Salarial para Edición |
-      | Comentario      | Para consultar              |
+      | CodigoRO        | 18                                   |
+      | ClaseSalarialRO | Clase para automatizacion (consulta) |
+      | Comentario      | Para consultar                       |
 
   @test
   @Highest
@@ -137,19 +134,19 @@ Característica: ClasesSalariales
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Pruebas EVO-1957 (Modificacion de datos)
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a ClasesSalariales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/ClasesSalariales.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ClasesSalariales.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -162,23 +159,23 @@ Característica: ClasesSalariales
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Pruebas EVO-1957 (Modificacion de datos)
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a ClasesSalariales
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/ClasesSalariales.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ClasesSalariales.json
     * Click a Nuevo
     * Esperar que el elemento ClaseSalarial este visible
     * Llenar formulario:
-      | ClaseSalarial | GRADO V |
+      | ClaseSalarial | Clase para automatizacion (consulta) |
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento MensajeError este visible

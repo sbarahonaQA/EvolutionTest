@@ -3,6 +3,10 @@
     "GetFieldBy": "ClassName",
     "ValueToFind": "tabla_grid"
   },
+  "Popup": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[12]"
+  },
   "ClaseSalarial": {
     "GetFieldBy": "Id",
     "ValueToFind": "codigoClaseSalarial",
@@ -37,28 +41,19 @@
   },
   "RegistroConsultar": {
     "GetFieldBy": "LinkText",
-    "ValueToFind": "Clase Salarial para Edición"
+    "ValueToFind": "Clase para automatizacion (consulta)"
   },
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"jDialogClaseSalarialPuesto\"]/div[2]/fieldset/div[1]/span",
+    "ValueToFind": "/html[1]/body[1]/div[10]/div[2]/div[2]/fieldset[1]/div[1]/span[1]",
     "FieldType": "Texto"
   },
   "ClaseSalarialRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "///*[@id=\"jDialogClaseSalarialPuesto\"]/div[2]/fieldset/div[2]/span",
+    "ValueToFind": "/html[1]/body[1]/div[10]/div[2]/div[2]/fieldset[1]/div[2]/span[1]",
     "FieldType": "Texto"
   },
-  "NivelDecisionRO": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[3]/span",
-    "FieldType": "Texto"
-  },
-  "OrdenRO": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
-    "FieldType": "Texto"
-  },
+
   "RegresarListado": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnRegresarListadoPuesto"

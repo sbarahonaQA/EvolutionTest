@@ -47,6 +47,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Toma de decisiones"
   },
+  "ClasesSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clases salariales"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
