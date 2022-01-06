@@ -1,0 +1,68 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_edit"
+  },
+
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
+
+  "GrupoCoporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
+  },
+
+  "GuardarTipoUnidad": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTipoUnidad"
+  },
+  "CancelarTipoUnidad": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarTipoUnidad"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposUnidades_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}

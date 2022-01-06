@@ -1,0 +1,72 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "ClaseSalarial": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoClaseSalarial",
+    "FieldType": "Lista"
+  },
+  "Comentario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Comentario",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarClaseSalarialPuesto"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarClaseSalarialPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva clase salarial de puesto"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clase Salarial para Edición"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"jDialogClaseSalarialPuesto\"]/div[2]/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "ClaseSalarialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "///*[@id=\"jDialogClaseSalarialPuesto\"]/div[2]/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "NivelDecisionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "OrdenRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  }
+}
+
+
