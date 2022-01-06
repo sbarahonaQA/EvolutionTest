@@ -2,6 +2,7 @@
 
 @organizacion
 @estructura_organizativa
+@puestos
 @toma_de_decisiones
 Característica: TomaDecisiones
   Pruebas para entidad TomaDecisiones
@@ -13,19 +14,19 @@ Característica: TomaDecisiones
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TomaDecisiones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/TomaDecisiones.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/TomaDecisiones.json
     * Click a Nuevo
     * Esperar que el elemento Comentario este visible
     * Llenar formulario:
@@ -49,19 +50,19 @@ Característica: TomaDecisiones
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TomaDecisiones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/TomaDecisiones.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/TomaDecisiones.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Comentario de valor Para Editar
     * Esperar que el elemento Comentario este visible
@@ -86,19 +87,19 @@ Característica: TomaDecisiones
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TomaDecisiones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/TomaDecisiones.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/TomaDecisiones.json
     * Esperar que el elemento Tabla este visible
     * Eliminar registro con columna Comentario de valor Para eliminar
     * Aceptar alerta
@@ -112,19 +113,19 @@ Característica: TomaDecisiones
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TomaDecisiones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/TomaDecisiones.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/TomaDecisiones.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
@@ -141,19 +142,19 @@ Característica: TomaDecisiones
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TomaDecisiones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/TomaDecisiones.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/TomaDecisiones.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -166,19 +167,19 @@ Característica: TomaDecisiones
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina inicio/Inicio.json
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Organizacion
-    * Se cargan elementos de la pagina organizacion/Organizacion.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
     * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/Puestos.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TomaDecisiones
-    * Se cargan elementos de la pagina organizacion/estructura_organizativa/puestos/TomaDecisiones.json
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/TomaDecisiones.json
     * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
