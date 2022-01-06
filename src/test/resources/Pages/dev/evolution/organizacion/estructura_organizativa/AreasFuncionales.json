@@ -1,0 +1,68 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_edit"
+  },
+
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[2]//span[1]"
+  },
+
+  "GrupoCoporativoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//fieldset)[1]/div[3]/span[1]"
+  },
+
+  "GuardarAreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarAreaFuncional"
+  },
+  "CancelarAreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAreaFuncional"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAreasFuncionales_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}

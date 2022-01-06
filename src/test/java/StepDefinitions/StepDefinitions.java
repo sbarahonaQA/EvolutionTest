@@ -367,4 +367,48 @@ public class StepDefinitions{
         functions.deleteRow(columna, text);
     }
 
+    @Entonces("^Aplicar busqueda avanzada:")
+    public void aplicarBusquedaAvanzada(List<List<String>> table) throws Exception {
+        functions.advanceSearch(table);
+    }
+
+    @Entonces("Comprobar que el valor del ingreso (.*) sea de (.*?)")
+    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) throws Exception {
+        functions.validateIncome(tipo, valor);
+    }
+
+    @Entonces("Comprobar que el valor del descuento (.*) sea de (.*?)")
+    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) throws Exception {
+        functions.validateDeduction(tipo, valor);
+    }
+
+    @Entonces("Comprobar que el valor de la reserva (.*) sea de (.*?)")
+    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) throws Exception {
+        functions.validateReserve(tipo, valor);
+    }
+
+    @Entonces("Comprobar que el total de ingresos sea de (.*?)")
+    public void comprobarQueElTotalDeIngresosSeaDe(String valor) throws Exception {
+        functions.validateTotalIncome(valor);
+    }
+
+    @Entonces("Comprobar que el total de descuentos sea de (.*?)")
+    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) throws Exception {
+        functions.validateTotalDeduction(valor);
+    }
+
+    @Entonces("Comprobar que el neto a pagar sea de (.*?)")
+    public void comprobarQueElNetoAPagarSeaDe(String valor) throws Exception {
+        functions.validateNetValue(valor);
+    }
+
+    @Entonces("Comprobar que los dias de (.*) sean (.*?)")
+    public void comprobarQueLosDiasDeSean(String tipo, String valor) throws Exception {
+        functions.validateDays(tipo, valor);
+    }
+
+    @Entonces("Comprobar que las horas de (.*) sean (.*?)")
+    public void comprobarQueLasHorasDeSean(String tipo, String valor) throws Exception {
+        functions.validateHours(tipo, valor);
+    }
 }

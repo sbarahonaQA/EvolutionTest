@@ -1,0 +1,58 @@
+{
+  "Organizacion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Organización"
+  },
+  "Configuracion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Configuración"
+  },
+  "Nominas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nóminas"
+  },
+  "Configuracion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(@href, 'Home/Index/AplicacionTaskInfrastructure')]"
+  },
+  "Empresa": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "companiaselector"
+  },
+  "ASEINFOCorporativo": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Corporativo"
+  },
+  "ASEINFOElSalvador": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO El Salvador"
+  },
+  "ASEINFOGuatemala": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Guatemala"
+  },
+  "ASEINFOHonduras": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Honduras"
+  },
+  "ASEINFOPanama": {
+    "GetFieldBy": "partialLinkText",
+    "ValueToFind": "ASEINFO Panamá"
+  },
+  "ListaEmpresas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ddlGrupoCompaniaSelector"
+  },
+  "EmpresaActual": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "companiaselector"
+  },
+  "SelectorEmpresas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "grupoCompaniaSelectorSpan"
+  },
+  "VerTodasAutorizaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='widgetAutorizaciones']//div[@class='widgetBox']//div[@class='widgetContent']//div//div[@class='HomeWidgetBody']//a"
+  }
+}
