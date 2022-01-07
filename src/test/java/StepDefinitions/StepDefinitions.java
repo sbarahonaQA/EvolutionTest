@@ -368,9 +368,19 @@ public class StepDefinitions{
         functions.editRow(columna, text);
     }
 
+    @Y("^Editar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void EditarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.editRowFromTable(tabla, columna, text);
+    }
+
     @Y("^Eliminar registro con columna (.*?) de valor (.*?)$")
     public void EliminarRegistroConColumnaDeValor(String columna, String text) throws Exception {
         functions.deleteRow(columna, text);
+    }
+
+    @Y("^Eliminar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void EliminarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.deleteRowFromTable(tabla, columna, text);
     }
 
     @Entonces("^Aplicar busqueda avanzada:")
@@ -384,12 +394,12 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el valor del descuento (.*) sea de (.*?)")
-    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) {
         functions.validateDeduction(tipo, valor);
     }
 
     @Entonces("Comprobar que el valor de la reserva (.*) sea de (.*?)")
-    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) {
         functions.validateReserve(tipo, valor);
     }
 
@@ -404,7 +414,7 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el neto a pagar sea de (.*?)")
-    public void comprobarQueElNetoAPagarSeaDe(String valor) throws Exception {
+    public void comprobarQueElNetoAPagarSeaDe(String valor) {
         functions.validateNetValue(valor);
     }
 

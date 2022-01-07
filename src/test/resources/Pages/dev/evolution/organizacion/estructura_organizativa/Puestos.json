@@ -51,6 +51,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Clases salariales"
   },
+  "CompetenciasTécnicas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias Técnicas"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
