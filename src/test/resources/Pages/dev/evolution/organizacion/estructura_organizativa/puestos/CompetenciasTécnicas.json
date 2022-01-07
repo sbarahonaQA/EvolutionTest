@@ -1,7 +1,15 @@
 {
   "Tabla": {
-    "GetFieldBy": "ClassName",
-    "ValueToFind": "tabla_grid"
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table//table[1]"
+  },
+  "Tabla2": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table[2]"
+  },
+  "Popup": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[12]"
   },
   "Competencia": {
     "GetFieldBy": "Id",
@@ -46,7 +54,7 @@
 
   "Mensaje": {
     "GetFieldBy": "Id",
-    "ValueToFind": "mensajesValidarCompetenciaTecnica"
+    "ValueToFind": "MessagesAndErrors"
   },
   "NuevaCompetenciaTecnicaPuesto": {
     "GetFieldBy": "LinkText",
@@ -54,38 +62,32 @@
   },
 
   "RegistroConsultar": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Para Consultar"
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//table//table[1]//tbody[1]//tr[3]//td[1]//a[1]//img[1]"
   },
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[1]/span",
-    "FieldType": "Texto"
+    "ValueToFind": "//div//div//div//div//div//div[1]//span[1]"
   },
   "CompetenciaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"jDialogCreateOrEditCompetenciaTecnicaPuesto\"]/div[2]/div/div/fieldset/div[2]/span",
-    "FieldType": "Texto"
+    "ValueToFind": "//div//div//div//div//div[2]//span[1]"
   },
-  "DescripciónRO": {
+  "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"jDialogCreateOrEditCompetenciaTecnicaPuesto\"]/div[2]/div/div/fieldset/div[3]/span",
-    "FieldType": "Texto"
+    "ValueToFind": "//div//div//div[3]//span[1]"
   },
   "OrdenRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
-    "FieldType": "Texto"
+    "ValueToFind": "//div//div//div[4]//span[1]"
   },
   "PesoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"jDialogCreateOrEditCompetenciaTecnicaPuesto\"]/div[2]/div/div/fieldset/div[5]/span",
-    "FieldType": "Texto"
+    "ValueToFind": "//div//div//div//div//div[5]//span[1]"
   },
   "NivelCumplimientoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"jDialogCreateOrEditCompetenciaTecnicaPuesto\"]/div[2]/div/div/fieldset/div[6]/span",
-    "FieldType": "Texto"
+    "ValueToFind": "//div//div[6]//span[1]"
   },
 
   "RegresarListado": {

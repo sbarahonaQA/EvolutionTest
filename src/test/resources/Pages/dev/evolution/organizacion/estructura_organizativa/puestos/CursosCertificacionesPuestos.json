@@ -23,6 +23,35 @@
     "ValueToFind": "Orden",
     "FieldType": "Texto"
   },
+  "RegistroConsultar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//tr[2]//td[1]//a[1]"
+  },
+  "CertificacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_det']//div[2]//input[2]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[3]//span[1]"
+  },
+  "RequeridoRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Requerido"
+  },
+  "OrdenRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+  "ValidezRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "UsaValidez"
+  },
+  "ModalidadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[7]//span[1]"
+  },
+
 
   "Validez": {
     "GetFieldBy": "Id",
