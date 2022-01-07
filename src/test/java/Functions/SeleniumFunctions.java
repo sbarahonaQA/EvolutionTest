@@ -32,7 +32,6 @@ public class SeleniumFunctions {
     public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
-    private String language;
 
     public SeleniumFunctions() {
         driver = Hooks.driver;
@@ -499,7 +498,7 @@ public class SeleniumFunctions {
     public void fillForm(List<List<String>> rows) throws Exception {
         int intentos = 0;
 
-        language = readProperties("language");
+        String language = readProperties("language");
 
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
@@ -687,17 +686,78 @@ public class SeleniumFunctions {
             //List <WebElement> acciones = columnas.get(0).findElements(By.tagName("a"));
             List <WebElement> acciones = fila.findElements(By.tagName("a"));
 
-            if(acciones.size()==0) {
-                aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
-            }
-
             if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
-                if(acciones.size()==3)
-                    acciones.get(2).click();
-                else
-                    acciones.get(1).click();
+                if(acciones.size()==0) {
+                    aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
+                }
+                else {
+                    if (acciones.size() == 3)
+                        acciones.get(2).click();
+                    else
+                        acciones.get(1).click();
+                    registroExiste = true;
+                    break;
+                }
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + text + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void editRowFromTable(String TablaRef, String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement(TablaRef)));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(TablaRef);
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
                 registroExiste = true;
                 break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            //List <WebElement> acciones = columnas.get(0).findElements(By.tagName("a"));
+            List <WebElement> acciones = fila.findElements(By.tagName("a"));
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                if(acciones.size()==0) {
+                    aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
+                }
+                else {
+                    if (acciones.size() == 3)
+                        acciones.get(2).click();
+                    else
+                        acciones.get(1).click();
+                    registroExiste = true;
+                    break;
+                }
             }
         }
         if(!registroExiste) {
@@ -711,6 +771,54 @@ public class SeleniumFunctions {
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
         By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                columnas.get(0).findElements(By.tagName("a")).get(0).click();
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+        }
+    }
+
+    public void deleteRowFromTable(String tablaRef, String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement(tablaRef)));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(tablaRef);
         WebElement tabla = driver.findElement(SeleniumElement);
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean registroExiste=false;
