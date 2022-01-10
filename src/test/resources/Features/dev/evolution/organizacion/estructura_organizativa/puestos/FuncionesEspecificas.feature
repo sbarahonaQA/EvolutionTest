@@ -3,14 +3,14 @@
 @organizacion
 @estructura_organizativa
 @puestos
-@cursos_y_certificaciones_por_puesto
-Característica: CursosCertificacionesPuesto
-  Pruebas para entidad CursosCertificacionesPuesto
+@funciones_especificas
+Característica: FuncionesEspecificas
+  Pruebas para entidad FuncionesEspecificas
 
   @test
   @Highest
-  @PDS-6593
-  Escenario: Crear un curso y certificación técnica de un puesto con información básica (PDS-6593)
+  @PDS-6626
+  Escenario: Crear una función específica de un puesto con información básica (PDS-6626)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -25,32 +25,30 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Click a NuevoCursoCertificacionPuesto
-    * Esperar que el elemento Descripcion este visible
+    * Click a FuncionesEspecificas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/FuncionesEspecificas.json
+    * Click a Nuevo
+    * Esperar que el elemento Orden este visible
     * Llenar formulario:
-      | Certificacion | False           |
-      | Descripcion   | Creacion Basica |
-      | Requerido     | True            |
-      | Orden         | 3               |
-      | Validez       | False           |
+      | Orden          | 10              |
+      | Definicion     | Creación Básica |
+      | Frecuencia     | Mensual         |
+      | codigoObjetivo | 6               |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Creacion Basica
+    * Editar registro con columna Función específica de valor Creación Básica
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Certificacion | False           |
-      | Descripcion   | Creacion Basica |
-      | Requerido     | True            |
-      | Orden         | 3               |
-      | Validez       | False           |
+      | Orden      | 10              |
+      | Definicion | Creación Básica |
+      | Frecuencia | Mensual         |
+      | Objetivo   | Para Consulta   |
 
   @test
   @Highest
-  @PDS-6597
-  Escenario: Editar un curso y certificación técnica de un puesto con información básica (PDS-6597)
+  @PDS-6630
+  Escenario: Editar una función específica de un puesto con información básica (PDS-6630)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -62,38 +60,34 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a FuncionesEspecificas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/FuncionesEspecificas.json
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Para Editar
-    * Esperar que el elemento Certificacion este visible
+    * Editar registro con columna Función específica de valor Editar
+    * Esperar que el elemento Orden este visible
     * Llenar formulario:
-      | Certificacion | False          |
-      | Descripcion   | Prueba Editada |
-      | Requerido     | True           |
-      | Orden         | 1              |
-      | Validez       | False          |
-      | Modalidad     | Presencial     |
+      | Orden          | 4               |
+      | Definicion     | Prueba Editada  |
+      | Frecuencia     | Eventuales      |
+      | codigoObjetivo | 6               |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Prueba Editada
+    * Editar registro con columna Función específica de valor Prueba Editada
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Certificacion | False          |
-      | Descripcion   | Prueba Editada |
-      | Requerido     | True           |
-      | Orden         | 1              |
-      | Validez       | False          |
-      | Modalidad     | Presencial     |
+      | Orden      | 4               |
+      | Definicion | Prueba Editada  |
+      | Frecuencia | Eventuales      |
+      | Objetivo   | Para Consulta   |
 
   @test
   @Highest
-  @PDS-6598
-  Escenario: Eliminar un curso y certificación técnica de un puesto (PDS-6598)
+  @PDS-6631
+  Escenario: Eliminar una función específica de un puesto (PDS-6631)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -105,21 +99,21 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a FuncionesEspecificas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/FuncionesEspecificas.json
     * Esperar que el elemento Tabla este visible
-    * Eliminar registro con columna Curso de valor Para Eliminar
+    * Eliminar registro con columna Función específica de valor Eliminar
     * Aceptar alerta
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Certificación para el puesto eliminada correctamente
-
+    Entonces Prueba exitosa si elemento Mensaje contiene texto La función específica ha sido eliminada correctamente
+    
   @test
   @Highest
-  @PDS-6590
-  Escenario: Consultar un curso y certificación técnica de un puesto con información básica (PDS-6590)
+  @PDS-6623
+  Escenario: Consultar una función específica de un puesto con información básica (PDS-6623)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -131,26 +125,25 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a FuncionesEspecificas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/FuncionesEspecificas.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CertificacionRO | False          |
-      | DescripcionRO   | Para Consultas |
-      | RequeridoRO     | True           |
-      | OrdenRO         | 0              |
-      | ValidezRO       | False          |
-      | ModalidadRO     | Presencial     |
+      | CodigoRO     | 1              |
+      | OrdenRO      | 0              |
+      | DefinicionRO | Para Consultas |
+      | FrecuenciaRO | Anual          |
+      | ObjetivoRO   | Para Consulta  |
 
   @test
   @Highest
-  @PDS-6601
-  Escenario: Ver el listado cursos y certificaciones técnicas de un puesto (PDS-6601)
+  @PDS-6634
+  Escenario: Ver el listado de funciones específicas de un puesto (PDS-6634)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -165,18 +158,18 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a FuncionesEspecificas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/FuncionesEspecificas.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
-      | NuevoCursoCertificacionPuesto | Tabla | RegresarListado |
+      | Nuevo | Tabla | RegresarListado |
 
 
   @test
   @Highest
-  @PDS-6599
-  Escenario: Guardar un curso y certificación técnica de un puesto con los campos en blanco (PDS-6599)
+  @PDS-6632
+  Escenario: Guardar una función específica de un puesto con los campos en blanco (PDS-6632)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -191,10 +184,10 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Click a NuevoCursoCertificacionPuesto
+    * Click a FuncionesEspecificas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/FuncionesEspecificas.json
+    * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento MensajeError este visible
-    Entonces Prueba exitosa si elemento MensajeError contiene texto La descripción es requerida
+    Entonces Prueba exitosa si elemento MensajeError contiene texto Favor seleccione un objetivo
