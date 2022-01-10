@@ -1,0 +1,73 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCategoriasMotivoRetiro_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCategoriasMotivoRetiro_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCategoriasMotivoRetiro_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCategoriasMotivoRetiro_edit"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "EstadoParaPlaza": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstadoParaPlaza",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "EstadoParaPlazaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarCategoriaMotivoRetiro"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAficion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlCategoriasMotivoRetiro_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}
