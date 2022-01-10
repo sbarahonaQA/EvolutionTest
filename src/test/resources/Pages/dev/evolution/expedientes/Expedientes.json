@@ -1,0 +1,6 @@
+{
+  "ExpedientesColaboradores": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(@href, 'Home/Index/ModuloTaskExpedientes')]"
+  }
+}

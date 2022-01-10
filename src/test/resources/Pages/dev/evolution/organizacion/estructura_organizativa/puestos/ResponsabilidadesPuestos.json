@@ -1,0 +1,64 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "CodigoResponsabilidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoResponsabilidad",
+    "FieldType": "CodeCombo"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Para Consulta de Archivos y Campo"
+  },
+  "Responsabilidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoResponsabilidad_Text",
+    "FieldType": "Texto"
+  },
+  "Observacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Observacion",
+    "FieldType": "Texto"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva responsabilidad"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarResponsabilidadPuesto"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarResponsabilidadPuesto"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "ResponsabilidadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "ObservacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  }
+}

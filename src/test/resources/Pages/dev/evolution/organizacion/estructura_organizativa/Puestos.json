@@ -51,9 +51,13 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Clases salariales"
   },
-  "CompetenciasTécnicas": {
+  "CompetenciasTecnicas": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencias Técnicas"
+  },
+  "ResponsabilidadesPuestos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
   },
 
   "Estado": {

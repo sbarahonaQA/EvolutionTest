@@ -3,56 +3,14 @@
 @organizacion
 @estructura_organizativa
 @puestos
-@Competencias_Tecnicas_por_puesto
-Característica: CompetenciasTecnicasPuesto
-  Pruebas para entidad CompetenciasTecnicasPuesto
+@responsabilidades
+Característica: ResponsabilidadesPuesto
+  Pruebas para entidad ResponsabilidadesPuesto
 
   @test
   @Highest
-  @PDS-6572
-  Escenario: Crear una competencia tecnica de un puesto con información básica(PDS-6572)
-    Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
-    * Click a Organizacion
-    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
-    * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Puestos
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
-    * Click a PrimerElementoDeSmartlist
-    * Click a Editar
-    * Click a CompetenciasTecnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
-    * Click a NuevaCompetenciaTecnicaPuesto
-    * Esperar que el elemento Descripcion este visible
-    * Llenar formulario:
-      | Competencia       | Técnicas de redacción persuasiva |
-      | Descripcion       | Con información Básica           |
-      | Orden             | 5                                |
-      | Peso              | 25                               |
-      | NivelCumplimiento | 3                                |
-    * Adjuntar captura de pantalla al reporte
-    * Click a Guardar
-    * Esperar que el elemento Popup deje de estar visible
-    #Las funciones de eliminar y editar se encuentra al reves
-    * Eliminar registro de Tabla2 con columna Descripcion de valor Con información Básica
-    * Adjuntar captura de pantalla al reporte
-    Entonces Validar informacion:
-      | Competencia       | Técnicas de redacción persuasiva |
-      | Descripcion       | Con información Básica           |
-      | Orden             | 5                                |
-      | Peso              | 25                               |
-      | NivelCumplimiento | 3                                |
-
-
-  @test
-  @Highest
-  @PDS-6576
-  Escenario: Editar una competencia tecnica de un puesto con información básica (PDS-6576)
+  @PDS-6733
+  Escenario: Crear una responsabilidad de puesto con información básica (PDS-6733)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -67,35 +25,24 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTecnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
-    * Esperar que el elemento Tabla este visible
-    #Las funciones de eliminar y editar se encuentra al reves
-    * Eliminar registro con columna Descripcion de valor Para Editar
-    * Esperar que el elemento Descripcion este visible
+    * Click a ResponsabilidadesPuestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ResponsabilidadesPuestos.json
+    * Click a Nuevo
+    * Esperar que el elemento Observacion este visible
     * Llenar formulario:
-      | Competencia       | Conocimiento de informática básico (herramientas Office) |
-      | Descripcion       | Competencia técnica Editada                              |
-      | Orden             | 10                                                       |
-      | Peso              | 25                                                       |
-      | NivelCumplimiento | 1                                                        |
+      | CodigoResponsabilidad | 5 |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
-    * Esperar que el elemento Popup deje de estar visible
-    #Las funciones de eliminar y editar se encuentra al reves
-    * Eliminar registro con columna Descripcion de valor Competencia técnica Editada
+    * Esperar que el elemento Tabla este visible
+    * Editar registro con columna Responsabilidad de valor Control de Calidad en los procesos de Desarrollo de mejoras a nuestros productos
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Competencia       | Conocimiento de informática básico (herramientas Office) |
-      | Descripcion       | Competencia técnica Editada                              |
-      | Orden             | 10                                                       |
-      | Peso              | 25                                                       |
-      | NivelCumplimiento | 1                                                        |
+      | Responsabilidad | Control de Calidad en los procesos de Desarrollo de mejoras a nuestros productos |
 
   @test
   @Highest
-  @PDS-6577
-  Escenario: Eliminar una competencia tecnica de un puesto (PDS-6577)
+  @PDS-6739
+  Escenario: Editar una responsabilidad de puesto con información básica (PDS-6739)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -110,19 +57,53 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTecnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
+    * Click a ResponsabilidadesPuestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ResponsabilidadesPuestos.json
     * Esperar que el elemento Tabla este visible
-    #Las funciones de eliminar y editar se encuentra al reves
-    * Editar registro con columna Descripcion de valor Para Eliminar
+    * Editar registro con columna Observacion de valor Observacion para editar
+    * Esperar que el elemento Observacion este visible
+    * Llenar formulario:
+      | CodigoResponsabilidad | 3                   |
+      | Observacion           | Observación editada |
+    * Adjuntar captura de pantalla al reporte
+    * Click a Guardar
+    * Esperar que el elemento Tabla este visible
+    * Editar registro con columna Observacion de valor Observación editada
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | Responsabilidad | Manejo y Control de Licenciamiento de Productos de Terceros |
+      | Observacion     | Observación editada                                         |
+
+  @test
+  @Highest
+  @PDS-6740
+  Escenario: Eliminar una responsabilidad de puesto (PDS-6740)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Puestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Click a ResponsabilidadesPuestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ResponsabilidadesPuestos.json
+    * Esperar que el elemento Tabla este visible
+    * Eliminar registro con columna Responsabilidad de valor Para Eliminar
     * Aceptar alerta
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Competencia técnica eliminada correctamente
+    Entonces Prueba exitosa si elemento Mensaje contiene texto Responsabilidad del puesto eliminado correctamente
 
   @test
   @Highest
-  @PDS-6569
-  Escenario: Consultar una competencia tecnica de un puesto con información básica (PDS-6569)
+  @PDS-6732
+  Escenario: Consultar una responsabilidad de puesto con información básica(PDS-6732)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -137,23 +118,20 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTecnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
+    * Click a ResponsabilidadesPuestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ResponsabilidadesPuestos.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO            | 20                                                       |
-      | CompetenciaRO       | Conocimiento de informática básico (herramientas Office) |
-      | DescripcionRO       | Para Consultar                                           |
-      | OrdenRO             | 0                                                        |
-      | PesoRO              | 0.00                                                     |
-      | NivelCumplimientoRO | 0                                                        |
+      | CodigoRO          | 1                                 |
+      | ResponsabilidadRO | Para Consulta de Archivos y Campo |
+      | ObservacionRO     | Para prueba de consulta           |
 
   @test
   @Highest
-  @PDS-6578
-  Escenario: Guardar una competencia tecnica de un puesto con los campos en blanco (PDS-6578)
+  @PDS-6742
+  Escenario: Ver el listado de responsabilidades de puesto (PDS-6742)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -165,38 +143,38 @@ Característica: CompetenciasTecnicasPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTecnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
-    * Click a NuevaCompetenciaTecnicaPuesto
-    * Click a Guardar
-    * Adjuntar captura de pantalla al reporte
-    * Esperar que el elemento MensajeError este visible
-    Entonces Prueba exitosa si elemento MensajeError contiene texto Campo Descripción es requerido
-
-  @test
-  @Highest
-  @PDS-6580
-  Escenario: Ver el listado una competencia tecnica de un puesto(PDS-6580)
-    Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
-    * Click a Organizacion
-    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
-    * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Puestos
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
-    * Click a PrimerElementoDeSmartlist
-    * Click a Editar
-    * Click a CompetenciasTecnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
+    * Click a ResponsabilidadesPuestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ResponsabilidadesPuestos.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
-      | NuevaCompetenciaTecnicaPuesto | Tabla | RegresarListado |
+      | Nuevo | Tabla | RegresarListado |
+
+  @test
+  @Highest
+  @PDS-6741
+  Escenario: Guardar un responsabilidad de puesto con los campos en blanco (PDS-6741)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Puestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Click a ResponsabilidadesPuestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/ResponsabilidadesPuestos.json
+    * Click a Nuevo
+    * Click a Guardar
+    * Adjuntar captura de pantalla al reporte
+    * Esperar que el elemento MensajeError este visible
+    Entonces Prueba exitosa si elemento MensajeError contiene texto La responsabilidad es requerida
