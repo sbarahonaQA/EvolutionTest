@@ -25,8 +25,8 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTécnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTécnicas.json
+    * Click a CompetenciasTecnicas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
     * Click a NuevaCompetenciaTecnicaPuesto
     * Esperar que el elemento Descripcion este visible
     * Llenar formulario:
@@ -67,8 +67,8 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTécnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTécnicas.json
+    * Click a CompetenciasTecnicas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
     * Esperar que el elemento Tabla este visible
     #Las funciones de eliminar y editar se encuentra al reves
     * Eliminar registro con columna Descripcion de valor Para Editar
@@ -110,8 +110,8 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTécnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTécnicas.json
+    * Click a CompetenciasTecnicas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
     * Esperar que el elemento Tabla este visible
     #Las funciones de eliminar y editar se encuentra al reves
     * Editar registro con columna Descripcion de valor Para Eliminar
@@ -137,8 +137,8 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTécnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTécnicas.json
+    * Click a CompetenciasTecnicas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
@@ -168,8 +168,8 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTécnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTécnicas.json
+    * Click a CompetenciasTecnicas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
     * Click a NuevaCompetenciaTecnicaPuesto
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
@@ -194,8 +194,8 @@ Característica: CompetenciasTecnicasPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CompetenciasTécnicas
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTécnicas.json
+    * Click a CompetenciasTecnicas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CompetenciasTecnicas.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
