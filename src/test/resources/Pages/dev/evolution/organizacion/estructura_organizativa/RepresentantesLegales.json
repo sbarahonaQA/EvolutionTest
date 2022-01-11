@@ -1,0 +1,256 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRepresentantesLegales_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRepresentantesLegales_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRepresentantesLegales_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRepresentantesLegales_edit"
+  },
+
+  "Activo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Activo",
+    "FieldType": "Checkbox"
+  },
+  "FechaInicio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaInicioVigencia",
+    "FieldType": "Texto"
+  },
+  "FechaFin": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaFinVigencia",
+    "FieldType": "Texto"
+  },
+  "Compania": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCompania",
+    "FieldType": "Lista"
+  },
+  "PrimerNombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PrimerNombre",
+    "FieldType": "Texto"
+  },
+  "PrimerApellido": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PrimerApellido",
+    "FieldType": "Texto"
+  },
+  "ApellidoCasada": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ApellidoCasada",
+    "FieldType": "Texto"
+  },
+  "FechaNacimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaNacimiento",
+    "FieldType": "Texto"
+  },
+  "EstadoCivil": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstadoCivil",
+    "FieldType": "Lista"
+  },
+  "Profesion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Profesion",
+    "FieldType": "Texto"
+  },
+  "Sexo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Sexo",
+    "FieldType": "Lista"
+  },
+
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+  "ActivoRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Activo"
+  },
+  "FechaInicioRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaInicioVigencia"
+  },
+  "FechaFinRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaFinVigencia"
+  },
+  "CompaniaRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCompania"
+  },
+  "PrimerNombreRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanPrimerNombre"
+  },
+  "PrimerApellidoRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanPrimerApellido"
+  },
+  "ApellidoCasadaRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanApellidoCasada"
+  },
+  "FechaNacimientoRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanFechaNacimiento"
+  },
+  "EstadoCivilRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanEstadoCivil"
+  },
+  "ProfesionRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanProfesion"
+  },
+  "SexoRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanSexo"
+  },
+  "EmailRO": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanEmail"
+  },
+
+  "CodigoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[1]/span[1]"
+  },
+  "FechaInicioDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[2]/span[1]"
+  },
+  "FechaFinDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[3]/span[1]"
+  },
+  "ActivoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[1]/div[4]/span[1]"
+  },
+  "PrimerNombreDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[1]/span[1]"
+  },
+  "SegundoNombreDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[2]/span[1]"
+  },
+  "PrimerApellidoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[3]/span[1]"
+  },
+  "SegundoApellidoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[4]/span[1]"
+  },
+  "ApellidoCasadaDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[5]/span[1]"
+  },
+  "FechaNacimientoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[6]/span[1]"
+  },
+  "EstadoCivilDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[7]/span[1]"
+  },
+  "ProfesionDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[8]/span[1]"
+  },
+  "NacionalidadDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[9]/span[1]"
+  },
+  "SexoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[10]/span[1]"
+  },
+  "EmailDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[2]/div[11]/span[1]"
+  },
+
+  "DocIdentNumeroDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[1]"
+  },
+  "DocIdentTipoDocDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[2]"
+  },
+  "DocIdentNombreEnDocDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[3]"
+  },
+  "DocIdentFechaExpedicionDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[4]"
+  },
+  "DocIdentFechaVencimientoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[5]"
+  },
+  "DocIdentPaisDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[6]"
+  },
+  "DocIdentDepartamentoDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[7]"
+  },
+  "DocIdentMunicipioDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[8]"
+  },
+  "DocIdentLugarDetails": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/div[3]/fieldset[3]/table[1]/tbody[1]/tr[2]/td[9]"
+  },
+
+  "GuardarRepresentanteLegal": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarRepresentanteLegal"
+  },
+  "CancelarRepresentanteLegal": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarRepresentanteLegal"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRepresentantesLegales_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}

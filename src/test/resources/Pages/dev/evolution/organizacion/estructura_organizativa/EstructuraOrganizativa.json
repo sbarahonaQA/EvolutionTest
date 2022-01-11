@@ -122,5 +122,9 @@
   "ModificacionTabuladorSalarial": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Modificación al tabulador Salarial"
+  },
+  "RepresentantesLegales": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='task']//a[contains(text(),'Representantes legales')]"
   }
 }
