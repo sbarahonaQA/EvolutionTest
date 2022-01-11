@@ -18,6 +18,28 @@
     "ValueToFind": "ac_even ac_over"
   },
 
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "para consulta"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='controls']//div[1]//span[1]"
+  },
+  "EquipoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_det']//div[2]//span[1]"
+  },
+  "ObservacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[3]//span[1]"
+  },
+
+  "NuevoEquipo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo equipo"
+  },
   "Guardar": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarEquipoPuesto"
@@ -30,5 +52,14 @@
   "Mensaje": {
     "GetFieldBy": "Id",
     "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
   }
+
 }
