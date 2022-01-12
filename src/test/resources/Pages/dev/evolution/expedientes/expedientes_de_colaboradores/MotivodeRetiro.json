@@ -1,0 +1,82 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlMotivosRetiro_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlMotivosRetiro_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlMotivosRetiro_delete"
+  },
+
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlMotivosRetiro_edit"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlMotivosRetiro_txtQuickSearch"
+  },
+
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre"
+  },
+  "PuedeEditarParams": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PuedeEditarParams",
+    "FieldType": "Radio"
+  },
+  "PermiteRecontratacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PermiteRecontratacion",
+    "FieldType": "Radio"
+  },
+  "codigoCategoria": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCategoria",
+    "FieldType": "Lista"
+  },
+  "Compania": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCompaniaFormulario",
+    "FieldType": "Lista"
+  },
+  "Formulario": {
+  "GetFieldBy": "Id",
+  "ValueToFind": "codigoFormulario",
+    "FieldType": "Lista"
+},
+  "GuardarMotivoRetiro": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarMotivoRetiro"
+  },
+
+  "RegresarAListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarMotivoRetiro"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+  "agregarFormulario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"frmMotivoRetiro\"]/div[1]/fieldset[2]/div[3]/input"
+  }
+}
