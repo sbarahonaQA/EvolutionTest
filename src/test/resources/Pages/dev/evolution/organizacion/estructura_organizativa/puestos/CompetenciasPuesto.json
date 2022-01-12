@@ -1,0 +1,167 @@
+{
+  "TablaCompetenciasGestion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//table[@class='puesto_table']//table[1]"
+  },
+  "TablaCompetenciasOrganizacionales": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table[2]"
+  },
+  "CodigoCompetencia": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCompetencia",
+    "FieldType": "CodeCombo"
+  },
+  "CodigoConducta": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoConducta",
+    "FieldType": "CodeCombo"
+  },
+  "PesoEnfoqueEstrategico": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "pesoCompetencia_7",
+    "FieldType": "Texto"
+  },
+  "PesoDesarrollaUnEnfoqueALargoPlazo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "pesoConducta_1",
+    "FieldType": "Texto"
+  },
+  "EliminarEnfoqueEstrategico": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/form[1]/div[2]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]/img[1]"
+  },
+
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "para consulta"
+  },
+
+  "PesoCompromisosOrganizacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[2]/td[2]"
+  },
+  "NivelEsperadoCompromisosOrganizacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[2]/td[3]"
+  },
+  "PesoHaceSacrificiosPorLaInstitucionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[3]/td[3]"
+  },
+  "NivelEsperadoHaceSacrificiosPorLaInstitucionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[3]/td[4]"
+  },
+  "PesoHaceSacrificiosPoLaInstitucionSinQueSeLoPidanRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[4]/td[3]"
+  },
+  "NivelEsperadoPoLaInstitucionSinQueSeLoPidanRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[4]/td[4]"
+  },
+  "PesoDesarroloDeLasPersonasRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[6]/td[2]"
+  },
+  "NivelEsperadoDesarroloDeLasPersonasRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[6]/td[3]"
+  },
+  "PesoCreaUnAmbienteDeAprendizajeYCrecimientoParaLosDemasRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[7]/td[3]"
+  },
+  "NivelEsperadoCreaUnAmbienteDeAprendizajeYCrecimientoParaLosDemasRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[7]/td[4]"
+  },
+  "PesoAdaptacionAlCambioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[8]/td[2]"
+  },
+  "NivelEsperadoAdaptacionAlCambioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[8]/td[3]"
+  },
+  "PesoAdaptaSuPropiaEstrategiaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[9]/td[3]"
+  },
+  "NivelEsperadoSuPropiaEstrategiaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[9]/td[4]"
+  },
+  "PesoOrientacionAResultadosRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[10]/td[2]"
+  },
+  "NivelEsperadoOrientacionAResultadosRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[10]/td[3]"
+  },
+  "PesoTomaRiesgosEmprendedoresCalculadosRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[11]/td[3]"
+  },
+  "NivelEsperadoTomaRiesgosEmprendedoresCalculadosRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[11]/td[4]"
+  },
+  "PesoAdministraConBaseEnValores1RO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[12]/td[2]"
+  },
+  "NivelEsperadoAdministraConBaseEnValores1RO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[12]/td[3]"
+  },
+  "PesoUtilizaPerspectivasALargoPlazoConElClienteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[13]/td[3]"
+  },
+  "NivelEsperadoUtilizaPerspectivasALargoPlazoConElClienteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[13]/td[4]"
+  },
+  "PesoAdministraConBaseEnValores2RO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[14]/td[2]"
+  },
+  "NivelEsperadoAdministraConBaseEnValores2RO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[14]/td[3]"
+  },
+  "PesoLlevaACaboAccionesConformeASusValoresAunCuandoEstoConllevaUnCostoORiesgoImportanteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[15]/td[3]"
+  },
+  "NivelEsperadoLlevaACaboAccionesConformeASusValoresAunCuandoEstoConllevaUnCostoORiesgoImportanteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/div[1]/table[2]/tbody[1]/tr[15]/td[4]"
+  },
+
+  "Agregar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[4]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/form[1]/div[2]/div[1]/div[1]/fieldset[1]/div[3]/input[1]"
+  },
+  "GuardarCompetencias": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_botones']//input[1]"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "Messages"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  }
+
+}
