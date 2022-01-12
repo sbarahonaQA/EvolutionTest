@@ -3,6 +3,58 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Aficiones"
   },
+  "AFPs": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "AFPs"
+  },
+  "Carreras": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Carreras"
+  },
+  "BeneficiosAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Beneficios Adicionales"
+  },
+  "ConsultaSolicitudConstancia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de constancia"
+  },
+  "ConsultaSolicitudAyudaEconomica": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de ayuda económica"
+  },
+  "CategoriasMotivoRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de motivo de retiro"
+  },
+  "TiposContratos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de contratos"
+  },
+  "TiposEstudios": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de estudios"
+  },
+  "TiposSeguros": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de seguros"
+  },
+  "TitulosPersonales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Títulos personales"
+  },
+  "ConceptosServiciosMedicos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Conceptos servicios médicos"
+  },
+  "TiposTransaccionesFueraNomina": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de transacciones fuera de nómina"
+  },
+  "TiposReferencia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de Referencias"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
