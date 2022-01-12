@@ -863,6 +863,39 @@ public class SeleniumFunctions {
         }
     }
 
+    public void validateCompetenceWithValue(String tablaRef, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement(tablaRef)));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(tablaRef);
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste;
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            for (WebElement columna : columnas) {
+                if(columna.getText().equalsIgnoreCase(text)) {
+                    aggregatedAsserts.assertTrue("", columna.getText().equalsIgnoreCase(text));
+                    aggregatedAsserts.processAllAssertions();
+                    registroExiste = true;
+                    break;
+                }
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + text + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+        }
+    }
+
     public void advanceSearch(List<List<String>> rows) throws Exception {
         int intentos = 0;
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
