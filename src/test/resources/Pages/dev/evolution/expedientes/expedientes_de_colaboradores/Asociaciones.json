@@ -1,0 +1,98 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAsociaciones_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAsociaciones_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAsociaciones_delete"
+  },
+
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAsociaciones_edit"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAsociaciones_txtQuickSearch"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura"
+  },
+
+  "Naturaleza": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Naturaleza"
+  },
+
+  "Porcentaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Porcentaje"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+
+  "NaturalezaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+
+  "PorcentajeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+
+
+  "GuardarAsociacion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarAsociacion"
+  },
+
+  "RegresarAListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAsociacion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+  "agregarFormulario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"frmMotivoRetiro\"]/div[1]/fieldset[2]/div[3]/input"
+  }
+}
