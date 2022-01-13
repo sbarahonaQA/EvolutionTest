@@ -1,0 +1,22 @@
+{
+  "Consultas": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[@routerlink='/consultas']"
+  },
+  "Solicitudes": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[@routerlink='/solicitudes']"
+  },
+  "Autorizaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[@routerlink='/autorizaciones']"
+  },
+  "Acciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[@routerlink='/acciones']"
+  },
+  "Perfil": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='wrapper-profile']"
+  }
+}

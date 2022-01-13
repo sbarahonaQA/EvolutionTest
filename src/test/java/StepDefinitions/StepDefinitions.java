@@ -427,4 +427,16 @@ public class StepDefinitions{
     public void comprobarQueLasHorasDeSean(String tipo, String valor) {
         functions.validateHours(tipo, valor);
     }
+
+    @Dado("^que carga EvolutionWave")
+    public void queCargaEvolutionWave() throws IOException {
+        String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instanciaEvoWave");
+        log.info("Cargando URL: " + sitioPruebas);
+        driver.get(sitioPruebas);
+    }
+
+    @Entonces("^Validar datos:")
+    public void validarDatos(List<List<String>> table) throws Exception {
+        functions.validarDatos(table);
+    }
 }

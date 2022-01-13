@@ -1103,4 +1103,52 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
+    public void validarDatos(List<List<String>> rows) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste;
+
+        for (List<String> columns : rows) {
+
+            registroExiste = false;
+            int posicionColumna = 0;
+
+            List<WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+            //Se busca la posicion del dato de columna propocionado
+            for (WebElement ignored : encabezados) {
+                if (!encabezados.get(posicionColumna).getText().equalsIgnoreCase(columns.get(0).trim()))
+                    posicionColumna++;
+                else {
+                    registroExiste = true;
+                    break;
+                }
+            }
+            if (!registroExiste) {
+                aggregatedAsserts.fail("Columna \"" + columns.get(0).trim() + "\" no encontrada");
+                aggregatedAsserts.processAllAssertions();
+                return;
+            }
+
+            for (WebElement fila : filas) {
+                List<WebElement> columnas = fila.findElements(By.tagName("td"));
+
+                //Si columnas es igual a cero es la fila con los encabezados
+                if (columnas.size() == 0) {
+                    continue;
+                }
+
+                if (columnas.get(posicionColumna).getText().equalsIgnoreCase(columns.get(1).trim())) {
+                    break;
+                }
+                else
+                    aggregatedAsserts.fail("Texto NO coinciden - Sistema: " + columnas.get(posicionColumna).getText() + " - Prueba: " + columns.get(1).trim());
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
 }

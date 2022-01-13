@@ -1,0 +1,50 @@
+{
+  "AutorizacionDeSustitutos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-card-header[@class='mat-card-header']"
+  },
+  "EmpleadoASustituir": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@placeholder='Seleccione el empleado a sustituir']"
+  },
+  "EmpleadoSustituto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@placeholder='Seleccione el empleado sustituto']"
+  },
+  "FechaInicio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//form//button)[1]"
+  },
+  "SelectorAnio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-calendar-period-button mat-button mat-button-base']"
+  },
+  "2020": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[contains(text(),'2020')]"
+  },
+  "Mayo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[contains(text(),'MAY.')]"
+  },
+  "15": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[contains(text(),'15')]"
+  },
+  "FechaFinal": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//form//button)[2]"
+  },
+  "16": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[contains(text(),'16')]"
+  },
+  "EnviarSolicitud": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']"
+  },
+  "SolicitudEnviada": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='moss-word']"
+  }
+}
