@@ -383,6 +383,11 @@ public class StepDefinitions{
         functions.deleteRowFromTable(tabla, columna, text);
     }
 
+    @Entonces("^Validar competencia de (.*?) con valor (.*?)$")
+    public void ValidarCompetenciaDeConValor(String tabla, String text) throws Exception {
+        functions.validateCompetenceWithValue(tabla, text);
+    }
+
     @Entonces("^Aplicar busqueda avanzada:")
     public void aplicarBusquedaAvanzada(List<List<String>> table) throws Exception {
         functions.advanceSearch(table);
