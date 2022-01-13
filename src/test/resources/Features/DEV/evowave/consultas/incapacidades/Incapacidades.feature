@@ -10,19 +10,19 @@ Característica: Incapacidades
   @PDS-4348
   Escenario: Consulta de incapacidad (PDS-4348)
     Dado que carga EvolutionWave
-    * Se cargan elementos de la pagina DEV/evowave/Login.json
+    * Se cargan elementos de la pagina dev/evowave/Login.json
     * Click a Ingresar
     * Esperar que el elemento UsuarioIDS este presente
     * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina DEV/evowave/Inicio.json
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
     * Esperar 4 segundos
     * Refrescar pagina
     * Esperar que el elemento Consultas este presente
     * Click a Consultas
-    * Se cargan elementos de la pagina DEV/evowave/consultas/Consultas.json
+    * Se cargan elementos de la pagina dev/evowave/consultas/Consultas.json
     * Esperar que el elemento Incapacidades este presente
     * Click a Incapacidades
-    * Se cargan elementos de la pagina DEV/evowave/consultas/incapacidades/Incapacidades.json
+    * Se cargan elementos de la pagina dev/evowave/consultas/incapacidades/Incapacidades.json
     * Esperar que el elemento Desde este presente
     * Click a Desde
     * Click a 2020
