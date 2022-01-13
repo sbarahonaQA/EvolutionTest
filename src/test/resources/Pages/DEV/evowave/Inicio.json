@@ -1,22 +1,22 @@
 {
   "Consultas": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[1]//div[1]//a[1]//div[1]//span[1]"
+    "ValueToFind": "//a[@routerlink='/consultas']"
   },
   "Solicitudes": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[2]//div[1]//a[1]//div[1]//span[1]"
+    "ValueToFind": "//a[@routerlink='/solicitudes']"
   },
   "Autorizaciones": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[3]//div[1]//a[1]//div[1]//span[1]"
+    "ValueToFind": "//a[@routerlink='/autorizaciones']"
   },
   "Acciones": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[4]//div[1]//a[1]//div[1]//span[1]"
+    "ValueToFind": "//a[@routerlink='/acciones']"
   },
   "Perfil": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//body/app-root/app-sidenav/div/mat-sidenav-container[@id='sidenav-drawer']/mat-sidenav/div/div/div/mat-nav-list/div[2]/div[1]"
+    "ValueToFind": "//div[@class='wrapper-profile']"
   }
 }
