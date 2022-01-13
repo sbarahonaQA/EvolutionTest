@@ -1,0 +1,61 @@
+{
+  "DesplegarTipoCondicionTrabajo1": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//li[8]//div[1]"
+  },
+  "ParaConsultaDeCondicion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Para Consulta de Condicion"
+  },
+  "ChequeParaEliminarRelacionada": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@name='condicionPuestoEliminar' and @value='14']"
+  },
+
+  "TipoCondicionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//td[contains(text(),'Lugar de trabajo')]"
+  },
+  "CondicionTrabajoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//li[contains(text(),'Comedor')]"
+  },
+
+  "AgregarCondicion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[1]"
+  },
+  "EliminarCondicion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[2]"
+  },
+  "EliminarTodasCondiciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[3]"
+  },
+
+  "GuardarCondiciones": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarCondicion"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListado"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "Messages"
+  },
+  "PanelIzquierdo": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "panel_der_contenido_izq"
+  },
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  }
+
+}
+
+
