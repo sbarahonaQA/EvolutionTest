@@ -3,54 +3,15 @@
 @organizacion
 @estructura_organizativa
 @puestos
-@cursos_y_certificaciones_por_puesto
-Característica: CursosCertificacionesPuesto
-  Pruebas para entidad CursosCertificacionesPuesto
+@relaciones_externas
+Característica: RelacionesExternas
+  Pruebas para entidad RelacionesExternas (Relaciones Externas - Puestos)
+
 
   @test
   @Highest
-  @PDS-6593
-  Escenario: Crear un curso y certificación técnica de un puesto con información básica (PDS-6593)
-    Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
-    * Click a Organizacion
-    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
-    * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Puestos
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
-    * Click a PrimerElementoDeSmartlist
-    * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Click a NuevoCursoCertificacionPuesto
-    * Esperar que el elemento Descripcion este visible
-    * Llenar formulario:
-      | Certificacion | False           |
-      | Descripcion   | Creacion Basica |
-      | Requerido     | True            |
-      | Orden         | 3               |
-      | Validez       | False           |
-    * Adjuntar captura de pantalla al reporte
-    * Click a Guardar
-    * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Creacion Basica
-    * Adjuntar captura de pantalla al reporte
-    Entonces Validar informacion:
-      | Certificacion | False           |
-      | Descripcion   | Creacion Basica |
-      | Requerido     | True            |
-      | Orden         | 3               |
-      | Validez       | False           |
-
-  @test
-  @Highest
-  @PDS-6597
-  Escenario: Editar un curso y certificación técnica de un puesto con información básica (PDS-6597)
+  @PDS-6699
+  Escenario: Crear una relación externa de puesto con información básica (PDS-6699)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -65,35 +26,30 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Para Editar
-    * Esperar que el elemento Certificacion este visible
+    * Click a RelacionesExternas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/RelacionesExternas.json
+    * Click a Nuevo
+    * Esperar que el elemento Orden este visible
     * Llenar formulario:
-      | Certificacion | False          |
-      | Descripcion   | Prueba Editada |
-      | Requerido     | True           |
-      | Orden         | 1              |
-      | Validez       | False          |
-      | Modalidad     | Presencial     |
+      | Orden       | 10                |
+      | Frecuencia  | Mensual           |
+      | Institucion | Para Crear Básico |
+      | Motivo      | Crear Básico      |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Prueba Editada
+    * Editar registro con columna Institución de valor Para Crear Básico
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Certificacion | False          |
-      | Descripcion   | Prueba Editada |
-      | Requerido     | True           |
-      | Orden         | 1              |
-      | Validez       | False          |
-      | Modalidad     | Presencial     |
+      | Orden       | 10                |
+      | Frecuencia  | Mensual           |
+      | Institucion | Para Crear Básico |
+      | Motivo      | Crear Básico      |
 
   @test
   @Highest
-  @PDS-6598
-  Escenario: Eliminar un curso y certificación técnica de un puesto (PDS-6598)
+  @PDS-6705
+  Escenario: Editar una relación externa de puesto con información básica (PDS-6705)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -108,18 +64,57 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a RelacionesExternas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/RelacionesExternas.json
     * Esperar que el elemento Tabla este visible
-    * Eliminar registro con columna Curso de valor Para Eliminar
+    * Editar registro con columna Institución de valor Para Editar
+    * Esperar que el elemento Orden este visible
+    * Llenar formulario:
+      | Orden       | 30             |
+      | Frecuencia  | Diaria         |
+      | Institucion | Editado        |
+      | Motivo      | Prueba Editada |
+    * Adjuntar captura de pantalla al reporte
+    * Click a Guardar
+    * Esperar que el elemento Tabla este visible
+    * Editar registro con columna Institución de valor Editado
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | Orden       | 30             |
+      | Frecuencia  | Diaria         |
+      | Institucion | Editado        |
+      | Motivo      | Prueba Editada |
+
+  @test
+  @Highest
+  @PDS-6706
+  Escenario: Eliminar una relación externa de puesto (PDS-6706)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Puestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Click a RelacionesExternas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/RelacionesExternas.json
+    * Esperar que el elemento Tabla este visible
+    * Eliminar registro con columna Institución de valor Eliminar
     * Aceptar alerta
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Certificación para el puesto eliminada correctamente
-
+    Entonces Prueba exitosa si elemento Mensaje contiene texto Relación externa eliminada correctamente
+    
   @test
   @Highest
-  @PDS-6590
-  Escenario: Consultar un curso y certificación técnica de un puesto con información básica (PDS-6590)
+  @PDS-6698
+  Escenario: Consultar una relación externa de puesto con información básica (PDS-6698)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -134,23 +129,22 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a RelacionesExternas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/RelacionesExternas.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CertificacionRO | False          |
-      | DescripcionRO   | Para Consultas |
-      | RequeridoRO     | True           |
-      | OrdenRO         | 0              |
-      | ValidezRO       | False          |
-      | ModalidadRO     | Presencial     |
+      | CodigoRO      | 1                   |
+      | InstitucionRO | Para Consultas      |
+      | OrdenRO       | 100                 |
+      | FrecuenciaRO  | Trimestral          |
+      | MotivoRO      | Prueba de Consulta  |
 
   @test
   @Highest
-  @PDS-6601
-  Escenario: Ver el listado cursos y certificaciones técnicas de un puesto (PDS-6601)
+  @PDS-6708
+  Escenario: Ver el listado de relaciones externas de puesto (PDS-6708)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -162,21 +156,21 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a RelacionesExternas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/RelacionesExternas.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
-      | NuevoCursoCertificacionPuesto | Tabla | RegresarListado |
+      | Nuevo | Tabla | RegresarListado |
 
 
   @test
   @Highest
-  @PDS-6599
-  Escenario: Guardar un curso y certificación técnica de un puesto con los campos en blanco (PDS-6599)
+  @PDS-6707
+  Escenario: Guardar un relación externa de puesto con los campos en blanco (PDS-6707)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -188,13 +182,13 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Click a NuevoCursoCertificacionPuesto
+    * Click a RelacionesExternas
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/RelacionesExternas.json
+    * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento MensajeError este visible
-    Entonces Prueba exitosa si elemento MensajeError contiene texto La descripción es requerida
+    Entonces Prueba exitosa si elemento MensajeError contiene texto El campo Institución o Motivo debe de ser ingresado

@@ -11,6 +11,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Nóminas"
   },
+  "Configuracion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(@href, 'Home/Index/AplicacionTaskInfrastructure')]"
+  },
   "Empresa": {
     "GetFieldBy": "Id",
     "ValueToFind": "companiaselector"

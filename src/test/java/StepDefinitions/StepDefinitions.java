@@ -248,6 +248,12 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
+    @Entonces("^Esperar que el elemento (.*?) deje de estar visible$")
+    public void esperarQueElElementoDejeDeEstarVisible(String element) throws Exception
+    {
+        functions.waitForElementInvisible(element);
+    }
+
     @Y("^Esperar (.*?) segundos$")
     public void esperar(int segundos) throws InterruptedException {
         TimeUnit.SECONDS.sleep(segundos);
@@ -362,9 +368,19 @@ public class StepDefinitions{
         functions.editRow(columna, text);
     }
 
+    @Y("^Editar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void EditarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.editRowFromTable(tabla, columna, text);
+    }
+
     @Y("^Eliminar registro con columna (.*?) de valor (.*?)$")
     public void EliminarRegistroConColumnaDeValor(String columna, String text) throws Exception {
         functions.deleteRow(columna, text);
+    }
+
+    @Y("^Eliminar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void EliminarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.deleteRowFromTable(tabla, columna, text);
     }
 
     @Entonces("^Aplicar busqueda avanzada:")

@@ -3,54 +3,14 @@
 @organizacion
 @estructura_organizativa
 @puestos
-@cursos_y_certificaciones_por_puesto
-Característica: CursosCertificacionesPuesto
-  Pruebas para entidad CursosCertificacionesPuesto
+@prestaciones
+Característica: Prestaciones
+  Pruebas para entidad Prestaciones
 
   @test
   @Highest
-  @PDS-6593
-  Escenario: Crear un curso y certificación técnica de un puesto con información básica (PDS-6593)
-    Dado que carga Evolution
-    * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
-    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
-    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
-    * Click a Organizacion
-    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
-    * Click a EstructuraOrganizativa
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
-    * Click a Puestos
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
-    * Click a PrimerElementoDeSmartlist
-    * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Click a NuevoCursoCertificacionPuesto
-    * Esperar que el elemento Descripcion este visible
-    * Llenar formulario:
-      | Certificacion | False           |
-      | Descripcion   | Creacion Basica |
-      | Requerido     | True            |
-      | Orden         | 3               |
-      | Validez       | False           |
-    * Adjuntar captura de pantalla al reporte
-    * Click a Guardar
-    * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Creacion Basica
-    * Adjuntar captura de pantalla al reporte
-    Entonces Validar informacion:
-      | Certificacion | False           |
-      | Descripcion   | Creacion Basica |
-      | Requerido     | True            |
-      | Orden         | 3               |
-      | Validez       | False           |
-
-  @test
-  @Highest
-  @PDS-6597
-  Escenario: Editar un curso y certificación técnica de un puesto con información básica (PDS-6597)
+  @PDS-6685
+  Escenario: Crear una prestación de un puesto con información básica (PDS-6685)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -65,35 +25,30 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Para Editar
-    * Esperar que el elemento Certificacion este visible
+    * Click a Prestaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/Prestaciones.json
+    * Click a Nuevo
+    * Esperar que el elemento CodigoPrestacion este visible
     * Llenar formulario:
-      | Certificacion | False          |
-      | Descripcion   | Prueba Editada |
-      | Requerido     | True           |
-      | Orden         | 1              |
-      | Validez       | False          |
-      | Modalidad     | Presencial     |
+      | CodigoMoneda     | GTQ      |
+      | CodigoPrestacion | 10       |
+      | Valor            | 50       |
+      | FechaInicio      | 8/9/2021 |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Curso de valor Prueba Editada
+    * Editar registro con columna Prestación de valor Aguinaldo 100%
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Certificacion | False          |
-      | Descripcion   | Prueba Editada |
-      | Requerido     | True           |
-      | Orden         | 1              |
-      | Validez       | False          |
-      | Modalidad     | Presencial     |
+      | PrestacionTexto | Aguinaldo 100% |
+      | Valor           | 50             |
+      | MonedaTexto     | Quetzales      |
+      | FechaInicio     | 8/9/2021       |
 
   @test
   @Highest
-  @PDS-6598
-  Escenario: Eliminar un curso y certificación técnica de un puesto (PDS-6598)
+  @PDS-6689
+  Escenario: Editar una prestación de un puesto con información básica (PDS-6689)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -108,18 +63,57 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a Prestaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/Prestaciones.json
     * Esperar que el elemento Tabla este visible
-    * Eliminar registro con columna Curso de valor Para Eliminar
+    * Editar registro con columna Prestación de valor Para Editar
+    * Esperar que el elemento CodigoPrestacion este visible
+    * Llenar formulario:
+      | CodigoPrestacion | 11       |
+      | Valor            | 250      |
+      | CodigoMoneda     | USD      |
+      | FechaInicio      | 8/9/2021 |
+    * Adjuntar captura de pantalla al reporte
+    * Click a Guardar
+    * Esperar que el elemento Tabla este visible
+    * Editar registro con columna Prestación de valor Vacaciones 30 dias
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | PrestacionTexto | Vacaciones 30 dias |
+      | Valor           | 250                |
+      | MonedaTexto     | Dólares            |
+      | FechaInicio     | 8/9/2021           |
+
+  @test
+  @Highest
+  @PDS-6690
+  Escenario: Eliminar una prestación de un puesto (PDS-6690)
+    Dado que carga Evolution
+    * Se cargan elementos de la pagina Login.json
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
+    * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
+    * Click a Organizacion
+    * Se cargan elementos de la pagina dev/evolution/organizacion/Organizacion.json
+    * Click a EstructuraOrganizativa
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
+    * Click a Puestos
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
+    * Click a PrimerElementoDeSmartlist
+    * Click a Editar
+    * Click a Prestaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/Prestaciones.json
+    * Esperar que el elemento Tabla este visible
+    * Eliminar registro con columna Prestación de valor Para eliminar
     * Aceptar alerta
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Certificación para el puesto eliminada correctamente
-
+    Entonces Prueba exitosa si elemento Mensaje contiene texto Prestación del puesto eliminado correctamente
+    
   @test
   @Highest
-  @PDS-6590
-  Escenario: Consultar un curso y certificación técnica de un puesto con información básica (PDS-6590)
+  @PDS-6682
+  Escenario: Consultar una prestación de un puesto con información básica (PDS-6682)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -134,23 +128,22 @@ Característica: CursosCertificacionesPuesto
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a Prestaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/Prestaciones.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CertificacionRO | False          |
-      | DescripcionRO   | Para Consultas |
-      | RequeridoRO     | True           |
-      | OrdenRO         | 0              |
-      | ValidezRO       | False          |
-      | ModalidadRO     | Presencial     |
+      | CodigoRO      | 1                             |
+      | PrestacionRO  | Para Consulta Archivo y Campo |
+      | ValorRO       | 100.00                        |
+      | MonedaRO      | Colones costarricenses        |
+      | FechaInicioRO | 8/9/2021                      |
 
   @test
   @Highest
-  @PDS-6601
-  Escenario: Ver el listado cursos y certificaciones técnicas de un puesto (PDS-6601)
+  @PDS-6693
+  Escenario: Ver el listado de prestaciones de un puesto (PDS-6693)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -162,21 +155,21 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
+    * Click a Prestaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/Prestaciones.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
-      | NuevoCursoCertificacionPuesto | Tabla | RegresarListado |
+      | Nuevo | Tabla | RegresarListado |
 
 
   @test
   @Highest
-  @PDS-6599
-  Escenario: Guardar un curso y certificación técnica de un puesto con los campos en blanco (PDS-6599)
+  @PDS-6691
+  Escenario: Guardar una prestación de un puesto con los campos en blanco (PDS-6691)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -188,13 +181,14 @@ Característica: CursosCertificacionesPuesto
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/EstructuraOrganizativa.json
     * Click a Puestos
     * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/Puestos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para realizar Modificaciones
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Realizar Modificaciones
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CursosCertificaciones
-    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/CursosCertificacionesPuestos.json
-    * Click a NuevoCursoCertificacionPuesto
+    * Click a Prestaciones
+    * Se cargan elementos de la pagina dev/evolution/organizacion/estructura_organizativa/puestos/Prestaciones.json
+    * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento MensajeError este visible
-    Entonces Prueba exitosa si elemento MensajeError contiene texto La descripción es requerida
+    Entonces Prueba exitosa si elemento MensajeError contiene texto La prestación es requerida
+    * Prueba exitosa si elemento MensajeError contiene texto La moneda es requerida
