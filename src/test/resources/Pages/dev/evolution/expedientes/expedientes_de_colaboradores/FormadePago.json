@@ -1,0 +1,81 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFormasPago_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFormasPago_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFormasPago_delete"
+  },
+
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFormasPago_edit"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlFormasPago_txtQuickSearch"
+  },
+
+  "Codigo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Codigo"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+
+  "RequiereCuenta": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "RequiereCuenta",
+    "FieldType": "Radio"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+
+  "RequiereCuentaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/text()"
+  },
+
+  "GuardarFormaPago": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarFormaPago"
+  },
+
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarFormaPago"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+
+}
