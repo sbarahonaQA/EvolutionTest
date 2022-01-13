@@ -10,16 +10,16 @@ Característica: AutorizadoresSustitutos
   @PDS-7036
   Escenario: Crear una solicitud de autorizador sustituto con información básica (formulario completo) (PDS-7036)
     Dado que carga EvolutionWave
-    * Se cargan elementos de la pagina DEV/evowave/Login.json
+    * Se cargan elementos de la pagina dev/evowave/Login.json
     * Click a Ingresar
     * Esperar que el elemento UsuarioIDS este presente
     * Inicio sesion con usuario gerenterrhh
-    * Se cargan elementos de la pagina DEV/evowave/Inicio.json
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
     * Esperar 4 segundos
     * Refrescar pagina
     * Esperar que el elemento Acciones este presente
     * Click a Acciones
-    * Se cargan elementos de la pagina DEV/evowave/autorizadores_sustitutos/AutorizadoresSustitutos.json
+    * Se cargan elementos de la pagina dev/evowave/acciones/autorizadores_sustitutos/AutorizadoresSustitutos.json
     * Click a AutorizacionDeSustitutos
     * Llenar formulario:
       | EmpleadoASustituir | Argueta Maravilla, María Leonor |
