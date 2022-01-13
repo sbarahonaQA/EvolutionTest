@@ -59,6 +59,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Registro de transacciones fuera de nómina"
   },
+  "Empleados": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Empleados"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
