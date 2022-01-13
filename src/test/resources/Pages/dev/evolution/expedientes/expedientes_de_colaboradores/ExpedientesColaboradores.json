@@ -6,5 +6,33 @@
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
+  },
+  "MotivodeRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Motivos de retiro"
+  },
+  "Parentescos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Parentescos"
+  },
+  "FormadePago": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Formas de pago"
+  },
+  "Asociaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Asociaciones"
+  },
+  "TiposdeDirecciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de direcciones"
+  },
+  "TiposdeDocumentos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de documentos"
+  },
+  "RubrosSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Rubros salariales"
   }
 }
