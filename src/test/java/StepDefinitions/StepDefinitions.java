@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import Functions.SeleniumFunctions;
-import Functions.SeleniumFunctionsEvoWave;
 import cucumber.api.java.es.*;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -45,7 +44,6 @@ public class StepDefinitions{
     @Entonces("^Se cargan elementos de la pagina (.*)")
     public void seCarganElementosDeLaPagina(String file) throws Exception {
         SeleniumFunctions.FileName = file;
-        SeleniumFunctionsEvoWave.FileName = file;
         SeleniumFunctions.readJson();
         log.info("initialize file: " + file );
     }
@@ -380,12 +378,12 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el valor del descuento (.*) sea de (.*?)")
-    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) {
         functions.validateDeduction(tipo, valor);
     }
 
     @Entonces("Comprobar que el valor de la reserva (.*) sea de (.*?)")
-    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) {
         functions.validateReserve(tipo, valor);
     }
 
@@ -400,7 +398,7 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el neto a pagar sea de (.*?)")
-    public void comprobarQueElNetoAPagarSeaDe(String valor) throws Exception {
+    public void comprobarQueElNetoAPagarSeaDe(String valor) {
         functions.validateNetValue(valor);
     }
 
@@ -412,5 +410,17 @@ public class StepDefinitions{
     @Entonces("Comprobar que las horas de (.*) sean (.*?)")
     public void comprobarQueLasHorasDeSean(String tipo, String valor) {
         functions.validateHours(tipo, valor);
+    }
+
+    @Dado("^que carga EvolutionWave")
+    public void queCargaEvolutionWave() throws IOException {
+        String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instanciaEvoWave");
+        log.info("Cargando URL: " + sitioPruebas);
+        driver.get(sitioPruebas);
+    }
+
+    @Entonces("^Validar datos:")
+    public void validarDatos(List<List<String>> table) throws Exception {
+        functions.validarDatos(table);
     }
 }

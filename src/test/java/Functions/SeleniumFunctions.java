@@ -32,7 +32,6 @@ public class SeleniumFunctions {
     public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
-    private String language;
 
     public SeleniumFunctions() {
         driver = Hooks.driver;
@@ -491,7 +490,7 @@ public class SeleniumFunctions {
     public void fillForm(List<List<String>> rows) throws Exception {
         int intentos = 0;
 
-        language = readProperties("language");
+        String language = readProperties("language");
 
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
@@ -843,7 +842,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateDeduction(String tipoDescuento, String valor) throws Exception {
+    public void validateDeduction(String tipoDescuento, String valor) {
         WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean sonFilasDescuentos=false;
@@ -880,7 +879,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateReserve(String tipoReserva, String valor) throws Exception {
+    public void validateReserve(String tipoReserva, String valor) {
         WebElement tabla = driver.findElement(By.xpath("//body//table[2]"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean tipoReservaExiste=false;
@@ -933,7 +932,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateNetValue(String valor) throws Exception {
+    public void validateNetValue(String valor) {
         WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         for (WebElement fila : filas) {
@@ -982,6 +981,54 @@ public class SeleniumFunctions {
                 }
                 aggregatedAsserts.assertTrue(String.format("Las horas %s para %s no coincide con valor %s", columnas.get(4).getText(), tipo, valor), columnas.get(4).getText().equalsIgnoreCase(valor));
                 break;
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validarDatos(List<List<String>> rows) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste;
+
+        for (List<String> columns : rows) {
+
+            registroExiste = false;
+            int posicionColumna = 0;
+
+            List<WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+            //Se busca la posicion del dato de columna propocionado
+            for (WebElement ignored : encabezados) {
+                if (!encabezados.get(posicionColumna).getText().equalsIgnoreCase(columns.get(0).trim()))
+                    posicionColumna++;
+                else {
+                    registroExiste = true;
+                    break;
+                }
+            }
+            if (!registroExiste) {
+                aggregatedAsserts.fail("Columna \"" + columns.get(0).trim() + "\" no encontrada");
+                aggregatedAsserts.processAllAssertions();
+                return;
+            }
+
+            for (WebElement fila : filas) {
+                List<WebElement> columnas = fila.findElements(By.tagName("td"));
+
+                //Si columnas es igual a cero es la fila con los encabezados
+                if (columnas.size() == 0) {
+                    continue;
+                }
+
+                if (columnas.get(posicionColumna).getText().equalsIgnoreCase(columns.get(1).trim())) {
+                    break;
+                }
+                else
+                    aggregatedAsserts.fail("Texto NO coinciden - Sistema: " + columnas.get(posicionColumna).getText() + " - Prueba: " + columns.get(1).trim());
             }
         }
         aggregatedAsserts.processAllAssertions();
