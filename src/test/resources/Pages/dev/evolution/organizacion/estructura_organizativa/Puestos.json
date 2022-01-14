@@ -59,6 +59,10 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
   },
+  "FuncionesGenerales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Funciones generales"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",
