@@ -1,0 +1,55 @@
+{
+  "ControlDeCalidad": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Control de Calidad"
+  },
+  "ChequeOperativas": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@name='funcionPuestoEliminar' and @value='15']"
+  },
+
+  "TipoFuncionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//td[contains(text(),'Generales')]"
+  },
+  "FuncionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//li[contains(text(),'Para Consulta (Anual)')]"
+  },
+
+  "AgregarFuncion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[1]"
+  },
+  "EliminarFuncion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[2]"
+  },
+  "EliminarTodasFunciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[3]"
+  },
+
+  "GuardarFunciones": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarFuncion"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListado"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "Messages"
+  },
+  "PanelIzquierdo": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "panel_der_contenido_izq"
+  },
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  }
+
+}
