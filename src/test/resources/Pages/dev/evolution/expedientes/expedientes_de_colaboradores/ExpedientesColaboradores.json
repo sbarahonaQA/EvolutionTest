@@ -67,6 +67,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de Reclamo de Seguro Médico"
   },
+  "Seguros": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Seguros"
+  },
 
   "Catalogo": {
     "GetFieldBy": "LinkText",
