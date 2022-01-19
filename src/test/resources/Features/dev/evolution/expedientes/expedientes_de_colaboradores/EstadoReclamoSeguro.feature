@@ -2,14 +2,14 @@
 
 @expedientes
 @expedientes_colaboradores
-@TiposdeDocumentos
-Característica: Tipos de Documentos
-  Pruebas para entidad Tipos de Documentos (Tipos de Documentos)
+@EstadoReclamoSeguroMedico
+Característica: Estado Reclamo Seguro Medico
+  Pruebas para entidad Estado Reclamo Seguro Medico (Estado Reclamo Seguro Medico)
 
   @test
   @Highest
-  @PDS-1575
-  Escenario: Crear un Tipos de Documentos con información básica (PDS-1575)
+  @PDS-1456
+  Escenario: Crear un Estado Reclamo Seguro Medicos con información básica (PDS-1456)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -20,30 +20,30 @@ Característica: Tipos de Documentos
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Catalogo
-    * Click a TiposdeDocumentos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
+    * Click a EstadoReclamoSeguro
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/EstadoReclamoSeguro.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion     | Tipo de documento PDS-1575|
-      | Abreviatura     | PDS-1575|
-      | codigoPais      | gt |
+      | Nombre             | Atraso de Pago |
+      | Orden              | 1|
+      | RequiereMonto      | True |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoDocumento
+    * Click a GuardarEstadoReclamoSeguroMedico
     * Esperar 3 segundos
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de documento PDS-1575
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Atraso de Pago
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion     | Tipo de documento PDS-1575|
-      | Abreviatura     | PDS-1575|
-      | Pais            | Guatemala |
+      | Nombre             | Atraso de Pago|
+      | Orden              | 1|
+      | RequiereMonto      | True |
 
 
   @test
   @Highest
-  @PDS-1577
-  Escenario: Guardar un Tipos de Documentos con los campos en blanco (PDS-1577)
+  @PDS-1458
+  Escenario: Guardar un Estado Reclamo Seguros con los campos en blanco (PDS-1458)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -54,18 +54,18 @@ Característica: Tipos de Documentos
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Catalogo
-    * Click a TiposdeDocumentos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
+    * Click a EstadoReclamoSeguro
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/EstadoReclamoSeguro.json
     * Click a Nuevo
-    * Click a GuardarTipoDocumento
+    * Click a GuardarEstadoReclamoSeguroMedico
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
 
   @test
   @Highest
-  @PDS-1578
-  Escenario: Editar un Tipos de Documentos con información básica(PDS-1578)
+  @PDS-1459
+  Escenario: Editar un Estado Reclamo Seguro de Medico con información básica(PDS-1459)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -76,40 +76,32 @@ Característica: Tipos de Documentos
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Catalogo
-    * Click a TiposdeDocumentos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Editar
+    * Click a EstadoReclamoSeguro
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/EstadoReclamoSeguro.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Reclamo Editar
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion              | Consulta Editada|
-      | Abreviatura              | Ceditada|
-      | codigoPais               | co |
-      | ExpresionRegular         | Prueba Editada|
-      | MascaraFormato           | Prueba Editada|
-      | MensajeErrorValidacion   | Prueba Editada |
-      | FormatoNombreCompleto    | 1245 |
+      | Nombre             | Reclamo Editado |
+      | Orden              | 8|
+      | EsRechazado        | True |
     * Adjuntar captura de pantalla al reporte
-    * Click a GuardarTipoDocumento
+    * Click a GuardarEstadoReclamoSeguroMedico
     * Esperar 3 segundos
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Consulta Editada
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Reclamo Editado
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion              | Consulta Editada|
-      | Abreviatura              | Ceditada|
-      | codigoPais               | co |
-      | ExpresionRegular         | Prueba Editada|
-      | MascaraFormato           | Prueba Editada|
-      | MensajeErrorValidacion   | Prueba Editada |
-      | FormatoNombreCompleto    | 1245 |
+      | Nombre             | Reclamo Editado |
+      | Orden              | 8|
+      | EsRechazado        | True |
 
   @test
   @Highest
   @PDS-1579
-  Escenario: Eliminar un Tipos de Documentos con información básica(PDS-1579)
+  Escenario: Eliminar un Estado Reclamo Seguro de Medico(PDS-1579)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -120,9 +112,9 @@ Característica: Tipos de Documentos
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Catalogo
-    * Click a TiposdeDocumentos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Eliminar
+    * Click a EstadoReclamoSeguro
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/EstadoReclamoSeguro.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Eliminar
     * Click a PrimerElementoDeSmartlist
     * Click a Eliminar
     * Aceptar alerta
@@ -131,8 +123,8 @@ Característica: Tipos de Documentos
 
   @test
   @Highest
-  @PDS-1576
-  Escenario: Consultar un Tipos de Documentos con información básica (PDS-1576)
+  @PDS-1457
+  Escenario: Consultar un Estado Reclamo Seguro de Medico con información básica (PDS-1457)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -143,26 +135,22 @@ Característica: Tipos de Documentos
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Catalogo
-    * Click a TiposdeDocumentos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Consulta Documento
+    * Click a EstadoReclamoSeguro
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/EstadoReclamoSeguro.json
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Rechazado
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                   | 50|
-      | DescripcionRO              | Consulta Documento |
-      | AbreviaturaRO              | CD|
-      | PaisRO                     | Guatemala |
-      | ExpresionRegularRO         | Prueba Test|
-      | MascaraFormatoRO           | Prueba |
-      | MensajeErrorValidacionRO   | Prueba Test |
-      | FormatoNombreCompletoRO    | 4512 |
+      | CodigoRO        | 10 |
+      | NombreRO        | Rechazado |
+      | OrdenRO         | 5 |
+      | EsRechazadoRO   | Estado Rechazado |
 
   @test
   @Highest
-  @PDS-1574
-  Escenario: Ver el listado de Tipos de Documentos (PDS-1574)
+  @PDS-1455
+  Escenario: Ver el listado de Estado Reclamo De Seguro Medico (PDS-1455)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -173,8 +161,8 @@ Característica: Tipos de Documentos
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Catalogo
-    * Click a TiposdeDocumentos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
+    * Click a EstadoReclamoSeguro
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/EstadoReclamoSeguro.json
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
       | Nuevo | Editar | Eliminar | CajaBusquedaSmartlist | ElementosMostrados |
