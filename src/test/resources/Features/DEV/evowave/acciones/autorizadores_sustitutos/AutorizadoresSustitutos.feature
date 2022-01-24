@@ -17,24 +17,17 @@ Característica: AutorizadoresSustitutos
     * Se cargan elementos de la pagina dev/evowave/Inicio.json
     * Esperar 4 segundos
     * Refrescar pagina
-    * Esperar que el elemento Acciones este presente
+    * Esperar que el elemento CirculoCarga deje de estar visible
+    * Esperar que el elemento Eventos este visible
     * Click a Acciones
     * Se cargan elementos de la pagina dev/evowave/acciones/autorizadores_sustitutos/AutorizadoresSustitutos.json
+    * Esperar que el elemento AutorizacionDeSustitutos este presente
     * Click a AutorizacionDeSustitutos
     * Llenar formulario:
       | EmpleadoASustituir | Argueta Maravilla, María Leonor |
       | EmpleadoSustituto  | Chang, José Ernesto             |
-    #Fecha Inicio
-    * Click a FechaInicio
-    * Click a SelectorAnio
-    * Click a 2022
-    * Click a Mayo
-    * Click a 15
-    #Fecha Final
-    * Click a FechaFinal
-    * Click a 2022
-    * Click a Mayo
-    * Click a 16
+      | FechaInicio        | 15/05/2022                      |
+      | FechaFinal         | 16/05/2022                      |
     * Adjuntar captura de pantalla al reporte
     * Click a EnviarSolicitud
     * Esperar que el elemento SolicitudEnviada este presente
