@@ -1,27 +1,17 @@
 {
   "Desde": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//mat-form-field[1]//div[1]//div[1]//div[4]"
-  },
-  "2020": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'2020')]"
-  },
-  "Febrero": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'FEB.')]"
-  },
-  "5": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'5')]"
+    "ValueToFind": "//mat-form-field[1]//div[1]//div[1]//div[4]",
+    "FieldType": "FechaEvoWave"
   },
   "Hasta": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//mat-form-field[2]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]"
+    "ValueToFind": "//mat-form-field[2]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]",
+    "FieldType": "FechaEvoWave"
   },
-  "10": {
+  "SelectorAnio": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'10')]"
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-calendar-period-button mat-button mat-button-base']"
   },
   "Consultar": {
     "GetFieldBy": "Xpath",
