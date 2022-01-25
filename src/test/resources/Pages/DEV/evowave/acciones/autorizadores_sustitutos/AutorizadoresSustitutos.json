@@ -5,39 +5,27 @@
   },
   "EmpleadoASustituir": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//input[@placeholder='Seleccione el empleado a sustituir']"
+    "ValueToFind": "//input[@placeholder='Seleccione el empleado a sustituir']",
+    "FieldType": "EmpleadoEvoWave"
   },
   "EmpleadoSustituto": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//input[@placeholder='Seleccione el empleado sustituto']"
+    "ValueToFind": "//input[@placeholder='Seleccione el empleado sustituto']",
+    "FieldType": "EmpleadoEvoWave"
   },
   "FechaInicio": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//form//button)[1]"
+    "ValueToFind": "//app-date[1]//mat-form-field[1]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]",
+    "FieldType": "FechaEvoWave"
+  },
+  "FechaFinal": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//app-date[2]//mat-form-field[1]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]",
+    "FieldType": "FechaEvoWave"
   },
   "SelectorAnio": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//button[@class='mat-focus-indicator mat-calendar-period-button mat-button mat-button-base']"
-  },
-  "2020": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'2020')]"
-  },
-  "Mayo": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'MAY.')]"
-  },
-  "15": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'15')]"
-  },
-  "FechaFinal": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "(//form//button)[2]"
-  },
-  "16": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "//div[contains(text(),'16')]"
   },
   "EnviarSolicitud": {
     "GetFieldBy": "Xpath",

@@ -13,10 +13,18 @@
   },
   "Acciones": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//a[@routerlink='/acciones']"
+    "ValueToFind": "//div[4]//div[1]//a[1]"
   },
   "Perfil": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='wrapper-profile']"
+  },
+  "CirculoCarga": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html/body/app-root/app-sidenav/div/app-overlay-spinner/div/mat-spinner/svg/circle"
+  },
+  "Eventos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-card-title[contains(text(),'Eventos')]"
   }
 }

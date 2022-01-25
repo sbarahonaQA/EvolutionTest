@@ -497,7 +497,7 @@ public class SeleniumFunctions {
 
     public void fillForm(List<List<String>> rows) throws Exception {
         int intentos = 0;
-
+        String ExpRegSelectorAnio = "[0-9]{4}\\s–\\s[0-9]{4}";
         String language = readProperties("language");
 
         for (List<String> columns : rows) {
@@ -573,6 +573,38 @@ public class SeleniumFunctions {
 
                     log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
                     break;
+                case "EmpleadoEvoWave":
+                    WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    wait.until(ExpectedConditions.presenceOfElementLocated(By.className("mat-option-text")));
+                    //wait.until(ExpectedConditions.elementToBeClickable(By.className("mat-option-text")));
+                    driver.findElement(By.className("mat-option-text")).click();
+                    //Esperar que se cargue la informacion del empleado
+                    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='principal']")));
+                    log.info(String.format("Para el campo %s se selecciona empleado %s", columns.get(0), columns.get(1)));
+                    break;
+                case "FechaEvoWave":
+                    //click a boton de fecha
+                    driver.findElement(SeleniumElement).click();
+                    //evaluar si en la esquina existe formato " 1999 – 2022 "
+                    if(!getTextElement("SelectorAnio").matches(ExpRegSelectorAnio)) {
+                        //si NO tiene ese formato, se hace loop haciendo click hasta que tenga ese formato (max 5 click)
+                        while (!getTextElement("SelectorAnio").matches(ExpRegSelectorAnio) && intentos < 5) {
+                            driver.findElement(SeleniumFunctions.getCompleteElement("SelectorAnio")).click();
+                            intentos++;
+                        }
+                    }
+                    //click al año
+                    driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).substring(6) + "')]")).click();
+                    //click al mes
+                    driver.findElement(By.xpath("//div[contains(text(),'" + getMonth(columns.get(1).substring(3,5)) + "')]")).click();
+                    //click al dia
+                    //Los dias del calendario del 1 al 9 no tienen ceros, se toma solo el 2do caracter despues del cero
+                    if (Integer.parseInt(columns.get(1).substring(0,2)) < 10)
+                        driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).charAt(1) + "')]")).click();
+                    else
+                        driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).substring(0,2) + "')]")).click();
                 default:
                     log.error("Manejo de tipo no disponible");
             }
@@ -1149,6 +1181,50 @@ public class SeleniumFunctions {
             }
         }
         aggregatedAsserts.processAllAssertions();
+    }
+
+    private String getMonth(String mes){
+        String salida = "";
+
+        switch (mes) {
+            case "01":
+                salida = "ENE.";
+                break;
+            case "02":
+                salida = "FEB.";
+                break;
+            case "03":
+                salida = "MAR.";
+                break;
+            case "04":
+                salida = "ABR.";
+                break;
+            case "05":
+                salida = "MAY.";
+                break;
+            case "06":
+                salida = "JUN.";
+                break;
+            case "07":
+                salida = "JUL.";
+                break;
+            case "08":
+                salida = "AGO.";
+                break;
+            case "09":
+                salida = "SEP.";
+                break;
+            case "10":
+                salida = "OCT.";
+                break;
+            case "11":
+                salida = "NOV.";
+                break;
+            case "12":
+                salida = "DIC.";
+                break;
+        }
+        return salida;
     }
 
 }
