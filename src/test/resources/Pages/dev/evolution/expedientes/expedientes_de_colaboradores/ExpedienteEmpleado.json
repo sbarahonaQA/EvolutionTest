@@ -1,0 +1,162 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_nuevoExpediente"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_edit"
+  },
+  "CurriculumCapacitaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Capacitaciones"
+  },
+  "CurriculumCompetenciasCurriculares": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias curriculares"
+  },
+  "CurriculumEducacion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Educación"
+  },
+  "CurriculumIdiomas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Idiomas"
+  },
+  "Prestaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prestaciones"
+  },
+  "RelacionesExternas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Relaciones externas"
+  },
+  "RelacionesInternas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Relaciones internas"
+  },
+  "TomaDecisiones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Toma de decisiones"
+  },
+  "ClasesSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clases salariales"
+  },
+  "CompetenciasTecnicas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias Técnicas"
+  },
+  "ResponsabilidadesPuestos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
+  },
+
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Descripcion"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Abreviatura"
+  },
+  "NomenContable": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "NomenclaturaContable"
+  },
+  "CtaContable": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "CtaContable",
+    "FieldType": "Texto"
+  },
+  "Compania": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "CodigoCompania",
+    "FieldType": "Lista"
+  },
+  "AreaFuncional": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "CodigoAreaFuncional",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[1]//span[1]"
+  },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='innerright']//div[2]//span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[@class='controls']//div[3]//span[1]"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
+  "NomenContableRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+  "CtaContableRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
+  },
+  "CompaniaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[7]//span[1]"
+  },
+  "AreaFuncionalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[8]//span[1]"
+  },
+
+
+  "GuardarExpediente": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarExpediente"
+  },
+
+  "RegresarExpediente": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarExpediente"
+  },
+
+  "MostrarExpedienteImpreso": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "MostrarExpedienteImpreso"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+}
