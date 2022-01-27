@@ -3,14 +3,14 @@
 @organizacion
 @estructura_organizativa
 @puestos
-@CurriculumCapacitaciones
-Característica: Curriculum Capacitaciones
-  Pruebas para entidad Curriculum Capacitaciones
+@CurriculumCompetenciasCurriculares
+Característica: Curriculum Competencias Curriculares
+  Pruebas para entidad Curriculum Competencias Curriculares
 
   @test
   @Highest
   @PDS-7511
-  Escenario: Crear una Capacitación en expedientes con toda la información (PDS-7511)
+  Escenario: Crear una Competencias Curricular en expedientes con toda la información (PDS-7511)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -25,9 +25,9 @@ Característica: Curriculum Capacitaciones
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 	Abrego Labbe, Rene Armando
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CurriculumCapacitaciones
+    * Click a CurriculumCompetenciasCurriculares
     * Esperar 3 segundos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
     * Click a Nuevo
     * Esperar 3 segundos
     * Llenar formulario:
