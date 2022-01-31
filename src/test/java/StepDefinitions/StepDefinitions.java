@@ -248,6 +248,12 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
+    @Entonces("^Esperar que el elemento (.*?) sea clickeable$")
+    public void esperarQueElElementoSeaClickeable(String element) throws Exception
+    {
+        functions.waitForElementClickable(element);
+    }
+
     @Entonces("^Esperar que el elemento (.*?) deje de estar visible$")
     public void esperarQueElElementoDejeDeEstarVisible(String element) throws Exception
     {
