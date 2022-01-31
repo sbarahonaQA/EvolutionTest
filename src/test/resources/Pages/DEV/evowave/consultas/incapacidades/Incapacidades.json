@@ -20,5 +20,9 @@
   "Tabla": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//table[@class='mat-table cdk-table']"
+  },
+  "MisIncapacidades": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='ng-star-inserted']//div[2]//span[1]"
   }
 }

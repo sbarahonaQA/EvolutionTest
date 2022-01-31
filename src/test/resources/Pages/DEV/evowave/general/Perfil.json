@@ -1,0 +1,50 @@
+{
+  "EtiquetaMiPerfil": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='page-header']//h1"
+  },
+  "Nombre": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "texto-nombre"
+  },
+  "Correo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//app-tarjeta-empleado//p[2]"
+  },
+  "Plaza": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div//div[1]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[1]"
+  },
+  "Unidad": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div//div[1]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[2]"
+  },
+  "Empresa": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div//div[1]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[3]"
+  },
+  "CentroTrabajo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div//div[1]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[4]"
+  },
+  "2daPlaza": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div[2]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[1]"
+  },
+  "2daUnidad": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div[2]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[2]"
+  },
+  "2daEmpresa": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div[2]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[3]"
+  },
+  "2doCentroTrabajo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div[2]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[2]//div[1]//p[4]"
+  },
+  "Seleccionar2doEmpleo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div[2]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[3]//button[1]"
+  }
+}
