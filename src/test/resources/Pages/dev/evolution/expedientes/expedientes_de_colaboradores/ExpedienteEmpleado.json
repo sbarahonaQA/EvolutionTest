@@ -75,6 +75,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos en entidades privadas"
   },
+  "Propiedades": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Propiedades"
+  },
   "IngresosMensualesAdicionales": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Ingresos mensuales adicionales"
