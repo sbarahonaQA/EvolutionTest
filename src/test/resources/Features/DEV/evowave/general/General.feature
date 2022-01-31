@@ -7,6 +7,68 @@ Característica: Generales
 
   @test
   @Highest
+  @PDS-4331
+  Escenario: Iniciar sesion con usuario activo (PDS-4331)
+    Dado que carga EvolutionWave
+    * Se cargan elementos de la pagina dev/evowave/Login.json
+    * Click a Ingresar
+    * Esperar que el elemento UsuarioIDS este presente
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
+    * Esperar 4 segundos
+    * Refrescar pagina
+    * Esperar que el elemento CirculoCarga deje de estar visible
+    Entonces Esperar que el elemento Perfil este visible
+
+  @test
+  @Highest
+  @PDS-4333
+  Escenario: Cerrar sesion (PDS-4333)
+    Dado que carga EvolutionWave
+    * Se cargan elementos de la pagina dev/evowave/Login.json
+    * Click a Ingresar
+    * Esperar que el elemento UsuarioIDS este presente
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
+    * Esperar 4 segundos
+    * Refrescar pagina
+    * Esperar que el elemento CirculoCarga deje de estar visible
+    * Esperar que el elemento Perfil este visible
+    * Click a Perfil
+    * Se cargan elementos de la pagina dev/evowave/general/Perfil.json
+    * Esperar que el elemento EtiquetaMiPerfil este presente
+    * Click a CerrarSesion
+    * Se cargan elementos de la pagina dev/evowave/Login.json
+    Entonces Esperar que el elemento Ingresar este visible
+
+  @test
+  @Highest
+  @PDS-4334
+  Escenario: Datos perfil (1 empleo) (PDS-4334)
+    Dado que carga EvolutionWave
+    * Se cargan elementos de la pagina dev/evowave/Login.json
+    * Click a Ingresar
+    * Esperar que el elemento UsuarioIDS este presente
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
+    * Esperar 4 segundos
+    * Refrescar pagina
+    * Esperar que el elemento CirculoCarga deje de estar visible
+    * Esperar que el elemento Perfil este visible
+    * Click a Perfil
+    * Se cargan elementos de la pagina dev/evowave/general/Perfil.json
+    * Esperar que el elemento EtiquetaMiPerfil este presente
+    * Adjuntar captura de pantalla al reporte
+    Entonces Validar informacion:
+      | Nombre        | Walter Alfredo Cordova          |
+      | Correo        | walter.cordova@aseinfo-test.com |
+      | Plaza         | Jefe de Compensaciones	        |
+      | Unidad        | Recursos Humanos                |
+      | Empresa       | ASEINFO Corporativo             |
+      | CentroTrabajo | Oficinas Centrales              |
+
+  @test
+  @Highest
   @PDS-4335
   Escenario: Datos perfil (2 empleos) (PDS-4335)
     Dado que carga EvolutionWave

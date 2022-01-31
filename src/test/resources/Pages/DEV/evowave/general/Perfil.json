@@ -46,5 +46,9 @@
   "Seleccionar2doEmpleo": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div//div//div//div//div//div[2]//app-tarjeta-empleo[1]//mat-card[1]//mat-card-content[1]//div[3]//button[1]"
+  },
+  "CerrarSesion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/app-root/app-sidenav/div/mat-sidenav-container/mat-sidenav-content/div/div/div/app-mi-perfil/div/button[1]"
   }
 }
