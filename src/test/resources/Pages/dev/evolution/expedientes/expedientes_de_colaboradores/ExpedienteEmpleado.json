@@ -71,6 +71,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos por el gobierno"
   },
+  "ValoresEmitidosEntidadesPrivadas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Valores emitidos en entidades privadas"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
