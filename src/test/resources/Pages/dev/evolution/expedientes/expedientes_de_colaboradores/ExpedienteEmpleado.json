@@ -83,6 +83,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Ingresos mensuales adicionales"
   },
+  "Vehiculos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Vehículos"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
