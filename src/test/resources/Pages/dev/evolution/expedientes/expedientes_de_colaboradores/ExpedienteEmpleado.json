@@ -67,6 +67,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Relaciones de fiador"
   },
+  "ValoresEmitidosPorGobierno": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Valores emitidos por el gobierno"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
