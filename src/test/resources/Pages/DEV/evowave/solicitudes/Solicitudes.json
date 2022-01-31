@@ -3,9 +3,49 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//button[@class='mat-focus-indicator nueva-solicitud-btn mat-raised-button mat-button-base mat-primary']"
   },
+  "Amonestaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[1]//mat-card[1]"
+  },
   "Constancias": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//mat-card-title[contains(text(),'Constancias')]"
+    "ValueToFind": "//div[2]//mat-card[1]"
+  },
+  "DescuentosEventuales": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[3]//mat-card[1]"
+  },
+  "IngresosEventuales": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[4]//mat-card[1]"
+  },
+  "JustificacionMarcas": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[5]//mat-card[1]"
+  },
+  "Permisos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[6]//mat-card[1]"
+  },
+  "Reconocimientos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[7]//mat-card[1]"
+  },
+  "RegistroOtrosPatronos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[8]//mat-card[1]"
+  },
+  "ReversionContratacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[9]//mat-card[1]"
+  },
+  "TiempoCompensatorio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[10]//mat-card[1]"
+  },
+  "Vacaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[11]//mat-card[1]"
   },
   "TotalSolicitudes": {
     "GetFieldBy": "ClassName",
