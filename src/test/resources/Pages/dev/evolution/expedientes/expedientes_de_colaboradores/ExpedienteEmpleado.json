@@ -75,6 +75,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos en entidades privadas"
   },
+  "IngresosMensualesAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Ingresos mensuales adicionales"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
