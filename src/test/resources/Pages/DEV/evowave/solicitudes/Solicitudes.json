@@ -6,5 +6,9 @@
   "Constancias": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//mat-card-title[contains(text(),'Constancias')]"
+  },
+  "TotalSolicitudes": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "mat-paginator-range-label"
   }
 }
