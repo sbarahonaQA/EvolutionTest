@@ -99,6 +99,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Concursos de selección"
   },
+  "Evaluaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Evaluaciones"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
