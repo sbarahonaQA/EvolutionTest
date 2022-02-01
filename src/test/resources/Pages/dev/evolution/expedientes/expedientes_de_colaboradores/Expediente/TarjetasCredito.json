@@ -1,0 +1,103 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva Tarjeta de Crédito"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta"
+  },
+  "NombreEntidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "NombreEntidad",
+    "FieldType": "Texto"
+  },
+  "Tipo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Tipo",
+    "FieldType": "Lista"
+  },
+  "MonedaCodigo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MonedaCodigo",
+    "FieldType": "Lista"
+  },
+  "LimiteAutorizado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "LimiteAutorizado",
+    "FieldType": "Texto"
+  },
+  "SaldoActual": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "SaldoActual",
+    "FieldType": "Texto"
+  },
+  "TieneExtrafinanciamiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TieneExtrafinanciamiento",
+    "FieldType": "Radio"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "NombreEntidadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "TipoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "MonedaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "LimiteAutorizadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "SaldoActualRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "TieneExtrafinanciamientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTarjetaCreditoExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
