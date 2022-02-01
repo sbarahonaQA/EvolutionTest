@@ -24,12 +24,20 @@
   },
   "MontoAPagarValorFijo": {
     "GetFieldBy": "Id",
-    "ValueToFind": "mat-checkbox-1",
+    "ValueToFind": "mat-checkbox-1-input",
     "FieldType": "CheckboxEvoWave"
   },
   "ValorAPagar": {
     "GetFieldBy": "Id",
     "ValueToFind": "mat-input-5"
+  },
+  "Factor": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "mat-input-7"
+  },
+  "Horas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "mat-input-8"
   },
   "Moneda": {
     "GetFieldBy": "Id",
@@ -53,7 +61,7 @@
   },
   "Guardar": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//mat-sidenav-container[@id='sidenav-drawer']//mat-sidenav-content//div//div//div//app-solicitudes//app-crear-solicitud//app-ingresos-eventuales//app-nuevo-editar-ingreso-eventual//div//div//div//app-dynamic-form//form//app-button//div//button"
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']"
   },
   "SolicitudEnviada": {
     "GetFieldBy": "Xpath",
