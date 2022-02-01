@@ -111,6 +111,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Historico de acciones de personal"
   },
+  "CompetenciasPuesto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias del Puesto"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
