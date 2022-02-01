@@ -1,0 +1,26 @@
+{
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  },
+  "CajaDeBusqueda": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlHistoricoAcciones_txtQuickSearch"
+  },
+  "Accion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Acción"
+  },
+  "Inicio": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Inicio"
+  },
+  "Fin": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Fin"
+  },
+  "Descripcion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Descripción"
+  }
+}

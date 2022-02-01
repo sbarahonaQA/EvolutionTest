@@ -107,6 +107,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Historico de transacciones de planilla"
   },
+  "HistoricoAcciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Historico de acciones de personal"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
