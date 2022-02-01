@@ -1,0 +1,10 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
