@@ -91,6 +91,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Contrataciones"
   },
+  "BeneficiosAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Beneficios adicionales"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
