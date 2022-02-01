@@ -508,9 +508,13 @@ public class SeleniumFunctions {
         String ExpRegSelectorAnio = "[0-9]{4}\\s–\\s[0-9]{4}";
         String language = readProperties("language");
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
 
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
+
+            //Desplazarse al elemento en cuestion
+            jse.executeScript("arguments[0].scrollIntoView(false);", driver.findElement(SeleniumElement));
 
             switch (FieldType){
                 case "Texto":
@@ -620,6 +624,14 @@ public class SeleniumFunctions {
                     //click al elemento según el texto
                     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'" + columns.get(1) + "')]")));
                     driver.findElement(By.xpath("//span[contains(text(),'" + columns.get(1) + "')]")).click();
+                    break;
+                case "CheckboxEvoWave":
+                    if((Boolean.parseBoolean(columns.get(1)) && !Boolean.parseBoolean(driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("aria-checked")))
+                    || (!Boolean.parseBoolean(columns.get(1)) && Boolean.parseBoolean(driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("aria-checked"))))
+                    {
+                        log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
+                        driver.findElement(By.xpath("//input[@id='" + SeleniumFunctions.getCompleteElement(columns.get(0)).toString().substring(7) + "']/./..")).click();
+                    }
                     break;
                 default:
                     log.error("Manejo de tipo no disponible");
@@ -1240,6 +1252,10 @@ public class SeleniumFunctions {
                 salida = "DIC.";
                 break;
         }
+
+        if(prop.getProperty("browser").equalsIgnoreCase("FIREFOX"))
+            salida = salida.substring(0,3);
+
         return salida;
     }
 
