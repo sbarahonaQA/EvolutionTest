@@ -67,6 +67,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Relaciones de fiador"
   },
+  "GestionTalento": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Gestión del Talento"
+  },
   "ValoresEmitidosPorGobierno": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos por el gobierno"
