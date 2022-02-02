@@ -123,6 +123,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Salario"
   },
+  "EmpleoAnterior": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Empleos anteriores"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
