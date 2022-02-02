@@ -1,0 +1,23 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarBeneficioAdicionalEmpleo"
+  },
+  "Aguinaldo": {
+    "GetFieldBy": "xpath",
+    "ValueToFind": "//Input[@type='checkbox'and @name='codigosBeneficiosEmpleo' and @value='1']",
+    "FieldType": "CheckBox"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  }
+}
