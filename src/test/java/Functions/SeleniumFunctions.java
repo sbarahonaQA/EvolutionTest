@@ -415,6 +415,14 @@ public class SeleniumFunctions {
         w.until(ExpectedConditions.presenceOfElementLocated(SeleniumElement));
     }
 
+    public void waitForElementClickable(String element) throws Exception
+    {
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        log.info("Esperando que el elemento: "+element + " sea clickeable");
+        w.until(ExpectedConditions.elementToBeClickable(SeleniumElement));
+    }
+
     public void waitForElementVisible(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
@@ -499,9 +507,14 @@ public class SeleniumFunctions {
         int intentos = 0;
         String ExpRegSelectorAnio = "[0-9]{4}\\s–\\s[0-9]{4}";
         String language = readProperties("language");
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
 
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
+
+            //Desplazarse al elemento en cuestion
+            jse.executeScript("arguments[0].scrollIntoView(false);", driver.findElement(SeleniumElement));
 
             switch (FieldType){
                 case "Texto":
@@ -574,7 +587,6 @@ public class SeleniumFunctions {
                     log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
                     break;
                 case "EmpleadoEvoWave":
-                    WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
                     driver.findElement(SeleniumElement).clear();
                     driver.findElement(SeleniumElement).sendKeys(columns.get(1));
                     wait.until(ExpectedConditions.presenceOfElementLocated(By.className("mat-option-text")));
@@ -605,6 +617,22 @@ public class SeleniumFunctions {
                         driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).charAt(1) + "')]")).click();
                     else
                         driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).substring(0,2) + "')]")).click();
+                    break;
+                case "ListaEvoWave":
+                    //click al elemento para que se despliegue la lista
+                    driver.findElement(SeleniumElement).click();
+                    //click al elemento según el texto
+                    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'" + columns.get(1) + "')]")));
+                    driver.findElement(By.xpath("//span[contains(text(),'" + columns.get(1) + "')]")).click();
+                    break;
+                case "CheckboxEvoWave":
+                    if((Boolean.parseBoolean(columns.get(1)) && !Boolean.parseBoolean(driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("aria-checked")))
+                    || (!Boolean.parseBoolean(columns.get(1)) && Boolean.parseBoolean(driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("aria-checked"))))
+                    {
+                        log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
+                        driver.findElement(By.xpath("//input[@id='" + SeleniumFunctions.getCompleteElement(columns.get(0)).toString().substring(7) + "']/./..")).click();
+                    }
+                    break;
                 default:
                     log.error("Manejo de tipo no disponible");
             }
@@ -676,7 +704,7 @@ public class SeleniumFunctions {
             SegAcceso.load(inSegAccesoIDS);
         else
             SegAcceso.load(inSegAcceso);
-        return SegAcceso.getProperty(usuario);
+        return SegAcceso.getProperty(usuario).isEmpty()?"":SegAcceso.getProperty(usuario);
     }
 
     public void editRow(String datoColumna, String text) throws Exception {
@@ -1224,6 +1252,10 @@ public class SeleniumFunctions {
                 salida = "DIC.";
                 break;
         }
+
+        if(prop.getProperty("browser").equalsIgnoreCase("FIREFOX"))
+            salida = salida.substring(0,3);
+
         return salida;
     }
 

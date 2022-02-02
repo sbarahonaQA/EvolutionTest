@@ -1,3 +1,82 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec lacinia leo. In in elit tortor. Aliquam eget consectetur augue. Duis nibh nisi, pretium sit amet lobortis quis, vulputate non sapien. Suspendisse auctor diam at velit feugiat, vel accumsan tortor volutpat. Ut molestie semper metus id facilisis. Nunc at egestas neque, non finibus quam. Nulla metus enim, malesuada quis blandit eu, condimentum eget tortor.
+# language: es
 
-In est mauris, tincidunt a efficitur ut, bibendum a mi. Suspendisse potenti. Nullam iaculis magna odio, vel tempus orci tincidunt vel. Proin volutpat non sapien at lobortis. Sed eu posuere eros. Nam commodo interdum tristique. Nunc ullamcorper et lacus et faucibus. Ut in leo non diam blandit tempor. Sed volutpat, erat tincidunt iaculis scelerisque, lectus nisi varius orci, eu ultrices metus lacus vitae urna. Pellentesque vitae nisl lacus. Nulla facilisi. Quisque metus risus, accumsan eu nibh a, placerat tempor tellus. Cras sodales suscipit purus, sed sodales volutpat.
+@evowave
+@solicitudes
+@ingresos_eventuales
+Característica: IngresosEventuales
+  Pruebas para IngresosEventuales
+
+  @test
+  @Highest
+  @PDS-6986
+  Escenario: Crear una solicitud de ingreso eventual con información básica por valor (PDS-6986)
+    Dado que carga EvolutionWave
+    * Se cargan elementos de la pagina dev/evowave/Login.json
+    * Click a Ingresar
+    * Esperar que el elemento UsuarioIDS este presente
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
+    * Esperar 4 segundos
+    * Refrescar pagina
+    * Esperar que el elemento CirculoCarga deje de estar visible
+    * Esperar que el elemento Solicitudes sea clickeable
+    * Click a Solicitudes
+    * Se cargan elementos de la pagina dev/evowave/solicitudes/Solicitudes.json
+    * Esperar que el elemento NuevaSolicitud sea clickeable
+    * Click a NuevaSolicitud
+    * Esperar que el elemento IngresosEventuales sea clickeable
+    * Click a IngresosEventuales
+    * Se cargan elementos de la pagina dev/evowave/solicitudes/IngresosEventuales.json
+    * Click a Nuevo
+    * Llenar formulario:
+      | Empleado             | De León Vidal, Jose Alberto       |
+      | Tipo                 | Anticipo de Sueldo                |
+      | Fecha                | 05/04/2021                        |
+      | MontoAPagarValorFijo | true                              |
+      | ValorAPagar          | 250                               |
+      | Moneda               | Quetzales                         |
+      | Solicitante          | Cordova, Walter Alfredo           |
+      | Planilla             | Planilla Quincenal Administrativa |
+      | PeriodoPlanilla      | 16/02/2022 - 28/02/2022           |
+    * Adjuntar captura de pantalla al reporte
+    * Click a Guardar
+    * Esperar que el elemento SolicitudEnviada este presente
+    * Adjuntar captura de pantalla al reporte
+
+  @test
+  @Highest
+  @PDS-6989
+  Escenario: Crear una solicitud de ingreso eventual con información básica por horas (PDS-6989)
+    Dado que carga EvolutionWave
+    * Se cargan elementos de la pagina dev/evowave/Login.json
+    * Click a Ingresar
+    * Esperar que el elemento UsuarioIDS este presente
+    * Inicio sesion con usuario planillascorp
+    * Se cargan elementos de la pagina dev/evowave/Inicio.json
+    * Esperar 4 segundos
+    * Refrescar pagina
+    * Esperar que el elemento CirculoCarga deje de estar visible
+    * Esperar que el elemento Solicitudes sea clickeable
+    * Click a Solicitudes
+    * Se cargan elementos de la pagina dev/evowave/solicitudes/Solicitudes.json
+    * Esperar que el elemento NuevaSolicitud sea clickeable
+    * Click a NuevaSolicitud
+    * Esperar que el elemento IngresosEventuales sea clickeable
+    * Click a IngresosEventuales
+    * Se cargan elementos de la pagina dev/evowave/solicitudes/IngresosEventuales.json
+    * Click a Nuevo
+    * Llenar formulario:
+      | Empleado             | De León Vidal, Jose Alberto        |
+      | Tipo                 | Anticipo de Sueldo                 |
+      | Fecha                | 05/04/2021                         |
+      | MontoAPagarValorFijo | false                              |
+      | Factor               | 3                                  |
+      | Horas                | 5                                  |
+      | Moneda               | Quetzales                          |
+      | Solicitante          | Umanzor Velásquez, Joaquin Alfredo |
+      | Planilla             | Planilla Quincenal Administrativa  |
+      | PeriodoPlanilla      | 16/02/2022 - 28/02/2022            |
+    * Adjuntar captura de pantalla al reporte
+    * Click a Guardar
+    * Esperar que el elemento SolicitudEnviada este presente
+    * Adjuntar captura de pantalla al reporte
