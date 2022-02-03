@@ -79,6 +79,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Referencias"
   },
+  "Familiares": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Familiares"
+  },
   "ValoresEmitidosPorGobierno": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos por el gobierno"
