@@ -75,6 +75,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Acciones en empresas"
   },
+  "Referencias": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Referencias"
+  },
   "ValoresEmitidosPorGobierno": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos por el gobierno"
