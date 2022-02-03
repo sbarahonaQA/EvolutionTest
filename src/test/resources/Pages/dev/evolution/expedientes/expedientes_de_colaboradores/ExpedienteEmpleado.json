@@ -71,6 +71,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Gestión del Talento"
   },
+  "AccionesEmpresas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Acciones en empresas"
+  },
   "ValoresEmitidosPorGobierno": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Valores emitidos por el gobierno"
