@@ -147,6 +147,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Empleos anteriores"
   },
+  "CapacidadesEspeciales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Capacidades especiales"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
