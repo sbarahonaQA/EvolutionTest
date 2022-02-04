@@ -1,0 +1,128 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva propiedad"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Casa"
+  },
+  "Tipo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Tipo",
+    "FieldType": "Lista"
+  },
+  "Ubicacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Ubicacion",
+    "FieldType": "Texto"
+  },
+  "FechaAdquisicion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaAdquisicion",
+    "FieldType": "Fecha"
+  },
+  "MonedaCodigo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MonedaCodigo",
+    "FieldType": "Lista"
+  },
+  "Valor": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Valor",
+    "FieldType": "Texto"
+  },
+  "Status": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Status",
+    "FieldType": "Lista"
+  },
+  "Gravamen": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Gravamen",
+    "FieldType": "Radio"
+  },
+  "Acreedor": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Acreedor",
+    "FieldType": "Texto"
+  },
+  "PrestamoSobreInmueble": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PrestamoSobreInmueble",
+    "FieldType": "Radio"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "TipoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "UbicacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "FechaAdquisicionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "MonedaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "ValorRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "StatusRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "GravamenRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "TienePrestamoHipotechaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[10]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarPropiedadExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
