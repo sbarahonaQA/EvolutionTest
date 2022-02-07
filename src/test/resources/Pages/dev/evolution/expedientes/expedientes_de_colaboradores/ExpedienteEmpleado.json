@@ -167,6 +167,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Parentescos con empleados"
   },
+  "SustitucionesAutorizaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Sustituciones para autorizaciones"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
