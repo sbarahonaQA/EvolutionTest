@@ -159,6 +159,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Información configurable"
   },
+  "ReclamosSeguroMedico": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Reclamos de Seguro Médico"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
