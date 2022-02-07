@@ -1,0 +1,34 @@
+{
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  },
+  "CajaDeBusqueda": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlHistoricoAcciones_txtQuickSearch"
+  },
+  "Accion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_0__Text"
+  },
+  "PeriodoPlanilla": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_1__Text"
+  },
+  "Monto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_2__Text"
+  },
+  "Fecha": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_3__Text"
+  },
+  "Tipo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_4__Text"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "parametros_5__Text"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva referencia"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Referencia Basica"
+  },
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre",
+    "FieldType": "Texto"
+  },
+    "Direccion": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Direccion",
+      "FieldType": "Texto"
+    },
+    "Telefono": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Telefono",
+      "FieldType": "Texto"
+    },
+    "TipoReferencia": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "TipoReferenciaCodigo",
+      "FieldType": "Lista"
+    },
+    "Ocupacion": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Ocupacion",
+      "FieldType": "Texto"
+    },
+    "Trabajo": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Trabajo",
+      "FieldType": "Texto"
+    },
+    "TelefonoTrabajo": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "TelefonoTrabajo",
+      "FieldType": "Texto"
+    },
+    "Tiempo": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Tiempo",
+      "FieldType": "Texto"
+    },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "TelefonoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "TipoReferenciaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarReferencia"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
