@@ -1,0 +1,94 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva forma de pago"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Cheque"
+  },
+  "FormaPago": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoFormaPago",
+    "FieldType": "Lista"
+  },
+  "CuentaBanco": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCuentaBanco",
+    "FieldType": "Lista"
+  },
+  "EstaVigente": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstaVigente",
+    "FieldType": "Checkbox"
+  },
+  "AplicacionPago": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAplicacionPago",
+    "FieldType": "Lista"
+  },
+  "Valor": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Valor",
+    "FieldType": "Texto"
+  },
+  "Porcentaje": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Valor",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "FormaPagoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "EstaVigenteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "AccionPagoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "PorcentajeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarFormaPagoEmpleo"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
