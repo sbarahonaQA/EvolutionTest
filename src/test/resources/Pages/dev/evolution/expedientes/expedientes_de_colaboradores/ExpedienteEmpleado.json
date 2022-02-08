@@ -151,6 +151,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Capacidades especiales"
   },
+  "FormasPago": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Formas de pago"
+  },
   "Adicional": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Adicional"
