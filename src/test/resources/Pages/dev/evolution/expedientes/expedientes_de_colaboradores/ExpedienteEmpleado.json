@@ -163,6 +163,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Adicional"
   },
+  "Aficiones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Aficiones"
+  },
   "InformacionConfigurable": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Información configurable"
