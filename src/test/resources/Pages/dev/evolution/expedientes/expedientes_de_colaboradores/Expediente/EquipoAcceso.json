@@ -1,0 +1,104 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo equipo o acceso"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Impresora"
+  },
+  "EquipooAcceso": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "codigoEquipo_Text",
+    "FieldType": "ValueList"
+  },
+  "FechaAlta": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaAlta",
+    "FieldType": "Fecha"
+  },
+  "FechaBaja": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaBaja",
+    "FieldType": "Fecha"
+  },
+  "Observaciones": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Observaciones",
+    "FieldType": "Texto"
+  },
+  "FechaEntrega": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaEntrega",
+    "FieldType": "Fecha"
+  },
+  "EstadoEntrega": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstadoEntrega",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "EquipoAccesoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "FechaAltaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "FechaBajaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "ObservacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[5]/span/table/tbody/tr/td",
+    "FieldType": "Texto"
+  },
+  "FechaEntregaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "EstadoEntregaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[1]/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarEquipoOAccesoEmpleo"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
