@@ -1,0 +1,169 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAfps_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAfps_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAfps_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAfps_edit"
+  },
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre",
+    "FieldType": "Texto"
+  },
+  "Direccion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Direccion",
+    "FieldType": "Texto"
+  },
+  "Telefono": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Telefono",
+    "FieldType": "Texto"
+  },
+  "Fax": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Fax",
+    "FieldType": "Texto"
+  },
+  "Contacto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Contacto",
+    "FieldType": "Texto"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura",
+    "FieldType": "Texto"
+  },
+  "codigoPais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais",
+    "FieldType": "CodeCombo"
+  },
+  "codigoPais_Text": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais_Text",
+    "FieldType": "Texto"
+  },
+  "CuotaEmpleado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParametroEmpleado",
+    "FieldType": "Lista"
+  },
+  "CuotaPatrono": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParametroPatrono",
+    "FieldType": "Lista"
+  },
+  "CuotaPatronal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParametroPatronoEmpleadoPensionado",
+    "FieldType": "Lista"
+  },
+  "ValorMinimoCotizacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParametroValorMinimo",
+    "FieldType": "Lista"
+  },
+  "ValorMaximoCotizacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParametroValorMaximo",
+    "FieldType": "Lista"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "DireccionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+  "TelefonoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+  "FaxRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+  "ContactoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[6]/span"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[7]/span"
+  },
+  "PaisRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[8]/span"
+  },
+  "CuotaEmpleadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/fieldset/div[1]/table/tbody/tr[1]/td/span"
+  },
+  "CuotaPatronoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/fieldset/div[2]/table/tbody/tr[1]/td/span/b"
+  },
+  "CuotaPatronalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/fieldset/div[3]/table/tbody/tr[1]/td/span/b"
+  },
+  "ValorMinimoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/fieldset/div[4]/table/tbody/tr[1]/td/span/b"
+  },
+  "ValorMaximoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/fieldset/div[5]/table/tbody/tr[1]/td/span/b"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarAfp"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAficion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlAfps_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

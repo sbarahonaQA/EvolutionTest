@@ -1,0 +1,117 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div[1]/a/img"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Cheque"
+  },
+  "Seguro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoSeguroMedico",
+    "FieldType": "Lista"
+  },
+  "CuotaEmpleado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CuotaEmpleado",
+    "FieldType": "Texto"
+  },
+  "CuotaPatrono": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CuotaPatrono",
+    "FieldType": "Texto"
+  },
+  "Rango": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TipoRango",
+    "FieldType": "Lista"
+  },
+  "Poliza": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Poliza",
+    "FieldType": "Texto"
+  },
+  "ValorAsegurado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ValorAsegurado",
+    "FieldType": "Texto"
+  },
+  "EsActivo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsActivo",
+    "FieldType": "Checkbox"
+  },
+  "NuevoBeneficiario": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo beneficiario"
+  },
+  "NombreBeneficiario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "NombreBeneficiario",
+    "FieldType": "Texto"
+  },
+  "Porcentaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Porcentaje",
+    "FieldType": "Texto"
+  },
+  "GuardarBeneficiario": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarBeneficarioSeguroEmpleo"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "FormaPagoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "EstaVigenteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "AccionPagoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "PorcentajeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div[2]/div[2]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarSeguroMedicoEmpleo"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva afición"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Pintura"
+  },
+  "Aficion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAficion",
+    "FieldType": "Lista"
+  },
+  "Practica": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Practica",
+    "FieldType": "Radio"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "AficionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "LoPracticaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarAficionExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
