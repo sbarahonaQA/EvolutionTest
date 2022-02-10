@@ -1,0 +1,194 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo familiar"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta"
+  },
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre",
+    "FieldType": "Texto"
+  },
+  "Parentesco": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParentesco",
+    "FieldType": "Lista"
+  },
+  "Nacionalidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais",
+    "FieldType": "Lista"
+  },
+  "FechaNacimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaNacimiento",
+    "FieldType": "Fecha"
+  },
+  "Sexo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Sexo",
+    "FieldType": "Lista"
+  },
+  "EstadoCivil": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstadoCivil",
+    "FieldType": "Lista"
+  },
+  "Ocupacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Ocupacion",
+    "FieldType": "Texto"
+  },
+  "TipoDocumento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoDocumento",
+    "FieldType": "Valuelist"
+  },
+  "Documento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Documento",
+    "FieldType": "Texto"
+  },
+  "TelefonoMovil": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TelefonoMovil",
+    "FieldType": "Texto"
+  },
+  "Estudia": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estudia",
+    "FieldType": "Radio"
+  },
+  "Depende": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Depende",
+    "FieldType": "Radio"
+  },
+  "BenefPrestLegales": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "BenefPrestLegales",
+    "FieldType": "Radio"
+  },
+  "Trabaja": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Trabaja",
+    "FieldType": "Radio"
+  },
+  "Fallecido": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Fallecido",
+    "FieldType": "Radio"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "ParentescoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "NacionalidadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "FechaNacimientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "SexoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "EstadoCivilRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "OcupacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "NoDocumentoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[9]/span",
+    "FieldType": "Texto"
+  },
+  "TipoDocumentoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[10]/span",
+    "FieldType": "Texto"
+  },
+  "TelefonoMovilRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[11]/span",
+    "FieldType": "Texto"
+  },
+  "EstudiaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[12]/span",
+    "FieldType": "Texto"
+  },
+  "DependeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[13]/span",
+    "FieldType": "Texto"
+  },
+  "EsBeneficiarioLegalEnCasoFallecimientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[14]/span",
+    "FieldType": "Texto"
+  },
+  "TrabajaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[15]/span",
+    "FieldType": "Texto"
+  },
+  "FallecidoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[16]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarFamiliarExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}

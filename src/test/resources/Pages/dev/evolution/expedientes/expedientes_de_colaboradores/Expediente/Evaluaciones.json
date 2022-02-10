@@ -1,0 +1,99 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva evaluación"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Norma Eilen Bonilla"
+  },
+  "esEmpleoEvaluador": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "esEmpleoEvaluador",
+    "FieldType": "Radio"
+  },
+  "codigoAlternativoEvaluador": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoEvaluador",
+    "FieldType": "CodeCombo"
+  },
+  "codigoAlternativoEvaluadorTexo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoEvaluador_Text",
+    "FieldType": "Texto"
+  },
+  "Fecha": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Fecha",
+    "FieldType": "Fecha"
+  },
+  "Nota": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nota",
+    "FieldType": "Texto"
+  },
+  "codigoNotaCualitativa": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoNotaCualitativa",
+    "FieldType": "Lista"
+  },
+  "ComentarioEvaluador": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ComentarioEvaluador",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"jDialogEvaluacionDesempenioEmpleo\"]/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "CodigoEvaluadorRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"DivCodeCombo\"]/span",
+    "FieldType": "Texto"
+  },
+  "FechaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"jDialogEvaluacionDesempenioEmpleo\"]/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "NotaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"jDialogEvaluacionDesempenioEmpleo\"]/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "NotaCualitativaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"jDialogEvaluacionDesempenioEmpleo\"]/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//Button[@class=\"button\" and @name=\"Submit\"]"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
