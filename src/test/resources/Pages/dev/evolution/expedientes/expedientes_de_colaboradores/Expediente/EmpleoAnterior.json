@@ -1,0 +1,154 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo empleo anterior"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Para Consultar"
+  },
+  "Institucion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Institucion",
+    "FieldType": "Texto"
+  },
+  "Lugar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Lugar",
+    "FieldType": "Texto"
+  },
+  "UltimoPuesto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "UltimoPuesto",
+    "FieldType": "Texto"
+  },
+  "Jefe": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Jefe",
+    "FieldType": "Texto"
+  },
+  "FechaIngreso": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaIngreso",
+    "FieldType": "Fecha"
+  },
+  "FechaRetiro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaRetiro",
+    "FieldType": "Fecha"
+  },
+  "TelefonoCompania": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TelefonoCompania",
+    "FieldType": "Texto"
+  },
+  "Motivo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Motivo",
+    "FieldType": "Texto"
+  },
+  "PrimerSalario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PrimerSalario",
+    "FieldType": "Texto"
+  },
+  "UltimoSalario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "UltimoSalario",
+    "FieldType": "Texto"
+  },
+  "PromedioComisiones": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PromedioComisiones",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "InstitucionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "LugarRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "UltimoPuestoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "JefeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "FechaIngresoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "FechaRetiroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "TelefonoCompaniaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "MotivoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[9]/span",
+    "FieldType": "Texto"
+  },
+  "PrimerSalarioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[10]/span",
+    "FieldType": "Texto"
+  },
+  "UltimoSalarioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[11]/span",
+    "FieldType": "Texto"
+  },
+  "PromedioComisionesRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[12]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarEmpleoAnterior"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
