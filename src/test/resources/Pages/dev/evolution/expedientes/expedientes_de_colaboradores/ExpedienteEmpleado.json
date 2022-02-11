@@ -171,7 +171,14 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Asociaciones"
   },
-
+  "EquipoAcceso": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Equipo o acceso"
+  },
+  "Documentacion": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Documentación"
+  },
   "InformacionConfigurable": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Información configurable"
