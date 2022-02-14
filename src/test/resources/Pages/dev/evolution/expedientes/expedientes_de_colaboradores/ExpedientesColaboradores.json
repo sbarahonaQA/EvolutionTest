@@ -7,6 +7,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Aficiones"
   },
+  "Carreras": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Carreras"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
