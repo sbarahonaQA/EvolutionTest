@@ -248,6 +248,12 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
+    @Entonces("^Esperar que el elemento (.*?) deje de estar visible$")
+    public void esperarQueElElementoDejeDeEstarVisible(String element) throws Exception
+    {
+        functions.waitForElementInvisible(element);
+    }
+
     @Y("^Esperar (.*?) segundos$")
     public void esperar(int segundos) throws InterruptedException {
         TimeUnit.SECONDS.sleep(segundos);
@@ -362,9 +368,19 @@ public class StepDefinitions{
         functions.editRow(columna, text);
     }
 
+    @Y("^Editar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void EditarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.editRowFromTable(tabla, columna, text);
+    }
+
     @Y("^Eliminar registro con columna (.*?) de valor (.*?)$")
     public void EliminarRegistroConColumnaDeValor(String columna, String text) throws Exception {
         functions.deleteRow(columna, text);
+    }
+
+    @Y("^Eliminar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void EliminarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.deleteRowFromTable(tabla, columna, text);
     }
 
     @Entonces("^Aplicar busqueda avanzada:")
@@ -373,42 +389,54 @@ public class StepDefinitions{
     }
 
     @Entonces("Comprobar que el valor del ingreso (.*) sea de (.*?)")
-    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDelIngresoSeaDe(String tipo, String valor) {
         functions.validateIncome(tipo, valor);
     }
 
     @Entonces("Comprobar que el valor del descuento (.*) sea de (.*?)")
-    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDelDescuentoSeaDe(String tipo, String valor) {
         functions.validateDeduction(tipo, valor);
     }
 
     @Entonces("Comprobar que el valor de la reserva (.*) sea de (.*?)")
-    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) throws Exception {
+    public void comprobarQueElValorDeLaReservaSeaDe(String tipo, String valor) {
         functions.validateReserve(tipo, valor);
     }
 
     @Entonces("Comprobar que el total de ingresos sea de (.*?)")
-    public void comprobarQueElTotalDeIngresosSeaDe(String valor) throws Exception {
+    public void comprobarQueElTotalDeIngresosSeaDe(String valor) {
         functions.validateTotalIncome(valor);
     }
 
     @Entonces("Comprobar que el total de descuentos sea de (.*?)")
-    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) throws Exception {
+    public void comprobarQueElTotalDeDescuentosSeaDe(String valor) {
         functions.validateTotalDeduction(valor);
     }
 
     @Entonces("Comprobar que el neto a pagar sea de (.*?)")
-    public void comprobarQueElNetoAPagarSeaDe(String valor) throws Exception {
+    public void comprobarQueElNetoAPagarSeaDe(String valor) {
         functions.validateNetValue(valor);
     }
 
     @Entonces("Comprobar que los dias de (.*) sean (.*?)")
-    public void comprobarQueLosDiasDeSean(String tipo, String valor) throws Exception {
+    public void comprobarQueLosDiasDeSean(String tipo, String valor) {
         functions.validateDays(tipo, valor);
     }
 
     @Entonces("Comprobar que las horas de (.*) sean (.*?)")
-    public void comprobarQueLasHorasDeSean(String tipo, String valor) throws Exception {
+    public void comprobarQueLasHorasDeSean(String tipo, String valor) {
         functions.validateHours(tipo, valor);
+    }
+
+    @Dado("^que carga EvolutionWave")
+    public void queCargaEvolutionWave() throws IOException {
+        String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instanciaEvoWave");
+        log.info("Cargando URL: " + sitioPruebas);
+        driver.get(sitioPruebas);
+    }
+
+    @Entonces("^Validar datos:")
+    public void validarDatos(List<List<String>> table) throws Exception {
+        functions.validarDatos(table);
     }
 }

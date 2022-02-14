@@ -1,0 +1,14 @@
+{
+  "NuevaSolicitud": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator nueva-solicitud-btn mat-raised-button mat-button-base mat-primary']"
+  },
+  "Constancias": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-card-title[contains(text(),'Constancias')]"
+  },
+  "TotalSolicitudes": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "mat-paginator-range-label"
+  }
+}
