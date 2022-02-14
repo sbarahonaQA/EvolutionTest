@@ -1,0 +1,38 @@
+{
+  "AutorizacionDeSustitutos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-card-header[@class='mat-card-header']"
+  },
+  "EmpleadoASustituir": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@placeholder='Seleccione el empleado a sustituir']",
+    "FieldType": "EmpleadoEvoWave"
+  },
+  "EmpleadoSustituto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@placeholder='Seleccione el empleado sustituto']",
+    "FieldType": "EmpleadoEvoWave"
+  },
+  "FechaInicio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//app-date[1]//mat-form-field[1]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]",
+    "FieldType": "FechaEvoWave"
+  },
+  "FechaFinal": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//app-date[2]//mat-form-field[1]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]",
+    "FieldType": "FechaEvoWave"
+  },
+  "SelectorAnio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-calendar-period-button mat-button mat-button-base']"
+  },
+  "EnviarSolicitud": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']"
+  },
+  "SolicitudEnviada": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='moss-word']"
+  }
+}

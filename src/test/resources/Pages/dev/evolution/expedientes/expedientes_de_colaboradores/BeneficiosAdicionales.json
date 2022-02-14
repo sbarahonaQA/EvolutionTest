@@ -27,15 +27,15 @@
   },
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
   },
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
   },
   "PaisRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
   },
   "Guardar": {
     "GetFieldBy": "Name",
