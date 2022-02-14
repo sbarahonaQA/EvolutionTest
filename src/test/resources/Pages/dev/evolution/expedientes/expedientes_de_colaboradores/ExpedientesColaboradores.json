@@ -1,4 +1,8 @@
 {
+  "AFPs": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "AFPs"
+  },
   "Aficiones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Aficiones"
