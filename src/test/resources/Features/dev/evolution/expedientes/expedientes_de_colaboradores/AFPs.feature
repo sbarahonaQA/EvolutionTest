@@ -141,7 +141,7 @@ Característica: AFPs
       | DireccionRO     | Direccion             |
       | TelefonoRO      | 22224455              |
       | FaxRO           | 22335588              |
-      | ContactoRO      |  Prueba               |
+      | ContactoRO      | Prueba                |
       | AbreviaturaRO   | AC8586                |
       | PaisRO          | Guatemala             |
       | CuotaEmpleadoRO | CuotaEmpleadoAFP      |

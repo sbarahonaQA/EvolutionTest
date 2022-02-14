@@ -1,0 +1,10 @@
+{
+  "Consultar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']"
+  },
+  "Marcaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-sidenav-content//div//div//div//div//div//div[2]//span[1]"
+  }
+}
