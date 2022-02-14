@@ -11,6 +11,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Carreras"
   },
+  "BeneficiosAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Beneficios Adicionales"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
