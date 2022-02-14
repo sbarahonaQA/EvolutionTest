@@ -4,7 +4,7 @@
 @expedientes_colaboradores
 @carreras
 Característica: Carreras
-  Pruebas para carreras AFPS (carreras)
+  Pruebas para entidad carreras
 
   @test
   @Highest
@@ -132,7 +132,7 @@ Característica: Carreras
       | DescripcionRO | EDUCACION BASICA O DIVERSIFICADO |
       | AbreviaturaRO | MEDIA                            |
       | ReconocidaRO  | No                               |
-      | TipoEstudioRO |  EDUCACION MEDIA O DIVERSIFICADO |
+      | TipoEstudioRO | EDUCACION MEDIA O DIVERSIFICADO  |
       | PaisRO        | Todos                            |
 
 

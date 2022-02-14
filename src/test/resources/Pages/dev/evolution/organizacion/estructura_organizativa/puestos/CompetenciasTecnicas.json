@@ -1,0 +1,103 @@
+{
+  "Tabla": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table//table[1]"
+  },
+  "Tabla2": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table[2]"
+  },
+  "Popup": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[12]"
+  },
+  "Competencia": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCompetencia",
+    "FieldType": "Lista"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "Orden": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Orden",
+    "FieldType": "Texto"
+  },
+  "Peso": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Peso",
+    "FieldType": "Texto"
+  },
+
+  "NivelCumplimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "NivelCumplimiento",
+    "FieldType": "Texto"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarCompetenciaTecnicaPuesto"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarCompetenciaTecnicaPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "NuevaCompetenciaTecnicaPuesto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva competencia técnica"
+  },
+
+  "RegistroConsultar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//table//table[1]//tbody[1]//tr[3]//td[1]//a[1]//img[1]"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div//div[1]//span[1]"
+  },
+  "CompetenciaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div[2]//span[1]"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[3]//span[1]"
+  },
+  "OrdenRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[4]//span[1]"
+  },
+  "PesoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div[5]//span[1]"
+  },
+  "NivelCumplimientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[6]//span[1]"
+  },
+
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
+  },
+  "MensajeError": {
+    "GetFieldBy": "id",
+    "ValueToFind": "mensajesValidarCompetenciaTecnica"
+  }
+}
+
+
