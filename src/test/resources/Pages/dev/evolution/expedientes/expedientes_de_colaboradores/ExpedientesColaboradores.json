@@ -15,6 +15,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Beneficios Adicionales"
   },
+  "CategoriasMotivoRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de motivo de retiro"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
