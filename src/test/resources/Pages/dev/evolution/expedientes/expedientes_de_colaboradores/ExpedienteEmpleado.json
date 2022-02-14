@@ -179,6 +179,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Identificación"
   },
+  "Emergencias": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "En emergencias"
+  },
   "Documentacion": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Documentación"
