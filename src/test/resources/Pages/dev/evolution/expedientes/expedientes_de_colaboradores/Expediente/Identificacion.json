@@ -1,0 +1,129 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo documento"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "3423"
+  },
+  "TipoDocumento": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "codigoTipoDocumento_Text",
+    "FieldType": "ValueList"
+  },
+  "Numero": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Numero",
+    "FieldType": "Texto"
+  },
+  "NombreSegunDocumento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "NombreSegunDocumento",
+    "FieldType": "Texto"
+  },
+  "FechaExpedicion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaExpedicion",
+    "FieldType": "Fecha"
+  },
+  "FechaVencimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaVencimiento",
+    "FieldType": "Fecha"
+  },
+  "Pais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais",
+    "FieldType": "Lista"
+  },
+  "Departamento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoDepartamento",
+    "FieldType": "Lista"
+  },
+  "Municipio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoMunicipio",
+    "FieldType": "Lista"
+  },
+  "Lugar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoLocalidad",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "NumeroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "TipoDocumentoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "NombreDocRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "FechaExpedicionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[10]/span",
+    "FieldType": "Texto"
+  },
+  "FechaVencimientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[11]/span",
+    "FieldType": "Texto"
+  },
+  "PaisRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[12]/span",
+    "FieldType": "Texto"
+  },
+  "DepartamentoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[13]/span",
+    "FieldType": "Texto"
+  },
+  "MunicipioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[14]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarDocumentoIdentificacion"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}

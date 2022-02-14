@@ -1,0 +1,167 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva acción en empresa"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prueba de Consulta"
+  },
+  "NombreEmpresa": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "NombreEmpresa",
+    "FieldType": "Texto"
+  },
+    "Direccion": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Direccion",
+      "FieldType": "Texto"
+    },
+    "Ciudad": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Ciudad",
+      "FieldType": "Texto"
+    },
+    "Pais": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "codigoPais",
+      "FieldType": "Lista"
+    },
+    "Departamento": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "codigoDepartamento",
+      "FieldType": "Lista"
+    },
+    "Municipio": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "codigoMunicipio",
+      "FieldType": "Lista"
+    },
+    "DatosRegistro": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "Descripcion",
+      "FieldType": "Texto"
+    },
+    "CargoOcupa": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "CargoOcupa",
+      "FieldType": "Texto"
+    },
+    "GiroEmpresa": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "GiroEmpresa",
+      "FieldType": "Texto"
+    },
+    "PorcentajeParticipacion": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "PorcentajeParticipacion",
+      "FieldType": "Texto"
+    },
+    "NumeroAcciones": {
+      "GetFieldBy": "Id",
+      "ValueToFind": "NumeroAcciones",
+      "FieldType": "Texto"
+    },
+  "Moneda": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MonedaCodigo",
+    "FieldType": "Lista"
+  },
+  "ValorAcciones": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ValorAcciones",
+    "FieldType": "Texto"
+  },
+  "FechaPosesion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaPosesion",
+    "FieldType": "Fecha"
+  },
+  "TotalInversion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "spanTotalInversion",
+    "FieldType": "Texto"
+  },
+
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "NombreEmpresaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "DatosRegistroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "CargoOcupaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "GiroEmpresaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "PorcentajeParticionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "NumeroAccionesRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "MonedaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "ValorAccionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[9]/span",
+    "FieldType": "Texto"
+  },
+  "TotalInversionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[10]/span",
+    "FieldType": "Texto"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarAccionCompaniaExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}

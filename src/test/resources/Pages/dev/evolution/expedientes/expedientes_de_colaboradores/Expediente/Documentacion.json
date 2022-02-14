@@ -1,0 +1,95 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo documento"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Carnet de Residente (Guatemala)"
+  },
+  "Documento": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "codigoTipoDocumento_Text",
+    "FieldType": "ValueList"
+  },
+  "Observacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Observacion",
+    "FieldType": "Texto"
+  },
+  "FechaEntrega": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaEntrega",
+    "FieldType": "Fecha"
+  },
+  "FechaPrestamo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaPrestamo",
+    "FieldType": "Fecha"
+  },
+  "FechaDevolucion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaDevolucion",
+    "FieldType": "Fecha"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "DocumentoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "ObservacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "FechaEntregaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "FechaPrestamoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "FechaDevolucionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarDocumentoExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
