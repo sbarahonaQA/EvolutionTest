@@ -23,6 +23,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Consulta de solicitudes de constancia"
   },
+  "ConsultaSolicitudAyudaEconomica": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de ayuda económica"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
