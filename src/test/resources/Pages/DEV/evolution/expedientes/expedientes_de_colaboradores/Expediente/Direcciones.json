@@ -1,0 +1,143 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva dirección"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta"
+  },
+  "Direccion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Direccion",
+    "FieldType": "Texto"
+  },
+  "TipoPropiedad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TipoPropiedad",
+    "FieldType": "Lista"
+  },
+  "Pais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPaisDireccion",
+    "FieldType": "Lista"
+  },
+  "Departamento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoDepartamento",
+    "FieldType": "Lista"
+  },
+  "Municipio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoMunicipio",
+    "FieldType": "Lista"
+  },
+  "Barrio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Barrio",
+    "FieldType": "Texto"
+  },
+  "CodigoPostal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoPostal",
+    "FieldType": "Texto"
+  },
+  "Telefono": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Telefono",
+    "FieldType": "Texto"
+  },
+  "TipoDireccion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipo",
+    "FieldType": "Lista"
+  },
+  "Observacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Observacion",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "DireccionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "TipoPropiedadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "PaisRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "DepartamentoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "MunicipioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "BarrioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "CodigoPostalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "TelefonoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[9]/span",
+    "FieldType": "Texto"
+  },
+  "TipoDireccionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[10]/span",
+    "FieldType": "Texto"
+  },
+  "ObservacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div[11]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarDireccionExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
