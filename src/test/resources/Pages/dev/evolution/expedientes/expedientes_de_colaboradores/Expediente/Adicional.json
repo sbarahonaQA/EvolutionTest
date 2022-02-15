@@ -1,0 +1,89 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo préstamo"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Para Consultar"
+  },
+  "FechaFallecimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "fechaFallecimiento",
+    "FieldType": "Fecha"
+  },
+  "AFPCotiza": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codafp",
+    "FieldType": "Lista"
+  },
+  "EsPensionado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsPensionado",
+    "FieldType": "Checkbox"
+  },
+  "EsJubilado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsJubilado",
+    "FieldType": "Checkbox"
+  },
+  "Acta": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Acta",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"property_bag\"]/div/fieldset[1]/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "AFPCotizaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"property_bag\"]/div/fieldset[1]/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "EmpleadoPensionadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"property_bag\"]/div/fieldset[1]/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "EmpleadoJubiladoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"property_bag\"]/div/fieldset[1]/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "ActaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"property_bag\"]/div/fieldset[2]/div/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarExpedienteAdicional"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}

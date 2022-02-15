@@ -1,0 +1,115 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo contacto"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta"
+  },
+  "Secuencial": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "Secuencial",
+    "FieldType": "Texto"
+  },
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre",
+    "FieldType": "Texto"
+  },
+  "Parentesco": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoParentesco",
+    "FieldType": "Lista"
+  },
+  "Direccion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Direccion",
+    "FieldType": "Texto"
+  },
+  "Telefono": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Telefono",
+    "FieldType": "Texto"
+  },
+  "Trabajo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Trabajo",
+    "FieldType": "Texto"
+  },
+  "TelefonoTrabajo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TelefonoTrabajo",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "SecuencialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "ParentescoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "DireccionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "TelefonoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "LugarTrabajoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "TelefonoTrabajoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarEmergenciaExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
