@@ -1,7 +1,23 @@
 {
+  "AFPs": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "AFPs"
+  },
   "Aficiones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Aficiones"
+  },
+  "Carreras": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Carreras"
+  },
+  "BeneficiosAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Beneficios Adicionales"
+  },
+  "CategoriasMotivoRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de motivo de retiro"
   },
   "Catalogo": {
     "GetFieldBy": "LinkText",
