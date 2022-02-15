@@ -19,6 +19,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Categorías de motivo de retiro"
   },
+  "ConsultaSolicitudConstancia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de constancia"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
