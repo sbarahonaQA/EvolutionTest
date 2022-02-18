@@ -1,0 +1,10 @@
+{
+  "MisReciboDeSalario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-sidenav-content//div//div//div//div//div//div[2]//span[1]"
+  },
+  "RecibosUltimos6Meses": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[contains(text(),'Últimos 6 meses')]"
+  }
+}

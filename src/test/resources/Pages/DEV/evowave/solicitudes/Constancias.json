@@ -1,0 +1,34 @@
+{
+  "TipoConstancia": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@id='mat-select-1']"
+  },
+  "TipoConstanciaSalario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Salario')]"
+  },
+  "TipoConstanciaTrabajo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Trabajo')]"
+  },
+  "TipoConstanciaEmbajada": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Embajada')]"
+  },
+  "DirigidaA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@id='mat-input-1']"
+  },
+  "Comentario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@id='mat-input-2']"
+  },
+  "EnviarSolicitud": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']"
+  },
+  "SolicitudEnviada": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='moss-word']"
+  }
+}

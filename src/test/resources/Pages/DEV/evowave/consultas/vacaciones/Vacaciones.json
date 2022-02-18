@@ -1,0 +1,14 @@
+{
+  "PeriodosVacacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//app-sin-datos//div[2]//span[1]"
+  },
+  "VerMisDiasDeVacaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-radio-button[@class='mat-radio-button mat-accent ng-star-inserted mat-radio-checked']//div[@class='mat-radio-inner-circle']"
+  },
+  "MisDiasDeVacaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//app-sin-datos//div[2]//span[1]"
+  }
+}
