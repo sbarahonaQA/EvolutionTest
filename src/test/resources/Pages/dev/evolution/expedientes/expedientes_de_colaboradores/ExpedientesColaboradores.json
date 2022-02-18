@@ -35,6 +35,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de estudios"
   },
+  "TiposSeguros": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de seguros"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
