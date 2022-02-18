@@ -27,6 +27,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Consulta de solicitudes de ayuda económica"
   },
+  "TiposContratos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de contratos"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
