@@ -1,0 +1,18 @@
+{
+  "Ingresar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Ingresar"
+  },
+  "UsuarioIDS": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Input_UserName"
+  },
+  "ContraseniaIDS": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Input_Password"
+  },
+  "BotonIniciarSesionIDS": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//form//div//button[1]"
+  }
+}

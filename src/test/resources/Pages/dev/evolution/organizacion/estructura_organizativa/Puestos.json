@@ -23,6 +23,42 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Equipo o dotación"
   },
+  "ObjetivosPuesto": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Objetivos del puesto"
+  },
+  "FuncionesEspecificas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Funciones específicas"
+  },
+  "Prestaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prestaciones"
+  },
+  "RelacionesExternas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Relaciones externas"
+  },
+  "RelacionesInternas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Relaciones internas"
+  },
+  "TomaDecisiones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Toma de decisiones"
+  },
+  "ClasesSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clases salariales"
+  },
+  "CompetenciasTecnicas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Competencias Técnicas"
+  },
+  "ResponsabilidadesPuestos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
+  },
 
   "Estado": {
     "GetFieldBy": "Id",

@@ -38,14 +38,14 @@ Característica: Plazas
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Estado                     | Pendiente              |
-      | Nombre                     | Creación Básica        |
-      | MaxEmpleados               | 2                      |
-      | EsPresupuestada            | False                  |
-      | CodigoUnidadTexto          | Operaciones            |
-      | CodigoPuestoTexto          | Consultor Junior       |
-      | CodigoCentroTrabajoTexto   | Oficinas Centrales     |
-      | EsTemporal                 | False                  |
+      | Estado                   | Pendiente          |
+      | Nombre                   | Creación Básica    |
+      | MaxEmpleados             | 2                  |
+      | EsPresupuestada          | False              |
+      | CodigoUnidadTexto        | Operaciones        |
+      | CodigoPuestoTexto        | Consultor Junior   |
+      | CodigoCentroTrabajoTexto | Oficinas Centrales |
+      | EsTemporal               | False              |
 
   @test
   @Highest
@@ -137,18 +137,18 @@ Característica: Plazas
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                | 6                                |
-      | EstadoRO                | Vigente                          |
-      | CompaniaRO              | ASEINFO Corporativo              |
-      | NombreRO                | Director Comercial CORP          |
-      | MaxRO                   | 100                              |
-      | EsPresupuestadaRO       | Si                               |
-      | UnidadRO                | Comercial                        |
-      | PuestoRO                | Director Comercial               |
-      | CentroTrabajoRO         | Oficinas Centrales               |
-      | EsTemporalRO            | No                               |
-      | FechaInicioRO           | 1/1/2010                         |
-      | FechaFinRO              | -----                            |
+      | CodigoRO          | 6                       |
+      | EstadoRO          | Vigente                 |
+      | CompaniaRO        | ASEINFO Corporativo     |
+      | NombreRO          | Director Comercial CORP |
+      | MaxRO             | 100                     |
+      | EsPresupuestadaRO | Si                      |
+      | UnidadRO          | Comercial               |
+      | PuestoRO          | Director Comercial      |
+      | CentroTrabajoRO   | Oficinas Centrales      |
+      | EsTemporalRO      | No                      |
+      | FechaInicioRO     | 1/1/2010                |
+      | FechaFinRO        | -----                   |
 
 
   @test

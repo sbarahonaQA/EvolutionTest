@@ -1,7 +1,31 @@
 {
+  "AFPs": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "AFPs"
+  },
   "Aficiones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Aficiones"
+  },
+  "Carreras": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Carreras"
+  },
+  "BeneficiosAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Beneficios Adicionales"
+  },
+  "CategoriasMotivoRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de motivo de retiro"
+  },
+  "ConsultaSolicitudConstancia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de constancia"
+  },
+  "ConsultaSolicitudAyudaEconomica": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de ayuda económica"
   },
   "Catalogo": {
     "GetFieldBy": "LinkText",
