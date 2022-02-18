@@ -1,0 +1,67 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Popup": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[12]"
+  },
+  "ClaseSalarial": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoClaseSalarial",
+    "FieldType": "Lista"
+  },
+  "Comentario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Comentario",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarClaseSalarialPuesto"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarClaseSalarialPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva clase salarial de puesto"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Clase para automatizacion (consulta)"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[10]/div[2]/div[2]/fieldset[1]/div[1]/span[1]",
+    "FieldType": "Texto"
+  },
+  "ClaseSalarialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "/html[1]/body[1]/div[10]/div[2]/div[2]/fieldset[1]/div[2]/span[1]",
+    "FieldType": "Texto"
+  },
+
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoPuesto"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  }
+}
+
+
