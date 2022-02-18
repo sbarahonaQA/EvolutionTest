@@ -31,6 +31,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de contratos"
   },
+  "TiposEstudios": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de estudios"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
