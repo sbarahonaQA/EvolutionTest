@@ -26,6 +26,10 @@
     "GetFieldBy": "Id",
     "ValueToFind": "Descripcion"
   },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div//div//div[2]//span[1]"
+  },
 
   "GuardarParentesco": {
     "GetFieldBy": "Name",

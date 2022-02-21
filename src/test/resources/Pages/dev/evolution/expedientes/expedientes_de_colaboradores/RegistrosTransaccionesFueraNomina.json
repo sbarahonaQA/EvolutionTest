@@ -1,0 +1,138 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRegistrosTransaccionesFueraDePlanilla_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRegistrosTransaccionesFueraDePlanilla_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRegistrosTransaccionesFueraDePlanilla_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRegistrosTransaccionesFueraDePlanilla_edit"
+  },
+  "CodigoEmpleado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoEmpleado",
+    "FieldType": "CodeCombo"
+  },
+  "EmpleadoTexto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "TipoCodigo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TipoCodigo",
+    "FieldType": "CodeCombo"
+  },
+  "TipoTexto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "Fecha": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Fecha",
+    "FieldType": "Fecha"
+  },
+  "MonedaCodigo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MonedaCodigo",
+    "FieldType": "CodeCombo"
+  },
+  "MonedaTexto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MonedaCodigo_Text",
+    "FieldType": "Texto"
+  },
+  "Valor": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Valor",
+    "FieldType": "Texto"
+  },
+  "Anio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Anio",
+    "FieldType": "Texto"
+  },
+  "MesAplicacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Mes",
+    "FieldType": "Lista"
+  },
+  "Comentario": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Comentario",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "EmpleadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "TipoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+  "FechaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+  "MonedaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[6]/span"
+  },
+  "ValorRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[7]/span"
+  },
+  "AnioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[8]/span"
+  },
+  "ComentarioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[10]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardar"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAficion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRegistrosTransaccionesFueraDePlanilla_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

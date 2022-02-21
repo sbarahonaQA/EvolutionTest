@@ -2,9 +2,9 @@
 
 @expedientes
 @expedientes_colaboradores
-@MotivodeRetiro
-Característica: Aficiones
-  Pruebas para entidad Aficiones (Aficiones)
+@parentescos
+Característica: Parentescos
+  Pruebas para entidad Parentescos
 
   @test
   @Highest
@@ -24,7 +24,7 @@ Característica: Aficiones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Parentesco.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion   | Creacion Basica |
+      | Descripcion | Creacion Basica |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarParentesco
     * Esperar 4 segundos
@@ -33,8 +33,7 @@ Característica: Aficiones
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion   | Creacion Basica |
-
+      | Descripcion | Creacion Basica |
 
   @test
   @Highest
@@ -79,21 +78,20 @@ Característica: Aficiones
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion            | Prueba Editada |
+      | Descripcion | Descripción editada |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarParentesco
-    * Esperar 3 segundos
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Editada
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Descripción editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion             | Prueba Editada |
+      | Descripcion | Descripción editada |
 
   @test
   @Highest
   @PDS-1669
-  Escenario: Eliminar un Motivo de Retiro(PDS-1669)
+  Escenario: Eliminar un Parentesco (PDS-1669)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -134,12 +132,12 @@ Característica: Aficiones
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion      | Para consulta |
+      | DescripcionRO | Para consulta |
 
   @test
   @Highest
   @PDS-1661
-  Escenario: Ver el listado de Parentesco (PDS-1661)
+  Escenario: Ver el listado de Parentescos (PDS-1661)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
