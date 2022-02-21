@@ -47,10 +47,6 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Motivos de retiro"
   },
-  "Parentescos": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Parentescos"
-  },
   "ConceptosServiciosMedicos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Conceptos servicios médicos"
@@ -79,25 +75,13 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
   },
-  "MotivodeRetiro": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Motivos de retiro"
-  },
   "Parentescos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Parentescos"
   },
-  "FormadePago": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Formas de pago"
-  },
   "Asociaciones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Asociaciones"
-  },
-  "TiposdeDirecciones": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Tipos de direcciones"
   },
   "TiposdeDocumentos": {
     "GetFieldBy": "LinkText",
