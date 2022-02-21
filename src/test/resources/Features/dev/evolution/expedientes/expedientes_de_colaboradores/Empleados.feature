@@ -100,8 +100,8 @@ Característica: Empleados
 
   @test
   @Highest
-  @PDS-1526
-  Escenario: Consultar una Afición con información básica (PDS-1526)
+  @PDS-1421
+  Escenario: Consultar un Nuevo expediente con información básica (PDS-1421)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
