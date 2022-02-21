@@ -67,6 +67,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Formas de pago"
   },
+  "RegistrosTransaccionesFueraNomina": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Registro de transacciones fuera de nómina"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
