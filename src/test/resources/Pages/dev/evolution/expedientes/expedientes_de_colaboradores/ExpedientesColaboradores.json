@@ -71,6 +71,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Registro de transacciones fuera de nómina"
   },
+  "TiposdeDirecciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de direcciones"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
