@@ -1,11 +1,11 @@
 {
-  "Aficiones": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Aficiones"
-  },
   "AFPs": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "AFPs"
+  },
+  "Aficiones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Aficiones"
   },
   "Carreras": {
     "GetFieldBy": "LinkText",
@@ -15,6 +15,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Beneficios Adicionales"
   },
+  "CategoriasMotivoRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de motivo de retiro"
+  },
   "ConsultaSolicitudConstancia": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Consulta de solicitudes de constancia"
@@ -22,10 +26,6 @@
   "ConsultaSolicitudAyudaEconomica": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Consulta de solicitudes de ayuda económica"
-  },
-  "CategoriasMotivoRetiro": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Categorías de motivo de retiro"
   },
   "TiposContratos": {
     "GetFieldBy": "LinkText",
@@ -43,6 +43,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Títulos personales"
   },
+  "MotivodeRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Motivos de retiro"
+  },
   "ConceptosServiciosMedicos": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Conceptos servicios médicos"
@@ -55,9 +59,17 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de Referencias"
   },
+  "FormadePago": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Formas de pago"
+  },
   "RegistrosTransaccionesFueraNomina": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Registro de transacciones fuera de nómina"
+  },
+  "TiposdeDirecciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de direcciones"
   },
   "Empleados": {
     "GetFieldBy": "LinkText",
@@ -75,5 +87,21 @@
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
+  },
+  "Parentescos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Parentescos"
+  },
+  "Asociaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Asociaciones"
+  },
+  "TiposdeDocumentos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de documentos"
+  },
+  "RubrosSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Rubros salariales"
   }
 }

@@ -22,7 +22,7 @@ Característica: ConsultaSolcitudesConstancia
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a ConsultaSolicitudConstancia
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ConsultaSolicitudConstancia.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 10
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino PDS-7383
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
@@ -33,8 +33,6 @@ Característica: ConsultaSolcitudesConstancia
       | DirigidaRO       | A QUIEN INTERESE                   |
       | FormaEntregaRO   | Recogeré constancia personalmente  |
       | ComentariosRO    | PARA PRUEBAS DE EVOLUTION PDS-7383 |
-
-
 
   @test
   @Highest

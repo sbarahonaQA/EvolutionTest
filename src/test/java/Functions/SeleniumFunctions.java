@@ -32,7 +32,6 @@ public class SeleniumFunctions {
     public static InputStream inSegAccesoIDS = SeleniumFunctions.class.getResourceAsStream("../usuariosIDS.properties");
     public static Map<String, String> ScenaryData = new HashMap<>();
     private final AggregatedAsserts aggregatedAsserts = new AggregatedAsserts();
-    private String language;
 
     public SeleniumFunctions() {
         driver = Hooks.driver;
@@ -416,12 +415,28 @@ public class SeleniumFunctions {
         w.until(ExpectedConditions.presenceOfElementLocated(SeleniumElement));
     }
 
+    public void waitForElementClickable(String element) throws Exception
+    {
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        log.info("Esperando que el elemento: "+element + " sea clickeable");
+        w.until(ExpectedConditions.elementToBeClickable(SeleniumElement));
+    }
+
     public void waitForElementVisible(String element) throws Exception
     {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
         WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
         log.info("Esperando que el elemento: "+element + " esté visible");
         w.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
+    }
+
+    public void waitForElementInvisible(String element) throws Exception
+    {
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        WebDriverWait w = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        log.info("Esperando que el elemento: "+element + " deje de estar visible");
+        w.until(ExpectedConditions.invisibilityOfElementLocated(SeleniumElement));
     }
 
     public void waitForTextToBePresentInElement(String text , String element) throws Exception {
@@ -490,11 +505,16 @@ public class SeleniumFunctions {
 
     public void fillForm(List<List<String>> rows) throws Exception {
         int intentos = 0;
-
-        language = readProperties("language");
+        String ExpRegSelectorAnio = "[0-9]{4}\\s–\\s[0-9]{4}";
+        String language = readProperties("language");
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
 
         for (List<String> columns : rows) {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
+
+            //Desplazarse al elemento en cuestion
+            jse.executeScript("arguments[0].scrollIntoView(false);", driver.findElement(SeleniumElement));
 
             switch (FieldType){
                 case "Texto":
@@ -565,6 +585,53 @@ public class SeleniumFunctions {
                     driver.findElement(By.className("ac_even")).click();
 
                     log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
+                    break;
+                case "EmpleadoEvoWave":
+                    driver.findElement(SeleniumElement).clear();
+                    driver.findElement(SeleniumElement).sendKeys(columns.get(1));
+                    wait.until(ExpectedConditions.presenceOfElementLocated(By.className("mat-option-text")));
+                    //wait.until(ExpectedConditions.elementToBeClickable(By.className("mat-option-text")));
+                    driver.findElement(By.className("mat-option-text")).click();
+                    //Esperar que se cargue la informacion del empleado
+                    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='principal']")));
+                    log.info(String.format("Para el campo %s se selecciona empleado %s", columns.get(0), columns.get(1)));
+                    break;
+                case "FechaEvoWave":
+                    //click a boton de fecha
+                    driver.findElement(SeleniumElement).click();
+                    //evaluar si en la esquina existe formato " 1999 – 2022 "
+                    if(!getTextElement("SelectorAnio").matches(ExpRegSelectorAnio)) {
+                        //si NO tiene ese formato, se hace loop haciendo click hasta que tenga ese formato (max 5 click)
+                        while (!getTextElement("SelectorAnio").matches(ExpRegSelectorAnio) && intentos < 5) {
+                            driver.findElement(SeleniumFunctions.getCompleteElement("SelectorAnio")).click();
+                            intentos++;
+                        }
+                    }
+                    //click al año
+                    driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).substring(6) + "')]")).click();
+                    //click al mes
+                    driver.findElement(By.xpath("//div[contains(text(),'" + getMonth(columns.get(1).substring(3,5)) + "')]")).click();
+                    //click al dia
+                    //Los dias del calendario del 1 al 9 no tienen ceros, se toma solo el 2do caracter despues del cero
+                    if (Integer.parseInt(columns.get(1).substring(0,2)) < 10)
+                        driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).charAt(1) + "')]")).click();
+                    else
+                        driver.findElement(By.xpath("//div[contains(text(),'" + columns.get(1).substring(0,2) + "')]")).click();
+                    break;
+                case "ListaEvoWave":
+                    //click al elemento para que se despliegue la lista
+                    driver.findElement(SeleniumElement).click();
+                    //click al elemento según el texto
+                    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'" + columns.get(1) + "')]")));
+                    driver.findElement(By.xpath("//span[contains(text(),'" + columns.get(1) + "')]")).click();
+                    break;
+                case "CheckboxEvoWave":
+                    if((Boolean.parseBoolean(columns.get(1)) && !Boolean.parseBoolean(driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("aria-checked")))
+                    || (!Boolean.parseBoolean(columns.get(1)) && Boolean.parseBoolean(driver.findElement(SeleniumFunctions.getCompleteElement(columns.get(0))).getAttribute("aria-checked"))))
+                    {
+                        log.info(String.format("Al cheque %s se marca con valor %s", columns.get(0), columns.get(1)));
+                        driver.findElement(By.xpath("//input[@id='" + SeleniumFunctions.getCompleteElement(columns.get(0)).toString().substring(7) + "']/./..")).click();
+                    }
                     break;
                 default:
                     log.error("Manejo de tipo no disponible");
@@ -637,7 +704,7 @@ public class SeleniumFunctions {
             SegAcceso.load(inSegAccesoIDS);
         else
             SegAcceso.load(inSegAcceso);
-        return SegAcceso.getProperty(usuario);
+        return SegAcceso.getProperty(usuario).isEmpty()?"":SegAcceso.getProperty(usuario);
     }
 
     public void editRow(String datoColumna, String text) throws Exception {
@@ -679,17 +746,78 @@ public class SeleniumFunctions {
             //List <WebElement> acciones = columnas.get(0).findElements(By.tagName("a"));
             List <WebElement> acciones = fila.findElements(By.tagName("a"));
 
-            if(acciones.size()==0) {
-                aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
-            }
-
             if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
-                if(acciones.size()==3)
-                    acciones.get(2).click();
-                else
-                    acciones.get(1).click();
+                if(acciones.size()==0) {
+                    aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
+                }
+                else {
+                    if (acciones.size() == 3)
+                        acciones.get(2).click();
+                    else
+                        acciones.get(1).click();
+                    registroExiste = true;
+                    break;
+                }
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + text + "\" no encontrado");
+        }
+
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    public void editRowFromTable(String TablaRef, String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement(TablaRef)));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(TablaRef);
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
                 registroExiste = true;
                 break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            //List <WebElement> acciones = columnas.get(0).findElements(By.tagName("a"));
+            List <WebElement> acciones = fila.findElements(By.tagName("a"));
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                if(acciones.size()==0) {
+                    aggregatedAsserts.fail("Acciones de eliminar y/o editar no encontrado");
+                }
+                else {
+                    if (acciones.size() == 3)
+                        acciones.get(2).click();
+                    else
+                        acciones.get(1).click();
+                    registroExiste = true;
+                    break;
+                }
             }
         }
         if(!registroExiste) {
@@ -703,6 +831,54 @@ public class SeleniumFunctions {
         WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
         By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste=false;
+        int posicionColumna = 0;
+
+        List <WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+        //Se busca la posicion del dato de columna propocionado
+        for (WebElement ignored : encabezados) {
+            if(!encabezados.get(posicionColumna).getText().equalsIgnoreCase(datoColumna))
+                posicionColumna++;
+            else {
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Columna \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+            return;
+        }
+
+        registroExiste = false;
+
+        for (WebElement fila : filas) {
+            List <WebElement> columnas = fila.findElements(By.tagName("td"));
+
+            //Si columnas es igual a cero es la fila con los encabezados
+            if(columnas.size() == 0){
+                continue;
+            }
+
+            if (columnas.get(posicionColumna).getText().equalsIgnoreCase(text)) {
+                columnas.get(0).findElements(By.tagName("a")).get(0).click();
+                registroExiste = true;
+                break;
+            }
+        }
+        if(!registroExiste) {
+            aggregatedAsserts.fail("Registro \"" + datoColumna + "\" no encontrado");
+            aggregatedAsserts.processAllAssertions();
+        }
+    }
+
+    public void deleteRowFromTable(String tablaRef, String datoColumna, String text) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement(tablaRef)));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(tablaRef);
         WebElement tabla = driver.findElement(SeleniumElement);
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean registroExiste=false;
@@ -843,7 +1019,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateDeduction(String tipoDescuento, String valor) throws Exception {
+    public void validateDeduction(String tipoDescuento, String valor) {
         WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean sonFilasDescuentos=false;
@@ -880,7 +1056,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateReserve(String tipoReserva, String valor) throws Exception {
+    public void validateReserve(String tipoReserva, String valor) {
         WebElement tabla = driver.findElement(By.xpath("//body//table[2]"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         boolean tipoReservaExiste=false;
@@ -933,7 +1109,7 @@ public class SeleniumFunctions {
         aggregatedAsserts.processAllAssertions();
     }
 
-    public void validateNetValue(String valor) throws Exception {
+    public void validateNetValue(String valor) {
         WebElement tabla = driver.findElement(By.xpath("//div[@id='detalleHistorialPago']//table//tbody"));
         List <WebElement> filas = tabla.findElements(By.tagName("tr"));
         for (WebElement fila : filas) {
@@ -985,6 +1161,102 @@ public class SeleniumFunctions {
             }
         }
         aggregatedAsserts.processAllAssertions();
+    }
+
+    public void validarDatos(List<List<String>> rows) throws Exception {
+        WebDriverWait wait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumFunctions.getCompleteElement("Tabla")));
+        By SeleniumElement = SeleniumFunctions.getCompleteElement("Tabla");
+        WebElement tabla = driver.findElement(SeleniumElement);
+        List <WebElement> filas = tabla.findElements(By.tagName("tr"));
+        boolean registroExiste;
+
+        for (List<String> columns : rows) {
+
+            registroExiste = false;
+            int posicionColumna = 0;
+
+            List<WebElement> encabezados = tabla.findElements(By.tagName("th"));
+
+            //Se busca la posicion del dato de columna propocionado
+            for (WebElement ignored : encabezados) {
+                if (!encabezados.get(posicionColumna).getText().equalsIgnoreCase(columns.get(0).trim()))
+                    posicionColumna++;
+                else {
+                    registroExiste = true;
+                    break;
+                }
+            }
+            if (!registroExiste) {
+                aggregatedAsserts.fail("Columna \"" + columns.get(0).trim() + "\" no encontrada");
+                aggregatedAsserts.processAllAssertions();
+                return;
+            }
+
+            for (WebElement fila : filas) {
+                List<WebElement> columnas = fila.findElements(By.tagName("td"));
+
+                //Si columnas es igual a cero es la fila con los encabezados
+                if (columnas.size() == 0) {
+                    continue;
+                }
+
+                if (columnas.get(posicionColumna).getText().equalsIgnoreCase(columns.get(1).trim())) {
+                    break;
+                }
+                else
+                    aggregatedAsserts.fail("Texto NO coinciden - Sistema: " + columnas.get(posicionColumna).getText() + " - Prueba: " + columns.get(1).trim());
+            }
+        }
+        aggregatedAsserts.processAllAssertions();
+    }
+
+    private String getMonth(String mes){
+        String salida = "";
+
+        switch (mes) {
+            case "01":
+                salida = "ENE.";
+                break;
+            case "02":
+                salida = "FEB.";
+                break;
+            case "03":
+                salida = "MAR.";
+                break;
+            case "04":
+                salida = "ABR.";
+                break;
+            case "05":
+                salida = "MAY.";
+                break;
+            case "06":
+                salida = "JUN.";
+                break;
+            case "07":
+                salida = "JUL.";
+                break;
+            case "08":
+                salida = "AGO.";
+                break;
+            case "09":
+                salida = "SEP.";
+                break;
+            case "10":
+                salida = "OCT.";
+                break;
+            case "11":
+                salida = "NOV.";
+                break;
+            case "12":
+                salida = "DIC.";
+                break;
+        }
+
+        if(prop.getProperty("browser").equalsIgnoreCase("FIREFOX"))
+            salida = salida.substring(0,3);
+
+        return salida;
     }
 
 }
