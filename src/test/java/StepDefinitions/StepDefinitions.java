@@ -389,6 +389,16 @@ public class StepDefinitions{
         functions.deleteRowFromTable(tabla, columna, text);
     }
 
+    @Y("^Seleccionar registro con columna (.*?) de valor (.*?)$")
+    public void SeleccionarRegistroConColumnaDeValor(String columna, String text) throws Exception {
+        functions.selectRow(columna, text);
+    }
+
+    @Y("^Seleccionar registro de (.*?) con columna (.*?) de valor (.*?)$")
+    public void SeleccionarRegistroDeConColumnaDeValor(String tabla, String columna, String text) throws Exception {
+        functions.selectRowFromTable(tabla, columna, text);
+    }
+
     @Entonces("^Aplicar busqueda avanzada:")
     public void aplicarBusquedaAvanzada(List<List<String>> table) throws Exception {
         functions.advanceSearch(table);

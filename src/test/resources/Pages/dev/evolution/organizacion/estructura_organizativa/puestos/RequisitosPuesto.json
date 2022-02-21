@@ -1,0 +1,41 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Idiomas": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Idiomas"
+  },
+  "8-10Anios": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "8-10 años"
+  },
+  "AgregarRequisito": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='panel_der_contenido_centro']//a[1]"
+  },
+  "EliminarRequisito": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//td[@class='puesto_panel_der']//a[2]"
+  },
+  "EliminarTodos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//td[@class='puesto_panel_der']//a[3]"
+  },
+
+
+  "GuardarRequisitos": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarRequisito"
+  },
+  "RegresarAlListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListado"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "Messages"
+  }
+}
