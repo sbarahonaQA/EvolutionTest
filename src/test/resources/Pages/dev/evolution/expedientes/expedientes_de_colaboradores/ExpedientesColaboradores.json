@@ -55,6 +55,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Conceptos servicios médicos"
   },
+  "TiposTransaccionesFueraNomina": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de transacciones fuera de nómina"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
