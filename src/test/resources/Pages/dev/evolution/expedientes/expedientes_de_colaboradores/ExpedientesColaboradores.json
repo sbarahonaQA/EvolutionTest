@@ -75,6 +75,11 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Empleados"
   },
+  "TiposReclamosSeguroMedico": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de Reclamo de Seguro Médico"
+  },
+
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
