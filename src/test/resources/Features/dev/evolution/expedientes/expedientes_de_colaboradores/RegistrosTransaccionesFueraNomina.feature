@@ -2,9 +2,9 @@
 
 @expedientes
 @expedientes_colaboradores
-@registrostransaccionesfueranomina
-Característica: RegistrosTransaccionesFueraNomina
-  Pruebas para entidad RegistrosTransaccionesFueraNomina (Registros de Transacciones Fuera de Nomina)
+@registros_transacciones_fuera_de_planilla
+Característica: RegistrosTransaccionesFueraDePlanilla
+  Pruebas para entidad RegistrosTransaccionesFueraDePlanilla (Transacciones fuera de planilla)
 
   @test
   @Highest
@@ -111,7 +111,7 @@ Característica: RegistrosTransaccionesFueraNomina
   @test
   @Highest
   @PDS-1711
-  Escenario: Consultar un Tipo de estudio con información básica (PDS-1711)
+  Escenario: Consultar un Registro de transacción fuera del cálculo de planilla con información básica (PDS-1711)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
