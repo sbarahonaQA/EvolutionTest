@@ -2,9 +2,10 @@
 
 @organizacion
 @estructura_organizativa
+@puestos
 @responsabilidades
-Característica: responsabilidades
-  Pruebas para entidad responsabilidades
+Característica: ResponsabilidadesPuesto
+  Pruebas para entidad ResponsabilidadesPuesto
 
   @test
   @Highest

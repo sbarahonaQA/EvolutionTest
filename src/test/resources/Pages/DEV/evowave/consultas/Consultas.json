@@ -1,0 +1,22 @@
+{
+  "Eventos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[1]//mat-card[1]"
+  },
+  "Incapacidades": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[2]//mat-card[1]"
+  },
+  "MisMarcaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[3]//mat-card[1]"
+  },
+  "ReciboSalario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[4]//mat-card[1]"
+  },
+  "Vacaciones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div//div[5]//mat-card[1]"
+  }
+}
