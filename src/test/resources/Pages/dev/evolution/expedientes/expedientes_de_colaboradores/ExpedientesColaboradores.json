@@ -39,6 +39,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de seguros"
   },
+  "TitulosPersonales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Títulos personales"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
