@@ -24,7 +24,7 @@ Característica: Catetegorias de Motivo de retiro
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/CategoriasMotivoRetiro.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion     | Prueba de Creación  |
+      | Descripcion | Prueba de Creación |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba de Creación
@@ -32,7 +32,7 @@ Característica: Catetegorias de Motivo de retiro
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Prueba de Creación  |
+      | Descripcion | Prueba de Creación |
 
   @test
   @Highest
@@ -112,10 +112,8 @@ Característica: Catetegorias de Motivo de retiro
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 28                       |
-      | DescripcionRO     | Finalización de Contrato |
-
-
+      | CodigoRO      | 28                       |
+      | DescripcionRO | Finalización de Contrato |
 
   @test
   @Highest
