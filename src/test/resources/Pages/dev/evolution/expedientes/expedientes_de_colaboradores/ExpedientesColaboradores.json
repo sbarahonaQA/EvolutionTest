@@ -59,6 +59,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de transacciones fuera de nómina"
   },
+  "TiposReferencia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de Referencias"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
