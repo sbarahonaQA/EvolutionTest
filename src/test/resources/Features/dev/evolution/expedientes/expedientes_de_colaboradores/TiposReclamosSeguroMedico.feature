@@ -2,9 +2,9 @@
 
 @expedientes
 @expedientes_colaboradores
-@tiposreclamosseguromedico
-Característica: TiposReclamosSeguroMedico
-  Pruebas para entidad TiposReclamosSeguroMedico (Tipos de Reclamos de Seguro Médico)
+@tipos_reclamos_seguro_medico
+Característica: TiposReclamoSeguroMedico
+  Pruebas para entidad TiposReclamoSeguroMedico (Tipos de reclamo de seguro médico)
 
   @test
   @Highest
@@ -110,9 +110,8 @@ Característica: TiposReclamosSeguroMedico
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO         | 5              |
-      | NombreRO         | Para Consultar |
-
+      | CodigoRO | 5              |
+      | NombreRO | Para Consultar |
 
   @test
   @Highest
