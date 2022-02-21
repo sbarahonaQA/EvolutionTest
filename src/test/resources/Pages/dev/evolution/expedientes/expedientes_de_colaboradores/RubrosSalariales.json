@@ -1,0 +1,87 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRubrosSalariales_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRubrosSalariales_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRubrosSalariales_delete"
+  },
+
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRubrosSalariales_edit"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlRubrosSalariales_txtQuickSearch"
+  },
+
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+
+  "EsSalarioBase": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsSalarioBase",
+    "FieldType": "Checkbox"
+  },
+
+  "Compania": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCompania",
+    "FieldType": "Lista"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+  },
+
+  "DescripcionRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+  },
+
+  "EsSalarioBaseRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+  },
+
+  "CompaniaRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[4]/span"
+  },
+
+
+  "GuardarRubrosSalariales": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarRubroSalarial"
+  },
+
+  "RegresarAListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarRubrosSalariales"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+}
