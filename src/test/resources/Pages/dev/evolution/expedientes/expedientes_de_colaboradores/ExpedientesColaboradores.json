@@ -51,6 +51,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Parentescos"
   },
+  "ConceptosServiciosMedicos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Conceptos servicios médicos"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
