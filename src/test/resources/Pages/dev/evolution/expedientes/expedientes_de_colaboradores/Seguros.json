@@ -96,10 +96,47 @@
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
   },
+  "RangoInicialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+  "RangoFinalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[6]//span[1]"
+  },
+  "CuotaSeguroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[7]//span[1]"
+  },
+  "CuotaFamiliarRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[8]//span[1]"
+  },
+  "PrimaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[9]//span[1]"
+  },
+  "PolizaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[10]//span[1]"
+  },
   "MonedaRO": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[11]/span"
   },
+  "CertificadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[12]//span[1]"
+  },
+  "AceptaBeneficiarioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[13]//span[1]"
+  },
+  "RequierePorcentajeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[14]//span[1]"
+  },
+
   "Guardar": {
     "GetFieldBy": "Name",
     "ValueToFind": "btnGuardarSeguroMedico"

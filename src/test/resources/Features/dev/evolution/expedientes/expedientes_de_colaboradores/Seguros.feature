@@ -26,15 +26,8 @@ Característica: Seguros
     * Llenar formulario:
       | TipoSeguro    | Seguros de Gastos Médicos |
       | Descripcion   | Farmacos recetados        |
-      | Abreviatura   | DRRS                      |
-      | RangoInicial  | 1                         |
-      | RangoFinal    | 1                         |
-      | CuotaSeguro   | 1                         |
-      | CuotaFamiliar | 1                         |
-      | Prima         | 1                         |
-      | Poliza        | 1                         |
+      | Abreviatura   | PDS-1675                  |
       | codigoMoneda  | GTQ                       |
-      | Certificado   | 1                         |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Farmacos recetados
@@ -44,15 +37,8 @@ Característica: Seguros
     Entonces Validar informacion:
       | TipoSeguro       | Seguros de Gastos Médicos |
       | Descripcion      | Farmacos recetados        |
-      | Abreviatura      | DRRS                      |
-      | RangoInicial     | 1                         |
-      | RangoFinal       | 1                         |
-      | CuotaSeguro      | 1                         |
-      | CuotaFamiliar    | 1                         |
-      | Prima            | 1                         |
-      | Poliza           | 1                         |
+      | Abreviatura      | PDS-1675                  |
       | codigoMonedaText | Quetzales                 |
-      | Certificado      | 1                         |
 
   @test
   @Highest
@@ -75,11 +61,17 @@ Característica: Seguros
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | TipoSeguro   | Seguros de Vida |
-      | Descripcion  | Editado         |
-      | Abreviatura  | ED1679          |
-      | codigoMoneda | GTQ             |
-      | Certificado  | 2               |
+      | TipoSeguro    | Seguros de Vida |
+      | Descripcion   | Editado         |
+      | Abreviatura   | ED1679          |
+      | RangoInicial  | 1000            |
+      | RangoFinal    | 5000            |
+      | CuotaSeguro   | 150             |
+      | CuotaFamiliar | 25              |
+      | Prima         | 75              |
+      | Poliza        | PDS-1679        |
+      | codigoMoneda  | GTQ             |
+      | Certificado   | 2               |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Refrescar pagina
@@ -91,6 +83,12 @@ Característica: Seguros
       | TipoSeguro       | Seguros de Vida |
       | Descripcion      | Editado         |
       | Abreviatura      | ED1679          |
+      | RangoInicial     | 1000            |
+      | RangoFinal       | 5000            |
+      | CuotaSeguro      | 150             |
+      | CuotaFamiliar    | 25              |
+      | Prima            | 75              |
+      | Poliza           | PDS-1679        |
       | codigoMonedaText | Quetzales       |
       | Certificado      | 2               |
 
@@ -133,16 +131,25 @@ Característica: Seguros
     * Click a Catalogo
     * Click a Seguros
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Seguros.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Seguro de Vida Categoria I
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino Para Consultar
     * Click a PrimerElementoDeSmartlist
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO       | 1                          |
-      | TipoDeSeguroRO | Seguros de Vida            |
-      | DescripcionRO  | Seguro de Vida Categoria I |
-      | AbreviaturaRO  | N/A                        |
-      | MonedaRO       | Dólares                    |
+      | CodigoRO             | 12              |
+      | TipoDeSeguroRO       | Seguros de Vida |
+      | DescripcionRO        | Para Consultar  |
+      | AbreviaturaRO        | PC7489          |
+      | RangoInicialRO       | 7,000.00        |
+      | RangoFinalRO         | 2,500.00        |
+      | CuotaSeguroRO        | 250.00          |
+      | CuotaFamiliarRO      | 15.00           |
+      | PrimaRO              | 10.00           |
+      | PolizaRO             | PDS-1676        |
+      | MonedaRO             | Dólares         |
+      | CertificadoRO        | 5               |
+      | AceptaBeneficiarioRO | Sí              |
+      | RequierePorcentajeRO | Sí              |
 
   @test
   @Highest
