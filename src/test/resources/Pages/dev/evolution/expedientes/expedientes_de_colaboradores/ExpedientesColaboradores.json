@@ -43,6 +43,14 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Títulos personales"
   },
+  "MotivodeRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Motivos de retiro"
+  },
+  "Parentescos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Parentescos"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
