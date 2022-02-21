@@ -3,8 +3,8 @@
 @expedientes
 @expedientes_colaboradores
 @beneficios_adicionales
-Característica: Beneficios Adicionales
-  Pruebas para BeneficiosAdicionales (BeneficiosAdicionalesRecibidosEmpresasAnteriores)
+Característica: BeneficiosAdicionales
+  Pruebas para entidad BeneficiosAdicionalesRecibidosEmpresasAnteriores
 
   @test
   @Highest
@@ -24,8 +24,8 @@ Característica: Beneficios Adicionales
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/BeneficiosAdicionales.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion | Creación Básica  |
-      | codigoPais  | Todos            |
+      | Descripcion | Creación Básica |
+      | codigoPais  | Todos           |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creación Básica
@@ -33,8 +33,8 @@ Característica: Beneficios Adicionales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion | Creación Básica  |
-      | codigoPais  | Todos            |
+      | Descripcion | Creación Básica |
+      | codigoPais  | Todos           |
 
   @test
   @Highest
@@ -114,11 +114,9 @@ Característica: Beneficios Adicionales
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO      | 11                             |
+      | CodigoRO      | 8                              |
       | DescripcionRO | Para Consultar Archivo y Campo |
       | PaisRO        | Todos                          |
-
-
 
   @test
   @Highest

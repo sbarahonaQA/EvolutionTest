@@ -55,7 +55,7 @@ Característica: TiposReferencia
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion    | Prueba Editada |
+      | Descripcion | Prueba Editada |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Refrescar pagina
@@ -64,7 +64,7 @@ Característica: TiposReferencia
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion    | Prueba Editada |
+      | Descripcion | Prueba Editada |
 
 
   @test
@@ -111,8 +111,8 @@ Característica: TiposReferencia
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO         | 2       |
-      | DescripcionRO    | Laboral |
+      | CodigoRO      | 2       |
+      | DescripcionRO | Laboral |
 
 
   @test

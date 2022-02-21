@@ -118,5 +118,9 @@
   "ObjetivoEstrategico": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Objetivos Estratégicos"
+  },
+  "ModificacionTabuladorSalarial": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Modificación al tabulador Salarial"
   }
 }
