@@ -1,0 +1,28 @@
+{
+  "Desde": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-form-field[1]//div[1]//div[1]//div[4]",
+    "FieldType": "FechaEvoWave"
+  },
+  "Hasta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-form-field[2]//div[1]//div[1]//div[4]//mat-datepicker-toggle[1]//button[1]",
+    "FieldType": "FechaEvoWave"
+  },
+  "SelectorAnio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-calendar-period-button mat-button mat-button-base']"
+  },
+  "Consultar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']"
+  },
+  "Tabla": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//table[@class='mat-table cdk-table']"
+  },
+  "MisIncapacidades": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='ng-star-inserted']//div[2]//span[1]"
+  }
+}
