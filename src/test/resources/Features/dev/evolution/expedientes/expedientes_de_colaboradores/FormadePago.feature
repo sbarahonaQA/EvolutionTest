@@ -2,9 +2,9 @@
 
 @expedientes
 @expedientes_colaboradores
-@FormadePago
-Característica: Forma de Pago
-  Pruebas para entidad Forma de Pago (Forma de Pago)
+@formas_de_pago
+Característica: FormasPago
+  Pruebas para entidad FormasPago (Forma de Pago)
 
   @test
   @Highest
@@ -24,24 +24,23 @@ Característica: Forma de Pago
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/FormadePago.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion      | Creacion Basica |
-      | RequiereCuenta   | False |
+      | Descripcion    | Creacion Basica |
+      | RequiereCuenta | False           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarFormaPago
-    * Esperar 4 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion      | Creacion Basica |
-      | RequiereCuenta   | False |
+      | Descripcion    | Creacion Basica |
+      | RequiereCuenta | False           |
 
 
   @test
   @Highest
   @PDS-1464
-  Escenario: Guardar una Forma de Pagocon los campos en blanco (PDS-1464)
+  Escenario: Guardar una Forma de Pago con los campos en blanco (PDS-1464)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -81,18 +80,17 @@ Característica: Forma de Pago
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion      | Prueba Editada|
-      | RequiereCuenta   | True |
+      | Descripcion    | Prueba Editada |
+      | RequiereCuenta | True           |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarFormaPago
-    * Esperar 3 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Prueba Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion      | Prueba Editada |
-      | RequiereCuenta   | True |
+      | Descripcion    | Prueba Editada |
+      | RequiereCuenta | True           |
 
   @test
   @Highest
@@ -138,8 +136,9 @@ Característica: Forma de Pago
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO          | 4 |
-      | DescripcionRO     | Transferencia Bancaria  |
+      | CodigoRO         | 4                      |
+      | DescripcionRO    | Transferencia Bancaria |
+      | RequiereCuentaRO | Sí                     |
 
 
   @test

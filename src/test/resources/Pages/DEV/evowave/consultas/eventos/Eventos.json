@@ -1,0 +1,6 @@
+{
+  "dummy": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "."
+  }
+}
