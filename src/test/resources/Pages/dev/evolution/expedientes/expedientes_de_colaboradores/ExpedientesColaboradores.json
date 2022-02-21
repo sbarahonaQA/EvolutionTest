@@ -63,6 +63,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de Referencias"
   },
+  "FormadePago": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Formas de pago"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
