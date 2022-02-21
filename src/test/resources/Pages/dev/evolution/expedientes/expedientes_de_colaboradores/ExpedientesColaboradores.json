@@ -71,6 +71,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tipos de direcciones"
   },
+  "Empleados": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Empleados"
+  },
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
