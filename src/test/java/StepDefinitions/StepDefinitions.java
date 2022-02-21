@@ -248,6 +248,12 @@ public class StepDefinitions{
         functions.waitForElementVisible(element);
     }
 
+    @Entonces("^Esperar que el elemento (.*?) sea clickeable$")
+    public void esperarQueElElementoSeaClickeable(String element) throws Exception
+    {
+        functions.waitForElementClickable(element);
+    }
+
     @Entonces("^Esperar que el elemento (.*?) deje de estar visible$")
     public void esperarQueElElementoDejeDeEstarVisible(String element) throws Exception
     {
@@ -426,5 +432,17 @@ public class StepDefinitions{
     @Entonces("Comprobar que las horas de (.*) sean (.*?)")
     public void comprobarQueLasHorasDeSean(String tipo, String valor) {
         functions.validateHours(tipo, valor);
+    }
+
+    @Dado("^que carga EvolutionWave")
+    public void queCargaEvolutionWave() throws IOException {
+        String sitioPruebas = functions.readProperties("servidor") + functions.readProperties("instanciaEvoWave");
+        log.info("Cargando URL: " + sitioPruebas);
+        driver.get(sitioPruebas);
+    }
+
+    @Entonces("^Validar datos:")
+    public void validarDatos(List<List<String>> table) throws Exception {
+        functions.validarDatos(table);
     }
 }

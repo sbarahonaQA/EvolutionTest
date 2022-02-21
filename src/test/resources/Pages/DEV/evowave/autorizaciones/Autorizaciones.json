@@ -1,0 +1,6 @@
+{
+  "TotalAutorizaciones": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "mat-paginator-range-label"
+  }
+}
