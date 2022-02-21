@@ -24,7 +24,7 @@ Característica: TiposContratos
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposEstudios.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion    | Tipo Estudio PDS-1597  |
+      | Descripcion | Tipo Estudio PDS-1597 |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo Estudio PDS-1597
@@ -32,7 +32,7 @@ Característica: TiposContratos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion    | Tipo Estudio PDS-1597  |
+      | Descripcion | Tipo Estudio PDS-1597 |
 
   @test
   @Highest
