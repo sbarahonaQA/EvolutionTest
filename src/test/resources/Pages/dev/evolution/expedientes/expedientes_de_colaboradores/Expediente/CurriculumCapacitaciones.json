@@ -1,11 +1,15 @@
 {
-  "Tabla": {
-    "GetFieldBy": "ClassName",
-    "ValueToFind": "tabla_grid"
+  "TablaProgramado": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table[1]"
+  },
+  "TablaFinalizado": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//table[2]"
   },
   "Nuevo": {
-    "GetFieldBy": "LinkText",
-    "ValueToFind": "Nueva capacitación"
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Nueva capacitación')]"
   },
   "RegistroConsultar": {
     "GetFieldBy": "LinkText",
@@ -76,7 +80,16 @@
     "ValueToFind": "codigoPais_Text",
     "FieldType": "Texto"
   },
-
+  "EsImpartidaInternamente": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsImpartidaInternamente",
+    "FieldType": "Checkbox"
+  },
+  "EsImpartidaLocalmente": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsImpartidaLocalmente",
+    "FieldType": "Checkbox"
+  },
   "Duracion": {
     "GetFieldBy": "Id",
     "ValueToFind": "Duracion",
@@ -102,63 +115,63 @@
 
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[1]/span"
+    "ValueToFind": "//body//div[@id='innerright']//div//div//div//div//div[1]//span[1]"
   },
 
   "NombreDeCapacitaciónRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[2]/span"
+    "ValueToFind": "//body//div[@id='innerright']//div//div//div[2]//span[1]"
   },
 
   "codigoTipoEventoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[3]/span"
+    "ValueToFind": "//div[@id='main']//div[3]//span[1]"
   },
 
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[4]/span"
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]//div[1]"
   },
 
   "TemaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[5]/span"
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]//div[1]"
   },
 
   "InstitucionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[6]/span"
+    "ValueToFind": "//div[6]//span[1]//div[1]"
   },
 
   "InstructoresRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[7]/span"
+    "ValueToFind": "//div[7]//span[1]//div[1]"
   },
 
   "NotaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[8]/text()",
+    "ValueToFind": "//div[@id='right']//div[8]",
     "FieldType": "Texto"
   },
 
   "FechaInicioRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[9]/span"
+    "ValueToFind": "//div[9]//span[1]"
   },
 
   "FechaFinRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[10]/span"
+    "ValueToFind": "//div[10]//span[1]"
   },
 
   "DuracionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[13]/span"
+    "ValueToFind": "//div[13]//span[1]"
   },
 
   "CostoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/form/div[2]/div/div/fieldset/div[14]/span"
+    "ValueToFind": "//div[14]//span[1]"
   },
 
   "ResultadoValueList": {
