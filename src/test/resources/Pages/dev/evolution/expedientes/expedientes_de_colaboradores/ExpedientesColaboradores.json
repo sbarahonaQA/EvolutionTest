@@ -103,5 +103,9 @@
   "RubrosSalariales": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Rubros salariales"
+  },
+  "EstadoReclamoSeguro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Estados del Reclamo de Seguro Médico"
   }
 }
