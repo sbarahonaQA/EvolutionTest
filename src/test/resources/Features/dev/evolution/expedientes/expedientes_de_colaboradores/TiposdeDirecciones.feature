@@ -2,14 +2,14 @@
 
 @expedientes
 @expedientes_colaboradores
-@Tipo_de_Direcciones
-Característica: Tipos de Direcciones
-  Pruebas para entidad Tipos de Direcciones (Tipos de Direcciones)
+@tipo_de_direcciones
+Característica: TiposDirecciones
+  Pruebas para entidad TiposDirecciones (Tipos de Direcciones)
 
   @test
   @Highest
   @PDS-1607
-  Escenario: Crear un Tipos de Direcciones con información básica (PDS-1607)
+  Escenario: Crear un Tipo de dirección con información básica (PDS-1607)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -27,7 +27,6 @@ Característica: Tipos de Direcciones
       | Nombre   | Creacion Basica |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTiposdeDirecciones
-    * Esperar 4 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Creacion Basica
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
@@ -35,11 +34,10 @@ Característica: Tipos de Direcciones
     Entonces Validar informacion:
       | Nombre   | Creacion Basica |
 
-
   @test
   @Highest
   @PDS-1609
-  Escenario: Guardar un Tipos de Direcciones con los campos en blanco (PDS-1609)
+  Escenario: Guardar un Tipo de dirección con los campos en blanco (PDS-1609)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -61,7 +59,7 @@ Característica: Tipos de Direcciones
   @test
   @Highest
   @PDS-1610
-  Escenario: Editar un TiposdeDirecciones con información básica(PDS-1610)
+  Escenario: Editar un Tipo de dirección con información básica (PDS-1610)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -79,21 +77,20 @@ Característica: Tipos de Direcciones
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre            | Información Básica Editada |
+      | Nombre | Información Básica Editada |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTiposdeDirecciones
-    * Esperar 3 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Información Básica Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre             | Información Básica Editada |
+      | Nombre | Información Básica Editada |
 
   @test
   @Highest
-  @PDS-1669
-  Escenario: Eliminar un Motivo de Retiro(PDS-1669)
+  @PDS-1611
+  Escenario: Eliminar un Tipo de dirección (PDS-1611)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -116,7 +113,7 @@ Característica: Tipos de Direcciones
   @test
   @Highest
   @PDS-1608
-  Escenario: Consultar un Tipos de Direcciones con información básica (PDS-1608)
+  Escenario: Consultar un Tipo de dirección con información básica (PDS-1608)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -134,8 +131,8 @@ Característica: Tipos de Direcciones
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO        | 1          |
-      | NombreRO        | Residencia |
+      | CodigoRO | 1          |
+      | NombreRO | Residencia |
 
   @test
   @Highest

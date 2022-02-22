@@ -3,12 +3,12 @@
 @expedientes
 @expedientes_colaboradores
 @MotivodeRetiro
-Característica: Aficiones
-  Pruebas para entidad Aficiones (Aficiones)
+Característica: MotivosRetiro
+  Pruebas para entidad MotivosRetiro (Motivos de retiro)
 
   @test
   @Highest
-  @PDS-1525
+  @PDS-1647
   Escenario: Crear un Motivo de retiro con información básica (PDS-1647)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
@@ -24,14 +24,14 @@ Característica: Aficiones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/MotivodeRetiro.json
     * Click a Nuevo
     * Llenar formulario:
-      | Compania            | ASEINFO Corporativo |
-      | Formulario          | Encuesta de retiro |
+      | Compania   | ASEINFO Corporativo |
+      | Formulario | Encuesta de retiro |
     * Click a agregarFormulario
     * Llenar formulario:
-      | Nombre                   | Creacion Basica |
-      | PuedeEditarParams        | True |
-      | PermiteRecontratacion    | True |
-      | codigoCategoria          | Despido |
+      | Nombre                | Creacion Basica |
+      | PuedeEditarParams     | True |
+      | PermiteRecontratacion | True |
+      | codigoCategoria       | Despido |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarMotivoRetiro
     * Esperar 4 segundos
@@ -40,10 +40,10 @@ Característica: Aficiones
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre                   | Creacion Basica |
-      | PuedeEditarParams        | True |
-      | PermiteRecontratacion    | True |
-      | codigoCategoria          | Despido |
+      | Nombre                | Creacion Basica |
+      | PuedeEditarParams     | True |
+      | PermiteRecontratacion | True |
+      | codigoCategoria       | Despido |
 
 
   @test
@@ -65,8 +65,9 @@ Característica: Aficiones
     * Click a Nuevo
     * Click a GuardarMotivoRetiro
     * Adjuntar captura de pantalla al reporte
-    * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto El nombre es requerido
+    * Esperar que el elemento MensajeError este visible
+    Entonces Prueba exitosa si elemento MensajeError contiene texto El nombre es requerido
+    * Prueba exitosa si elemento MensajeError contiene texto La categoría es requerida
 
   @test
   @Highest
@@ -89,10 +90,10 @@ Característica: Aficiones
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Nombre                   | Prueba Editada |
-      | PuedeEditarParams        | True |
-      | PermiteRecontratacion    | True |
-      | codigoCategoria          | Renuncia |
+      | Nombre                | Prueba Editada |
+      | PuedeEditarParams     | True |
+      | PermiteRecontratacion | True |
+      | codigoCategoria       | Renuncia |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarMotivoRetiro
     * Esperar 3 segundos
@@ -101,10 +102,10 @@ Característica: Aficiones
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre                   | Prueba Editada |
-      | PuedeEditarParams        | True |
-      | PermiteRecontratacion    | True |
-      | codigoCategoria          | Renuncia |
+      | Nombre                | Prueba Editada |
+      | PuedeEditarParams     | True |
+      | PermiteRecontratacion | True |
+      | codigoCategoria       | Renuncia |
 
   @test
   @Highest
@@ -150,10 +151,10 @@ Característica: Aficiones
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre                   | Despido Injustificado |
-      | PuedeEditarParams        | True |
-      | PermiteRecontratacion    | True |
-      | codigoCategoria          | Renuncia |
+      | CodigoRO            | 2                     |
+      | NombreRO            | Despido Injustificado |
+      | PuedeEditarParamsRO | Sí                    |
+      | Categoria           | Renuncia              |
 
   @test
   @Highest

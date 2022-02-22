@@ -2,14 +2,14 @@
 
 @expedientes
 @expedientes_colaboradores
-@Rubros_Salariales
-Característica: Rubros Salariales
-  Pruebas para entidad Rubros Salariales (Rubros Salariales)
+@rubros_salariales
+Característica: RubrosSalariales
+  Pruebas para entidad RubrosSalariales (Rubros Salariales)
 
   @test
   @Highest
   @PDS-1627
-  Escenario: Crear un Rubros Salariales con información básica (PDS-1627)
+  Escenario: Crear un Rubro salarial con información básica (PDS-1627)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -24,26 +24,24 @@ Característica: Rubros Salariales
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/RubrosSalariales.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion     | Impuesto sobre la renta |
-      | EsSalarioBase   | True |
-      | Compania        | ASEINFO Corporativo |
+      | Descripcion   | Impuesto sobre la renta |
+      | EsSalarioBase | True                    |
+      | Compania      | ASEINFO Corporativo     |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarRubrosSalariales
-    * Esperar 3 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Impuesto sobre la renta
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion     | Impuesto sobre la renta |
-      | EsSalarioBase   | True |
-      | Compania        | ASEINFO Corporativo |
-
+      | Descripcion   | Impuesto sobre la renta |
+      | EsSalarioBase | True                    |
+      | Compania      | ASEINFO Corporativo     |
 
   @test
   @Highest
   @PDS-1638
-  Escenario: Guardar un Rubros Salariales con los campos en blanco (PDS-1638)
+  Escenario: Guardar un Rubro salarial con los campos en blanco (PDS-1638)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -65,7 +63,7 @@ Característica: Rubros Salariales
   @test
   @Highest
   @PDS-1640
-  Escenario: Editar un Rubros Salariales con información básica(PDS-1640)
+  Escenario: Editar un Rubro salarial con información básica (PDS-1640)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -83,25 +81,24 @@ Característica: Rubros Salariales
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion     | Editado |
-      | EsSalarioBase   | True |
-      | Compania        | ASEINFO Corporativo |
+      | Descripcion   | Editado             |
+      | EsSalarioBase | True                |
+      | Compania      | ASEINFO Corporativo |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarRubrosSalariales
-    * Esperar 3 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Editado
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion     | Editado |
-      | EsSalarioBase   | True |
-      | Compania        | ASEINFO Corporativo |
+      | Descripcion   | Editado             |
+      | EsSalarioBase | True                |
+      | Compania      | ASEINFO Corporativo |
 
   @test
   @Highest
   @PDS-1639
-  Escenario: Eliminar un Rubros Salariales(PDS-1639)
+  Escenario: Eliminar un Rubro salarial (PDS-1639)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -124,7 +121,7 @@ Característica: Rubros Salariales
   @test
   @Highest
   @PDS-1628
-  Escenario: Consultar un Rubros Salariales con información básica (PDS-1628)
+  Escenario: Consultar un Rubro salarial con información básica (PDS-1628)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -142,14 +139,14 @@ Característica: Rubros Salariales
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | DescripcionRO     | Salario |
-      | EsSalarioBaseRO   | Sí |
-      | CompaniaRO        | ASEINFO Corporativo |
+      | DescripcionRO   | Salario             |
+      | EsSalarioBaseRO | Sí                  |
+      | CompaniaRO      | ASEINFO Corporativo |
 
   @test
   @Highest
   @PDS-1626
-  Escenario: Ver el listado de RubrosSalariales (PDS-1626)
+  Escenario: Ver el listado de Rubros salariales (PDS-1626)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
