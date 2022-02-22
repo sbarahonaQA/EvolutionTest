@@ -1,0 +1,107 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlEstadoReclamoSeguroMedico_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlEstadoReclamoSeguroMedico_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlEstadoReclamoSeguroMedico_delete"
+  },
+
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlEstadoReclamoSeguroMedico_edit"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlEstadoReclamoSeguroMedico_txtQuickSearch"
+  },
+
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion"
+  },
+
+  "Orden": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Orden"
+  },
+
+  "EsRechazado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsRechazado",
+    "FieldType": "Checkbox"
+  },
+
+  "EsFinalizado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsFinalizado",
+    "FieldType": "Checkbox"
+  },
+
+  "RequiereMonto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "RequiereMonto",
+    "FieldType": "Checkbox"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+
+  "NombreRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+
+  "OrdenRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+
+  "EsRechazadoRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]"
+  },
+
+  "EsFinalizadoRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]"
+  },
+
+  "RequiereMontoRO": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[6]"
+  },
+
+  "GuardarEstadoReclamoSeguroMedico": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarEstadoReclamoSeguroMedico"
+  },
+
+  "RegresarAListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEstadoReclamoSeguroMedico"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  }
+}

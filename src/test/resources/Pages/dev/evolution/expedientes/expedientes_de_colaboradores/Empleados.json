@@ -1,0 +1,198 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_nuevoExpediente"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_edit"
+  },
+  "codigoPaisDigita": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPaisDigita",
+    "FieldType": "Lista"
+  },
+  "codigoTituloPersonal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTituloPersonal",
+    "FieldType": "Lista"
+  },
+  "PrimerNombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PrimerNombre",
+    "FieldType": "Texto"
+  },
+  "SegundoNombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "SegundoNombre",
+    "FieldType": "Texto"
+  },
+  "PrimerApellido": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PrimerApellido",
+    "FieldType": "Texto"
+  },
+  "SegundoApellido": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "SegundoApellido",
+    "FieldType": "Texto"
+  },
+  "ApellidoCasada": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ApellidoCasada",
+    "FieldType": "Texto"
+  },
+  "OtrosNombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "OtrosNombre",
+    "FieldType": "Texto"
+  },
+  "NombreUsual": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "NombreUsual",
+    "FieldType": "Texto"
+  },
+  "Sexo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Sexo",
+    "FieldType": "Radio"
+  },
+  "EstadoCivil": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstadoCivil",
+    "FieldType": "Lista"
+  },
+  "Profesion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Profesion",
+    "FieldType": "Texto"
+  },
+  "Nacionalidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPaisNacionalidad",
+    "FieldType": "Lista"
+  },
+  "FechaNacimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaNacimiento",
+    "FieldType": "Fecha"
+  },
+  "Email": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Email",
+    "FieldType": "Texto"
+  },
+  "EmailInterno": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EmailInterno",
+    "FieldType": "Texto"
+  },
+  "TelefonoMovil": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TelefonoMovil",
+    "FieldType": "Texto"
+  },
+
+  "TelefonoMovilInterno": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EmailInterno",
+    "FieldType": "TelefonoMovilInterno"
+  },
+
+  "codigoPaisNacimiento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPaisNacimiento",
+    "FieldType": "Lista"
+  },
+  "codigoDepartamento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoDepartamento",
+    "FieldType": "Lista"
+  },
+  "codigoMunicipio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoMunicipio",
+    "FieldType": "Lista"
+  },
+  "PrimerNombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[3]/tbody/tr[2]/td[2]"
+  },
+  "SegundoNombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[3]/tbody/tr[3]/td[2]"
+  },
+  "PrimerApellidoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[3]/tbody/tr[4]/td[2]"
+  },
+  "SegundoApellidoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[3]/tbody/tr[5]/td[2]"
+  },
+  "EdadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[3]/tbody/tr[10]/td[2]"
+  },
+  "EstadoCivilRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[4]/tbody/tr[1]/td[2]"
+  },
+  "ProfesionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[4]/tbody/tr[2]/td[2]"
+  },
+  "NacionalidadRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[4]/tbody/tr[3]/td[2]"
+  },
+  "FechaNacimientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div[1]/fieldset/div/table[4]/tbody/tr[4]/td[2]"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarExpediente"
+  },
+  "Continuar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btContinuar"
+  },
+  "Regresar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarExpediente"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

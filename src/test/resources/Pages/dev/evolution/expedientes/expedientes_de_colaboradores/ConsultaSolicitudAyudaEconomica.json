@@ -1,0 +1,74 @@
+{
+
+  "Consultar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlConslutasolicitudesAyudaEconomica_details"
+  },
+
+  "codigoPais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+  },
+  "SolicitanteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+  },
+  "MotivoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[4]/span"
+  },
+  "NombreFallecidoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[5]/span"
+  },
+  "FechaFallecimientoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[6]/span"
+  },
+  "ParentescoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[7]/span"
+  },
+  "ComentariosRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"FieldComentarios\"]/span/div"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarBeneficioAdicionalRecibidoEmpresaAnterior"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAficion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlConslutasolicitudesAyudaEconomica_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

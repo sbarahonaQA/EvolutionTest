@@ -61,8 +61,8 @@ Característica: GruposCorporativos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre    | Creación Básica |
-      | PaisTexto | Guatemala       |
+      | Nombre        | Creación Básica |
+      | PaisTexto     | Guatemala       |
 
   @test
   @Highest
@@ -95,8 +95,8 @@ Característica: GruposCorporativos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Nombre    | Para Editado Información |
-      | PaisTexto | El Salvador              |
+      | Nombre      | Para Editado Información |
+      | PaisTexto   | El Salvador              |
 
   @test
   @Highest
