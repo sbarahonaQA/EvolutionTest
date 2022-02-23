@@ -15,11 +15,11 @@
     "GetFieldBy": "Id",
     "ValueToFind": "smlExpedientes_edit"
   },
-  "CurriculumCapacitaciones": {
+  "Capacitaciones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Capacitaciones"
   },
-  "CurriculumCompetenciasCurriculares": {
+  "CompetenciasCurriculares": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencias curriculares"
   },
