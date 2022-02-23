@@ -514,6 +514,7 @@ public class SeleniumFunctions {
             By SeleniumElement = SeleniumFunctions.getCompleteElement(columns.get(0));
 
             //Desplazarse al elemento en cuestion
+            wait.until(ExpectedConditions.visibilityOfElementLocated(SeleniumElement));
             jse.executeScript("arguments[0].scrollIntoView(false);", driver.findElement(SeleniumElement));
 
             switch (FieldType){
@@ -579,11 +580,9 @@ public class SeleniumFunctions {
                 case "ValueList":
                     driver.findElement(SeleniumElement).clear();
                     driver.findElement(SeleniumElement).sendKeys(columns.get(1));
-                    driver.findElement(SeleniumElement).sendKeys(Keys.ARROW_DOWN);
                     //Esperar que la lista se despliegue
                     TimeUnit.SECONDS.sleep(1);
-                    driver.findElement(By.className("ac_even")).click();
-
+                    driver.findElement(By.xpath("//strong[contains(text(),'" + columns.get(1) +"')]")).click();
                     log.info(String.format("Al valuelist %s se le pone texto %s", columns.get(0), columns.get(1)));
                     break;
                 case "EmpleadoEvoWave":
