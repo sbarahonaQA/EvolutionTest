@@ -1,0 +1,12 @@
+{
+  "OtrasOpciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Otras Opciones"
+  },
+  "TiposIncrementos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos Incrementos"
+  }
+}
+
+
