@@ -22,11 +22,11 @@ Característica: Curriculum Capacitaciones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CurriculumCapacitaciones
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/curriculum/Capacitaciones.json
     * Click a Nuevo
     * Esperar que el elemento NombreDeCapacitación este visible
     * Llenar formulario:
@@ -70,11 +70,11 @@ Característica: Curriculum Capacitaciones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino 	Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CurriculumCapacitaciones
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/curriculum/Capacitaciones.json
     * Esperar que el elemento TablaProgramado este visible
     * Editar registro de TablaProgramado con columna Fecha de valor 2/9/2022 - 2/9/2022
     * Esperar que el elemento NombreDeCapacitación este visible
@@ -131,11 +131,11 @@ Característica: Curriculum Capacitaciones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CurriculumCapacitaciones
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/curriculum/Capacitaciones.json
     * Esperar que el elemento TablaProgramado este visible
     * Eliminar registro de TablaProgramado con columna Fecha de valor 2/8/2022 - 2/8/2022
     * Aceptar alerta
@@ -157,11 +157,11 @@ Característica: Curriculum Capacitaciones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CurriculumCapacitaciones
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/curriculum/Capacitaciones.json
     * Esperar que el elemento RegistroConsultar este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
@@ -194,11 +194,11 @@ Característica: Curriculum Capacitaciones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CurriculumCapacitaciones
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/curriculum/Capacitaciones.json
     * Esperar que el elemento TablaProgramado este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -220,11 +220,11 @@ Característica: Curriculum Capacitaciones
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a CurriculumCapacitaciones
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCapacitaciones.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/curriculum/Capacitaciones.json
     * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
