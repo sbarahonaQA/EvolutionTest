@@ -1,0 +1,12 @@
+{
+  "OtrasOpciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Otras Opciones"
+  },
+  "TiposReconocimiento": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de Reconocimiento"
+  }
+}
+
+
