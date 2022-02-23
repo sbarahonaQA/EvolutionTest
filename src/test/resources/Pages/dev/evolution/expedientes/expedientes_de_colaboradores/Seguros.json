@@ -1,0 +1,173 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSeguros_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSeguros_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSeguros_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSeguros_edit"
+  },
+  "TipoSeguro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoSeguro",
+    "FieldType": "Lista"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura",
+    "FieldType": "Texto"
+  },
+  "RangoInicial": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "RangoInicial",
+    "FieldType": "Texto"
+  },
+  "RangoFinal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "RangoFinal",
+    "FieldType": "Texto"
+  },
+  "CuotaSeguro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CuotaSeguro",
+    "FieldType": "Texto"
+  },
+  "CuotaFamiliar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CuotaFamiliar",
+    "FieldType": "Texto"
+  },
+  "Prima": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Prima",
+    "FieldType": "Texto"
+  },
+  "Poliza": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Poliza",
+    "FieldType": "Texto"
+  },
+  "codigoMoneda": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoMoneda",
+    "FieldType": "CodeCombo"
+  },
+  "codigoMonedaText": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoMoneda_Text",
+    "FieldType": "Texto"
+  },
+  "Certificado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Certificado",
+    "FieldType": "Texto"
+  },
+  "AceptaBeneficiario": {
+  "GetFieldBy": "Id",
+  "ValueToFind": "AceptaBeneficiario",
+  "FieldType": "CheckBox"
+},
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "TipoDeSeguroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+  "RangoInicialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+  "RangoFinalRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[6]//span[1]"
+  },
+  "CuotaSeguroRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[7]//span[1]"
+  },
+  "CuotaFamiliarRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div//div[8]//span[1]"
+  },
+  "PrimaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[9]//span[1]"
+  },
+  "PolizaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[10]//span[1]"
+  },
+  "MonedaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[11]/span"
+  },
+  "CertificadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[12]//span[1]"
+  },
+  "AceptaBeneficiarioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[13]//span[1]"
+  },
+  "RequierePorcentajeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[14]//span[1]"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarSeguroMedico"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAficion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSeguros_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

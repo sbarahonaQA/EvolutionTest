@@ -11,6 +11,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Nóminas"
   },
+  "Expedientes": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Expedientes"
+  },
   "Empresa": {
     "GetFieldBy": "Id",
     "ValueToFind": "companiaselector"

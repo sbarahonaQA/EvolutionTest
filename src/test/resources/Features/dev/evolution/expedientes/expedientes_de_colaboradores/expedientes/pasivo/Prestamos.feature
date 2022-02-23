@@ -2,9 +2,11 @@
 
 @expedientes
 @expedientes_colaboradores
-@prestamos
-Característica: Prestamos
-  Pruebas para entidad Prestamos
+@expedientes
+@pasivo
+@prestamos_expedientes
+Característica: PrestamosExpedientes
+  Pruebas para entidad PrestamosExpedientes (Prestamos realizados por el expediente)
 
 
   @test
@@ -20,13 +22,13 @@ Característica: Prestamos
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a Prestamos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/Prestamos.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expedientes/pasivo/Prestamos.json
     * Click a Nuevo
     * Esperar que el elemento NombreEntidad este visible
     * Llenar formulario:
@@ -60,13 +62,13 @@ Característica: Prestamos
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a Prestamos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/Prestamos.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expedientes/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Nombre de la entidad de valor Para Editar
     * Esperar que el elemento NombreEntidad este visible
@@ -101,13 +103,13 @@ Característica: Prestamos
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a Prestamos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/Prestamos.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expedientes/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
     * Eliminar registro con columna Nombre de la entidad de valor Para Eliminar
     * Aceptar alerta
@@ -127,13 +129,13 @@ Característica: Prestamos
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a Prestamos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/Prestamos.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expedientes/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
@@ -158,13 +160,13 @@ Característica: Prestamos
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a Prestamos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/Prestamos.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expedientes/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -184,13 +186,13 @@ Característica: Prestamos
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a Prestamos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/Prestamos.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expedientes/pasivo/Prestamos.json
     * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte

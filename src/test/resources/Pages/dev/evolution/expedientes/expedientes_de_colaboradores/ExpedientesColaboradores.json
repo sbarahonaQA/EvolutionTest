@@ -1,10 +1,111 @@
 {
+  "AFPs": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "AFPs"
+  },
   "Aficiones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Aficiones"
   },
+  "Carreras": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Carreras"
+  },
+  "BeneficiosAdicionales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Beneficios Adicionales"
+  },
+  "CategoriasMotivoRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Categorías de motivo de retiro"
+  },
+  "ConsultaSolicitudConstancia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de constancia"
+  },
+  "ConsultaSolicitudAyudaEconomica": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta de solicitudes de ayuda económica"
+  },
+  "TiposContratos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de contratos"
+  },
+  "TiposEstudios": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de estudios"
+  },
+  "TiposSeguros": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de seguros"
+  },
+  "TitulosPersonales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Títulos personales"
+  },
+  "MotivodeRetiro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Motivos de retiro"
+  },
+  "ConceptosServiciosMedicos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Conceptos servicios médicos"
+  },
+  "TiposTransaccionesFueraNomina": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de transacciones fuera de nómina"
+  },
+  "TiposReferencia": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de Referencias"
+  },
+  "FormadePago": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Formas de pago"
+  },
+  "RegistrosTransaccionesFueraNomina": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Registro de transacciones fuera de nómina"
+  },
+  "TiposdeDirecciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de direcciones"
+  },
+  "Empleados": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Empleados"
+  },
+  "TiposReclamosSeguroMedico": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de Reclamo de Seguro Médico"
+  },
+  "Seguros": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Seguros"
+  },
+
   "Catalogo": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Catálogo"
+  },
+  "Parentescos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Parentescos"
+  },
+  "Asociaciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Asociaciones"
+  },
+  "TiposdeDocumentos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de documentos"
+  },
+  "RubrosSalariales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Rubros salariales"
+  },
+  "EstadoReclamoSeguro": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Estados del Reclamo de Seguro Médico"
   }
 }
