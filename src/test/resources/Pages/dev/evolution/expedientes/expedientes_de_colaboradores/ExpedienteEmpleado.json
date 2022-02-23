@@ -55,6 +55,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencias Técnicas"
   },
+  "Prestamos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Préstamos"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
