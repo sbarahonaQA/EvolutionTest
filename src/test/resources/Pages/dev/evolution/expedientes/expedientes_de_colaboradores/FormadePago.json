@@ -40,17 +40,17 @@
 
   "CodigoRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+    "ValueToFind": "//body//div//div//div//div//fieldset//div[1]"
   },
 
   "DescripcionRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+    "ValueToFind": "//body//div//div//div//div//fieldset//div[2]"
   },
 
   "RequiereCuentaRO": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/text()"
+    "ValueToFind": "//body//div//div//div//div//fieldset//div[3]"
   },
 
   "GuardarFormaPago": {

@@ -1,16 +1,16 @@
 # language: es
 
-@organizacion
-@estructura_organizativa
-@puestos
-@CurriculumCompetenciasCurriculares
-Característica: Curriculum Competencias Curriculares
-  Pruebas para entidad Curriculum Competencias Curriculares
+@expedientes
+@expedientes_colaboradores
+@prestamos
+Característica: Prestamos
+  Pruebas para entidad Prestamos
+
 
   @test
   @Highest
-  @PDS-7524
-  Escenario: Crear una habilidad en expedientes con información básica (PDS-7524)
+  @PDS-7688
+  Escenario: Crear un Préstamo en expedientes con información básica (PDS-7688)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -22,38 +22,38 @@ Característica: Curriculum Competencias Curriculares
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Boris
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Esperar 3 segundos
-    * Click a CurriculumCompetenciasCurriculares
-    * Esperar 3 segundos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
+    * Click a Prestamos
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/pasivo/Prestamos.json
     * Click a Nuevo
-    * Esperar 3 segundos
+    * Esperar que el elemento NombreEntidad este visible
     * Llenar formulario:
-      | CodigoTipoRequisito   | Área de Estudio   |
-      | CodigoRequisito       | Area de trabajo Social |
-      | Dominio               | Medio |
-      | Metrico               | 75 |
+      | NombreEntidad | Para Creación Básica |
+      | Tipo          | Personal             |
+      | MonedaCodigo  | Dólares              |
+      | MontoOriginal | 1350.00              |
+      | SaldoActual   | 1300.00              |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Requisito de valor Area de Agronomía
+    * Editar registro con columna Nombre de la entidad de valor Para Creación Básica
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoTipoRequisito   | Área de Estudio   |
-      | CodigoRequisito       | Area de trabajo Social  |
-      | Dominio               | Medio |
-      | Metrico               | 75 |
+      | NombreEntidad | Para Creación Básica |
+      | Tipo          | Personal             |
+      | MonedaCodigo  | Dólares              |
+      | MontoOriginal | 1350.00              |
+      | SaldoActual   | 1300.00              |
 
   @test
   @Highest
-  @PDS-7528
-  Escenario: Editar una habilidad en expedientes con información básica(PDS-7528)
+  @PDS-7690
+  Escenario: Editar un Préstamo en expedientes con información básica (PDS-7690)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Expedientes
@@ -62,40 +62,39 @@ Característica: Curriculum Competencias Curriculares
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CurriculumCompetenciasCurriculares
-    * Esperar 3 segundos
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
+    * Click a Prestamos
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Requisito de valor Hidráulica
-    * Esperar 3 segundos
+    * Editar registro con columna Nombre de la entidad de valor Para Editar
+    * Esperar que el elemento NombreEntidad este visible
     * Llenar formulario:
-      | CodigoTipoRequisito   | Experiencia Requerida  |
-      | CodigoRequisito       | Tres años |
-      | Dominio               | Medio |
-      | TiempoExperiencia     | Prueba |
-      | Metrico               | 75 |
+      | NombreEntidad | Registro Editado |
+      | Tipo          | Personal         |
+      | MonedaCodigo  | Dólares          |
+      | MontoOriginal | 1500             |
+      | SaldoActual   | 1500             |
     * Adjuntar captura de pantalla al reporte
     * Click a Guardar
     * Esperar que el elemento Tabla este visible
-    * Editar registro con columna Requisito de valor Experiencia Requerida
+    * Editar registro con columna Nombre de la entidad de valor Registro Editado
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoTipoRequisito   | Experiencia Requerida  |
-      | CodigoRequisito       | Tres años |
-      | Dominio               | Medio |
-      | TiempoExperiencia     | Prueba |
-      | Metrico               | 75 |
+      | NombreEntidad | Registro Editado |
+      | Tipo          | Personal         |
+      | MonedaCodigo  | Dólares          |
+      | MontoOriginal | 1500             |
+      | SaldoActual   | 1500             |
 
   @test
   @Highest
-  @PDS-7529
-  Escenario: Eliminar una habilidad en expedientes (PDS-7529)
+  @PDS-7691
+  Escenario: Eliminar un préstamo en expedientes (PDS-7691)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Expedientes
@@ -104,22 +103,21 @@ Característica: Curriculum Competencias Curriculares
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Boris Fernando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CurriculumCompetenciasCurriculares
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
+    * Click a Prestamos
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
-    * Esperar 3 segundos
-    * Eliminar registro con columna Requisito de valor Prueba de Eliminar
+    * Eliminar registro con columna Nombre de la entidad de valor Para Eliminar
     * Aceptar alerta
     * Esperar que el elemento Mensaje este visible
-    Entonces Prueba exitosa si elemento Mensaje contiene texto Habilidad del empleo eliminada correctamente
+    Entonces Prueba exitosa si elemento Mensaje contiene texto Préstamo eliminado correctamente
 
   @test
   @Highest
-  @PDS-7521
-  Escenario: Consultar una habilidad en expedientes con información básica (PDS-7521)
+  @PDS-7684
+  Escenario: Consultar un Préstamo en expedientes con información básica (PDS-7684)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -131,30 +129,29 @@ Característica: Curriculum Competencias Curriculares
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CurriculumCompetenciasCurriculares
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
+    * Click a Prestamos
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
-    * Esperar 3 segundos
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                | 4 |
-      | CodigoTipoRequisitoRO   | Área de Estudio  |
-      | CodigoRequisitoRO       | Prueba de Requisitos |
-      | DominioRO               | Medio |
-      | TiempoExperienciaRO     | Prueba |
-      | MetricoRO               | 75 |
+      | CodigoRO        | 1              |
+      | NombreEntidadRO | Para Consultar |
+      | TipoRO          | Personal       |
+      | MonedaRO        | Dólares        |
+      | MontoOriginalRO | 350.00         |
+      | SaldoActualRO   | 300.00         |
 
   @test
   @Highest
-  @PDS-6693
-  Escenario: Ver el listado de Capacitacion del expediente de un puesto (PDS-6693)
+  @PDS-7693
+  Escenario: Ver el listado de Préstamos en expedientes (PDS-7693)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Expedientes
@@ -163,12 +160,11 @@ Característica: Curriculum Competencias Curriculares
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
-    * Esperar 2 segundos
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CurriculumCompetenciasCurriculares
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
+    * Click a Prestamos
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/pasivo/Prestamos.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -177,11 +173,11 @@ Característica: Curriculum Competencias Curriculares
 
   @test
   @Highest
-  @PDS-6691
-  Escenario: Guardar una prestación de un puesto con los campos en blanco (PDS-6691)
+  @PDS-7692
+  Escenario: Guardar un Préstamo en expedientes con los campos en blanco (PDS-7692)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
-    * Inicio sesion con usuario planillascorp
+    * Inicio sesion con usuario gerenterrhh
     * Se cargan elementos de la pagina dev/evolution/inicio/Inicio.json
     * seleccionar la empresa ASEINFO Corporativo si no está seleccionada
     * Click a Expedientes
@@ -190,15 +186,17 @@ Característica: Curriculum Competencias Curriculares
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
     * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
-    * Buscar en Smartlist CajaBusquedaSmartlist el termino Abrego Labbe, Rene Armando
+    * Buscar en Smartlist CajaBusquedaSmartlist el termino 100221
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
-    * Click a CurriculumCompetenciasCurriculares
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/CurriculumCompetenciasCurriculares.json
+    * Click a Prestamos
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/pasivo/Prestamos.json
     * Click a Nuevo
-    * Esperar 2 segundos
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento MensajeError este visible
-    Entonces Prueba exitosa si elemento MensajeError contiene texto El valor métrico debe de ser mayor que 0
-    * Prueba exitosa si elemento MensajeError contiene texto El Requisito es requerido
+    Entonces Prueba exitosa si elemento MensajeError contiene texto El tipo es requerido
+    * Prueba exitosa si elemento MensajeError contiene texto El nombre es requerido
+    * Prueba exitosa si elemento MensajeError contiene texto El monto original tiene que ser mayor o igual que 0
+    * Prueba exitosa si elemento MensajeError contiene texto El saldo actual tiene que ser mayor o igual que 0
+    * Prueba exitosa si elemento MensajeError contiene texto La moneda es requerida

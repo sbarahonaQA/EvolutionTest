@@ -1,0 +1,78 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposContratos_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposContratos_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposContratos_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposContratos_edit"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "Abreviatura": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura",
+    "FieldType": "Texto"
+  },
+  "Temporal": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Abreviatura",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "AbreviaturaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTipoContrato"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarAficion"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposContratos_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}
