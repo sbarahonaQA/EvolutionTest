@@ -1,0 +1,108 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo idioma"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "português"
+  },
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_txtQuickSearch"
+  },
+
+  "Idioma": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoIdioma",
+    "FieldType": "Lista"
+  },
+
+  "Nivel": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nivel",
+    "FieldType": "Lista"
+  },
+
+  "Habla": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Habla",
+    "FieldType": "Checkbox"
+  },
+
+  "Escribe": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Escribe",
+    "FieldType": "Checkbox"
+  },
+
+  "Lee": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Lee",
+    "FieldType": "Checkbox"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div[1]/fieldset/div[1]/span"
+  },
+
+  "IdiomaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div[1]/fieldset/div[2]/span"
+  },
+
+  "NivelRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div[1]/fieldset/div[3]/span"
+  },
+  "HablaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div[1]/fieldset/div[4]/span"
+  },
+
+  "EscribeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div[1]/fieldset/div[5]/span"
+  },
+
+  "LeeRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[2]/div/div[1]/fieldset/div[6]/span"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIdiomaExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarIdiomaExpediente"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  },
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  }
+}
