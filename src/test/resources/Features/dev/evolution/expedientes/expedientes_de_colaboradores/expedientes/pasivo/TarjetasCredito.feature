@@ -2,10 +2,11 @@
 
 @expedientes
 @expedientes_colaboradores
-@tarjetascredito
-Característica: TarjetasCredito
-  Pruebas para entidad TarjetasCredito
-
+@expedientes
+@pasivo
+@tarjetas_credito_expedientes
+Característica: TarjetasCreditoExpedientes
+  Pruebas para entidad TarjetasCreditoExpedientes (Tarjetas de crédito que posee el expediente)
 
   @test
   @Highest
@@ -20,13 +21,13 @@ Característica: TarjetasCredito
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TarjetasCredito
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/TarjetasCredito.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/expedientes/pasivo/TarjetasCredito.json
     * Click a Nuevo
     * Esperar que el elemento NombreEntidad este visible
     * Llenar formulario:
@@ -62,13 +63,13 @@ Característica: TarjetasCredito
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TarjetasCredito
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/TarjetasCredito.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/expedientes/pasivo/TarjetasCredito.json
     * Esperar que el elemento Tabla este visible
     * Editar registro con columna Nombre de la entidad de valor Editar
     * Esperar que el elemento NombreEntidad este visible
@@ -105,13 +106,13 @@ Característica: TarjetasCredito
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TarjetasCredito
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/TarjetasCredito.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/expedientes/pasivo/TarjetasCredito.json
     * Esperar que el elemento Tabla este visible
     * Eliminar registro con columna Nombre de la entidad de valor Eliminar
     * Aceptar alerta
@@ -131,13 +132,13 @@ Característica: TarjetasCredito
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TarjetasCredito
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/TarjetasCredito.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/expedientes/pasivo/TarjetasCredito.json
     * Esperar que el elemento Tabla este visible
     * Click a RegistroConsultar
     * Adjuntar captura de pantalla al reporte
@@ -164,13 +165,13 @@ Característica: TarjetasCredito
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TarjetasCredito
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/TarjetasCredito.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/expedientes/pasivo/TarjetasCredito.json
     * Esperar que el elemento Tabla este visible
     * Adjuntar captura de pantalla al reporte
     Entonces Verificar que esten presentes:
@@ -190,13 +191,13 @@ Característica: TarjetasCredito
     * Se cargan elementos de la pagina dev/evolution/expedientes/Expedientes.json
     * Click a ExpedientesColaboradores
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedientesColaboradores.json
-    * Click a ExpedienteEmpleado
+    * Click a Empleados
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/ExpedienteEmpleado.json
     * Buscar en Smartlist CajaBusquedaSmartlist el termino 700003
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Click a TarjetasCredito
-    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/Expediente/TarjetasCredito.json
+    * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/expedientes/pasivo/TarjetasCredito.json
     * Click a Nuevo
     * Click a Guardar
     * Adjuntar captura de pantalla al reporte
