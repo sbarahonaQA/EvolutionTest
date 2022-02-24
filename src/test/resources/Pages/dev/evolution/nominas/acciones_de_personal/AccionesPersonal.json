@@ -1,0 +1,12 @@
+{
+  "OtrasOpciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Otras Opciones"
+  },
+  "TiposTiempoCompensatorio": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de tiempo compensatorio"
+  }
+}
+
+

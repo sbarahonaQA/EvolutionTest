@@ -1,0 +1,91 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposTiempoCompensatorio_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposTiempoCompensatorio_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposTiempoCompensatorio_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposTiempoCompensatorio_edit"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "TipoOperacionSaldo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TipoOperacionSaldo",
+    "FieldType": "Radio"
+  },
+  "MaximoTransaccionesPorAnio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MaximoTransaccionesPorAnio",
+    "FieldType": "Texto"
+  },
+  "HorasMaximasAcumuladosPorAnio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "HorasMaximasAcumuladosPorAnio",
+    "FieldType": "Texto"
+  },
+  "MinutosMaximoAcumuladosPorAnio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MinutosMaximoAcumuladosPorAnio",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "MaximoTransaccionesPorAnioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[4]/span"
+  },
+  "HorasMaximasAcumuladosPorAnioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[5]/span"
+  },
+  "MinutosMaximoAcumuladosPorAnioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[6]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardar"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposTiempoCompensatorio_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}
