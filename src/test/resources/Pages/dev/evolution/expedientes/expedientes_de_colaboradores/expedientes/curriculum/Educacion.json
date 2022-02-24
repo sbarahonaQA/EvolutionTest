@@ -1,0 +1,185 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva educación"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Para Consultar"
+  },
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlExpedientes_txtQuickSearch"
+  },
+
+  "Situacion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Situacion",
+    "FieldType": "Lista"
+  },
+
+  "TituloObtenido": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TituloObtenido",
+    "FieldType": "Texto"
+  },
+
+  "TipoEstudio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoEstudio",
+    "FieldType": "Lista"
+  },
+
+  "Carrera": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCarrera",
+    "FieldType": "Lista"
+  },
+
+  "Institucion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Institucion",
+    "FieldType": "Texto"
+  },
+
+  "codigoPais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais",
+    "FieldType": "CodeCombo"
+  },
+
+  "Pais": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoPais_Text",
+    "FieldType": "Texto"
+  },
+
+  "Especialidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Especialidad",
+    "FieldType": "Texto"
+  },
+
+  "EstudianteActivo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstudianteActivo",
+    "FieldType": "Radio"
+  },
+
+  "anhoInicio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "anhoInicio",
+    "FieldType": "Texto"
+  },
+
+  "anhoFin": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "anhoFin",
+    "FieldType": "Texto"
+  },
+
+  "Jornada": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Jornada",
+    "FieldType": "Lista"
+  },
+
+  "Modalidad": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Modalidad",
+    "FieldType": "Lista"
+  },
+
+  "CicloEnCurso": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CicloEnCurso",
+    "FieldType": "Lista"
+  },
+
+  "TotalMaterias": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TotalMaterias",
+    "FieldType": "Texto"
+  },
+
+  "MateriasAprobadas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MateriasAprobadas",
+    "FieldType": "Texto"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span"
+  },
+
+  "SituacionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span"
+  },
+
+  "TituloObtenidoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span"
+  },
+
+  "TipoEstudioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span"
+  },
+
+  "CarreraRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[5]/span"
+  },
+
+  "PaisRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[7]/span"
+  },
+
+  "EstudianteActivoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[9]/span"
+  },
+
+  "FechaInicialRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[10]/span"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarDocumentoExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarDocumentoExpediente"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  },
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  }
+}

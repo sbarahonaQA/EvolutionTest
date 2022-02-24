@@ -21,6 +21,22 @@
     "GetFieldBy": "Id",
     "ValueToFind": "smlMotivosRetiro_txtQuickSearch"
   },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div/div/div/div/div/fieldset/div[1]/span[1]"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div/div/div/div/div/fieldset/div[2]/span[1]"
+  },
+  "PuedeEditarParamsRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div/div/div/div/div/fieldset/div[3]/span[1]"
+  },
+  "Categoria": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div/div/div/div/div/fieldset/div[4]/span[1]"
+  },
 
   "Nombre": {
     "GetFieldBy": "Id",
@@ -64,6 +80,10 @@
   "Mensaje": {
     "GetFieldBy": "Id",
     "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
   },
 
   "PrimerElementoDeSmartlist": {

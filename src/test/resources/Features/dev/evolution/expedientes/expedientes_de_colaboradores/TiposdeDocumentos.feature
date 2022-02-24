@@ -2,9 +2,9 @@
 
 @expedientes
 @expedientes_colaboradores
-@TiposdeDocumentos
-Característica: Tipos de Documentos
-  Pruebas para entidad Tipos de Documentos (Tipos de Documentos)
+@tipos_de_documentos
+Característica: TiposDocumentos
+  Pruebas para entidad TiposDocumentos (Tipos de Documentos)
 
   @test
   @Highest
@@ -24,26 +24,24 @@ Característica: Tipos de Documentos
     * Se cargan elementos de la pagina dev/evolution/expedientes/expedientes_de_colaboradores/TiposdeDocumentos.json
     * Click a Nuevo
     * Llenar formulario:
-      | Descripcion     | Tipo de documento PDS-1575|
-      | Abreviatura     | PDS-1575|
-      | codigoPais      | gt |
+      | Descripcion | Tipo de documento PDS-1575 |
+      | Abreviatura | PDS-1575                   |
+      | codigoPais  | gt                         |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipoDocumento
-    * Esperar 3 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Tipo de documento PDS-1575
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion     | Tipo de documento PDS-1575|
-      | Abreviatura     | PDS-1575|
-      | Pais            | Guatemala |
-
+      | Descripcion | Tipo de documento PDS-1575 |
+      | Abreviatura | PDS-1575                   |
+      | Pais        | Guatemala                  |
 
   @test
   @Highest
   @PDS-1577
-  Escenario: Guardar un Tipos de Documentos con los campos en blanco (PDS-1577)
+  Escenario: Guardar un Tipo de Documento con los campos en blanco (PDS-1577)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -61,6 +59,8 @@ Característica: Tipos de Documentos
     * Adjuntar captura de pantalla al reporte
     * Esperar que el elemento Mensaje este visible
     Entonces Prueba exitosa si elemento Mensaje contiene texto La descripción es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto La abreviatura es requerida
+    * Prueba exitosa si elemento Mensaje contiene texto El pais es requerida
 
   @test
   @Highest
@@ -83,33 +83,32 @@ Característica: Tipos de Documentos
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     * Llenar formulario:
-      | Descripcion              | Consulta Editada|
-      | Abreviatura              | Ceditada|
-      | codigoPais               | co |
-      | ExpresionRegular         | Prueba Editada|
-      | MascaraFormato           | Prueba Editada|
-      | MensajeErrorValidacion   | Prueba Editada |
-      | FormatoNombreCompleto    | 1245 |
+      | Descripcion            | Consulta Editada    |
+      | Abreviatura            | Ceditada            |
+      | codigoPais             | co                  |
+      | ExpresionRegular       | Prueba Editada      |
+      | MascaraFormato         | Prueba Editada      |
+      | MensajeErrorValidacion | Prueba Editada      |
+      | FormatoNombreCompleto  | {0} {1} {2} {3} {4} |
     * Adjuntar captura de pantalla al reporte
     * Click a GuardarTipoDocumento
-    * Esperar 3 segundos
     * Buscar en Smartlist CajaBusquedaSmartlist el termino Consulta Editada
     * Click a PrimerElementoDeSmartlist
     * Click a Editar
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | Descripcion              | Consulta Editada|
-      | Abreviatura              | Ceditada|
-      | codigoPais               | co |
-      | ExpresionRegular         | Prueba Editada|
-      | MascaraFormato           | Prueba Editada|
-      | MensajeErrorValidacion   | Prueba Editada |
-      | FormatoNombreCompleto    | 1245 |
+      | Descripcion            | Consulta Editada    |
+      | Abreviatura            | Ceditada            |
+      | Pais                   | Colombia            |
+      | ExpresionRegular       | Prueba Editada      |
+      | MascaraFormato         | Prueba Editada      |
+      | MensajeErrorValidacion | Prueba Editada      |
+      | FormatoNombreCompleto  | {0} {1} {2} {3} {4} |
 
   @test
   @Highest
   @PDS-1579
-  Escenario: Eliminar un Tipos de Documentos con información básica(PDS-1579)
+  Escenario: Eliminar un Tipo de documento (PDS-1579)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario planillascorp
@@ -132,7 +131,7 @@ Característica: Tipos de Documentos
   @test
   @Highest
   @PDS-1576
-  Escenario: Consultar un Tipos de Documentos con información básica (PDS-1576)
+  Escenario: Consultar un Tipo de Documento con información básica (PDS-1576)
     Dado que carga Evolution
     * Se cargan elementos de la pagina Login.json
     * Inicio sesion con usuario auditoria
@@ -150,14 +149,14 @@ Característica: Tipos de Documentos
     * Click a Detalles
     * Adjuntar captura de pantalla al reporte
     Entonces Validar informacion:
-      | CodigoRO                   | 50|
-      | DescripcionRO              | Consulta Documento |
-      | AbreviaturaRO              | CD|
-      | PaisRO                     | Guatemala |
-      | ExpresionRegularRO         | Prueba Test|
-      | MascaraFormatoRO           | Prueba |
-      | MensajeErrorValidacionRO   | Prueba Test |
-      | FormatoNombreCompletoRO    | 4512 |
+      | CodigoRO                 | 49                 |
+      | DescripcionRO            | Consulta Documento |
+      | AbreviaturaRO            | CD                 |
+      | PaisRO                   | Guatemala          |
+      | ExpresionRegularRO       | Prueba Test        |
+      | MascaraFormatoRO         | Prueba             |
+      | MensajeErrorValidacionRO | Prueba Test        |
+      | FormatoNombreCompletoRO  | 4512               |
 
   @test
   @Highest

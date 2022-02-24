@@ -1,0 +1,105 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo requisito"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Prueba de Requisitos"
+  },
+
+  "TipoRequisito": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoTipoRequisito_Text",
+    "FieldType": "ValueList"
+  },
+
+  "Requisito": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoRequisito_Text",
+    "FieldType": "ValueList"
+  },
+
+  "Dominio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Dominio",
+    "FieldType": "Lista"
+  },
+
+  "TiempoExperiencia": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TiempoExperiencia",
+    "FieldType": "Texto"
+  },
+
+  "Metrico": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Metrico",
+    "FieldType": "Texto"
+  },
+
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[@id='innerright']//div//div//div//div//div[1]//span[1]"
+  },
+
+  "TipoRequisitoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body//div[@id='innerright']//div//div//div//div[2]//span[1]"
+  },
+
+  "RequisitoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[3]//span[1]"
+  },
+
+  "DominioRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='main']//div[4]//span[1]"
+  },
+
+  "TiempoExperienciaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='right']//div[5]//span[1]"
+  },
+
+  "MetricoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='container']//div[6]//span[1]"
+  },
+
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarHabilidadEmpleo"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarHabilidadEmpleo"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  },
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  }
+}
