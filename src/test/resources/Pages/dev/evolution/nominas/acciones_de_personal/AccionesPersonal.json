@@ -1,0 +1,10 @@
+{
+  "OtrasOpciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Otras Opciones"
+  },
+  "TiposMovimiento": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de movimiento"
+  }
+}

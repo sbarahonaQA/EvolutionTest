@@ -1,0 +1,92 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposMovimientos_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposMovimientos_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposMovimientos_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposMovimientos_edit"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "GeneraIncremento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "GeneraIncremento",
+    "FieldType": "Checkbox"
+  },
+  "EstadoPlazaAlAutorizar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EstadoPlazaAlAutorizar",
+    "FieldType": "Lista"
+  },
+  "PermiteTrasladoEntreEmpresas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "PermiteTrasladoEntreEmpresas",
+    "FieldType": "Checkbox"
+  },
+  "CategoriaRetiro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoCategoriaRetiro",
+    "FieldType": "Lista"
+  },
+  "MotivoRetiro": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoMotivoRetiro",
+    "FieldType": "Lista"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+  },
+  "PuedeAsociarseIncrementoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+  },
+  "EstadoPlazaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[4]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTipoMovimiento"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposMovimientos_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

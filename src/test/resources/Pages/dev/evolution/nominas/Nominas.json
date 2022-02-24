@@ -2,5 +2,9 @@
   "AdministracionSalarios": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Administración de Salarios"
+  },
+  "AccionesPersonal": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Acciones de Personal"
   }
 }
