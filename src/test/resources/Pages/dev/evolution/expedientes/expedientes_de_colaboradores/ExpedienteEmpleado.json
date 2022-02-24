@@ -15,11 +15,11 @@
     "GetFieldBy": "Id",
     "ValueToFind": "smlExpedientes_edit"
   },
-  "CurriculumCapacitaciones": {
+  "Capacitaciones": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Capacitaciones"
   },
-  "CurriculumCompetenciasCurriculares": {
+  "CompetenciasCurriculares": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencias curriculares"
   },
@@ -54,6 +54,14 @@
   "CompetenciasTecnicas": {
     "GetFieldBy": "LinkText",
     "ValueToFind": "Competencias Técnicas"
+  },
+  "Prestamos": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Préstamos"
+  },
+  "TarjetasCredito": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tarjetas de crédito"
   },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
