@@ -1,0 +1,13 @@
+{
+  "OtrasOpciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Otras Opciones"
+  },
+  "TiposIncapacidad": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Tipos de incapacidad"
+  }
+}
+
+
+
