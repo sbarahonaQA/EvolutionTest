@@ -1,0 +1,88 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposIncapacidad_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposIncapacidad_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposIncapacidad_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposIncapacidad_edit"
+  },
+  "Descripcion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Descripcion",
+    "FieldType": "Texto"
+  },
+  "codigoTipoDescuento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoDescuento",
+    "FieldType": "CodeCombo"
+  },
+  "TipoDescuento": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoDescuento_Text",
+    "FieldType": "Texto"
+  },
+  "codigoTipoIngreso": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoIngreso",
+    "FieldType": "CodeCombo"
+  },
+  "TipoIngreso": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoTipoIngreso_Text",
+    "FieldType": "Texto"
+  },
+  "EsAccidente": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "EsAccidente",
+    "FieldType": "Radio"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[2]/span"
+  },
+  "AplicaAccidenteRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[3]/fieldset/div[3]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarTipoIncapacidad"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlTiposIncapacidad_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}
