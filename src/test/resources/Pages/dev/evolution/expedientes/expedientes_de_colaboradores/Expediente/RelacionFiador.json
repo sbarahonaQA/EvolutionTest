@@ -1,0 +1,68 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nueva relación de fiador"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consulta"
+  },
+  "Nombre": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Nombre",
+    "FieldType": "Texto"
+  },
+  "LugarTrabajo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "LugarTrabajo",
+    "FieldType": "Texto"
+  },
+  "Institucion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Institucion",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "NombreRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "InstitucionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarRelacionFiadorExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}

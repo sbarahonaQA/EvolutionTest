@@ -63,6 +63,10 @@
     "GetFieldBy": "LinkText",
     "ValueToFind": "Tarjetas de crédito"
   },
+  "RelacionFiador": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Relaciones de fiador"
+  },
   "ResponsabilidadesPuestos": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//div[@class='panel_izq']//a[contains(text(),'Responsabilidades')]"
