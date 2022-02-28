@@ -1,0 +1,154 @@
+{
+  "Nuevo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSolicitudesVacaciones_new"
+  },
+  "Editar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSolicitudesVacaciones_edit"
+  },
+  "Eliminar": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSolicitudesVacaciones_delete"
+  },
+  "Detalles": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSolicitudesVacaciones_edit"
+  },
+  "codigoAlternativoTitular": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoTitular",
+    "FieldType": "CodeCombo"
+  },
+  "EmpleadoTitular": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "EmpleadoTitularA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "codigoAlternativoSustituto": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoSustituto",
+    "FieldType": "CodeCombo"
+  },
+  "EmpleadoSustituto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/form/div[1]/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "EmpleadoSustitutoA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "SeEspecificaronHoras": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "SeEspecificaronHoras",
+    "FieldType": "Radio"
+  },
+  "FechaInicio": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaInicio",
+    "FieldType": "Fecha"
+  },
+  "FechaFin": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaFin",
+    "FieldType": "Fecha"
+  },
+  "Motivo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "CodigoMotivoSustitucionTemporal",
+    "FieldType": "Lista"
+  },
+  "CodigoEmpleadoSolicitante": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoSolicita",
+    "FieldType": "CodeCombo"
+  },
+  "EmpleadoSolicitante": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "codigoAlternativoSolicita_Text",
+    "FieldType": "Texto"
+  },
+  "Observaciones": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Observaciones",
+    "FieldType": "Texto"
+  },
+  "TomaraDiaCompleto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"divEspecificarHoras\"]/span",
+    "FieldType": "Texto"
+  },
+  "Desde": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "Hasta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "MotivoA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[7]/span"
+  },
+  "ObservacionesA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[8]/span"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[1]/span"
+  },
+  "DescripcionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[2]/span"
+  },
+  "TieneMovimientoAsociadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/div[2]/fieldset/div[3]/span"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarSustitucionTemporal"
+  },
+  "GuardarYProcesar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarIniciarFlujo"
+  },
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+
+  "CajaBusquedaSmartlist": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "smlSolicitudesVacaciones_txtQuickSearch"
+  },
+
+  "PrimerElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[1]"
+  },
+  "SegundoElementoDeSmartlist": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@class='k-grid-content']//tr[2]"
+  },
+
+  "ElementosMostrados": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[@class='k-pager-info k-label']"
+  },
+
+  "SmartlistLoading": {
+    "GetFieldBy": "className",
+    "ValueToFind": "k-loading-mask"
+  }
+}

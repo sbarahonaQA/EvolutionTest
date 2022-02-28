@@ -1,0 +1,13 @@
+{
+  "OtrasOpciones": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Otras Opciones"
+  },
+  "SustitucionesTemporales": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Sustituciones Temporales"
+  }
+}
+
+
+
