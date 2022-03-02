@@ -1,0 +1,129 @@
+{
+  "Tabla": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "tabla_grid"
+  },
+  "Nuevo": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Nuevo vehículo"
+  },
+  "RegistroConsultar": {
+    "GetFieldBy": "LinkText",
+    "ValueToFind": "Consultar Toyota"
+  },
+  "Marca": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Marca",
+    "FieldType": "Texto"
+  },
+  "Modelo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Modelo",
+    "FieldType": "Texto"
+  },
+  "Placa": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Placa",
+    "FieldType": "Texto"
+  },
+  "FechaAdquisicion": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FechaAdquisicion",
+    "FieldType": "Fecha"
+  },
+  "MonedaCodigo": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MonedaCodigo",
+    "FieldType": "Lista"
+  },
+  "ValorActual": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ValorActual",
+    "FieldType": "Texto"
+  },
+  "Estado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Estado",
+    "FieldType": "Lista"
+  },
+  "TipoGravamen": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "TipoGravamen",
+    "FieldType": "Texto"
+  },
+  "SaldoActual": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "SaldoActual",
+    "FieldType": "Texto"
+  },
+  "CodigoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[1]/span",
+    "FieldType": "Texto"
+  },
+  "MarcaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[2]/span",
+    "FieldType": "Texto"
+  },
+  "ModeloRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[3]/span",
+    "FieldType": "Texto"
+  },
+  "PlacaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[4]/span",
+    "FieldType": "Texto"
+  },
+  "FechaAdquisicionRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[5]/span",
+    "FieldType": "Texto"
+  },
+  "MonedaRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[6]/span",
+    "FieldType": "Texto"
+  },
+  "ValorActualRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[7]/span",
+    "FieldType": "Texto"
+  },
+  "EstadoRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[8]/span",
+    "FieldType": "Texto"
+  },
+  "TipoGravamenRO": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//*[@id=\"innerright\"]/table/tbody/tr/td[2]/div/div[3]/div/div/fieldset/div[9]/span",
+    "FieldType": "Texto"
+  },
+  "ResultadoValueList": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "ac_even ac_over"
+  },
+  "Guardar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnGuardarVehiculoExpediente"
+  },
+  "Cancelar": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnCancelarEquipoPuesto"
+  },
+
+  "Mensaje": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MessagesAndErrors"
+  },
+  "MensajeError": {
+    "GetFieldBy": "ClassName",
+    "ValueToFind": "validation-summary-errors"
+  },
+  "RegresarListado": {
+    "GetFieldBy": "Name",
+    "ValueToFind": "btnRegresarListadoEmpleado"
+  }
+}
